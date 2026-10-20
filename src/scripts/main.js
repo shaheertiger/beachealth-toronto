@@ -9,7 +9,6 @@ document.addEventListener('DOMContentLoaded', () => {
   initServicesFilter();
   initModals();
   initContactForm();
-  initStatsCounter();
 });
 
 /* ==========================================================================
@@ -544,36 +543,4 @@ function initContactForm() {
   });
 }
 
-/* ==========================================================================
-   6. STATS ANIMATION
-   ========================================================================== */
-function initStatsCounter() {
-  const statNumbers = document.querySelectorAll('.stat-number');
-  if (!statNumbers.length) return;
 
-  const observer = new IntersectionObserver((entries, obs) => {
-    entries.forEach(entry => {
-      if (entry.isIntersecting) {
-        const el = entry.target;
-        const target = parseInt(el.getAttribute('data-target') || el.textContent, 10);
-        const suffix = el.getAttribute('data-suffix') || '';
-        if (!isNaN(target)) {
-          let current = 0;
-          const step = Math.max(1, Math.floor(target / 40));
-          const interval = setInterval(() => {
-            current += step;
-            if (current >= target) {
-              el.textContent = target + suffix;
-              clearInterval(interval);
-            } else {
-              el.textContent = current + suffix;
-            }
-          }, 30);
-        }
-        obs.unobserve(el);
-      }
-    });
-  }, { threshold: 0.5 });
-
-  statNumbers.forEach(num => observer.observe(num));
-}
