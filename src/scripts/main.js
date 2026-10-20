@@ -419,7 +419,8 @@ function initModals() {
 
       const pointsHtml = service.points.map(p => `
         <li style="display: flex; align-items: center; gap: 10px; margin-bottom: 8px;">
-          <span style="color: #1b998b; font-weight: bold;">✓</span> ${p}
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#1b998b" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" style="flex-shrink: 0;"><polyline points="20 6 9 17 4 12"></polyline></svg>
+          <span>${p}</span>
         </li>
       `).join('');
 
@@ -484,20 +485,35 @@ function initModals() {
           
           <div style="display: grid; grid-template-columns: 1fr; gap: 12px; margin-bottom: 24px; text-align: left;">
             <a href="https://beachealth.janeapp.com/" target="_blank" rel="noopener" style="display: flex; align-items: center; justify-content: space-between; padding: 14px 20px; background: #f8fafc; border: 1px solid #e2e8f0; border-radius: 10px; font-weight: 600; color: #173753; transition: all 0.2s;" onmouseover="this.style.borderColor='#1b998b'; this.style.background='#e8f5f3';" onmouseout="this.style.borderColor='#e2e8f0'; this.style.background='#f8fafc';">
-              <span>🩺 Book Osteopathy / Manual Practice</span>
-              <span style="color: #1b998b;">Select &rarr;</span>
+              <div style="display: flex; align-items: center; gap: 12px;">
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#1b998b" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4.8 2.3A.3.3 0 1 0 5 2H4a2 2 0 0 0-2 2v5a6 6 0 0 0 6 6v0a6 6 0 0 0 6-6V4a2 2 0 0 0-2-2h-1a.2.2 0 1 0 .3.3"/><path d="M8 15v1a6 6 0 0 0 6 6v0a6 6 0 0 0 6-6v-4"/><circle cx="20" cy="10" r="2"/></svg>
+                <span>Book Osteopathy / Manual Practice</span>
+              </div>
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#1b998b" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
             </a>
+
             <a href="https://beachealth.janeapp.com/" target="_blank" rel="noopener" style="display: flex; align-items: center; justify-content: space-between; padding: 14px 20px; background: #f8fafc; border: 1px solid #e2e8f0; border-radius: 10px; font-weight: 600; color: #173753; transition: all 0.2s;" onmouseover="this.style.borderColor='#1b998b'; this.style.background='#e8f5f3';" onmouseout="this.style.borderColor='#e2e8f0'; this.style.background='#f8fafc';">
-              <span>🦶 Book Chiropody / Foot Care / Orthotics</span>
-              <span style="color: #1b998b;">Select &rarr;</span>
+              <div style="display: flex; align-items: center; gap: 12px;">
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#1b998b" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 17v1a3 3 0 0 0 3 3h10a3 3 0 0 0 3-3v-1"/><path d="M4 12c0-4.4 3.6-8 8-8s8 3.6 8 8"/><path d="M12 4v8"/></svg>
+                <span>Book Chiropody / Foot Care / Orthotics</span>
+              </div>
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#1b998b" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
             </a>
+
             <a href="https://beachealth.janeapp.com/" target="_blank" rel="noopener" style="display: flex; align-items: center; justify-content: space-between; padding: 14px 20px; background: #f8fafc; border: 1px solid #e2e8f0; border-radius: 10px; font-weight: 600; color: #173753; transition: all 0.2s;" onmouseover="this.style.borderColor='#1b998b'; this.style.background='#e8f5f3';" onmouseout="this.style.borderColor='#e2e8f0'; this.style.background='#f8fafc';">
-              <span>💆 Book Registered Massage Therapy (RMT)</span>
-              <span style="color: #1b998b;">Select &rarr;</span>
+              <div style="display: flex; align-items: center; gap: 12px;">
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#1b998b" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M18 11V6a2 2 0 0 0-2-2v0a2 2 0 0 0-2 2v0"/><path d="M14 10V4a2 2 0 0 0-2-2v0a2 2 0 0 0-2 2v2"/><path d="M10 10.5V6a2 2 0 0 0-2-2v0a2 2 0 0 0-2 2v8"/><path d="M18 8a2 2 0 1 1 4 0v6a8 8 0 0 1-8 8h-2c-2.8 0-4.5-.86-5.99-2.34l-3.6-3.6a2 2 0 0 1 2.83-2.82L7 15"/></svg>
+                <span>Book Registered Massage Therapy (RMT)</span>
+              </div>
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#1b998b" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
             </a>
+
             <a href="https://beachealth.janeapp.com/" target="_blank" rel="noopener" style="display: flex; align-items: center; justify-content: space-between; padding: 14px 20px; background: #f8fafc; border: 1px solid #e2e8f0; border-radius: 10px; font-weight: 600; color: #173753; transition: all 0.2s;" onmouseover="this.style.borderColor='#1b998b'; this.style.background='#e8f5f3';" onmouseout="this.style.borderColor='#e2e8f0'; this.style.background='#f8fafc';">
-              <span>⚡ Book Chiropractic Care / Shockwave</span>
-              <span style="color: #1b998b;">Select &rarr;</span>
+              <div style="display: flex; align-items: center; gap: 12px;">
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#1b998b" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polygon points="13 2 3 14 12 14 11 22 21 10 12 10 13 2"></polygon></svg>
+                <span>Book Chiropractic Care / Shockwave</span>
+              </div>
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#1b998b" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
             </a>
           </div>
 
@@ -533,9 +549,14 @@ function initContactForm() {
       submitBtn.textContent = originalText;
       submitBtn.disabled = false;
 
-      // Show toast
+      // Show toast with clean SVG checkmark
       if (toast) {
-        toast.textContent = '✓ Thank you! Your message has been sent to our reception team.';
+        toast.innerHTML = `
+          <div style="display: flex; align-items: center; gap: 10px;">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#5eead4" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"></polyline></svg>
+            <span>Thank you! Your message has been sent to our reception team.</span>
+          </div>
+        `;
         toast.classList.add('show');
         setTimeout(() => toast.classList.remove('show'), 5000);
       }

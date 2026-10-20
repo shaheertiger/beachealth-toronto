@@ -1,4 +1,4 @@
-# Beachealth — High-Performance Vercel Clone 🏖️⚡
+# Beachealth — High-Performance Vercel Clone 
 
 An exact, ditto replication of **[Beachealth](https://beachealth.com/)** (Multidisciplinary Rehabilitation & Integrated Healthcare Clinic in The Beaches, East Toronto).
 
@@ -6,7 +6,7 @@ Built to replace slow, heavy WordPress / Elementor architectures with a modern, 
 
 ---
 
-## 🚀 Key Improvements Over Original Elementor Site
+##  Key Improvements Over Original Elementor Site
 
 | Metric / Feature | Original WordPress + Elementor | This Vercel Clone |
 | :--- | :--- | :--- |
@@ -18,7 +18,7 @@ Built to replace slow, heavy WordPress / Elementor architectures with a modern, 
 
 ---
 
-## 🛠️ Architecture & Tech Stack
+##  Architecture & Tech Stack
 
 - **Core**: Semantic HTML5 structure with modern responsive layout.
 - **Styling**: Tailored Vanilla CSS design system with Work Sans typography, modern glassmorphism, and responsive breakpoints.
@@ -34,7 +34,7 @@ Built to replace slow, heavy WordPress / Elementor architectures with a modern, 
 
 ---
 
-## 📁 Project Structure
+##  Project Structure
 
 ```text
 beachealth-clone/
@@ -61,7 +61,7 @@ beachealth-clone/
 
 ---
 
-## 💻 Local Development
+##  Local Development
 
 1. **Install dependencies**:
    ```bash
@@ -81,7 +81,7 @@ beachealth-clone/
 
 ---
 
-## 🐙 Push to GitHub
+##  Push to GitHub
 
 To push this repository to your GitHub account:
 
@@ -95,7 +95,7 @@ git push -u origin main
 
 ---
 
-## ▲ Deploy to Vercel
+##  Deploy to Vercel
 
 ### Option 1: Via Vercel Web Dashboard (Recommended)
 1. Go to [vercel.com/new](https://vercel.com/new).
@@ -112,7 +112,7 @@ Follow the interactive prompts to deploy directly from your terminal.
 
 ---
 
-## 🩺 Clinic Details Replicated
+##  Clinic Details Replicated
 
 - **Clinic Name**: Beachealth (Multidisciplinary Rehabilitation Clinic)
 - **Address**: Upper Level, 350 Beech Avenue, Toronto, ON M4E 3T8 (at Kingston Rd)
