@@ -15,10 +15,10 @@
   --primary: #173753;
   --primary-dark: #0e2437;
   --primary-light: #234c71;
-  --brand-blue: #1a73e8; /* Website Logo Ocean Blue */
-  --brand-blue-hover: #1557b0; /* Deep Blue Hover */
-  --brand-blue-light: #e8f2fc; /* Soft Ice Blue */
-  --brand-blue-glow: rgba(26, 115, 232, 0.28);
+  --brand-blue: #0093d0; /* Exact Beachealth Logo Cyan/Ocean Blue */
+  --brand-blue-hover: #007cb0; /* Deep Blue Hover */
+  --brand-blue-light: #e6f4fb; /* Soft Ice Blue */
+  --brand-blue-glow: rgba(0, 147, 208, 0.28);
   --ocean-blue: #2e86ab;
   --ocean-light: #ebf5fa;
   --gold: #f59e0b;
@@ -389,7 +389,7 @@ ul, ol {
 .btn-primary:hover {
   background: var(--brand-blue-hover);
   transform: translateY(-2px);
-  box-shadow: 0 6px 20px rgba(21, 87, 176, 0.35);
+  box-shadow: 0 6px 20px rgba(0, 124, 176, 0.35);
 }
 
 .btn-secondary {
