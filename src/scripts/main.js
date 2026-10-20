@@ -395,7 +395,7 @@ function initModals() {
         <div style="display: flex; gap: 24px; align-items: flex-start; flex-wrap: wrap;">
           <img src="${member.image}" alt="${member.name}" style="width: 140px; height: 160px; object-fit: cover; border-radius: 12px; box-shadow: 0 4px 14px rgba(0,0,0,0.1);" />
           <div style="flex: 1; min-width: 220px;">
-            <div style="font-size: 0.85rem; font-weight: 700; color: #1b998b; text-transform: uppercase;">Practitioner Profile</div>
+            <div style="font-size: 0.85rem; font-weight: 700; color: #1a73e8; text-transform: uppercase;">Practitioner Profile</div>
             <h3 style="font-size: 1.6rem; color: #173753; margin: 4px 0 8px;">${member.name}</h3>
             <p style="font-size: 0.95rem; font-weight: 600; color: #64748b; margin-bottom: 12px;">${member.role}</p>
             <a href="https://beachealth.janeapp.com/" target="_blank" rel="noopener" class="btn btn-primary btn-sm">Book with ${member.name.split(' ')[0]}</a>
@@ -419,7 +419,7 @@ function initModals() {
 
       const pointsHtml = service.points.map(p => `
         <li style="display: flex; align-items: center; gap: 10px; margin-bottom: 8px;">
-          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#1b998b" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" style="flex-shrink: 0;"><polyline points="20 6 9 17 4 12"></polyline></svg>
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#1a73e8" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" style="flex-shrink: 0;"><polyline points="20 6 9 17 4 12"></polyline></svg>
           <span>${p}</span>
         </li>
       `).join('');
@@ -453,7 +453,7 @@ function initModals() {
 
       const html = `
         <div>
-          <span style="color: #1b998b; font-size: 0.85rem; font-weight: 700; text-transform: uppercase;">${post.category}</span>
+          <span style="color: #1a73e8; font-size: 0.85rem; font-weight: 700; text-transform: uppercase;">${post.category}</span>
           <h3 style="font-size: 1.6rem; color: #173753; margin: 8px 0 16px; line-height: 1.3;">${post.title}</h3>
           <div style="font-size: 1.02rem; line-height: 1.7; color: #334155; margin-bottom: 28px;">
             ${post.content}
@@ -477,43 +477,43 @@ function initModals() {
       e.preventDefault();
       const html = `
         <div style="text-align: center;">
-          <div style="width: 56px; height: 56px; border-radius: 50%; background: #e8f5f3; color: #1b998b; display: flex; align-items: center; justify-content: center; margin: 0 auto 16px;">
+          <div style="width: 56px; height: 56px; border-radius: 50%; background: #e8f2fc; color: #1a73e8; display: flex; align-items: center; justify-content: center; margin: 0 auto 16px;">
             <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="4" width="18" height="18" rx="2" ry="2"></rect><line x1="16" y1="2" x2="16" y2="6"></line><line x1="8" y1="2" x2="8" y2="6"></line><line x1="3" y1="10" x2="21" y2="10"></line></svg>
           </div>
           <h3 style="font-size: 1.65rem; color: #173753; margin-bottom: 8px;">Book Your Appointment</h3>
           <p style="color: #64748b; font-size: 0.98rem; max-width: 440px; margin: 0 auto 24px;">Appointments at Beachealth are managed via JaneApp for secure 24/7 online scheduling with real-time practitioner availability.</p>
           
           <div style="display: grid; grid-template-columns: 1fr; gap: 12px; margin-bottom: 24px; text-align: left;">
-            <a href="https://beachealth.janeapp.com/" target="_blank" rel="noopener" style="display: flex; align-items: center; justify-content: space-between; padding: 14px 20px; background: #f8fafc; border: 1px solid #e2e8f0; border-radius: 10px; font-weight: 600; color: #173753; transition: all 0.2s;" onmouseover="this.style.borderColor='#1b998b'; this.style.background='#e8f5f3';" onmouseout="this.style.borderColor='#e2e8f0'; this.style.background='#f8fafc';">
+            <a href="https://beachealth.janeapp.com/" target="_blank" rel="noopener" style="display: flex; align-items: center; justify-content: space-between; padding: 14px 20px; background: #f8fafc; border: 1px solid #e2e8f0; border-radius: 10px; font-weight: 600; color: #173753; transition: all 0.2s;" onmouseover="this.style.borderColor='#1a73e8'; this.style.background='#e8f2fc';" onmouseout="this.style.borderColor='#e2e8f0'; this.style.background='#f8fafc';">
               <div style="display: flex; align-items: center; gap: 12px;">
-                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#1b998b" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4.8 2.3A.3.3 0 1 0 5 2H4a2 2 0 0 0-2 2v5a6 6 0 0 0 6 6v0a6 6 0 0 0 6-6V4a2 2 0 0 0-2-2h-1a.2.2 0 1 0 .3.3"/><path d="M8 15v1a6 6 0 0 0 6 6v0a6 6 0 0 0 6-6v-4"/><circle cx="20" cy="10" r="2"/></svg>
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#1a73e8" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4.8 2.3A.3.3 0 1 0 5 2H4a2 2 0 0 0-2 2v5a6 6 0 0 0 6 6v0a6 6 0 0 0 6-6V4a2 2 0 0 0-2-2h-1a.2.2 0 1 0 .3.3"/><path d="M8 15v1a6 6 0 0 0 6 6v0a6 6 0 0 0 6-6v-4"/><circle cx="20" cy="10" r="2"/></svg>
                 <span>Book Osteopathy / Manual Practice</span>
               </div>
-              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#1b998b" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#1a73e8" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
             </a>
 
-            <a href="https://beachealth.janeapp.com/" target="_blank" rel="noopener" style="display: flex; align-items: center; justify-content: space-between; padding: 14px 20px; background: #f8fafc; border: 1px solid #e2e8f0; border-radius: 10px; font-weight: 600; color: #173753; transition: all 0.2s;" onmouseover="this.style.borderColor='#1b998b'; this.style.background='#e8f5f3';" onmouseout="this.style.borderColor='#e2e8f0'; this.style.background='#f8fafc';">
+            <a href="https://beachealth.janeapp.com/" target="_blank" rel="noopener" style="display: flex; align-items: center; justify-content: space-between; padding: 14px 20px; background: #f8fafc; border: 1px solid #e2e8f0; border-radius: 10px; font-weight: 600; color: #173753; transition: all 0.2s;" onmouseover="this.style.borderColor='#1a73e8'; this.style.background='#e8f2fc';" onmouseout="this.style.borderColor='#e2e8f0'; this.style.background='#f8fafc';">
               <div style="display: flex; align-items: center; gap: 12px;">
-                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#1b998b" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 17v1a3 3 0 0 0 3 3h10a3 3 0 0 0 3-3v-1"/><path d="M4 12c0-4.4 3.6-8 8-8s8 3.6 8 8"/><path d="M12 4v8"/></svg>
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#1a73e8" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 17v1a3 3 0 0 0 3 3h10a3 3 0 0 0 3-3v-1"/><path d="M4 12c0-4.4 3.6-8 8-8s8 3.6 8 8"/><path d="M12 4v8"/></svg>
                 <span>Book Chiropody / Foot Care / Orthotics</span>
               </div>
-              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#1b998b" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#1a73e8" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
             </a>
 
-            <a href="https://beachealth.janeapp.com/" target="_blank" rel="noopener" style="display: flex; align-items: center; justify-content: space-between; padding: 14px 20px; background: #f8fafc; border: 1px solid #e2e8f0; border-radius: 10px; font-weight: 600; color: #173753; transition: all 0.2s;" onmouseover="this.style.borderColor='#1b998b'; this.style.background='#e8f5f3';" onmouseout="this.style.borderColor='#e2e8f0'; this.style.background='#f8fafc';">
+            <a href="https://beachealth.janeapp.com/" target="_blank" rel="noopener" style="display: flex; align-items: center; justify-content: space-between; padding: 14px 20px; background: #f8fafc; border: 1px solid #e2e8f0; border-radius: 10px; font-weight: 600; color: #173753; transition: all 0.2s;" onmouseover="this.style.borderColor='#1a73e8'; this.style.background='#e8f2fc';" onmouseout="this.style.borderColor='#e2e8f0'; this.style.background='#f8fafc';">
               <div style="display: flex; align-items: center; gap: 12px;">
-                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#1b998b" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M18 11V6a2 2 0 0 0-2-2v0a2 2 0 0 0-2 2v0"/><path d="M14 10V4a2 2 0 0 0-2-2v0a2 2 0 0 0-2 2v2"/><path d="M10 10.5V6a2 2 0 0 0-2-2v0a2 2 0 0 0-2 2v8"/><path d="M18 8a2 2 0 1 1 4 0v6a8 8 0 0 1-8 8h-2c-2.8 0-4.5-.86-5.99-2.34l-3.6-3.6a2 2 0 0 1 2.83-2.82L7 15"/></svg>
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#1a73e8" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M18 11V6a2 2 0 0 0-2-2v0a2 2 0 0 0-2 2v0"/><path d="M14 10V4a2 2 0 0 0-2-2v0a2 2 0 0 0-2 2v2"/><path d="M10 10.5V6a2 2 0 0 0-2-2v0a2 2 0 0 0-2 2v8"/><path d="M18 8a2 2 0 1 1 4 0v6a8 8 0 0 1-8 8h-2c-2.8 0-4.5-.86-5.99-2.34l-3.6-3.6a2 2 0 0 1 2.83-2.82L7 15"/></svg>
                 <span>Book Registered Massage Therapy (RMT)</span>
               </div>
-              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#1b998b" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#1a73e8" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
             </a>
 
-            <a href="https://beachealth.janeapp.com/" target="_blank" rel="noopener" style="display: flex; align-items: center; justify-content: space-between; padding: 14px 20px; background: #f8fafc; border: 1px solid #e2e8f0; border-radius: 10px; font-weight: 600; color: #173753; transition: all 0.2s;" onmouseover="this.style.borderColor='#1b998b'; this.style.background='#e8f5f3';" onmouseout="this.style.borderColor='#e2e8f0'; this.style.background='#f8fafc';">
+            <a href="https://beachealth.janeapp.com/" target="_blank" rel="noopener" style="display: flex; align-items: center; justify-content: space-between; padding: 14px 20px; background: #f8fafc; border: 1px solid #e2e8f0; border-radius: 10px; font-weight: 600; color: #173753; transition: all 0.2s;" onmouseover="this.style.borderColor='#1a73e8'; this.style.background='#e8f2fc';" onmouseout="this.style.borderColor='#e2e8f0'; this.style.background='#f8fafc';">
               <div style="display: flex; align-items: center; gap: 12px;">
-                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#1b998b" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polygon points="13 2 3 14 12 14 11 22 21 10 12 10 13 2"></polygon></svg>
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#1a73e8" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polygon points="13 2 3 14 12 14 11 22 21 10 12 10 13 2"></polygon></svg>
                 <span>Book Chiropractic Care / Shockwave</span>
               </div>
-              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#1b998b" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#1a73e8" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
             </a>
           </div>
 
@@ -553,7 +553,7 @@ function initContactForm() {
       if (toast) {
         toast.innerHTML = `
           <div style="display: flex; align-items: center; gap: 10px;">
-            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#5eead4" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"></polyline></svg>
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#38bdf8" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"></polyline></svg>
             <span>Thank you! Your message has been sent to our reception team.</span>
           </div>
         `;
