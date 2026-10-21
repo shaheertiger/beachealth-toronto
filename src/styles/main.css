@@ -807,21 +807,24 @@ ul, ol {
 }
 
 .welcome-grid {
-  display: grid;
-  grid-template-columns: 1.1fr 0.9fr;
-  gap: 60px;
+  display: flex;
+  flex-direction: column;
   align-items: center;
+  text-align: center;
+  max-width: 860px;
+  margin: 0 auto;
 }
 
-@media (max-width: 992px) {
-  .welcome-grid {
-    grid-template-columns: 1fr;
-    gap: 40px;
-  }
+.welcome-content {
+  text-align: center;
+}
+
+.welcome-content .section-badge {
+  margin-bottom: 16px;
 }
 
 .welcome-content h2 {
-  font-size: 2.3rem;
+  font-size: 2.4rem;
   font-weight: 800;
   color: var(--primary);
   line-height: 1.25;
@@ -829,18 +832,32 @@ ul, ol {
 }
 
 .welcome-lead {
-  font-size: 1.15rem;
+  font-size: 1.18rem;
   font-weight: 600;
   color: var(--brand-blue);
   margin-bottom: 18px;
   line-height: 1.6;
+  max-width: 720px;
+  margin-left: auto;
+  margin-right: auto;
 }
 
 .welcome-text {
   font-size: 1.05rem;
   color: var(--text-body);
   line-height: 1.7;
-  margin-bottom: 24px;
+  margin-bottom: 20px;
+  max-width: 780px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.welcome-actions {
+  display: flex;
+  gap: 16px;
+  margin-top: 30px;
+  flex-wrap: wrap;
+  justify-content: center;
 }
 
 .pillars-grid {
