@@ -165,42 +165,56 @@ const TEAM_DATA = {
   'lada-milos-lee': {
     name: 'Lada Milos Lee',
     role: 'Chiropodist & Clinic Owner',
+    portal: 'Beaches Foot Care Centre',
+    bookingUrl: 'https://beachesfootcare.janeapp.com/',
     image: '/images/team-lada.jpg',
     bio: `Lada Milos Lee has been practicing as a licensed chiropodist for over 15 years and is currently the owner and clinical director of Beaches Foot Care Centre at Beachealth. Graduating with honors from the Michener Institute for Applied Health Sciences, Lada specializes in comprehensive foot care, diabetic wound management, nail surgery, and bespoke biomechanical orthotics. She takes great pride in creating tailored treatment plans that restore mobility and relieve foot and lower-limb pain for patients of all ages.`
   },
   'emily-tran': {
     name: 'Emily Tran',
     role: 'Chiropodist',
+    portal: 'Beaches Foot Care Centre',
+    bookingUrl: 'https://beachesfootcare.janeapp.com/',
     image: '/images/team-emily.jpg',
     bio: `Emily is a skilled, dedicated Chiropodist holding an Advanced Diploma of Health Sciences in Chiropody (with distinction) from the prestigious Michener Institute. Her clinical approach merges preventive podiatric care with advanced medical treatments for ingrown toenails, plantar fasciitis, dermatological conditions, and diabetic foot health. Emily works closely with Beachealth’s osteopaths and physiotherapists to analyze gait and correct lower extremity mechanics.`
   },
   'dr-adam-bletsoe': {
     name: 'Dr. Adam Bletsoe',
     role: 'Chiropractor',
+    portal: 'Beachealth Clinic',
+    bookingUrl: 'https://beachealth.janeapp.com/',
     image: '/images/team-adam.jpeg',
     bio: `Dr. Adam Bletsoe is a chiropractor whose clinical focus centers on restoring biomechanical harmony, joint mobility, and spinal health. Utilizing evidence-informed spinal adjustments, myofascial release, dry needling, and corrective exercise therapy, Dr. Bletsoe helps desk workers, weekend warriors, and competitive runners overcome chronic restrictions, sciatic discomfort, and acute sports injuries.`
   },
   'jared-cox': {
     name: 'Jared Cox',
     role: 'Osteopathic Manual Practitioner, Holistic Nutritionist & Personal Trainer',
+    portal: 'Beachealth Clinic',
+    bookingUrl: 'https://beachealth.janeapp.com/',
     image: '/images/team-jared.jpg',
     bio: `Jared is a registered Osteopathic Manual Practitioner, certified Holistic Nutritionist, and Personal Trainer with a specialized passion for sports injuries, spinal rehabilitation, and chronic pain management. He uses gentle osteopathic articular techniques, visceral mobilization, and cranial work combined with functional nutrition to resolve the underlying root causes of systemic inflammation and structural imbalance.`
   },
   'jake-maher': {
     name: 'Jake Maher',
     role: 'Osteopathic Manual Practitioner',
+    portal: 'Beachealth Clinic',
+    bookingUrl: 'https://beachealth.janeapp.com/',
     image: '/images/team-jake.jpg',
     bio: `Jake graduated from RMIT University in Melbourne, Australia, completing an intensive double degree comprising a Bachelor of Health Science and Bachelor of Applied Science (Osteopathy). Jake brings extensive international experience treating postural fatigue, rotator cuff strains, disc herniations, and repetitive stress injuries through osteopathic manual medicine and evidence-based rehabilitation.`
   },
   'patrice-wilson': {
     name: 'Patrice Wilson',
     role: 'Registered Massage Therapist (RMT)',
+    portal: 'Beachealth Clinic',
+    bookingUrl: 'https://beachealth.janeapp.com/#/registered-massage-therapy',
     image: '/images/team-patrice.jpg',
     bio: `Patrice Wilson is a graduate of Sutherland-Chan School & Teaching Clinic and an active member in good standing with the College of Massage Therapists of Ontario (CMTO) since 2004. With over two decades of clinical expertise, Patrice specializes in deep tissue therapy, trigger point release, myofascial manipulation, and prenatal massage, helping clients release deep chronic tension and improve postural alignment.`
   },
   'krystele-charles': {
     name: 'Krystele Charles',
     role: 'Registered Massage Therapist (RMT)',
+    portal: 'Beachealth Clinic',
+    bookingUrl: 'https://beachealth.janeapp.com/#/registered-massage-therapy',
     image: '/images/team-krystele.jpg',
     bio: `Krystele Charles is a compassionate Registered Massage Therapist dedicated to musculoskeletal recovery and pain reduction. Her clinical focus includes TMJ dysfunction massage, sports injury recovery, neck and shoulder tension relief, and stress reduction. Krystele coordinates with Beachealth’s osteopaths and chiropractors to augment structural recovery with targeted soft-tissue therapy.`
   }
@@ -209,6 +223,8 @@ const TEAM_DATA = {
 const SERVICE_DATA = {
   'osteopathy': {
     title: 'Osteopathy (Manual Practice)',
+    portal: 'Beachealth Services',
+    bookingUrl: 'https://beachealth.janeapp.com/#/osteopathy',
     image: '/images/osteo-card.jpg',
     desc: 'Osteopathy is a whole-body manual therapy that recognizes the profound link between body structure, joint alignment, and overall health. Rather than merely masking symptoms, osteopathic practitioners evaluate how the musculoskeletal system, nervous system, and organs interact to cause restriction or pain.',
     points: [
@@ -220,6 +236,8 @@ const SERVICE_DATA = {
   },
   'chiropody': {
     title: 'Chiropody & Advanced Foot Care',
+    portal: 'Beaches Foot Care Centre',
+    bookingUrl: 'https://beachesfootcare.janeapp.com/',
     image: '/images/chiropody-card.jpg',
     desc: 'Chiropodists are primary healthcare foot specialists who diagnose and treat conditions affecting the feet and lower limbs. From painful ingrown toenails and plantar warts to custom foot orthotics and diabetic wound prevention, our chiropodists keep you walking pain-free.',
     points: [
@@ -231,6 +249,8 @@ const SERVICE_DATA = {
   },
   'massage-therapy': {
     title: 'Registered Massage Therapy (RMT)',
+    portal: 'Beachealth Services',
+    bookingUrl: 'https://beachealth.janeapp.com/#/registered-massage-therapy',
     image: '/images/massage-card.jpg',
     desc: 'Massage therapy involves the clinical manipulation of the soft tissues of the body—muscles, connective tissues, tendons, ligaments, and joints. Our registered therapists work collaboratively to optimize physical function, relieve chronic spasms, and eliminate trigger points.',
     points: [
@@ -242,6 +262,8 @@ const SERVICE_DATA = {
   },
   'physio-pilates': {
     title: 'Physio-Guided Scientific Pilates',
+    portal: 'Beachealth Services',
+    bookingUrl: 'https://beachealth.janeapp.com/#/pilates-physio-pilates',
     image: '/images/pilates-card.jpeg',
     desc: 'Physio-guided Pilates combines the biomechanical precision of clinical rehabilitation with the core strength and stability principles of Pilates. Tailored for individuals recovering from back pain, surgery, or postural deficits.',
     points: [
@@ -253,6 +275,8 @@ const SERVICE_DATA = {
   },
   'medical-pedicure': {
     title: 'Clinical Medical Pedicure',
+    portal: 'Beaches Foot Care Centre',
+    bookingUrl: 'https://beachesfootcare.janeapp.com/',
     image: '/images/pedicure-card.jpg',
     desc: 'An advanced clinical medical pedicure performed in a sterile, medical-grade environment by our registered Chiropodists. Ideal for individuals with thickened nails, calluses, fungal infections, diabetes, or sensitive feet requiring sterile medical care.',
     points: [
@@ -264,6 +288,8 @@ const SERVICE_DATA = {
   },
   'running-analysis': {
     title: '3D Video Running Gait Analysis',
+    portal: 'Beachealth Services',
+    bookingUrl: 'https://beachealth.janeapp.com/#/running-analysis',
     image: '/images/running-card.png',
     desc: 'Running analysis utilizes specialized high-speed video capture and biomechanical assessment to evaluate cadence, strike patterns, hip drop, and ground reaction forces. We pinpoint exactly why injuries recur and how to boost performance.',
     points: [
@@ -275,6 +301,8 @@ const SERVICE_DATA = {
   },
   'shockwave-therapy': {
     title: 'Radial Shockwave Therapy',
+    portal: 'Beachealth Services',
+    bookingUrl: 'https://beachealth.janeapp.com/',
     image: '/images/shockwave-card.jpeg',
     desc: 'Shockwave therapy delivers acoustic sound wave pulses into chronic, non-healing connective tissue. These acoustic pulses stimulate micro-vascularization, break down calcium deposits, and trigger cellular healing cascades in chronic tendons.',
     points: [
@@ -286,6 +314,8 @@ const SERVICE_DATA = {
   },
   'chiropractic': {
     title: 'Chiropractic Care',
+    portal: 'Beachealth Services',
+    bookingUrl: 'https://beachealth.janeapp.com/',
     image: '/images/chiro-hero.jpeg',
     desc: 'Chiropractic care restores natural biomechanical motion where joints and muscles have become guarded, stiff, or dysfunctional. Dr. Adam Bletsoe uses modern, gentle adjustments combined with muscle release and rehab exercises.',
     points: [
@@ -297,6 +327,8 @@ const SERVICE_DATA = {
   },
   'dry-needling': {
     title: 'Dry Needling (Intramuscular Stimulation)',
+    portal: 'Beachealth Services',
+    bookingUrl: 'https://beachealth.janeapp.com/#/acupuncture',
     image: '/images/dry-needling-hero.jpg',
     desc: 'Dry needling involves inserting a sterile, ultra-fine filament needle into myofascial trigger points—taut muscular bands that refer pain and restrict mobility. It produces a local twitch response, instantly relieving deep intramuscular spasms.',
     points: [
@@ -395,10 +427,10 @@ function initModals() {
         <div style="display: flex; gap: 24px; align-items: flex-start; flex-wrap: wrap;">
           <img src="${member.image}" alt="${member.name}" style="width: 140px; height: 160px; object-fit: cover; border-radius: 12px; box-shadow: 0 4px 14px rgba(0,0,0,0.1);" />
           <div style="flex: 1; min-width: 220px;">
-            <div style="font-size: 0.85rem; font-weight: 700; color: #1a73e8; text-transform: uppercase;">Practitioner Profile</div>
+            <div style="font-size: 0.85rem; font-weight: 700; color: #0093d0; text-transform: uppercase;">${member.portal || 'Practitioner Profile'}</div>
             <h3 style="font-size: 1.6rem; color: #173753; margin: 4px 0 8px;">${member.name}</h3>
-            <p style="font-size: 0.95rem; font-weight: 600; color: #64748b; margin-bottom: 12px;">${member.role}</p>
-            <a href="https://beachealth.janeapp.com/" target="_blank" rel="noopener" class="btn btn-primary btn-sm">Book with ${member.name.split(' ')[0]}</a>
+            <p style="font-size: 0.95rem; font-weight: 600; color: #64748b; margin-bottom: 14px;">${member.role}</p>
+            <a href="${member.bookingUrl || 'https://beachealth.janeapp.com/'}" target="_blank" rel="noopener" class="btn btn-primary btn-sm">Book with ${member.name.split(' ')[0]}</a>
           </div>
         </div>
         <div style="margin-top: 24px; padding-top: 20px; border-top: 1px solid #e2e8f0; font-size: 1rem; line-height: 1.7; color: #334155;">
@@ -419,7 +451,7 @@ function initModals() {
 
       const pointsHtml = service.points.map(p => `
         <li style="display: flex; align-items: center; gap: 10px; margin-bottom: 8px;">
-          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#1a73e8" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" style="flex-shrink: 0;"><polyline points="20 6 9 17 4 12"></polyline></svg>
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#0093d0" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" style="flex-shrink: 0;"><polyline points="20 6 9 17 4 12"></polyline></svg>
           <span>${p}</span>
         </li>
       `).join('');
@@ -427,6 +459,7 @@ function initModals() {
       const html = `
         <div>
           <img src="${service.image}" alt="${service.title}" style="width: 100%; height: 220px; object-fit: cover; border-radius: 12px; margin-bottom: 20px;" />
+          <div style="display: inline-block; padding: 4px 12px; background: #e6f4fb; color: #0093d0; font-size: 0.8rem; font-weight: 700; border-radius: 20px; text-transform: uppercase; margin-bottom: 8px;">${service.portal}</div>
           <h3 style="font-size: 1.6rem; color: #173753; margin-bottom: 12px;">${service.title}</h3>
           <p style="font-size: 1.02rem; line-height: 1.65; color: #334155; margin-bottom: 20px;">${service.desc}</p>
           <div style="background: #f8fafc; padding: 20px; border-radius: 12px; border: 1px solid #e2e8f0; margin-bottom: 24px;">
@@ -434,7 +467,7 @@ function initModals() {
             <ul style="font-size: 0.95rem; color: #334155;">${pointsHtml}</ul>
           </div>
           <div style="display: flex; gap: 14px; flex-wrap: wrap;">
-            <a href="https://beachealth.janeapp.com/" target="_blank" rel="noopener" class="btn btn-primary">Book This Service Online</a>
+            <a href="${service.bookingUrl || 'https://beachealth.janeapp.com/'}" target="_blank" rel="noopener" class="btn btn-primary">Book This Service Online</a>
             <a href="tel:4165464887" class="btn btn-secondary">Call (416) 546-4887</a>
           </div>
         </div>
@@ -453,7 +486,7 @@ function initModals() {
 
       const html = `
         <div>
-          <span style="color: #1a73e8; font-size: 0.85rem; font-weight: 700; text-transform: uppercase;">${post.category}</span>
+          <span style="color: #0093d0; font-size: 0.85rem; font-weight: 700; text-transform: uppercase;">${post.category}</span>
           <h3 style="font-size: 1.6rem; color: #173753; margin: 8px 0 16px; line-height: 1.3;">${post.title}</h3>
           <div style="font-size: 1.02rem; line-height: 1.7; color: #334155; margin-bottom: 28px;">
             ${post.content}
@@ -471,54 +504,71 @@ function initModals() {
     });
   });
 
-  // 4. Booking Quick Dialog Modal (Triggered by main Book buttons)
+  // 4. Booking Quick Dialog Modal (Two JaneApp Portals)
   document.querySelectorAll('[data-open-booking]').forEach(btn => {
     btn.addEventListener('click', e => {
       e.preventDefault();
       const html = `
         <div style="text-align: center;">
-          <div style="width: 56px; height: 56px; border-radius: 50%; background: #e8f2fc; color: #1a73e8; display: flex; align-items: center; justify-content: center; margin: 0 auto 16px;">
-            <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="4" width="18" height="18" rx="2" ry="2"></rect><line x1="16" y1="2" x2="16" y2="6"></line><line x1="8" y1="2" x2="8" y2="6"></line><line x1="3" y1="10" x2="21" y2="10"></line></svg>
+          <div style="width: 54px; height: 54px; border-radius: 50%; background: #e6f4fb; color: #0093d0; display: flex; align-items: center; justify-content: center; margin: 0 auto 16px;">
+            <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="4" width="18" height="18" rx="2" ry="2"></rect><line x1="16" y1="2" x2="16" y2="6"></line><line x1="8" y1="2" x2="8" y2="6"></line><line x1="3" y1="10" x2="21" y2="10"></line></svg>
           </div>
-          <h3 style="font-size: 1.65rem; color: #173753; margin-bottom: 8px;">Book Your Appointment</h3>
-          <p style="color: #64748b; font-size: 0.98rem; max-width: 440px; margin: 0 auto 24px;">Appointments at Beachealth are managed via JaneApp for secure 24/7 online scheduling with real-time practitioner availability.</p>
+          <h3 style="font-size: 1.65rem; color: #173753; margin-bottom: 8px; font-weight: 800;">Select Booking Portal</h3>
+          <p style="color: #64748b; font-size: 0.95rem; max-width: 480px; margin: 0 auto 24px; line-height: 1.5;">Our clinic operates two separate JaneApp schedules. Please choose the service department you wish to book:</p>
           
-          <div style="display: grid; grid-template-columns: 1fr; gap: 12px; margin-bottom: 24px; text-align: left;">
-            <a href="https://beachealth.janeapp.com/" target="_blank" rel="noopener" style="display: flex; align-items: center; justify-content: space-between; padding: 14px 20px; background: #f8fafc; border: 1px solid #e2e8f0; border-radius: 10px; font-weight: 600; color: #173753; transition: all 0.2s;" onmouseover="this.style.borderColor='#1a73e8'; this.style.background='#e8f2fc';" onmouseout="this.style.borderColor='#e2e8f0'; this.style.background='#f8fafc';">
-              <div style="display: flex; align-items: center; gap: 12px;">
-                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#1a73e8" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4.8 2.3A.3.3 0 1 0 5 2H4a2 2 0 0 0-2 2v5a6 6 0 0 0 6 6v0a6 6 0 0 0 6-6V4a2 2 0 0 0-2-2h-1a.2.2 0 1 0 .3.3"/><path d="M8 15v1a6 6 0 0 0 6 6v0a6 6 0 0 0 6-6v-4"/><circle cx="20" cy="10" r="2"/></svg>
-                <span>Book Osteopathy / Manual Practice</span>
+          <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(260px, 1fr)); gap: 16px; margin-bottom: 24px; text-align: left;">
+            
+            <!-- Portal 1: Beachealth Clinic -->
+            <div style="border: 2px solid #e2e8f0; border-radius: 12px; padding: 20px 18px; background: #ffffff; display: flex; flex-direction: column; justify-content: space-between; transition: all 0.25s;" onmouseover="this.style.borderColor='#0093d0'; this.style.boxShadow='0 8px 24px rgba(0,147,208,0.15)';" onmouseout="this.style.borderColor='#e2e8f0'; this.style.boxShadow='none';">
+              <div>
+                <div style="display: flex; align-items: center; justify-content: space-between; margin-bottom: 10px;">
+                  <span style="display: inline-block; padding: 3px 10px; background: #e6f4fb; color: #0093d0; font-size: 0.72rem; font-weight: 700; border-radius: 20px; text-transform: uppercase;">Rehabilitation</span>
+                  <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#0093d0" stroke-width="2"><path d="M22 12h-4l-3 9L9 3l-3 9H2"/></svg>
+                </div>
+                <h4 style="font-size: 1.2rem; color: #173753; font-weight: 800; margin-bottom: 6px;">Beachealth Services</h4>
+                <p style="font-size: 0.85rem; color: #64748b; margin-bottom: 14px; line-height: 1.4;">Multi-disciplinary manual therapy, spinal rehab, and sports recovery.</p>
+                <ul style="font-size: 0.84rem; color: #334155; margin-bottom: 18px; display: flex; flex-direction: column; gap: 6px;">
+                  <li style="display: flex; align-items: center; gap: 8px;"><svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="#0093d0" stroke-width="3"><polyline points="20 6 9 17 4 12"></polyline></svg> Osteopathy (Manual Practice)</li>
+                  <li style="display: flex; align-items: center; gap: 8px;"><svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="#0093d0" stroke-width="3"><polyline points="20 6 9 17 4 12"></polyline></svg> Chiropractic Care</li>
+                  <li style="display: flex; align-items: center; gap: 8px;"><svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="#0093d0" stroke-width="3"><polyline points="20 6 9 17 4 12"></polyline></svg> Registered Massage Therapy (RMT)</li>
+                  <li style="display: flex; align-items: center; gap: 8px;"><svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="#0093d0" stroke-width="3"><polyline points="20 6 9 17 4 12"></polyline></svg> Physio Pilates & Running Analysis</li>
+                  <li style="display: flex; align-items: center; gap: 8px;"><svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="#0093d0" stroke-width="3"><polyline points="20 6 9 17 4 12"></polyline></svg> Shockwave & Dry Needling</li>
+                </ul>
               </div>
-              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#1a73e8" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
-            </a>
+              <a href="https://beachealth.janeapp.com/" target="_blank" rel="noopener" class="btn btn-primary" style="width: 100%; text-align: center; justify-content: center; font-size: 0.9rem; padding: 10px 16px;">
+                Book Beachealth Services
+                <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+              </a>
+            </div>
 
-            <a href="https://beachealth.janeapp.com/" target="_blank" rel="noopener" style="display: flex; align-items: center; justify-content: space-between; padding: 14px 20px; background: #f8fafc; border: 1px solid #e2e8f0; border-radius: 10px; font-weight: 600; color: #173753; transition: all 0.2s;" onmouseover="this.style.borderColor='#1a73e8'; this.style.background='#e8f2fc';" onmouseout="this.style.borderColor='#e2e8f0'; this.style.background='#f8fafc';">
-              <div style="display: flex; align-items: center; gap: 12px;">
-                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#1a73e8" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 17v1a3 3 0 0 0 3 3h10a3 3 0 0 0 3-3v-1"/><path d="M4 12c0-4.4 3.6-8 8-8s8 3.6 8 8"/><path d="M12 4v8"/></svg>
-                <span>Book Chiropody / Foot Care / Orthotics</span>
+            <!-- Portal 2: Beaches Foot Care Centre -->
+            <div style="border: 2px solid #e2e8f0; border-radius: 12px; padding: 20px 18px; background: #ffffff; display: flex; flex-direction: column; justify-content: space-between; transition: all 0.25s;" onmouseover="this.style.borderColor='#0093d0'; this.style.boxShadow='0 8px 24px rgba(0,147,208,0.15)';" onmouseout="this.style.borderColor='#e2e8f0'; this.style.boxShadow='none';">
+              <div>
+                <div style="display: flex; align-items: center; justify-content: space-between; margin-bottom: 10px;">
+                  <span style="display: inline-block; padding: 3px 10px; background: #e6f4fb; color: #0093d0; font-size: 0.72rem; font-weight: 700; border-radius: 20px; text-transform: uppercase;">Podiatry & Nails</span>
+                  <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#0093d0" stroke-width="2"><path d="M4 17v1a3 3 0 0 0 3 3h10a3 3 0 0 0 3-3v-1"/><path d="M4 12c0-4.4 3.6-8 8-8s8 3.6 8 8"/><path d="M12 4v8"/></svg>
+                </div>
+                <h4 style="font-size: 1.2rem; color: #173753; font-weight: 800; margin-bottom: 6px;">Beaches Foot Care Centre</h4>
+                <p style="font-size: 0.85rem; color: #64748b; margin-bottom: 14px; line-height: 1.4;">Registered Chiropody, medical-grade pedicures, and bespoke orthotics.</p>
+                <ul style="font-size: 0.84rem; color: #334155; margin-bottom: 18px; display: flex; flex-direction: column; gap: 6px;">
+                  <li style="display: flex; align-items: center; gap: 8px;"><svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="#0093d0" stroke-width="3"><polyline points="20 6 9 17 4 12"></polyline></svg> Chiropody & Foot Assessments</li>
+                  <li style="display: flex; align-items: center; gap: 8px;"><svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="#0093d0" stroke-width="3"><polyline points="20 6 9 17 4 12"></polyline></svg> Sterile Clinical Medical Pedicures</li>
+                  <li style="display: flex; align-items: center; gap: 8px;"><svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="#0093d0" stroke-width="3"><polyline points="20 6 9 17 4 12"></polyline></svg> Custom Biomechanical Orthotics</li>
+                  <li style="display: flex; align-items: center; gap: 8px;"><svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="#0093d0" stroke-width="3"><polyline points="20 6 9 17 4 12"></polyline></svg> Ingrown Toenails & Fungal Care</li>
+                  <li style="display: flex; align-items: center; gap: 8px;"><svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="#0093d0" stroke-width="3"><polyline points="20 6 9 17 4 12"></polyline></svg> Plantar Fasciitis & Heel Spurs</li>
+                </ul>
               </div>
-              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#1a73e8" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
-            </a>
+              <a href="https://beachesfootcare.janeapp.com/" target="_blank" rel="noopener" class="btn btn-primary" style="width: 100%; text-align: center; justify-content: center; font-size: 0.9rem; padding: 10px 16px;">
+                Book Foot Care & Pedicures
+                <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+              </a>
+            </div>
 
-            <a href="https://beachealth.janeapp.com/" target="_blank" rel="noopener" style="display: flex; align-items: center; justify-content: space-between; padding: 14px 20px; background: #f8fafc; border: 1px solid #e2e8f0; border-radius: 10px; font-weight: 600; color: #173753; transition: all 0.2s;" onmouseover="this.style.borderColor='#1a73e8'; this.style.background='#e8f2fc';" onmouseout="this.style.borderColor='#e2e8f0'; this.style.background='#f8fafc';">
-              <div style="display: flex; align-items: center; gap: 12px;">
-                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#1a73e8" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M18 11V6a2 2 0 0 0-2-2v0a2 2 0 0 0-2 2v0"/><path d="M14 10V4a2 2 0 0 0-2-2v0a2 2 0 0 0-2 2v2"/><path d="M10 10.5V6a2 2 0 0 0-2-2v0a2 2 0 0 0-2 2v8"/><path d="M18 8a2 2 0 1 1 4 0v6a8 8 0 0 1-8 8h-2c-2.8 0-4.5-.86-5.99-2.34l-3.6-3.6a2 2 0 0 1 2.83-2.82L7 15"/></svg>
-                <span>Book Registered Massage Therapy (RMT)</span>
-              </div>
-              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#1a73e8" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
-            </a>
-
-            <a href="https://beachealth.janeapp.com/" target="_blank" rel="noopener" style="display: flex; align-items: center; justify-content: space-between; padding: 14px 20px; background: #f8fafc; border: 1px solid #e2e8f0; border-radius: 10px; font-weight: 600; color: #173753; transition: all 0.2s;" onmouseover="this.style.borderColor='#1a73e8'; this.style.background='#e8f2fc';" onmouseout="this.style.borderColor='#e2e8f0'; this.style.background='#f8fafc';">
-              <div style="display: flex; align-items: center; gap: 12px;">
-                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#1a73e8" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polygon points="13 2 3 14 12 14 11 22 21 10 12 10 13 2"></polygon></svg>
-                <span>Book Chiropractic Care / Shockwave</span>
-              </div>
-              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#1a73e8" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
-            </a>
           </div>
 
-          <div style="background: #f1f5f9; padding: 16px; border-radius: 10px; font-size: 0.9rem; color: #475569;">
-            Prefer to book by phone? Call our friendly reception at <a href="tel:4165464887" style="color: #173753; font-weight: 700; text-decoration: underline;">(416) 546-4887</a>.
+          <div style="background: #f8fafc; padding: 14px 18px; border-radius: 10px; font-size: 0.88rem; color: #475569; border: 1px solid #e2e8f0; display: inline-flex; align-items: center; gap: 8px;">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#0093d0" stroke-width="2"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"></path></svg>
+            <span>Prefer to book by phone? Call reception at <a href="tel:4165464887" style="color: #0093d0; font-weight: 700; text-decoration: underline;">(416) 546-4887</a></span>
           </div>
         </div>
       `;
