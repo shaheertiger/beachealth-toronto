@@ -9,6 +9,7 @@ document.addEventListener('DOMContentLoaded', () => {
   initServicesFilter();
   initModals();
   initContactForm();
+  initReviewsSlider();
 
   // Dynamic Copyright Year
   const yearEl = document.getElementById('current-year');
@@ -836,6 +837,64 @@ function initContactForm() {
       }
     }, 600);
   });
+}
+
+/* ==========================================================================
+   6. REVIEWS SLIDER (PATIENT REVIEWS CAROUSEL)
+   ========================================================================== */
+function initReviewsSlider() {
+  const track = document.querySelector('.reviews-track');
+  const prevBtn = document.querySelector('.reviews-prev');
+  const nextBtn = document.querySelector('.reviews-next');
+  const cards = document.querySelectorAll('.review-slide-card');
+  const dotsContainer = document.getElementById('reviews-dots');
+
+  if (!track || !cards.length) return;
+
+  function getStep() {
+    const card = cards[0];
+    const gap = 24;
+    return card ? card.offsetWidth + gap : 360;
+  }
+
+  // Create pagination dots
+  if (dotsContainer) {
+    dotsContainer.innerHTML = '';
+    cards.forEach((_, idx) => {
+      const dot = document.createElement('button');
+      dot.className = `reviews-dot ${idx === 0 ? 'active' : ''}`;
+      dot.setAttribute('aria-label', `Go to review ${idx + 1}`);
+      dot.addEventListener('click', () => {
+        track.scrollTo({ left: idx * getStep(), behavior: 'smooth' });
+        updateDots(idx);
+      });
+      dotsContainer.appendChild(dot);
+    });
+  }
+
+  function updateDots(activeIndex) {
+    const dots = document.querySelectorAll('.reviews-dot');
+    dots.forEach((dot, idx) => {
+      dot.classList.toggle('active', idx === activeIndex);
+    });
+  }
+
+  if (nextBtn) {
+    nextBtn.addEventListener('click', () => {
+      track.scrollBy({ left: getStep(), behavior: 'smooth' });
+    });
+  }
+
+  if (prevBtn) {
+    prevBtn.addEventListener('click', () => {
+      track.scrollBy({ left: -getStep(), behavior: 'smooth' });
+    });
+  }
+
+  track.addEventListener('scroll', () => {
+    const activeIndex = Math.round(track.scrollLeft / getStep());
+    updateDots(Math.min(activeIndex, cards.length - 1));
+  }, { passive: true });
 }
 
 
