@@ -903,7 +903,10 @@
           <h3>Send Us a Message</h3>
           <p>Have questions about treatments, insurance billing, or finding the right practitioner? Drop us a line below.</p>
           
-          <form id="contact-form" novalidate>
+          <form id="contact-form" action="https://formsubmit.co/admin@beachealth.com" method="POST" novalidate>
+            <input type="hidden" name="_captcha" value="false">
+            <input type="hidden" name="_subject" value="New Website Patient Inquiry - Beachealth">
+            <input type="hidden" name="_template" value="table">
             <div id="form-alert-container"></div>
             <div class="form-grid">
               <div class="form-group">

@@ -774,31 +774,91 @@ function initContactForm() {
       return;
     }
 
+    const phoneInput = document.getElementById('user-phone');
+    const serviceInput = document.getElementById('user-service');
+    const phoneVal = phoneInput ? phoneInput.value.trim() : '';
+    const serviceVal = serviceInput ? serviceInput.options[serviceInput.selectedIndex].text : 'General Inquiry';
+
     const submitBtn = form.querySelector('button[type="submit"]');
     const originalText = submitBtn.textContent;
 
-    submitBtn.textContent = 'Sending message to reception...';
+    submitBtn.textContent = 'Redirecting inquiry to admin@beachealth.com...';
     submitBtn.disabled = true;
+
+    // 1. Asynchronous dispatch to FormSubmit.co for admin@beachealth.com
+    fetch('https://formsubmit.co/ajax/admin@beachealth.com', {
+      method: 'POST',
+      headers: {
+        'Content-Type': 'application/json',
+        'Accept': 'application/json'
+      },
+      body: JSON.stringify({
+        name: nameVal,
+        email: emailVal,
+        phone: phoneVal || 'Not provided',
+        service: serviceVal,
+        message: messageVal,
+        _subject: `New Patient Website Inquiry: ${nameVal} (${serviceVal})`,
+        _template: 'table'
+      })
+    }).catch(err => {
+      console.warn('FormSubmit notice:', err);
+    });
+
+    // 2. Build prefilled mailto composer directed to admin@beachealth.com
+    const mailSubject = encodeURIComponent(`New Patient Inquiry: ${nameVal} - ${serviceVal}`);
+    const mailBody = encodeURIComponent(
+`Hello Beachealth Reception,
+
+You have received a new inquiry from the clinic website contact form:
+
+• Patient Name: ${nameVal}
+• Email: ${emailVal}
+• Phone: ${phoneVal || 'Not provided'}
+• Interested Service: ${serviceVal}
+
+Message:
+${messageVal}
+
+---
+Sent via Beachealth Website (https://beachealth.com)`
+    );
+    const mailtoUrl = `mailto:admin@beachealth.com?subject=${mailSubject}&body=${mailBody}`;
+
+    // 3. Trigger redirect to user's default email client
+    setTimeout(() => {
+      try {
+        window.location.href = mailtoUrl;
+      } catch (e) {
+        console.warn('Mailto redirect notice:', e);
+      }
+    }, 450);
 
     setTimeout(() => {
       const parentCard = form.parentElement;
       const userNameSafe = nameVal.replace(/</g, '&lt;').replace(/>/g, '&gt;');
       
-      // Render clean Success Card
+      // Render clean Success Card with direct email links
       parentCard.innerHTML = `
         <div class="form-success-card">
           <div style="width: 58px; height: 58px; background: #dcfce7; border-radius: 50%; display: flex; align-items: center; justify-content: center; margin: 0 auto 16px;">
             <svg width="30" height="30" viewBox="0 0 24 24" fill="none" stroke="#16a34a" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"></polyline></svg>
           </div>
-          <h4 style="margin-bottom: 8px;">Inquiry Sent Successfully!</h4>
-          <p style="margin-bottom: 20px;">Thank you, <strong>${userNameSafe}</strong>! Your inquiry has been delivered directly to our clinic desk at <strong style="color: #0093d0;">admin@beachealth.com</strong>. One of our coordinators will reply within 1 business day.</p>
+          <h4 style="margin-bottom: 8px;">Inquiry Redirected to admin@beachealth.com</h4>
+          <p style="margin-bottom: 18px;">Thank you, <strong>${userNameSafe}</strong>! Your inquiry has been routed directly to <strong style="color: #0093d0;"><a href="mailto:admin@beachealth.com" style="text-decoration: underline;">admin@beachealth.com</a></strong>. A clinic coordinator will reply within 1 business day.</p>
           
-          <div style="background: #ffffff; padding: 16px; border-radius: 12px; border: 1px solid #bbf7d0; margin-bottom: 22px; text-align: left;">
-            <div style="font-weight: 700; color: #173753; margin-bottom: 4px;">Need Immediate Booking?</div>
-            <p style="font-size: 0.88rem; color: #4b5563; margin-bottom: 12px;">You can view realtime practitioner availability online or call our desk directly:</p>
-            <div style="display: flex; gap: 10px; flex-wrap: wrap;">
-              <a href="tel:4165464887" class="btn btn-secondary btn-sm">Call (416) 546-4887</a>
-              <button class="btn btn-primary btn-sm" id="btn-success-book">Book Online via JaneApp</button>
+          <div style="background: #ffffff; padding: 18px; border-radius: 12px; border: 1px solid #bbf7d0; margin-bottom: 22px; text-align: left;">
+            <div style="font-weight: 700; color: #173753; margin-bottom: 6px;">Sent Directly to Clinic Email</div>
+            <p style="font-size: 0.88rem; color: #4b5563; margin-bottom: 14px;">If your email application did not launch automatically, you can open it with all your details prefilled:</p>
+            
+            <a href="${mailtoUrl}" class="btn btn-primary btn-sm" style="display: inline-flex; align-items: center; gap: 8px; margin-bottom: 14px; text-decoration: none;">
+              <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path><polyline points="22,6 12,13 2,6"></polyline></svg>
+              Open in Mail App to admin@beachealth.com
+            </a>
+
+            <div style="border-top: 1px dashed #cbd5e1; padding-top: 12px; display: flex; gap: 10px; flex-wrap: wrap;">
+              <a href="tel:4165464887" class="btn btn-secondary btn-sm">Call Reception (416) 546-4887</a>
+              <button class="btn btn-outline-dark btn-sm" id="btn-success-book">Book Online via JaneApp</button>
             </div>
           </div>
 
@@ -829,7 +889,7 @@ function initContactForm() {
         toast.innerHTML = `
           <div style="display: flex; align-items: center; gap: 10px;">
             <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#38bdf8" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"></polyline></svg>
-            <span>Thank you, ${userNameSafe}! Message dispatched to Beachealth reception.</span>
+            <span>Inquiry routed to admin@beachealth.com!</span>
           </div>
         `;
         toast.classList.add('show');
