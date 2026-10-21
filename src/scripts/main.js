@@ -9,6 +9,10 @@ document.addEventListener('DOMContentLoaded', () => {
   initServicesFilter();
   initModals();
   initContactForm();
+
+  // Dynamic Copyright Year
+  const yearEl = document.getElementById('current-year');
+  if (yearEl) yearEl.textContent = new Date().getFullYear();
 });
 
 /* ==========================================================================
@@ -106,12 +110,14 @@ function initMobileDrawer() {
   function openDrawer() {
     drawer.classList.add('open');
     backdrop.classList.add('open');
+    if (toggleBtn) toggleBtn.setAttribute('aria-expanded', 'true');
     document.body.style.overflow = 'hidden';
   }
 
   function closeDrawer() {
     drawer.classList.remove('open');
     backdrop.classList.remove('open');
+    if (toggleBtn) toggleBtn.setAttribute('aria-expanded', 'false');
     document.body.style.overflow = '';
   }
 
@@ -121,6 +127,18 @@ function initMobileDrawer() {
 
   drawerLinks.forEach(link => {
     link.addEventListener('click', closeDrawer);
+  });
+
+  // Global ESC key listener to close drawer and modals
+  document.addEventListener('keydown', e => {
+    if (e.key === 'Escape') {
+      closeDrawer();
+      const modal = document.getElementById('modal-overlay');
+      if (modal && modal.classList.contains('open')) {
+        modal.classList.remove('open');
+        document.body.style.overflow = '';
+      }
+    }
   });
 }
 
@@ -575,42 +593,248 @@ function initModals() {
       openModal(html);
     });
   });
+
+  // 5. Clinic Policy Modals (PHIPA Privacy, Terms, Cancellation)
+  const POLICY_DATA = {
+    'privacy': {
+      title: 'Privacy Policy',
+      subtitle: 'Ontario PHIPA & PIPEDA Regulatory Standards',
+      content: `
+        <p style="margin-bottom: 14px;">At Beachealth and Beaches Foot Care Centre, safeguarding your personal health information (PHI) is fundamental to our clinical practice. We adhere strictly to Ontario's <em>Personal Health Information Protection Act, 2004 (PHIPA)</em> and Canada's PIPEDA framework.</p>
+        <h5 style="color: #173753; font-weight: 700; margin: 16px 0 8px; font-size: 1rem;">Collection & Purpose</h5>
+        <p style="margin-bottom: 14px;">We collect relevant medical history, practitioner notes, and insurance information exclusively to provide coordinated multidisciplinary rehabilitation, ensure patient safety, and process direct insurance billing.</p>
+        <h5 style="color: #173753; font-weight: 700; margin: 16px 0 8px; font-size: 1rem;">Electronic Medical Records Security</h5>
+        <p style="margin-bottom: 14px;">All patient records and booking information are encrypted and hosted within SOC-2 certified Canadian cloud servers (Jane Software). Only your direct healthcare providers and clinic reception coordinators have authorized access.</p>
+        <h5 style="color: #173753; font-weight: 700; margin: 16px 0 8px; font-size: 1rem;">Accessing Your Records</h5>
+        <p>You have the right to review and request copies of your clinical files at any time. For questions regarding our privacy practices, contact our Privacy Officer at <a href="mailto:admin@beachealth.com" style="color: #0093d0; font-weight: 600;">admin@beachealth.com</a> or <a href="tel:4165464887" style="color: #0093d0; font-weight: 600;">(416) 546-4887</a>.</p>
+      `
+    },
+    'terms': {
+      title: 'Terms of Service',
+      subtitle: 'Patient Care Agreements & Clinic Standards',
+      content: `
+        <p style="margin-bottom: 14px;">Welcome to Beachealth. By scheduling an appointment or using our healthcare services, you agree to the following terms:</p>
+        <h5 style="color: #173753; font-weight: 700; margin: 16px 0 8px; font-size: 1rem;">Regulated Healthcare Professionals</h5>
+        <p style="margin-bottom: 14px;">All assessments and treatments are delivered by independent practitioners licensed and registered with their respective Ontario Colleges (College of Chiropodists of Ontario, College of Chiropractors of Ontario, College of Massage Therapists of Ontario, Ontario Association of Osteopathic Manual Practitioners). Informed consent is gathered prior to any evaluation or therapeutic treatment.</p>
+        <h5 style="color: #173753; font-weight: 700; margin: 16px 0 8px; font-size: 1rem;">Direct Billing & Fees</h5>
+        <p style="margin-bottom: 14px;">Patients are responsible for payment of services at the time of their appointment. We provide direct billing to all major extended health insurance providers (Sun Life, Manulife, Canada Life, Green Shield, Desjardins, etc.). Any unpaid balance remains the patient's responsibility.</p>
+        <h5 style="color: #173753; font-weight: 700; margin: 16px 0 8px; font-size: 1rem;">Safe Clinic Environment</h5>
+        <p>Beachealth is committed to providing an inclusive, harassment-free environment for all patients, clinical practitioners, and administrative staff.</p>
+      `
+    },
+    'cancellation': {
+      title: 'Cancellation Policy',
+      subtitle: '24-Hour Notice Guideline',
+      content: `
+        <p style="margin-bottom: 14px;">Our clinical practitioners reserve dedicated, one-on-one appointment time specifically for your rehabilitation. When an appointment is missed or cancelled without adequate notice, another patient awaiting care is unable to receive treatment.</p>
+        <h5 style="color: #173753; font-weight: 700; margin: 16px 0 8px; font-size: 1rem;">24 Hours Advance Notice Required</h5>
+        <p style="margin-bottom: 14px;">We kindly request at least <strong>24 hours notice</strong> to cancel or reschedule your visit. You can manage appointments 24/7 through your JaneApp account, or by contacting our front desk at <a href="tel:4165464887" style="color: #0093d0; font-weight: 600;">(416) 546-4887</a> or <a href="mailto:admin@beachealth.com" style="color: #0093d0; font-weight: 600;">admin@beachealth.com</a>.</p>
+        <h5 style="color: #173753; font-weight: 700; margin: 16px 0 8px; font-size: 1rem;">Late Cancellation & No-Show Fees</h5>
+        <p style="margin-bottom: 14px;">Appointments cancelled with less than 24 hours notice or missed without notification may be subject to a fee up to the full value of the scheduled service. Please note that extended health insurance plans do not reimburse missed appointment fees.</p>
+        <h5 style="color: #173753; font-weight: 700; margin: 16px 0 8px; font-size: 1rem;">Unforeseen Circumstances</h5>
+        <p>We recognize that genuine emergencies and unexpected illnesses happen. Please reach out to our team promptly so we can accommodate your situation with compassion.</p>
+      `
+    }
+  };
+
+  document.querySelectorAll('[data-policy-id]').forEach(link => {
+    link.addEventListener('click', e => {
+      e.preventDefault();
+      const id = link.getAttribute('data-policy-id');
+      const policy = POLICY_DATA[id];
+      if (!policy) return;
+
+      const html = `
+        <div>
+          <span style="color: #0093d0; font-size: 0.85rem; font-weight: 700; text-transform: uppercase;">Clinic Policy</span>
+          <h3 style="font-size: 1.65rem; color: #173753; margin: 8px 0 4px; font-weight: 800;">${policy.title}</h3>
+          <p style="color: #64748b; font-size: 0.95rem; margin-bottom: 20px;">${policy.subtitle}</p>
+          <div style="font-size: 0.98rem; line-height: 1.7; color: #334155;">
+            ${policy.content}
+          </div>
+          <div style="margin-top: 24px; padding-top: 18px; border-top: 1px solid #e2e8f0; display: flex; justify-content: flex-end;">
+            <button class="btn btn-primary btn-sm" onclick="document.getElementById('modal-overlay').classList.remove('open'); document.body.style.overflow='';">Understood</button>
+          </div>
+        </div>
+      `;
+      openModal(html);
+    });
+  });
 }
 
 /* ==========================================================================
-   5. CONTACT FORM
+   5. CONTACT FORM (VALIDATION, ERROR & SUCCESS MESSAGES)
    ========================================================================== */
 function initContactForm() {
   const form = document.getElementById('contact-form');
   const toast = document.getElementById('toast-notification');
+  const alertContainer = document.getElementById('form-alert-container');
 
   if (!form) return;
 
+  const nameInput = document.getElementById('user-name');
+  const emailInput = document.getElementById('user-email');
+  const messageInput = document.getElementById('user-message');
+
+  const nameError = document.getElementById('name-error');
+  const emailError = document.getElementById('email-error');
+  const messageError = document.getElementById('message-error');
+
+  function clearErrors() {
+    [nameInput, emailInput, messageInput].forEach(input => {
+      if (input) {
+        input.classList.remove('is-invalid');
+        input.removeAttribute('aria-invalid');
+      }
+    });
+    [nameError, emailError, messageError].forEach(err => {
+      if (err) {
+        err.style.display = 'none';
+        err.textContent = '';
+      }
+    });
+    if (alertContainer) alertContainer.innerHTML = '';
+  }
+
+  function setError(input, errorEl, message) {
+    if (input) {
+      input.classList.add('is-invalid');
+      input.setAttribute('aria-invalid', 'true');
+    }
+    if (errorEl) {
+      errorEl.textContent = message;
+      errorEl.style.display = 'block';
+    }
+  }
+
+  // Clear individual field errors on user input
+  if (nameInput) {
+    nameInput.addEventListener('input', () => {
+      nameInput.classList.remove('is-invalid');
+      if (nameError) nameError.style.display = 'none';
+      if (alertContainer) alertContainer.innerHTML = '';
+    });
+  }
+  if (emailInput) {
+    emailInput.addEventListener('input', () => {
+      emailInput.classList.remove('is-invalid');
+      if (emailError) emailError.style.display = 'none';
+      if (alertContainer) alertContainer.innerHTML = '';
+    });
+  }
+  if (messageInput) {
+    messageInput.addEventListener('input', () => {
+      messageInput.classList.remove('is-invalid');
+      if (messageError) messageError.style.display = 'none';
+      if (alertContainer) alertContainer.innerHTML = '';
+    });
+  }
+
   form.addEventListener('submit', e => {
     e.preventDefault();
+    clearErrors();
+
+    const nameVal = nameInput ? nameInput.value.trim() : '';
+    const emailVal = emailInput ? emailInput.value.trim() : '';
+    const messageVal = messageInput ? messageInput.value.trim() : '';
+
+    const emailPattern = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+    let hasError = false;
+    let firstInvalidInput = null;
+
+    if (!nameVal || nameVal.length < 2) {
+      setError(nameInput, nameError, 'Please enter your full name (at least 2 characters).');
+      hasError = true;
+      if (!firstInvalidInput) firstInvalidInput = nameInput;
+    }
+
+    if (!emailVal || !emailPattern.test(emailVal)) {
+      setError(emailInput, emailError, 'Please provide a valid email address (e.g. name@domain.com).');
+      hasError = true;
+      if (!firstInvalidInput) firstInvalidInput = emailInput;
+    }
+
+    if (!messageVal || messageVal.length < 5) {
+      setError(messageInput, messageError, 'Please enter your message or inquiry (at least 5 characters).');
+      hasError = true;
+      if (!firstInvalidInput) firstInvalidInput = messageInput;
+    }
+
+    if (hasError) {
+      if (alertContainer) {
+        alertContainer.innerHTML = `
+          <div class="form-alert-error" role="alert">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#dc2626" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"></circle><line x1="12" y1="8" x2="12" y2="12"></line><line x1="12" y1="16" x2="12.01" y2="16"></line></svg>
+            <span>Please complete all highlighted fields accurately before submitting.</span>
+          </div>
+        `;
+      }
+      if (firstInvalidInput) firstInvalidInput.focus();
+      return;
+    }
+
     const submitBtn = form.querySelector('button[type="submit"]');
     const originalText = submitBtn.textContent;
 
-    submitBtn.textContent = 'Sending message...';
+    submitBtn.textContent = 'Sending message to reception...';
     submitBtn.disabled = true;
 
     setTimeout(() => {
-      form.reset();
-      submitBtn.textContent = originalText;
-      submitBtn.disabled = false;
+      const parentCard = form.parentElement;
+      const userNameSafe = nameVal.replace(/</g, '&lt;').replace(/>/g, '&gt;');
+      
+      // Render clean Success Card
+      parentCard.innerHTML = `
+        <div class="form-success-card">
+          <div style="width: 58px; height: 58px; background: #dcfce7; border-radius: 50%; display: flex; align-items: center; justify-content: center; margin: 0 auto 16px;">
+            <svg width="30" height="30" viewBox="0 0 24 24" fill="none" stroke="#16a34a" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"></polyline></svg>
+          </div>
+          <h4 style="margin-bottom: 8px;">Inquiry Sent Successfully!</h4>
+          <p style="margin-bottom: 20px;">Thank you, <strong>${userNameSafe}</strong>! Your inquiry has been delivered directly to our clinic desk at <strong style="color: #0093d0;">admin@beachealth.com</strong>. One of our coordinators will reply within 1 business day.</p>
+          
+          <div style="background: #ffffff; padding: 16px; border-radius: 12px; border: 1px solid #bbf7d0; margin-bottom: 22px; text-align: left;">
+            <div style="font-weight: 700; color: #173753; margin-bottom: 4px;">Need Immediate Booking?</div>
+            <p style="font-size: 0.88rem; color: #4b5563; margin-bottom: 12px;">You can view realtime practitioner availability online or call our desk directly:</p>
+            <div style="display: flex; gap: 10px; flex-wrap: wrap;">
+              <a href="tel:4165464887" class="btn btn-secondary btn-sm">Call (416) 546-4887</a>
+              <button class="btn btn-primary btn-sm" id="btn-success-book">Book Online via JaneApp</button>
+            </div>
+          </div>
 
-      // Show toast with clean SVG checkmark
+          <button type="button" class="btn btn-outline-dark btn-sm" id="btn-send-another">Send Another Message</button>
+        </div>
+      `;
+
+      // Trigger JaneApp booking modal from success card
+      const successBookBtn = document.getElementById('btn-success-book');
+      if (successBookBtn) {
+        successBookBtn.addEventListener('click', e => {
+          e.preventDefault();
+          const firstOpenBooking = document.querySelector('[data-open-booking]');
+          if (firstOpenBooking) firstOpenBooking.click();
+        });
+      }
+
+      // Reconnect Send Another Message button
+      const resetBtn = document.getElementById('btn-send-another');
+      if (resetBtn) {
+        resetBtn.addEventListener('click', () => {
+          window.location.reload();
+        });
+      }
+
+      // Show toast notice
       if (toast) {
         toast.innerHTML = `
           <div style="display: flex; align-items: center; gap: 10px;">
             <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#38bdf8" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"></polyline></svg>
-            <span>Thank you! Your message has been sent to our reception team.</span>
+            <span>Thank you, ${userNameSafe}! Message dispatched to Beachealth reception.</span>
           </div>
         `;
         toast.classList.add('show');
         setTimeout(() => toast.classList.remove('show'), 5000);
       }
-    }, 800);
+    }, 600);
   });
 }
 

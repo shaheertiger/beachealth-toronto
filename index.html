@@ -3,13 +3,26 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Beachealth | Multidisciplinary Rehabilitation Clinic East Toronto</title>
+  <title>Beachealth | Multidisciplinary Healthcare & Foot Care Clinic Toronto</title>
   <meta name="description" content="Beachealth is a premier multidisciplinary healthcare clinic in The Beaches, East Toronto offering Osteopathy, Chiropractic, Massage Therapy, Chiropody, Shockwave Therapy, and Physio Pilates." />
-  <meta property="og:title" content="Beachealth | Multidisciplinary Rehabilitation Clinic East Toronto" />
-  <meta property="og:description" content="Integrated rehabilitation clinic in The Beaches, East Toronto. Coordinated care through Osteopathy, Chiropody, Chiropractic, and Massage Therapy." />
+  <link rel="canonical" href="https://beachealth.com/" />
+
+  <!-- Favicons -->
+  <link rel="icon" type="image/x-icon" href="/favicon.ico" />
+  <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon.png" />
+  <link rel="apple-touch-icon" href="/images/favicon.png" />
+
+  <!-- Open Graph & Social Sharing -->
+  <meta property="og:site_name" content="Beachealth" />
+  <meta property="og:title" content="Beachealth | Multidisciplinary Healthcare & Foot Care Clinic Toronto" />
+  <meta property="og:description" content="Integrative rehabilitation and foot care clinic in The Beaches, East Toronto. Coordinated care through Osteopathy, Chiropody, Chiropractic, Massage Therapy, and Physio Pilates." />
   <meta property="og:type" content="website" />
+  <meta property="og:url" content="https://beachealth.com/" />
   <meta property="og:image" content="/images/logo.png" />
-  <link rel="icon" type="image/png" href="/images/favicon.png" />
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="Beachealth | Multidisciplinary Healthcare & Foot Care Clinic Toronto" />
+  <meta name="twitter:description" content="Integrative rehabilitation and foot care clinic in The Beaches, East Toronto." />
+  <meta name="twitter:image" content="/images/logo.png" />
 
   <!-- Google Fonts: Work Sans (Matches original Elementor typography) -->
   <link rel="preconnect" href="https://fonts.googleapis.com" />
@@ -45,14 +58,14 @@
   <nav class="main-header" id="navbar">
     <div class="container header-container">
       <div class="brand-logo-wrap">
-        <a href="#" aria-label="Beachealth Home">
+        <a href="/" aria-label="Beachealth Home">
           <img src="/images/logo.png" alt="Beachealth Multidisciplinary Healthcare" class="brand-logo" />
         </a>
       </div>
 
       <div class="main-nav">
         <ul class="nav-list">
-          <li><a href="#" class="nav-link active">Home</a></li>
+          <li><a href="/" class="nav-link active">Home</a></li>
           <li><a href="#about" class="nav-link">About</a></li>
           <li class="nav-item-dropdown">
             <a href="#services" class="nav-link">Services <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" style="margin-left: 4px; vertical-align: middle;"><path d="M6 9l6 6 6-6"/></svg></a>
@@ -75,9 +88,8 @@
       </div>
 
       <div class="header-cta-group">
-        <a href="tel:4165464887" class="btn btn-outline-dark btn-sm" style="display: none;">Call Clinic</a>
         <a href="https://beachealth.janeapp.com/" target="_blank" rel="noopener" class="btn btn-primary" data-open-booking>Book Online</a>
-        <button class="mobile-toggle" aria-label="Open mobile menu">
+        <button class="mobile-toggle" aria-label="Open mobile menu" aria-expanded="false" aria-controls="mobile-drawer">
           <span></span>
           <span></span>
           <span></span>
@@ -88,13 +100,15 @@
 
   <!-- Mobile Drawer Menu -->
   <div class="drawer-backdrop"></div>
-  <aside class="mobile-drawer" aria-label="Mobile Navigation">
+  <aside class="mobile-drawer" id="mobile-drawer" aria-label="Mobile Navigation">
     <div class="drawer-header">
-      <img src="/images/logo.png" alt="Beachealth" style="height: 38px;" />
+      <a href="/" aria-label="Beachealth Home">
+        <img src="/images/logo.png" alt="Beachealth" style="height: 38px;" />
+      </a>
       <button class="drawer-close" aria-label="Close menu"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><line x1="18" y1="6" x2="6" y2="18"></line><line x1="6" y1="6" x2="18" y2="18"></line></svg></button>
     </div>
     <nav class="drawer-nav">
-      <a href="#">Home</a>
+      <a href="/">Home</a>
       <a href="#about">About Us</a>
       <a href="#services">All Services</a>
       <a href="#team">Our Practitioners</a>
@@ -1109,21 +1123,24 @@
           <h3>Send Us a Message</h3>
           <p>Have questions about treatments, insurance billing, or finding the right practitioner? Drop us a line below.</p>
           
-          <form id="contact-form">
+          <form id="contact-form" novalidate>
+            <div id="form-alert-container"></div>
             <div class="form-grid">
               <div class="form-group">
                 <label class="form-label" for="user-name">Full Name *</label>
-                <input class="form-input" type="text" id="user-name" name="name" required placeholder="John Doe" />
+                <input class="form-input" type="text" id="user-name" name="name" required placeholder="e.g. Sarah Jenkins" autocomplete="name" />
+                <span class="field-error-msg" id="name-error" style="display: none;"></span>
               </div>
 
               <div class="form-group">
                 <label class="form-label" for="user-email">Email Address *</label>
-                <input class="form-input" type="email" id="user-email" name="email" required placeholder="john@example.com" />
+                <input class="form-input" type="email" id="user-email" name="email" required placeholder="e.g. sarah.jenkins@example.com" autocomplete="email" />
+                <span class="field-error-msg" id="email-error" style="display: none;"></span>
               </div>
 
               <div class="form-group">
                 <label class="form-label" for="user-phone">Phone Number</label>
-                <input class="form-input" type="tel" id="user-phone" name="phone" placeholder="(416) 000-0000" />
+                <input class="form-input" type="tel" id="user-phone" name="phone" placeholder="(416) 555-0199" autocomplete="tel" />
               </div>
 
               <div class="form-group">
@@ -1143,7 +1160,8 @@
 
               <div class="form-group full">
                 <label class="form-label" for="user-message">How Can We Help You? *</label>
-                <textarea class="form-textarea" id="user-message" name="message" required placeholder="Please describe any pain, injury history, or questions..."></textarea>
+                <textarea class="form-textarea" id="user-message" name="message" required placeholder="Tell us about your condition, symptoms, or preferred appointment times..."></textarea>
+                <span class="field-error-msg" id="message-error" style="display: none;"></span>
               </div>
             </div>
 
@@ -1171,13 +1189,18 @@
     <div class="container">
       <div class="footer-grid">
         <div class="footer-col-brand">
-          <img src="/images/logo.png" alt="Beachealth" />
+          <a href="/" aria-label="Beachealth Home">
+            <img src="/images/logo.png" alt="Beachealth" />
+          </a>
           <p class="footer-bio">Beachealth is a multidisciplinary rehabilitation and integrated healthcare clinic located in The Beaches, East Toronto. We believe in collaborative, root-cause healing across disciplines.</p>
           <div class="social-links">
-            <a href="https://facebook.com" class="social-link" target="_blank" rel="noopener" aria-label="Facebook">
+            <a href="https://www.facebook.com/beachealth/" class="social-link" target="_blank" rel="noopener" aria-label="Facebook">
               <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"/></svg>
             </a>
-            <a href="https://instagram.com" class="social-link" target="_blank" rel="noopener" aria-label="Instagram">
+            <a href="https://www.instagram.com/beachintegrated/" class="social-link" target="_blank" rel="noopener" aria-label="Instagram">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"/></svg>
+            </a>
+            <a href="https://www.instagram.com/beachintegrated/" class="social-link" target="_blank" rel="noopener" aria-label="Instagram">
               <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"/></svg>
             </a>
           </div>
@@ -1236,12 +1259,12 @@
 
       <div class="footer-bottom">
         <div>
-          © 2026 Beachealth. All rights reserved. Multidisciplinary healthcare in The Beaches, East Toronto.
+          © <span id="current-year">2026</span> Beachealth. All rights reserved. Multidisciplinary healthcare in The Beaches, East Toronto.
         </div>
         <div class="footer-bottom-links">
-          <a href="#">Privacy Policy</a>
-          <a href="#">Terms of Service</a>
-          <a href="#">Cancellation Policy</a>
+          <a href="#privacy" data-policy-id="privacy">Privacy Policy</a>
+          <a href="#terms" data-policy-id="terms">Terms of Service</a>
+          <a href="#cancellation" data-policy-id="cancellation">Cancellation Policy</a>
         </div>
       </div>
     </div>
@@ -1266,7 +1289,7 @@
   <div class="floating-book-bar">
     <div>
       <div style="font-weight: 700; color: #173753; font-size: 0.95rem;">Beachealth Clinic</div>
-      <div style="font-size: 0.8rem; color: #64748b;">(416) 546-4887</div>
+      <a href="tel:4165464887" style="font-size: 0.8rem; color: #64748b; text-decoration: none; display: block;" title="Call clinic">(416) 546-4887</a>
     </div>
     <a href="https://beachealth.janeapp.com/" target="_blank" rel="noopener" class="btn btn-primary btn-sm" data-open-booking>Book Online</a>
   </div>
