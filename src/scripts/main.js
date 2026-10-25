@@ -218,7 +218,25 @@ const TEAM_DATA = {
     portal: 'Beachealth Clinic',
     bookingUrl: 'https://beachealth.janeapp.com/',
     image: '/images/team-adam.jpeg',
-    bio: `Dr. Adam Bletsoe is a chiropractor whose clinical focus centers on restoring biomechanical harmony, joint mobility, and spinal health. Utilizing evidence-informed spinal adjustments, myofascial release, dry needling, and corrective exercise therapy, Dr. Bletsoe helps desk workers, weekend warriors, and competitive runners overcome chronic restrictions, sciatic discomfort, and acute sports injuries.`
+    bio: `
+      <p style="font-size: 1.05rem; font-weight: 700; color: #0093d0; margin-bottom: 12px;">Move Better. Hurt Less. Get Back to Doing What You Love.</p>
+      <p style="margin-bottom: 14px;">Dr. Adam Bletsoe combines hands-on chiropractic care with movement, contemporary pain science, and nervous-system-informed strategies. His approach can be simple and hands-on when that is what you need — or go deeper when pain has become persistent, recurring, or difficult to understand.</p>
+      <p style="margin-bottom: 14px;">Whether you are dealing with a new injury, long-standing joint stiffness, athletic restrictions, or pain that flares with stress, Dr. Adam’s goal is to help you feel and function better with a clear, collaborative path forward.</p>
+      <div style="background: #f8fafc; border: 1px solid #e2e8f0; border-radius: 10px; padding: 16px; margin: 18px 0;">
+        <strong style="color: #173753; display: block; margin-bottom: 8px;">Clinical Focus & Techniques:</strong>
+        <ul style="display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 6px; font-size: 0.9rem; color: #334155;">
+          <li>• Hands-on spinal & joint adjustments</li>
+          <li>• Gentle joint mobilization</li>
+          <li>• Instrument-assisted adjusting & soft-tissue therapy</li>
+          <li>• Pain Reprocessing Therapy (PRT) principles</li>
+          <li>• Movement, rehabilitation & exercise coaching</li>
+          <li>• TMJ jaw tension, headaches & posture care</li>
+        </ul>
+      </div>
+      <div style="margin-top: 16px;">
+        <a href="/chiropractic.html" style="color: #0093d0; font-weight: 700; text-decoration: underline;">Read Full Chiropractic Practice Page →</a>
+      </div>
+    `
   },
   'jared-cox': {
     name: 'Jared Cox',
@@ -295,17 +313,83 @@ const SERVICE_DATA = {
     ]
   },
   'physio-pilates': {
-    title: 'Physio-Guided Scientific Pilates',
-    portal: 'Beachealth Services',
+    title: 'Clinical Pilates & Physiotherapy at Beach Health',
+    portal: 'Physiotherapy & Active Rehab',
     bookingUrl: 'https://beachealth.janeapp.com/#/pilates-physio-pilates',
     image: '/images/pilates-card.jpeg',
-    desc: 'Physio-guided Pilates combines the biomechanical precision of clinical rehabilitation with the core strength and stability principles of Pilates. Tailored for individuals recovering from back pain, surgery, or postural deficits.',
+    desc: 'Move with confidence. Build strength. Support your long-term health with physiotherapy-guided Clinical Pilates.',
     points: [
-      'Core & deep stabilizer muscular retraining',
-      'Reformer & clinical mat exercises',
-      'Safe post-rehabilitation progressions',
-      'Guided 1-on-1 by trained clinical specialists'
-    ]
+      'Core strength and spinal stability',
+      'Posture and body alignment retraining',
+      'Hip, knee, ankle and pelvic stability',
+      'Specialized Pelvic Health Physiotherapy with Javia',
+      'Return to running, fitness, and daily sport'
+    ],
+    customHtml: `
+      <div class="service-modal-rich">
+        <img src="/images/pilates-card.jpeg" alt="Clinical Pilates & Physiotherapy at Beach Health" style="width: 100%; height: 240px; object-fit: cover; border-radius: 12px; margin-bottom: 20px;" />
+        <div style="display: inline-block; padding: 4px 12px; background: #e6f4fb; color: #0093d0; font-size: 0.8rem; font-weight: 700; border-radius: 20px; text-transform: uppercase; margin-bottom: 8px;">Physiotherapy & Active Rehab</div>
+        <h2 style="font-size: 1.7rem; color: #173753; margin-bottom: 8px; font-weight: 800;">Clinical Pilates & Physiotherapy at Beach Health</h2>
+        <p style="font-size: 1.05rem; font-weight: 600; color: #0093d0; margin-bottom: 16px;">Move with confidence. Build strength. Support your long-term health.</p>
+
+        <p style="font-size: 0.98rem; line-height: 1.65; color: #334155; margin-bottom: 14px;">
+          We offer physiotherapy-guided Clinical Pilates, combining evidence-based rehabilitation with mindful, individualized movement.
+        </p>
+        <p style="font-size: 0.98rem; line-height: 1.65; color: #334155; margin-bottom: 14px;">
+          Our Registered Physiotherapists integrate Pilates-based therapeutic exercises into personalized treatment plans when clinically appropriate, helping clients improve strength, mobility, stability, and movement confidence.
+        </p>
+        <div style="background: #e0f2fe; border-left: 4px solid #0284c7; padding: 14px 18px; border-radius: 0 10px 10px 0; margin-bottom: 20px;">
+          <strong style="color: #0369a1; display: block; font-size: 0.92rem; margin-bottom: 4px;">Pelvic Health Partnership with Javia:</strong>
+          <p style="font-size: 0.88rem; color: #0c4a6e; line-height: 1.5; margin: 0;">
+            We also have access to a Registered Pelvic Health Physiotherapist through Javia, offering specialized consultations for clients interested in addressing pelvic floor concerns, pregnancy and postpartum recovery, or other pelvic health conditions.
+          </p>
+        </div>
+
+        <div style="background: #f8fafc; border: 1px solid #e2e8f0; border-radius: 12px; padding: 18px; margin-bottom: 20px;">
+          <h3 style="font-size: 1.15rem; color: #173753; font-weight: 800; margin-bottom: 10px;">Who Is Clinical Pilates For?</h3>
+          <p style="font-size: 0.9rem; color: #475569; margin-bottom: 12px;">Clinical Pilates is suitable for individuals recovering from injury, managing pain, improving physical function, or looking to build strength and confidence in their movements. It can help with:</p>
+          <ul style="display: flex; flex-direction: column; gap: 8px; font-size: 0.88rem; color: #334155;">
+            <li style="display: flex; gap: 8px; align-items: flex-start;"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="#0093d0" stroke-width="3" style="flex-shrink: 0; margin-top: 3px;"><polyline points="20 6 9 17 4 12"/></svg> <span><strong>Back and neck pain:</strong> Improving spinal mobility, postural awareness, and muscular endurance.</span></li>
+            <li style="display: flex; gap: 8px; align-items: flex-start;"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="#0093d0" stroke-width="3" style="flex-shrink: 0; margin-top: 3px;"><polyline points="20 6 9 17 4 12"/></svg> <span><strong>Sports and repetitive strain injuries:</strong> Supporting rehabilitation and a gradual return to physical activity.</span></li>
+            <li style="display: flex; gap: 8px; align-items: flex-start;"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="#0093d0" stroke-width="3" style="flex-shrink: 0; margin-top: 3px;"><polyline points="20 6 9 17 4 12"/></svg> <span><strong>Hip, knee, and ankle concerns:</strong> Improving joint stability, strength, and movement control.</span></li>
+            <li style="display: flex; gap: 8px; align-items: flex-start;"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="#0093d0" stroke-width="3" style="flex-shrink: 0; margin-top: 3px;"><polyline points="20 6 9 17 4 12"/></svg> <span><strong>Pregnancy and postpartum recovery:</strong> Supporting physical changes during pregnancy and rebuilding strength following childbirth.</span></li>
+            <li style="display: flex; gap: 8px; align-items: flex-start;"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="#0093d0" stroke-width="3" style="flex-shrink: 0; margin-top: 3px;"><polyline points="20 6 9 17 4 12"/></svg> <span><strong>Pelvic floor concerns:</strong> Specialized consultations for pelvic floor weakness, urinary leakage, or coordination difficulties.</span></li>
+            <li style="display: flex; gap: 8px; align-items: flex-start;"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="#0093d0" stroke-width="3" style="flex-shrink: 0; margin-top: 3px;"><polyline points="20 6 9 17 4 12"/></svg> <span><strong>Diastasis recti:</strong> Supporting abdominal wall rehabilitation and functional core strength.</span></li>
+            <li style="display: flex; gap: 8px; align-items: flex-start;"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="#0093d0" stroke-width="3" style="flex-shrink: 0; margin-top: 3px;"><polyline points="20 6 9 17 4 12"/></svg> <span><strong>Arthritis, stiffness, and hypermobility:</strong> Improving muscular support, mobility, and joint control.</span></li>
+            <li style="display: flex; gap: 8px; align-items: flex-start;"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="#0093d0" stroke-width="3" style="flex-shrink: 0; margin-top: 3px;"><polyline points="20 6 9 17 4 12"/></svg> <span><strong>Running and fitness injuries:</strong> Supporting rehabilitation and a safe return to sport.</span></li>
+            <li style="display: flex; gap: 8px; align-items: flex-start;"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="#0093d0" stroke-width="3" style="flex-shrink: 0; margin-top: 3px;"><polyline points="20 6 9 17 4 12"/></svg> <span><strong>Healthy aging:</strong> Maintaining balance, strength, mobility, and independence.</span></li>
+          </ul>
+        </div>
+
+        <div style="background: #ffffff; border: 1px solid #e2e8f0; border-radius: 12px; padding: 18px; margin-bottom: 20px;">
+          <h3 style="font-size: 1.15rem; color: #173753; font-weight: 800; margin-bottom: 10px;">What Is the Difference Between Regular Pilates and Clinical Pilates?</h3>
+          <p style="font-size: 0.92rem; color: #475569; line-height: 1.6; margin-bottom: 10px;">
+            Regular Pilates focuses on general fitness, flexibility, strength, and body awareness. <strong>Clinical Pilates takes a more individualized, therapeutic approach.</strong>
+          </p>
+          <p style="font-size: 0.92rem; color: #475569; line-height: 1.6;">
+            At Beach Health, our physiotherapists assess your movement, strength, mobility, and functional limitations before determining whether Pilates-based exercises would benefit your rehabilitation. Exercises are selected and modified according to your individual condition, physical abilities, and treatment goals.
+          </p>
+        </div>
+
+        <div style="background: #fdf2f8; border: 1px solid #fbcfe8; border-radius: 12px; padding: 18px; margin-bottom: 20px;">
+          <h3 style="font-size: 1.15rem; color: #9d174d; font-weight: 800; margin-bottom: 8px;">Specialized Pelvic Health Physiotherapy Consultations</h3>
+          <p style="font-size: 0.88rem; color: #831843; line-height: 1.5; margin-bottom: 10px;">Through our partnership with Javia, Beach Health clients can access consultations with a Registered Physiotherapist specializing in pelvic health:</p>
+          <ul style="display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 6px; font-size: 0.85rem; color: #701a75;">
+            <li>• Pregnancy-related pelvic or back discomfort</li>
+            <li>• Postpartum recovery concerns</li>
+            <li>• Urinary incontinence & pelvic floor issues</li>
+            <li>• Diastasis recti abdominal rehab</li>
+            <li>• Safe return to exercise after childbirth</li>
+            <li>• Menopause-related pelvic health changes</li>
+          </ul>
+        </div>
+
+        <div style="display: flex; gap: 12px; flex-wrap: wrap;">
+          <a href="https://beachealth.janeapp.com/#/pilates-physio-pilates" target="_blank" rel="noopener" class="btn btn-primary">Book Clinical Pilates Online</a>
+          <a href="/clinical-pilates.html" class="btn btn-secondary">Open Dedicated Pilates Page →</a>
+        </div>
+      </div>
+    `
   },
   'medical-pedicure': {
     title: 'Clinical Medical Pedicure',
@@ -351,13 +435,108 @@ const SERVICE_DATA = {
     portal: 'Beachealth Services',
     bookingUrl: 'https://beachealth.janeapp.com/',
     image: '/images/chiro-hero.jpeg',
-    desc: 'Chiropractic care restores natural biomechanical motion where joints and muscles have become guarded, stiff, or dysfunctional. Dr. Adam Bletsoe uses modern, gentle adjustments combined with muscle release and rehab exercises.',
+    desc: 'Move Better. Hurt Less. Get Back to Doing What You Love. Hands-on chiropractic care combined with movement and pain science with Dr. Adam Bletsoe.',
     points: [
       'Gentle spinal & extremity joint adjustments',
-      'Postural analysis & ergonomic coaching',
-      'Sciatica, disc bulges & radiculopathy relief',
-      'Comprehensive active rehabilitation plans'
-    ]
+      'Joint mobilization & instrument-assisted therapy',
+      'Pain Reprocessing Therapy & nervous-system work',
+      'Headaches, TMJ jaw tension & ergonomic rehab',
+      'Sports and running injury recovery plans'
+    ],
+    customHtml: `
+      <div class="service-modal-rich">
+        <img src="/images/chiro-hero.jpeg" alt="Dr. Adam Bletsoe Chiropractic Care" style="width: 100%; height: 240px; object-fit: cover; border-radius: 12px; margin-bottom: 20px;" />
+        <div style="display: inline-block; padding: 4px 12px; background: #e6f4fb; color: #0093d0; font-size: 0.8rem; font-weight: 700; border-radius: 20px; text-transform: uppercase; margin-bottom: 8px;">Beachealth Services</div>
+        <h2 style="font-size: 1.7rem; color: #173753; margin-bottom: 8px; font-weight: 800;">Chiropractic Care with Dr. Adam Bletsoe</h2>
+        <p style="font-size: 1.05rem; font-weight: 600; color: #0093d0; margin-bottom: 16px;">Move Better. Hurt Less. Get Back to Doing What You Love.</p>
+
+        <p style="font-size: 0.98rem; line-height: 1.65; color: #334155; margin-bottom: 14px;">
+          Chiropractic care at Beachealth is designed to help you reduce pain, move more freely and feel more confident in your body.
+        </p>
+        <p style="font-size: 0.98rem; line-height: 1.65; color: #334155; margin-bottom: 14px;">
+          <strong>Dr. Adam Bletsoe</strong> combines hands-on chiropractic care with movement, contemporary pain science and nervous-system-informed strategies. The approach can be simple and hands-on when that is what you need — or go deeper when pain has become persistent, recurring or difficult to understand.
+        </p>
+        <p style="font-size: 0.98rem; line-height: 1.65; color: #334155; margin-bottom: 20px;">
+          Whether you are dealing with a new problem, an old injury, recurring stiffness or pain that seems to change with stress, the goal is the same: <em>Help you feel and function better — and give you a clear path forward.</em>
+        </p>
+
+        <!-- How It Works Box -->
+        <div style="background: #f8fafc; border: 1px solid #e2e8f0; border-radius: 12px; padding: 18px; margin-bottom: 20px;">
+          <h3 style="font-size: 1.15rem; color: #173753; font-weight: 800; margin-bottom: 10px;">How Chiropractic Care at Beachealth Works</h3>
+          <p style="font-size: 0.9rem; color: #475569; line-height: 1.6; margin-bottom: 12px;">
+            Bodies can become stiff, guarded or painful for many reasons—injury, physical strain, repetitive activity, sport, work, prolonged positions, or when the nervous system becomes protective. Treatment is adapted to your body and preferences:
+          </p>
+          <ul style="display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 6px; font-size: 0.88rem; color: #334155;">
+            <li style="display: flex; align-items: center; gap: 8px;"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="#0093d0" stroke-width="3"><polyline points="20 6 9 17 4 12"/></svg> Chiropractic adjustments</li>
+            <li style="display: flex; align-items: center; gap: 8px;"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="#0093d0" stroke-width="3"><polyline points="20 6 9 17 4 12"/></svg> Gentle joint mobilization</li>
+            <li style="display: flex; align-items: center; gap: 8px;"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="#0093d0" stroke-width="3"><polyline points="20 6 9 17 4 12"/></svg> Instrument-assisted adjusting</li>
+            <li style="display: flex; align-items: center; gap: 8px;"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="#0093d0" stroke-width="3"><polyline points="20 6 9 17 4 12"/></svg> Soft-tissue treatment</li>
+            <li style="display: flex; align-items: center; gap: 8px;"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="#0093d0" stroke-width="3"><polyline points="20 6 9 17 4 12"/></svg> Movement & exercise rehab</li>
+            <li style="display: flex; align-items: center; gap: 8px;"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="#0093d0" stroke-width="3"><polyline points="20 6 9 17 4 12"/></svg> Breathing & nervous-system regulation</li>
+            <li style="display: flex; align-items: center; gap: 8px;"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="#0093d0" stroke-width="3"><polyline points="20 6 9 17 4 12"/></svg> Contemporary pain science</li>
+          </ul>
+        </div>
+
+        <!-- Conditions Commonly Helped -->
+        <div style="background: #ffffff; border: 1px solid #e2e8f0; border-radius: 12px; padding: 18px; margin-bottom: 20px;">
+          <h3 style="font-size: 1.15rem; color: #173753; font-weight: 800; margin-bottom: 10px;">Conditions We Commonly Help With</h3>
+          <div style="display: flex; flex-wrap: wrap; gap: 6px; margin-bottom: 12px;">
+            <span style="background: #e6f4fb; color: #0093d0; padding: 3px 10px; border-radius: 14px; font-size: 0.8rem; font-weight: 600;">Back Pain</span>
+            <span style="background: #e6f4fb; color: #0093d0; padding: 3px 10px; border-radius: 14px; font-size: 0.8rem; font-weight: 600;">Neck Pain</span>
+            <span style="background: #e6f4fb; color: #0093d0; padding: 3px 10px; border-radius: 14px; font-size: 0.8rem; font-weight: 600;">Headaches</span>
+            <span style="background: #e6f4fb; color: #0093d0; padding: 3px 10px; border-radius: 14px; font-size: 0.8rem; font-weight: 600;">Shoulder Pain</span>
+            <span style="background: #e6f4fb; color: #0093d0; padding: 3px 10px; border-radius: 14px; font-size: 0.8rem; font-weight: 600;">Jaw Tension & TMJ</span>
+            <span style="background: #e6f4fb; color: #0093d0; padding: 3px 10px; border-radius: 14px; font-size: 0.8rem; font-weight: 600;">Stiffness & Restrictions</span>
+            <span style="background: #e6f4fb; color: #0093d0; padding: 3px 10px; border-radius: 14px; font-size: 0.8rem; font-weight: 600;">Sport Injuries</span>
+            <span style="background: #e6f4fb; color: #0093d0; padding: 3px 10px; border-radius: 14px; font-size: 0.8rem; font-weight: 600;">Persistent Pain</span>
+          </div>
+          <p style="font-size: 0.86rem; color: #64748b; font-style: italic; margin: 0;">You do not need to know exactly what is causing your pain before coming in—part of the first visit is figuring that out together.</p>
+        </div>
+
+        <!-- 3 Steps -->
+        <div style="margin-bottom: 20px;">
+          <h3 style="font-size: 1.15rem; color: #173753; font-weight: 800; margin-bottom: 12px;">What to Expect at Your First Visit</h3>
+          <div style="display: flex; flex-direction: column; gap: 10px;">
+            <div style="display: flex; gap: 12px; align-items: flex-start; background: #f8fafc; border: 1px solid #e2e8f0; padding: 12px 14px; border-radius: 8px;">
+              <div style="width: 26px; height: 26px; border-radius: 50%; background: #0093d0; color: #fff; display: flex; align-items: center; justify-content: center; font-weight: 800; font-size: 0.8rem; flex-shrink: 0;">1</div>
+              <div><strong style="color: #173753; font-size: 0.9rem;">Understand Your Story:</strong> <span style="font-size: 0.86rem; color: #475569;">Explore symptoms, history, lifestyle, and goals.</span></div>
+            </div>
+            <div style="display: flex; gap: 12px; align-items: flex-start; background: #f8fafc; border: 1px solid #e2e8f0; padding: 12px 14px; border-radius: 8px;">
+              <div style="width: 26px; height: 26px; border-radius: 50%; background: #0093d0; color: #fff; display: flex; align-items: center; justify-content: center; font-weight: 800; font-size: 0.8rem; flex-shrink: 0;">2</div>
+              <div><strong style="color: #173753; font-size: 0.9rem;">Examine What Is Going On:</strong> <span style="font-size: 0.86rem; color: #475569;">Physical exam evaluating mobility, nerve function, and joint mechanics.</span></div>
+            </div>
+            <div style="display: flex; gap: 12px; align-items: flex-start; background: #f8fafc; border: 1px solid #e2e8f0; padding: 12px 14px; border-radius: 8px;">
+              <div style="width: 26px; height: 26px; border-radius: 50%; background: #0093d0; color: #fff; display: flex; align-items: center; justify-content: center; font-weight: 800; font-size: 0.8rem; flex-shrink: 0;">3</div>
+              <div><strong style="color: #173753; font-size: 0.9rem;">Build a Plan Together:</strong> <span style="font-size: 0.86rem; color: #475569;">Collaborative roadmap and hands-on treatment when appropriate on day one.</span></div>
+            </div>
+          </div>
+        </div>
+
+        <!-- FAQs -->
+        <div style="background: #f8fafc; border: 1px solid #e2e8f0; border-radius: 12px; padding: 18px; margin-bottom: 22px;">
+          <h3 style="font-size: 1.15rem; color: #173753; font-weight: 800; margin-bottom: 12px;">Frequently Asked Questions</h3>
+          <div style="display: flex; flex-direction: column; gap: 10px; font-size: 0.88rem; color: #334155;">
+            <div>
+              <strong style="color: #173753;">Does chiropractic care hurt?</strong>
+              <p style="margin: 4px 0 0; color: #475569;">No. Treatment may occasionally feel briefly sensitive in guarded areas, but most patients experience it as pressure, stretching, or massage-like relief.</p>
+            </div>
+            <div style="border-top: 1px solid #e2e8f0; padding-top: 8px;">
+              <strong style="color: #173753;">Do I have to be adjusted or "cracked"?</strong>
+              <p style="margin: 4px 0 0; color: #475569;">No. Adjustments are always optional. Treatment can include gentle joint mobilization, instrument-assisted techniques, soft-tissue work, and pain education.</p>
+            </div>
+            <div style="border-top: 1px solid #e2e8f0; padding-top: 8px;">
+              <strong style="color: #173753;">Will I have to come forever?</strong>
+              <p style="margin: 4px 0 0; color: #475569;">No. Dr. Adam's goal is empowerment, not dependency. We give you tools and strategies to stay well independently.</p>
+            </div>
+          </div>
+        </div>
+
+        <div style="display: flex; gap: 12px; flex-wrap: wrap;">
+          <a href="https://beachealth.janeapp.com/" target="_blank" rel="noopener" class="btn btn-primary">Book with Dr. Adam Online</a>
+          <a href="/chiropractic.html" class="btn btn-secondary">Open Dedicated Chiropractic Page →</a>
+        </div>
+      </div>
+    `
   },
   'dry-needling': {
     title: 'Dry Needling (Intramuscular Stimulation)',
@@ -455,7 +634,10 @@ function initModals() {
       e.preventDefault();
       const id = btn.getAttribute('data-team-id');
       const member = TEAM_DATA[id];
-      if (!member) return;
+      if (member.customHtml) {
+        openModal(member.customHtml);
+        return;
+      }
 
       const html = `
         <div style="display: flex; gap: 24px; align-items: flex-start; flex-wrap: wrap;">
@@ -482,6 +664,11 @@ function initModals() {
       const id = btn.getAttribute('data-service-id');
       const service = SERVICE_DATA[id];
       if (!service) return;
+
+      if (service.customHtml) {
+        openModal(service.customHtml);
+        return;
+      }
 
       const pointsHtml = service.points.map(p => `
         <li style="display: flex; align-items: center; gap: 10px; margin-bottom: 8px;">
