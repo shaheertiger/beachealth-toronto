@@ -106,7 +106,7 @@ function initMobileDrawer() {
   const drawer = document.querySelector('.mobile-drawer');
   const backdrop = document.querySelector('.drawer-backdrop');
   const closeBtn = document.querySelector('.drawer-close');
-  const drawerLinks = document.querySelectorAll('.drawer-nav a, .drawer-footer a');
+  const drawerLinks = document.querySelectorAll('.drawer-nav a, .drawer-footer a, .drawer-portals a');
 
   function openDrawer() {
     drawer.classList.add('open');
@@ -129,6 +129,21 @@ function initMobileDrawer() {
   drawerLinks.forEach(link => {
     link.addEventListener('click', closeDrawer);
   });
+
+  // Auto-hide floating book bar when keyboard opens (input focus)
+  const floatingBar = document.getElementById('floating-book-bar');
+  if (floatingBar) {
+    const inputs = document.querySelectorAll('input, textarea, select');
+    inputs.forEach(input => {
+      input.addEventListener('focus', () => {
+        floatingBar.style.transform = 'translateY(100%)';
+        floatingBar.style.transition = 'transform 0.2s ease';
+      });
+      input.addEventListener('blur', () => {
+        floatingBar.style.transform = 'translateY(0)';
+      });
+    });
+  }
 
   // Global ESC key listener to close drawer and modals
   document.addEventListener('keydown', e => {

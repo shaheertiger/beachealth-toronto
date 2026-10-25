@@ -79,6 +79,7 @@
               <a href="#services" class="dropdown-link" data-service-id="medical-pedicure">Medical Pedicure <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M12 5l7 7-7 7"/></svg></a>
               <a href="#services" class="dropdown-link" data-service-id="chiropractic">Chiropractic <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M12 5l7 7-7 7"/></svg></a>
               <a href="#services" class="dropdown-link" data-service-id="dry-needling">Dry Needling <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M12 5l7 7-7 7"/></svg></a>
+              <a href="#services" class="dropdown-link" data-service-id="massage-therapy">TMJ Massage <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M12 5l7 7-7 7"/></svg></a>
             </div>
           </li>
           <li><a href="#team" class="nav-link">Our Practitioners</a></li>
@@ -88,7 +89,10 @@
       </div>
 
       <div class="header-cta-group">
-        <a href="https://beachealth.janeapp.com/" target="_blank" rel="noopener" class="btn btn-primary" data-open-booking>Book Online</a>
+        <a href="tel:4165464887" class="header-call-btn" title="Call Clinic" aria-label="Call (416) 546-4887">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"></path></svg>
+        </a>
+        <a href="https://beachealth.janeapp.com/" target="_blank" rel="noopener" class="btn btn-primary btn-header-book" data-open-booking>Book Online</a>
         <button class="mobile-toggle" aria-label="Open mobile menu" aria-expanded="false" aria-controls="mobile-drawer">
           <span></span>
           <span></span>
@@ -103,23 +107,54 @@
   <aside class="mobile-drawer" id="mobile-drawer" aria-label="Mobile Navigation">
     <div class="drawer-header">
       <a href="/" aria-label="Beachealth Home">
-        <img src="/images/logo.png" alt="Beachealth" style="height: 38px;" />
+        <img src="/images/logo.png" alt="Beachealth" style="height: 34px;" />
       </a>
       <button class="drawer-close" aria-label="Close menu"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><line x1="18" y1="6" x2="6" y2="18"></line><line x1="6" y1="6" x2="18" y2="18"></line></svg></button>
     </div>
+
+    <!-- Dual Booking Quick Cards inside Drawer -->
+    <div class="drawer-portals">
+      <div class="drawer-portal-title">Direct Booking Portals</div>
+      <a href="https://beachealth.janeapp.com/" target="_blank" rel="noopener" class="drawer-portal-card">
+        <div class="portal-card-icon">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 12h-4l-3 9L9 3l-3 9H2"/></svg>
+        </div>
+        <div class="portal-card-info">
+          <strong>Beachealth Clinic</strong>
+          <span>Osteo, Chiro, RMT, Physio</span>
+        </div>
+        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+      </a>
+
+      <a href="https://beachesfootcare.janeapp.com/" target="_blank" rel="noopener" class="drawer-portal-card footcare">
+        <div class="portal-card-icon">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 17v1a3 3 0 0 0 3 3h10a3 3 0 0 0 3-3v-1"/><path d="M4 12c0-4.4 3.6-8 8-8s8 3.6 8 8"/><path d="M12 4v8"/></svg>
+        </div>
+        <div class="portal-card-info">
+          <strong>Beaches Foot Care Centre</strong>
+          <span>Chiropody, Pedicures, Orthotics</span>
+        </div>
+        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+      </a>
+    </div>
+
     <nav class="drawer-nav">
       <a href="/">Home</a>
-      <a href="#about">About Us</a>
-      <a href="#services">All Services</a>
-      <a href="#team">Our Practitioners</a>
-      <a href="#reviews">Patient Reviews</a>
+      <a href="#about">About Our Clinic</a>
+      <a href="#why-choose-us">Why Choose Us</a>
+      <a href="#services">All 9 Clinical Services</a>
+      <a href="#team">Our 7 Practitioners</a>
+      <a href="#reviews">Patient Reviews (5.0 ★)</a>
       <a href="#blog">Health Articles</a>
-      <a href="#location">Clinic Location & Hours</a>
+      <a href="#location">Location & Hours</a>
     </nav>
+
     <div class="drawer-footer">
-      <a href="https://beachealth.janeapp.com/" target="_blank" rel="noopener" class="btn btn-primary" data-open-booking>Book Appointment Online</a>
-      <a href="tel:4165464887" class="btn btn-secondary">Call (416) 546-4887</a>
-      <div style="font-size: 0.85rem; color: #64748b; text-align: center; margin-top: 10px;">
+      <a href="tel:4165464887" class="btn btn-secondary drawer-call-btn">
+        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"></path></svg>
+        Call Clinic: (416) 546-4887
+      </a>
+      <div class="drawer-address-note">
         Upper Level, 350 Beech Ave, Toronto, ON M4E 3T8
       </div>
     </div>
@@ -289,6 +324,45 @@
           </div>
         </div>
       </div>
+
+      <!-- Why Choose Us? (Faithfully Reconstructed from Original Website) -->
+      <div class="why-choose-us-wrap" id="why-choose-us">
+        <div class="why-header">
+          <span class="section-badge">Our Clinical Difference</span>
+          <h3 class="why-title">Why Choose Us?</h3>
+          <div class="why-divider"></div>
+        </div>
+
+        <div class="why-grid">
+          <!-- Pillar 1 -->
+          <div class="why-card">
+            <div class="why-icon-wrap">
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"></path><circle cx="9" cy="7" r="4"></circle><path d="M23 21v-2a4 4 0 0 0-3-3.87"></path><path d="M16 3.13a4 4 0 0 1 0 7.75"></path></svg>
+            </div>
+            <h4>Experience and Integrated Team</h4>
+            <p>Our practitioners communicate directly across disciplines under one roof—ensuring your Osteopath, Chiropodist, Chiropractor, and Massage Therapist align on your recovery.</p>
+          </div>
+
+          <!-- Pillar 2 -->
+          <div class="why-card">
+            <div class="why-icon-wrap">
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="4" width="18" height="16" rx="2"></rect><circle cx="9" cy="10" r="2"></circle><line x1="15" y1="8" x2="17" y2="8"></line><line x1="15" y1="12" x2="17" y2="12"></line><line x1="7" y1="16" x2="17" y2="16"></line></svg>
+            </div>
+            <h4>Trained and Registered Practitioners</h4>
+            <p>Every clinician is registered with their respective Ontario professional Colleges (CCO, CMTO, COCOO, OAOO), guaranteeing medical standards and insurance coverage.</p>
+          </div>
+
+          <!-- Pillar 3 -->
+          <div class="why-card">
+            <div class="why-icon-wrap">
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M20.42 4.58a5.4 5.4 0 0 0-7.65 0l-.77.78-.77-.78a5.4 5.4 0 0 0-7.65 7.65l.77.78L12 20.67l7.65-7.66.77-.78a5.4 5.4 0 0 0 0-7.65z"></path></svg>
+            </div>
+            <h4>Personalized Treatment</h4>
+            <p>No cookie-cutter protocols. Assessments examine full-body biomechanics and posture, resulting in tailored care that addresses root causes rather than just symptoms.</p>
+          </div>
+        </div>
+      </div>
+
     </div>
   </section>
 
@@ -995,6 +1069,7 @@
             <a href="#services" data-service-id="osteopathy">Osteopathy</a>
             <a href="#services" data-service-id="chiropody">Chiropody & Foot Care</a>
             <a href="#services" data-service-id="massage-therapy">Massage Therapy</a>
+            <a href="#services" data-service-id="massage-therapy">TMJ Massage</a>
             <a href="#services" data-service-id="chiropractic">Chiropractic</a>
             <a href="#services" data-service-id="shockwave-therapy">Shockwave Therapy</a>
             <a href="#services" data-service-id="medical-pedicure">Medical Pedicure</a>
@@ -1014,6 +1089,7 @@
             <a href="#team" data-team-id="jake-maher">Jake Maher (Osteopath)</a>
             <a href="#team" data-team-id="patrice-wilson">Patrice Wilson (RMT)</a>
             <a href="#team" data-team-id="krystele-charles">Krystele Charles (RMT)</a>
+            <a href="https://beachealth.com/job-opportunities/" target="_blank" rel="noopener" style="margin-top: 6px; color: #38bdf8; font-weight: 600;">Job Opportunities →</a>
           </div>
         </div>
 
@@ -1042,7 +1118,7 @@
 
       <div class="footer-bottom">
         <div>
-          © <span id="current-year">2026</span> Beachealth. All rights reserved. Multidisciplinary healthcare in The Beaches, East Toronto.
+          © <span id="current-year">2026</span> Beach Integrated Health Clinic (Beachealth). All rights reserved. Multidisciplinary healthcare in The Beaches, East Toronto.
         </div>
         <div class="footer-bottom-links">
           <a href="#privacy" data-policy-id="privacy">Privacy Policy</a>
@@ -1068,13 +1144,16 @@
   <!-- Interactive Feedback Toast -->
   <div class="toast-notice" id="toast-notification"></div>
 
-  <!-- Mobile Floating Book Bar -->
-  <div class="floating-book-bar">
-    <div>
-      <div style="font-weight: 700; color: #173753; font-size: 0.95rem;">Beachealth Clinic</div>
-      <a href="tel:4165464887" style="font-size: 0.8rem; color: #64748b; text-decoration: none; display: block;" title="Call clinic">(416) 546-4887</a>
-    </div>
-    <a href="https://beachealth.janeapp.com/" target="_blank" rel="noopener" class="btn btn-primary btn-sm" data-open-booking>Book Online</a>
+  <!-- Mobile Floating Book & Call Bar -->
+  <div class="floating-book-bar" id="floating-book-bar">
+    <a href="tel:4165464887" class="floating-call-btn" aria-label="Call clinic reception">
+      <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"></path></svg>
+      <span>(416) 546-4887</span>
+    </a>
+    <button type="button" class="btn btn-primary btn-sm floating-action-btn" data-open-booking>
+      <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><rect x="3" y="4" width="18" height="18" rx="2" ry="2"></rect><line x1="16" y1="2" x2="16" y2="6"></line><line x1="8" y1="2" x2="8" y2="6"></line><line x1="3" y1="10" x2="21" y2="10"></line></svg>
+      Book Online
+    </button>
   </div>
 
   <!-- Main JavaScript -->

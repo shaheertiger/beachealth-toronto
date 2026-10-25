@@ -265,6 +265,13 @@ ul, ol {
   align-items: center;
   justify-content: space-between;
   height: 84px;
+  transition: height var(--transition-fast);
+}
+
+@media (max-width: 768px) {
+  .header-container {
+    height: 60px;
+  }
 }
 
 .brand-logo-wrap {
@@ -276,6 +283,13 @@ ul, ol {
   height: 48px;
   width: auto;
   object-fit: contain;
+  transition: height var(--transition-fast);
+}
+
+@media (max-width: 768px) {
+  .brand-logo {
+    height: 36px;
+  }
 }
 
 .main-nav {
@@ -369,6 +383,36 @@ ul, ol {
   display: flex;
   align-items: center;
   gap: 14px;
+}
+
+.header-call-btn {
+  display: none;
+}
+
+@media (max-width: 768px) {
+  .header-cta-group {
+    gap: 8px;
+  }
+  .header-call-btn {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 36px;
+    height: 36px;
+    border-radius: 50%;
+    background: var(--brand-blue-light);
+    color: var(--brand-blue);
+    flex-shrink: 0;
+    transition: all var(--transition-fast);
+  }
+  .header-call-btn:hover {
+    background: var(--brand-blue);
+    color: #ffffff;
+  }
+  .btn-header-book {
+    padding: 7px 14px;
+    font-size: 0.82rem;
+  }
 }
 
 /* Primary Button */
@@ -479,7 +523,7 @@ ul, ol {
   display: flex;
   flex-direction: column;
   transition: right var(--transition-normal);
-  padding: 30px;
+  padding: 24px 20px;
   overflow-y: auto;
 }
 
@@ -491,6 +535,7 @@ ul, ol {
   position: fixed;
   inset: 0;
   background: rgba(0, 0, 0, 0.5);
+  backdrop-filter: blur(4px);
   z-index: 1050;
   opacity: 0;
   visibility: hidden;
@@ -506,41 +551,161 @@ ul, ol {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  margin-bottom: 30px;
-  padding-bottom: 16px;
+  margin-bottom: 20px;
+  padding-bottom: 14px;
   border-bottom: 1px solid var(--border-color);
 }
 
 .drawer-close {
-  font-size: 28px;
+  width: 36px;
+  height: 36px;
+  border-radius: 50%;
+  background: var(--bg-alt);
+  display: flex;
+  align-items: center;
+  justify-content: center;
   color: var(--text-muted);
-  line-height: 1;
+  transition: all var(--transition-fast);
+}
+
+.drawer-close:hover {
+  background: var(--brand-blue-light);
+  color: var(--brand-blue);
+}
+
+/* Dual Portal Quick Cards inside Drawer */
+.drawer-portals {
+  margin-bottom: 20px;
+  padding-bottom: 16px;
+  border-bottom: 1px solid var(--border-light);
+}
+
+.drawer-portal-title {
+  font-size: 0.72rem;
+  font-weight: 800;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  color: var(--brand-blue);
+  margin-bottom: 10px;
+}
+
+.drawer-portal-card {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  background: var(--bg-page);
+  border: 1.5px solid var(--border-color);
+  border-radius: var(--radius-md);
+  padding: 10px 12px;
+  margin-bottom: 8px;
+  text-decoration: none;
+  transition: all 0.2s ease;
+}
+
+.drawer-portal-card:hover,
+.drawer-portal-card:active {
+  background: #ffffff;
+  border-color: var(--brand-blue);
+  transform: translateX(3px);
+  box-shadow: var(--shadow-sm);
+}
+
+.drawer-portal-card.footcare {
+  border-color: #bae6fd;
+}
+
+.portal-card-icon {
+  width: 34px;
+  height: 34px;
+  border-radius: 8px;
+  background: var(--brand-blue-light);
+  color: var(--brand-blue);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+}
+
+.drawer-portal-card.footcare .portal-card-icon {
+  background: #e0f2fe;
+  color: #0284c7;
+}
+
+.portal-card-info {
+  display: flex;
+  flex-direction: column;
+}
+
+.portal-card-info strong {
+  font-size: 0.88rem;
+  font-weight: 700;
+  color: var(--primary);
+  line-height: 1.25;
+}
+
+.portal-card-info span {
+  font-size: 0.74rem;
+  color: var(--text-muted);
+}
+
+.drawer-portal-card svg:last-child {
+  margin-left: auto;
+  color: var(--text-light);
+  transition: transform 0.2s;
+  flex-shrink: 0;
+}
+
+.drawer-portal-card:hover svg:last-child {
+  transform: translateX(3px);
+  color: var(--brand-blue);
 }
 
 .drawer-nav {
   display: flex;
   flex-direction: column;
-  gap: 16px;
-  margin-bottom: 30px;
+  gap: 6px;
+  margin-bottom: 24px;
 }
 
 .drawer-nav a {
-  font-size: 1.1rem;
+  font-size: 0.98rem;
   font-weight: 600;
   color: var(--primary);
-  padding: 8px 0;
+  padding: 10px 4px;
   border-bottom: 1px solid var(--border-light);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  transition: color var(--transition-fast);
 }
 
 .drawer-nav a:hover {
   color: var(--brand-blue);
+  padding-left: 6px;
 }
 
 .drawer-footer {
   margin-top: auto;
   display: flex;
   flex-direction: column;
-  gap: 16px;
+  gap: 12px;
+  padding-top: 14px;
+  border-top: 1px solid var(--border-light);
+}
+
+.drawer-call-btn {
+  width: 100%;
+  justify-content: center;
+  padding: 12px;
+  font-size: 0.92rem;
+  box-shadow: 0 4px 12px rgba(23, 55, 83, 0.15);
+}
+
+.drawer-address-note {
+  font-size: 0.8rem;
+  color: #64748b;
+  text-align: center;
+  line-height: 1.4;
 }
 
 /* ==========================================================================
@@ -860,51 +1025,97 @@ ul, ol {
   justify-content: center;
 }
 
-.pillars-grid {
+/* Why Choose Us Section (Reconstructed from Original Elementor Site) */
+.why-choose-us-wrap {
+  margin-top: 60px;
+  padding-top: 50px;
+  border-top: 1px solid var(--border-light);
+}
+
+.why-header {
+  text-align: center;
+  margin-bottom: 40px;
+}
+
+.why-title {
+  font-size: 2.1rem;
+  font-weight: 800;
+  color: var(--primary);
+  margin-top: 6px;
+  letter-spacing: -0.01em;
+}
+
+.why-divider {
+  width: 48px;
+  height: 3px;
+  background: var(--brand-blue);
+  margin: 14px auto 0;
+  border-radius: 2px;
+}
+
+.why-grid {
   display: grid;
-  grid-template-columns: 1fr;
-  gap: 20px;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 24px;
 }
 
-.pillar-card {
-  background: var(--bg-page);
-  border-radius: var(--radius-md);
-  padding: 24px;
+@media (max-width: 900px) {
+  .why-grid {
+    grid-template-columns: 1fr;
+    gap: 16px;
+  }
+}
+
+.why-card {
+  background: #ffffff;
   border: 1px solid var(--border-color);
-  transition: all var(--transition-normal);
+  border-radius: var(--radius-lg);
+  padding: 32px 24px;
+  text-align: center;
   display: flex;
-  gap: 18px;
+  flex-direction: column;
+  align-items: center;
+  box-shadow: var(--shadow-xs);
+  transition: all var(--transition-normal);
 }
 
-.pillar-card:hover {
+.why-card:hover {
   transform: translateY(-4px);
   box-shadow: var(--shadow-md);
   border-color: var(--brand-blue);
 }
 
-.pillar-icon {
-  width: 48px;
-  height: 48px;
+.why-icon-wrap {
+  width: 60px;
+  height: 60px;
   border-radius: 50%;
   background: var(--brand-blue-light);
   color: var(--brand-blue);
   display: flex;
   align-items: center;
   justify-content: center;
-  flex-shrink: 0;
+  margin-bottom: 20px;
+  transition: transform var(--transition-fast);
 }
 
-.pillar-info h3 {
+.why-card:hover .why-icon-wrap {
+  transform: scale(1.08);
+  background: var(--brand-blue);
+  color: #ffffff;
+}
+
+.why-card h4 {
   font-size: 1.2rem;
-  font-weight: 700;
+  font-weight: 800;
   color: var(--primary);
-  margin-bottom: 8px;
+  margin-bottom: 12px;
+  line-height: 1.3;
 }
 
-.pillar-info p {
-  font-size: 0.95rem;
+.why-card p {
+  font-size: 0.94rem;
   color: var(--text-body);
-  line-height: 1.55;
+  line-height: 1.6;
 }
 
 /* ==========================================================================
@@ -2021,41 +2232,442 @@ ul, ol {
   transform: translateY(0);
 }
 
-/* Floating Book Now button on mobile */
+/* ==========================================================================
+   STATE-OF-THE-ART MOBILE UI & RESPONSIVE POLISH
+   Tested across iPhone, Android, and tablets (<768px and <400px)
+   ========================================================================== */
+
 .floating-book-bar {
   display: none;
-  position: fixed;
-  bottom: 0;
-  left: 0;
-  right: 0;
-  background: #ffffff;
-  border-top: 1px solid var(--border-color);
-  padding: 12px 20px;
-  padding-bottom: calc(12px + env(safe-area-inset-bottom, 0px));
-  box-shadow: 0 -4px 16px rgba(0, 0, 0, 0.08);
-  z-index: 999;
 }
 
-@media (max-width: 600px) {
+@media (max-width: 768px) {
   body {
-    padding-bottom: 76px;
+    padding-bottom: 68px; /* space for the floating bottom bar */
   }
 
-  .modal-content {
+  /* 1. Spacing & Section Titles */
+  .section {
+    padding: 44px 0;
+  }
+
+  .container {
+    padding-left: 18px;
+    padding-right: 18px;
+  }
+
+  .section-title-wrap {
+    margin-bottom: 30px;
+  }
+
+  .section-badge {
+    font-size: 0.78rem;
+    padding: 5px 14px;
+    margin-bottom: 10px;
+  }
+
+  .section-title {
+    font-size: 1.7rem;
+    line-height: 1.25;
+    margin-bottom: 10px;
+  }
+
+  .section-subtitle {
+    font-size: 0.95rem;
+    line-height: 1.55;
+  }
+
+  /* 2. Hero Slider on Mobile: Touch Optimized, Zero Collision */
+  .hero-slider-section,
+  .hero-slider-container {
+    height: 520px;
+    min-height: 520px;
+  }
+
+  .hero-content {
+    padding: 24px 0 65px;
+    max-width: 100%;
+  }
+
+  .hero-tag {
+    font-size: 0.78rem;
+    padding: 5px 14px;
+    margin-bottom: 14px;
+  }
+
+  .hero-title {
+    font-size: clamp(1.75rem, 6vw, 2.2rem);
+    line-height: 1.15;
+    margin-bottom: 12px;
+  }
+
+  .hero-desc {
+    font-size: 0.95rem;
+    line-height: 1.5;
+    margin-bottom: 22px;
+    display: -webkit-box;
+    -webkit-line-clamp: 3;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+  }
+
+  .hero-actions {
+    display: flex;
+    gap: 10px;
+    flex-wrap: wrap;
+  }
+
+  .hero-actions .btn {
+    padding: 10px 18px;
+    font-size: 0.88rem;
+  }
+
+  .hero-slide-overlay {
+    background: linear-gradient(180deg, rgba(14, 36, 55, 0.78) 0%, rgba(14, 36, 55, 0.94) 100%);
+  }
+
+  /* Slider Navigation on Mobile */
+  .slider-nav-arrows {
+    bottom: 16px;
+    right: 18px;
+    gap: 8px;
+  }
+
+  .slider-arrow {
+    width: 38px;
+    height: 38px;
+  }
+
+  .slider-counter {
+    bottom: 22px;
+    left: 18px;
+    font-size: 0.85rem;
+  }
+
+  .slider-counter .current {
+    font-size: 1.3rem;
+  }
+
+  /* 3. Welcome Section & Why Choose Us on Mobile */
+  .welcome-content h2 {
+    font-size: 1.8rem;
+  }
+
+  .welcome-lead {
+    font-size: 1.05rem;
+  }
+
+  .welcome-text {
+    font-size: 0.94rem;
+  }
+
+  .welcome-actions {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    gap: 10px;
+  }
+
+  .welcome-actions .btn {
+    width: 100%;
+  }
+
+  .why-choose-us-wrap {
+    margin-top: 40px;
+    padding-top: 36px;
+  }
+
+  .why-title {
+    font-size: 1.7rem;
+  }
+
+  .why-card {
+    padding: 24px 18px;
+  }
+
+  .why-card h4 {
+    font-size: 1.1rem;
+  }
+
+  .why-card p {
+    font-size: 0.88rem;
+  }
+
+  /* 4. Services Filter: Sleek Horizontal Scroll Chips */
+  .services-filter {
+    display: flex;
+    overflow-x: auto;
+    flex-wrap: nowrap;
+    justify-content: flex-start;
+    gap: 8px;
+    padding: 4px 18px 12px;
+    margin: 0 -18px 24px;
+    -webkit-overflow-scrolling: touch;
+    scrollbar-width: none;
+  }
+
+  .services-filter::-webkit-scrollbar {
+    display: none;
+  }
+
+  .filter-btn {
+    flex-shrink: 0;
+    padding: 7px 16px;
+    font-size: 0.85rem;
+  }
+
+  .services-grid {
+    grid-template-columns: 1fr;
+    gap: 18px;
+  }
+
+  .service-img-wrap {
+    height: 180px;
+  }
+
+  .service-body {
+    padding: 18px;
+  }
+
+  .service-title {
+    font-size: 1.22rem;
+    margin-bottom: 8px;
+  }
+
+  .service-desc {
+    font-size: 0.9rem;
+    margin-bottom: 14px;
+    line-height: 1.55;
+  }
+
+  .service-tags {
+    margin-bottom: 14px;
+    gap: 5px;
+  }
+
+  .service-tag-item {
+    font-size: 0.72rem;
+    padding: 2px 8px;
+  }
+
+  .service-card-footer {
+    padding-top: 14px;
+  }
+
+  /* 5. Team Section on Mobile */
+  .team-grid {
+    grid-template-columns: 1fr;
+    gap: 18px;
+  }
+
+  .team-img-wrap {
+    height: 220px;
+  }
+
+  .team-body {
+    padding: 18px;
+  }
+
+  .team-name {
+    font-size: 1.18rem;
+  }
+
+  .team-role {
+    font-size: 0.82rem;
+    margin-bottom: 8px;
+  }
+
+  .team-bio {
+    font-size: 0.86rem;
+    line-height: 1.5;
+    margin-bottom: 14px;
+    display: -webkit-box;
+    -webkit-line-clamp: 3;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+  }
+
+  /* 6. Callout Banner on Mobile */
+  .callout-banner {
+    padding: 48px 0;
+  }
+
+  .callout-text h2 {
+    font-size: 1.7rem;
+    margin-bottom: 10px;
+  }
+
+  .callout-text p {
+    font-size: 1rem;
+    margin-bottom: 20px;
+  }
+
+  .callout-actions {
+    width: 100%;
+  }
+
+  .callout-actions .btn {
+    width: 100%;
+  }
+
+  /* 7. Reviews Carousel on Mobile: Smooth Touch Swipe */
+  .reviews-section {
+    padding: 44px 0;
+  }
+
+  .reviews-title {
+    font-size: 1.6rem;
+  }
+
+  .reviews-track {
+    padding: 6px 18px 16px;
+    margin: 0 -18px;
+    gap: 14px;
+  }
+
+  .review-slide-card {
+    flex: 0 0 86%;
+    padding: 22px 18px;
+    border-radius: 14px;
+  }
+
+  .review-quote-text {
+    font-size: 0.88rem;
+    line-height: 1.6;
+    margin: 14px 0 18px;
+  }
+
+  /* 8. Contact Form & Location Card on Mobile */
+  .contact-info-card,
+  .contact-form-card {
     padding: 24px 18px;
     border-radius: var(--radius-lg);
   }
 
+  .contact-info-card h3,
+  .contact-form-card h3 {
+    font-size: 1.35rem;
+    margin-bottom: 14px;
+  }
+
+  .contact-detail-list {
+    gap: 16px;
+    margin-bottom: 22px;
+  }
+
+  .contact-icon {
+    width: 38px;
+    height: 38px;
+  }
+
+  .contact-detail-text p,
+  .contact-detail-text a {
+    font-size: 0.95rem;
+  }
+
+  .hours-table td {
+    padding: 6px 0;
+    font-size: 0.86rem;
+  }
+
+  .map-container {
+    height: 280px;
+    margin-top: 30px;
+  }
+
+  /* 9. Floating Bottom Action Bar */
   .floating-book-bar {
     display: flex;
     align-items: center;
     justify-content: space-between;
-    gap: 12px;
+    gap: 10px;
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background: rgba(255, 255, 255, 0.97);
+    backdrop-filter: blur(14px);
+    -webkit-backdrop-filter: blur(14px);
+    border-top: 1px solid var(--border-color);
+    padding: 8px 16px;
+    padding-bottom: calc(8px + env(safe-area-inset-bottom, 0px));
+    box-shadow: 0 -4px 18px rgba(15, 23, 42, 0.08);
+    z-index: 999;
+  }
+
+  .floating-call-btn {
+    display: inline-flex;
+    align-items: center;
+    gap: 7px;
+    font-weight: 700;
+    font-size: 0.84rem;
+    color: var(--primary);
+    background: var(--bg-alt);
+    padding: 8px 12px;
+    border-radius: var(--radius-full);
+    border: 1px solid var(--border-color);
+    text-decoration: none;
+    flex-shrink: 0;
+  }
+
+  .floating-call-btn svg {
+    color: var(--brand-blue);
+  }
+
+  .floating-action-btn {
+    padding: 9px 16px;
+    font-size: 0.86rem;
+    box-shadow: 0 4px 12px var(--brand-blue-glow);
+    white-space: nowrap;
+    flex-shrink: 0;
+  }
+
+  /* 10. Modals & Toast */
+  .modal-content {
+    padding: 24px 18px;
+    border-radius: var(--radius-lg);
+    max-height: 85vh;
   }
 
   .toast-notice {
-    bottom: 84px;
-    right: 16px;
-    left: 16px;
+    bottom: 74px;
+    right: 14px;
+    left: 14px;
+    padding: 12px 16px;
+    font-size: 0.88rem;
+  }
+}
+
+/* Extra small devices (<400px like iPhone SE) */
+@media (max-width: 400px) {
+  .hero-slider-section,
+  .hero-slider-container {
+    height: 500px;
+    min-height: 500px;
+  }
+
+  .hero-title {
+    font-size: 1.65rem;
+  }
+
+  .hero-actions .btn {
+    width: 100%;
+    justify-content: center;
+  }
+
+  .floating-call-btn span {
+    display: none; /* Icon-only call button on narrow screens */
+  }
+
+  .floating-call-btn {
+    padding: 8px;
+    width: 38px;
+    height: 38px;
+    justify-content: center;
+  }
+
+  .floating-action-btn {
+    flex-grow: 1;
+    justify-content: center;
   }
 }
