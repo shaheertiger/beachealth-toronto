@@ -328,7 +328,6 @@ const SERVICE_DATA = {
     customHtml: `
       <div class="service-modal-rich">
         <img src="/images/pilates-card.jpeg" alt="Clinical Pilates & Physiotherapy at Beach Health" style="width: 100%; height: 240px; object-fit: cover; border-radius: 12px; margin-bottom: 20px;" />
-        <div style="display: inline-block; padding: 4px 12px; background: #e6f4fb; color: #0093d0; font-size: 0.8rem; font-weight: 700; border-radius: 20px; text-transform: uppercase; margin-bottom: 8px;">Physiotherapy & Active Rehab</div>
         <h2 style="font-size: 1.7rem; color: #173753; margin-bottom: 8px; font-weight: 800;">Clinical Pilates & Physiotherapy at Beach Health</h2>
         <p style="font-size: 1.05rem; font-weight: 600; color: #0093d0; margin-bottom: 16px;">Move with confidence. Build strength. Support your long-term health.</p>
 
@@ -446,7 +445,6 @@ const SERVICE_DATA = {
     customHtml: `
       <div class="service-modal-rich">
         <img src="/images/chiro-hero.jpeg" alt="Dr. Adam Bletsoe Chiropractic Care" style="width: 100%; height: 240px; object-fit: cover; border-radius: 12px; margin-bottom: 20px;" />
-        <div style="display: inline-block; padding: 4px 12px; background: #e6f4fb; color: #0093d0; font-size: 0.8rem; font-weight: 700; border-radius: 20px; text-transform: uppercase; margin-bottom: 8px;">Beachealth Services</div>
         <h2 style="font-size: 1.7rem; color: #173753; margin-bottom: 8px; font-weight: 800;">Chiropractic Care with Dr. Adam Bletsoe</h2>
         <p style="font-size: 1.05rem; font-weight: 600; color: #0093d0; margin-bottom: 16px;">Move Better. Hurt Less. Get Back to Doing What You Love.</p>
 
@@ -680,7 +678,6 @@ function initModals() {
       const html = `
         <div>
           <img src="${service.image}" alt="${service.title}" style="width: 100%; height: 220px; object-fit: cover; border-radius: 12px; margin-bottom: 20px;" />
-          <div style="display: inline-block; padding: 4px 12px; background: #e6f4fb; color: #0093d0; font-size: 0.8rem; font-weight: 700; border-radius: 20px; text-transform: uppercase; margin-bottom: 8px;">${service.portal}</div>
           <h3 style="font-size: 1.6rem; color: #173753; margin-bottom: 12px;">${service.title}</h3>
           <p style="font-size: 1.02rem; line-height: 1.65; color: #334155; margin-bottom: 20px;">${service.desc}</p>
           <div style="background: #f8fafc; padding: 20px; border-radius: 12px; border: 1px solid #e2e8f0; margin-bottom: 24px;">
