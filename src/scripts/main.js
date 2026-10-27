@@ -435,7 +435,7 @@ const TEAM_DATA = {
 const SERVICE_DATA = {
   'osteopathy': {
     pageUrl: '/osteopathy.html',
-    title: 'Osteopathy (Manual Practice)',
+    title: 'Osteopathy',
     portal: 'Beachealth Services',
     bookingUrl: 'https://beachealth.janeapp.com/#/osteopathy',
     image: '/images/osteo-card.jpg',
@@ -449,7 +449,7 @@ const SERVICE_DATA = {
   },
   'chiropody': {
     pageUrl: '/chiropody.html',
-    title: 'Chiropody & Advanced Foot Care',
+    title: 'Chiropody and Foot Care',
     portal: 'Beaches Foot Care Centre',
     bookingUrl: 'https://beachesfootcare.janeapp.com/',
     image: '/images/chiropody-card.jpg',
@@ -463,7 +463,7 @@ const SERVICE_DATA = {
   },
   'massage-therapy': {
     pageUrl: '/massage-therapy.html',
-    title: 'Registered Massage Therapy (RMT)',
+    title: 'Massage Therapy',
     portal: 'Beachealth Services',
     bookingUrl: 'https://beachealth.janeapp.com/#/registered-massage-therapy',
     image: '/images/massage-card.jpg',
@@ -556,7 +556,7 @@ const SERVICE_DATA = {
   },
   'medical-pedicure': {
     pageUrl: '/medical-pedicure.html',
-    title: 'Clinical Medical Pedicure',
+    title: 'Medical Pedicure',
     portal: 'Beaches Foot Care Centre',
     bookingUrl: 'https://beachesfootcare.janeapp.com/',
     image: '/images/pedicure-card.jpg',
@@ -570,7 +570,7 @@ const SERVICE_DATA = {
   },
   'shockwave-therapy': {
     pageUrl: '/shockwave-therapy.html',
-    title: 'Radial Shockwave Therapy',
+    title: 'Shockwave',
     portal: 'Beachealth Services',
     bookingUrl: 'https://beachealth.janeapp.com/',
     image: '/images/shockwave-card.jpeg',
@@ -691,7 +691,7 @@ const SERVICE_DATA = {
   },
   'dry-needling': {
     pageUrl: '/dry-needling.html',
-    title: 'Dry Needling (Intramuscular Stimulation)',
+    title: 'Dry Needle',
     portal: 'Beachealth Services',
     bookingUrl: 'https://beachealth.janeapp.com/#/acupuncture',
     image: '/images/dry-needling-hero.jpg',
@@ -929,11 +929,12 @@ function initModals() {
                 <h4 style="font-size: 1.2rem; color: #173753; font-weight: 800; margin-bottom: 6px;">Beachealth Services</h4>
                 <p style="font-size: 0.85rem; color: #64748b; margin-bottom: 14px; line-height: 1.4;">Multi-disciplinary manual therapy, spinal rehab, and sports recovery.</p>
                 <ul style="font-size: 0.84rem; color: #334155; margin-bottom: 18px; display: flex; flex-direction: column; gap: 6px;">
-                  <li style="display: flex; align-items: center; gap: 8px;"><svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="#0093d0" stroke-width="3"><polyline points="20 6 9 17 4 12"></polyline></svg> Osteopathy (Manual Practice)</li>
+                  <li style="display: flex; align-items: center; gap: 8px;"><svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="#0093d0" stroke-width="3"><polyline points="20 6 9 17 4 12"></polyline></svg> Osteopathy</li>
                   <li style="display: flex; align-items: center; gap: 8px;"><svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="#0093d0" stroke-width="3"><polyline points="20 6 9 17 4 12"></polyline></svg> Chiropractic Care</li>
                   <li style="display: flex; align-items: center; gap: 8px;"><svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="#0093d0" stroke-width="3"><polyline points="20 6 9 17 4 12"></polyline></svg> Physiotherapy &amp; Clinical Pilates</li>
-                  <li style="display: flex; align-items: center; gap: 8px;"><svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="#0093d0" stroke-width="3"><polyline points="20 6 9 17 4 12"></polyline></svg> Registered Massage Therapy (RMT)</li>
-                  <li style="display: flex; align-items: center; gap: 8px;"><svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="#0093d0" stroke-width="3"><polyline points="20 6 9 17 4 12"></polyline></svg> Shockwave &amp; Dry Needle</li>
+                  <li style="display: flex; align-items: center; gap: 8px;"><svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="#0093d0" stroke-width="3"><polyline points="20 6 9 17 4 12"></polyline></svg> Massage Therapy</li>
+                  <li style="display: flex; align-items: center; gap: 8px;"><svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="#0093d0" stroke-width="3"><polyline points="20 6 9 17 4 12"></polyline></svg> Shockwave</li>
+                  <li style="display: flex; align-items: center; gap: 8px;"><svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="#0093d0" stroke-width="3"><polyline points="20 6 9 17 4 12"></polyline></svg> Dry Needle</li>
                 </ul>
               </div>
               <a href="https://beachealth.janeapp.com/" target="_blank" rel="noopener" class="btn btn-primary" style="width: 100%; text-align: center; justify-content: center; font-size: 0.9rem; padding: 10px 16px;">
@@ -951,11 +952,9 @@ function initModals() {
                 <h4 style="font-size: 1.2rem; color: #173753; font-weight: 800; margin-bottom: 6px;">Beaches Foot Care Centre</h4>
                 <p style="font-size: 0.85rem; color: #64748b; margin-bottom: 14px; line-height: 1.4;">Registered Chiropody, medical-grade pedicures, and bespoke orthotics.</p>
                 <ul style="font-size: 0.84rem; color: #334155; margin-bottom: 18px; display: flex; flex-direction: column; gap: 6px;">
-                  <li style="display: flex; align-items: center; gap: 8px;"><svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="#0093d0" stroke-width="3"><polyline points="20 6 9 17 4 12"></polyline></svg> Chiropody &amp; Foot Care</li>
-                  <li style="display: flex; align-items: center; gap: 8px;"><svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="#0093d0" stroke-width="3"><polyline points="20 6 9 17 4 12"></polyline></svg> Sterile Clinical Medical Pedicures</li>
+                  <li style="display: flex; align-items: center; gap: 8px;"><svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="#0093d0" stroke-width="3"><polyline points="20 6 9 17 4 12"></polyline></svg> Chiropody and Foot Care</li>
+                  <li style="display: flex; align-items: center; gap: 8px;"><svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="#0093d0" stroke-width="3"><polyline points="20 6 9 17 4 12"></polyline></svg> Medical Pedicure</li>
                   <li style="display: flex; align-items: center; gap: 8px;"><svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="#0093d0" stroke-width="3"><polyline points="20 6 9 17 4 12"></polyline></svg> Custom Biomechanical Orthotics</li>
-                  <li style="display: flex; align-items: center; gap: 8px;"><svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="#0093d0" stroke-width="3"><polyline points="20 6 9 17 4 12"></polyline></svg> Ingrown Toenails &amp; Fungal Care</li>
-                  <li style="display: flex; align-items: center; gap: 8px;"><svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="#0093d0" stroke-width="3"><polyline points="20 6 9 17 4 12"></polyline></svg> Plantar Fasciitis &amp; Heel Spurs</li>
                 </ul>
               </div>
               <a href="https://beachesfootcare.janeapp.com/" target="_blank" rel="noopener" class="btn btn-primary" style="width: 100%; text-align: center; justify-content: center; font-size: 0.9rem; padding: 10px 16px;">

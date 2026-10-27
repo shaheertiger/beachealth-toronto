@@ -118,5 +118,5 @@ Follow the interactive prompts to deploy directly from your terminal.
 - **Address**: Upper Level, 350 Beech Avenue, Toronto, ON M4E 3T8 (at Kingston Rd)
 - **Phone**: `(416) 546-4887` | **Fax**: `(647) 689-2337`
 - **Email**: `admin@beachealth.com`
-- **Services**: Osteopathy, Chiropody, Massage Therapy, Physio Pilates, Running Analysis, Shockwave Therapy, Medical Pedicure, Chiropractic, Dry Needling.
+- **Services**: Osteopathy, Chiropractic Care, Physiotherapy & Clinical Pilates, Chiropody and Foot Care, Medical Pedicure, Massage Therapy, Shockwave, Dry Needle.
 - **Online Booking**: Seamless integration with JaneApp (`https://beachealth.janeapp.com/`).
