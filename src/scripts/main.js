@@ -285,27 +285,37 @@ function initCardLandingAnimations() {
 
     intersectingEntries.forEach((entry, idx) => {
       const card = entry.target;
-      // Stagger entrance delay: 90ms per card index in the visible batch
-      const delayMs = idx * 90;
+      // Stagger entrance delay: 70ms per card index in the visible batch
+      const delayMs = idx * 70;
       card.style.transitionDelay = `${delayMs}ms`;
 
       requestAnimationFrame(() => {
         card.classList.add('card-landed');
       });
 
-      // Clear transitionDelay after landing so hover effects respond instantaneously
+      // Clear transitionDelay and cleanup init class after landing
       setTimeout(() => {
         card.style.transitionDelay = '';
-      }, delayMs + 800);
+        card.classList.remove('card-animate-init');
+      }, delayMs + 850);
 
       obs.unobserve(card);
     });
   }, {
-    threshold: 0.08,
-    rootMargin: '0px 0px -30px 0px'
+    threshold: 0.05,
+    rootMargin: '0px 0px -20px 0px'
   });
 
   cards.forEach(card => observer.observe(card));
+
+  // Global safety fallback: Ensure all cards become fully visible and active
+  setTimeout(() => {
+    cards.forEach(card => {
+      card.classList.add('card-landed');
+      card.classList.remove('card-animate-init');
+      card.style.opacity = '1';
+    });
+  }, 1200);
 }
 
 /* ==========================================================================
