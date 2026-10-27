@@ -2397,15 +2397,36 @@ ul, ol {
 .modal-content {
   background: #ffffff;
   border-radius: var(--radius-xl);
-  max-width: 650px;
+  max-width: 720px;
   width: 100%;
   max-height: 90vh;
-  overflow-y: auto;
+  /* The inner container scrolls, so the close button stays pinned in the corner */
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
   position: relative;
   box-shadow: var(--shadow-xl);
   transform: scale(0.95);
   transition: transform var(--transition-normal);
-  padding: 36px;
+  padding: 36px 0 36px 36px;
+}
+
+#modal-body-container {
+  flex: 1 1 auto;
+  min-height: 0;
+  overflow-y: auto;
+  overscroll-behavior: contain;
+  padding-right: 36px;
+}
+
+/* Page scroll lock while a modal or the mobile drawer is open */
+html.scroll-locked,
+html.scroll-locked body {
+  overflow: hidden;
+}
+
+html.scroll-locked body {
+  padding-right: var(--scrollbar-width, 0px);
 }
 
 .modal-overlay.open .modal-content {
@@ -2414,8 +2435,10 @@ ul, ol {
 
 .modal-close {
   position: absolute;
-  top: 20px;
-  right: 20px;
+  top: 16px;
+  right: 16px;
+  z-index: 2;
+  box-shadow: 0 2px 8px rgba(15, 23, 42, 0.12);
   width: 36px;
   height: 36px;
   border-radius: 50%;
@@ -2848,9 +2871,13 @@ ul, ol {
 
   /* 10. Modals & Toast */
   .modal-content {
-    padding: 24px 18px;
+    padding: 24px 0 24px 18px;
     border-radius: var(--radius-lg);
     max-height: 85vh;
+  }
+
+  #modal-body-container {
+    padding-right: 18px;
   }
 
   .toast-notice {
