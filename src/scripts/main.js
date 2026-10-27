@@ -229,7 +229,7 @@ const TEAM_DATA = {
         </ul>
       </div>
       <div style="margin-top: 16px;">
-        <a href="/chiropractic.html" style="color: #0093d0; font-weight: 700; text-decoration: underline;">Read Full Chiropractic Practice Page →</a>
+        <a href="/chiropractic.html" style="color: #0093d0; font-weight: 700; text-decoration: underline;">Learn More →</a>
       </div>
     `
   },
@@ -383,7 +383,7 @@ const SERVICE_DATA = {
 
         <div style="display: flex; gap: 12px; flex-wrap: wrap;">
           <a href="https://beachealth.janeapp.com/#/pilates-physio-pilates" target="_blank" rel="noopener" class="btn btn-primary">Book Clinical Pilates</a>
-          <a href="/clinical-pilates.html" class="btn btn-secondary">View Clinical Pilates Page <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M12 5l7 7-7 7"/></svg></a>
+          <a href="/clinical-pilates.html" class="btn btn-secondary">Learn More <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M12 5l7 7-7 7"/></svg></a>
         </div>
       </div>
     `
@@ -532,7 +532,7 @@ const SERVICE_DATA = {
 
         <div style="display: flex; gap: 12px; flex-wrap: wrap;">
           <a href="https://beachealth.janeapp.com/" target="_blank" rel="noopener" class="btn btn-primary">Book with Dr. Adam</a>
-          <a href="/chiropractic.html" class="btn btn-secondary">View Chiropractic Page <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M12 5l7 7-7 7"/></svg></a>
+          <a href="/chiropractic.html" class="btn btn-secondary">Learn More <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M12 5l7 7-7 7"/></svg></a>
         </div>
       </div>
     `
@@ -716,7 +716,7 @@ function initModals() {
           </div>
           <div style="display: flex; gap: 14px; flex-wrap: wrap;">
             <a href="${service.bookingUrl || 'https://beachealth.janeapp.com/'}" target="_blank" rel="noopener" class="btn btn-primary">Book Now</a>
-            ${service.pageUrl ? `<a href="${service.pageUrl}" class="btn btn-secondary">View Full Page <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M12 5l7 7-7 7"/></svg></a>` : ''}
+            ${service.pageUrl ? `<a href="${service.pageUrl}" class="btn btn-secondary">Learn More <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M12 5l7 7-7 7"/></svg></a>` : ''}
             <a href="tel:4165464887" class="btn btn-outline-dark">Call (416) 546-4887</a>
           </div>
         </div>
