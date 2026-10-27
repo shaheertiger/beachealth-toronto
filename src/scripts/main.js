@@ -8,6 +8,7 @@ document.addEventListener('DOMContentLoaded', () => {
   initMobileDrawer();
   initServicesFilter();
   initCardLandingAnimations();
+  init3DCardTilt();
   initModals();
   initContactForm();
   initReviewsSlider();
@@ -206,7 +207,7 @@ function initServicesFilter() {
    plus Welcome Section
    ========================================================================== */
 function initCardLandingAnimations() {
-  const cards = document.querySelectorAll('.service-card, .team-card, .why-card');
+  const cards = document.querySelectorAll('.service-card, .team-card, .why-card, .review-slide-card');
 
   // Check if reduced motion is preferred
   const prefersReducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
@@ -299,6 +300,50 @@ function initCardLandingAnimations() {
   });
 
   cards.forEach(card => observer.observe(card));
+}
+
+/* ==========================================================================
+   3C. 3D MAGNETIC PERSPECTIVE TILT (DESKTOP INTERACTION)
+   Dynamic physics-based tilt responding to cursor position
+   ========================================================================== */
+function init3DCardTilt() {
+  if (window.matchMedia('(hover: none)').matches) return;
+
+  const tiltCards = document.querySelectorAll('.service-card, .team-card, .why-card, .review-slide-card');
+  if (!tiltCards.length) return;
+
+  tiltCards.forEach(card => {
+    let bounds;
+
+    function onMouseEnter() {
+      bounds = card.getBoundingClientRect();
+      card.style.transition = 'transform 0.1s ease-out, box-shadow 0.3s ease, border-color 0.3s ease';
+    }
+
+    function onMouseMove(e) {
+      if (!bounds) bounds = card.getBoundingClientRect();
+      const mouseX = e.clientX - bounds.left;
+      const mouseY = e.clientY - bounds.top;
+      const xPct = (mouseX / bounds.width) - 0.5;
+      const yPct = (mouseY / bounds.height) - 0.5;
+
+      // Subtle, sleek 3D rotation (max ~6.5deg)
+      const rotateX = (-yPct * 6.5).toFixed(2);
+      const rotateY = (xPct * 6.5).toFixed(2);
+
+      card.style.transform = `perspective(1000px) rotateX(${rotateX}deg) rotateY(${rotateY}deg) translateY(-8px) scale3d(1.015, 1.015, 1.015)`;
+    }
+
+    function onMouseLeave() {
+      card.style.transition = 'transform 0.5s cubic-bezier(0.16, 1, 0.3, 1), box-shadow 0.4s ease, border-color 0.4s ease';
+      card.style.transform = '';
+      bounds = null;
+    }
+
+    card.addEventListener('mouseenter', onMouseEnter);
+    card.addEventListener('mousemove', onMouseMove);
+    card.addEventListener('mouseleave', onMouseLeave);
+  });
 }
 
 /* ==========================================================================
