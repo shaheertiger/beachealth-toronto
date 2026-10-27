@@ -429,6 +429,84 @@ const TEAM_DATA = {
     bookingUrl: 'https://beachealth.janeapp.com/#/registered-massage-therapy',
     image: '/images/team-krystele.jpg',
     bio: `Krystele Charles is a compassionate Registered Massage Therapist dedicated to musculoskeletal recovery and pain reduction. Her clinical focus includes TMJ dysfunction massage, sports injury recovery, neck and shoulder tension relief, and stress reduction. Krystele coordinates with Beachealth’s osteopaths and chiropractors to augment structural recovery with targeted soft-tissue therapy.`
+  },
+  'shakiba-bani': {
+    name: 'Shakiba Bani',
+    role: 'Registered Physiotherapist (Javia Partner)',
+    portal: 'Physiotherapy & Pelvic Health',
+    bookingUrl: 'https://javia.janeapp.com/',
+    image: '/images/team-shakiba.jpg',
+    bio: `
+      <p style="font-size: 1.05rem; font-weight: 700; color: #0093d0; margin-bottom: 12px;">Registered Physiotherapist & Founder of Javia</p>
+      <p style="margin-bottom: 14px;">Shakiba graduated from Western University with a Master’s in Physical Therapy (MPT) and is registered with the College of Physiotherapists of Ontario and the College of Health and Care Professionals of BC. She brings a profound passion for movement and exercise therapy, underpinned by her background in personal training and gymnastics-related injury recovery.</p>
+      <p style="margin-bottom: 14px;">Through Beach Health's outsourcing partnership with Javia, Shakiba delivers multi-dimensional, evidence-based care focused on pain-free living, functional mobility, and long-term health longevity.</p>
+      <div style="background: #fdf2f8; border: 1px solid #fbcfe8; border-radius: 10px; padding: 16px; margin: 18px 0;">
+        <strong style="color: #9d174d; display: block; margin-bottom: 8px;">Areas of Practice & Clinical Focus:</strong>
+        <ul style="display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 6px; font-size: 0.9rem; color: #701a75;">
+          <li>• Pelvic Health Physiotherapy (Pre/Postnatal)</li>
+          <li>• Musculoskeletal Rehabilitation & Back Pain</li>
+          <li>• Vestibular Dysfunction & Concussion Recovery</li>
+          <li>• Return-to-Sports Rehabilitation</li>
+          <li>• Therapeutic Exercise & Movement Optimization</li>
+        </ul>
+      </div>
+      <p style="font-size: 0.88rem; color: #64748b; margin-top: 12px;"><strong>Languages:</strong> English, Persian</p>
+    `
+  },
+  'amin-montazeri': {
+    name: 'Amin Montazeri',
+    role: 'Registered Physiotherapist (Javia Partner)',
+    portal: 'Physiotherapy & Active Rehab',
+    bookingUrl: 'https://javia.janeapp.com/',
+    image: '/images/team-amin.jpg',
+    bio: `
+      <p style="font-size: 1.05rem; font-weight: 700; color: #0093d0; margin-bottom: 12px;">Registered Physiotherapist & CSCS</p>
+      <p style="margin-bottom: 14px;">Amin is a Registered Physiotherapist registered with the College of Physiotherapists of Ontario and a certified Strength and Conditioning Specialist (CSCS). He holds a Master of Physical Therapy from Western University and a BSc in Kinesiology & Recreation Management from the University of Manitoba. With clinical experience across Canada and internationally, Amin delivers patient-centred, evidence-based care tailored to each person.</p>
+      <p style="margin-bottom: 14px;">His approach integrates manual therapy techniques, functional movement training, and strength conditioning principles. Drawing on his background as a CSEP-Certified Personal Trainer and black belt martial artist, Amin incorporates acupuncture and dry needling into treatment plans when clinically appropriate to address muscle tension, accelerate recovery, and build lifelong resilience.</p>
+      <div style="background: #f8fafc; border: 1px solid #e2e8f0; border-radius: 10px; padding: 16px; margin: 18px 0;">
+        <strong style="color: #173753; display: block; margin-bottom: 8px;">Credentials & Areas of Practice:</strong>
+        <ul style="display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 6px; font-size: 0.9rem; color: #334155;">
+          <li>• Musculoskeletal & Orthopedic Rehabilitation</li>
+          <li>• Manual Therapy & Joint Mobilization</li>
+          <li>• Acupuncture & Dry Needling</li>
+          <li>• Therapeutic Exercise & Injury Prevention</li>
+          <li>• Concussion Recovery & Chronic Pain Management</li>
+          <li>• Strength Training & Functional Movement</li>
+        </ul>
+      </div>
+      <div style="background: #f0fdf4; border: 1px solid #bbf7d0; border-radius: 10px; padding: 16px; margin-bottom: 14px;">
+        <strong style="color: #166534; display: block; margin-bottom: 8px;">Physiotherapy Services & Pricing (CAD):</strong>
+        <ul style="font-size: 0.9rem; color: #14532d; display: flex; flex-direction: column; gap: 6px;">
+          <li>• <strong>Initial Physiotherapy Assessment:</strong> 60 minutes — $160</li>
+          <li>• <strong>Physiotherapy Session:</strong> 30 min — $105 | 45 min — $160 | 60 min — $200</li>
+        </ul>
+        <span style="font-size: 0.8rem; color: #15803d; display: block; margin-top: 6px; font-style: italic;">Eligible for extended health insurance coverage and direct billing where applicable.</span>
+      </div>
+      <p style="font-size: 0.88rem; color: #64748b; margin: 0;"><strong>Languages:</strong> English, Persian, Arabic</p>
+    `
+  },
+  'adriana-lis': {
+    name: 'Adriana Lis Pereira',
+    role: 'Physiotherapy Assistant (PTA) | Clinical Pilates Instructor',
+    portal: 'Clinical Pilates & Movement',
+    bookingUrl: 'https://beachealth.janeapp.com/#/pilates-physio-pilates',
+    image: '/images/team-lis.jpg',
+    bio: `
+      <p style="font-size: 1.05rem; font-weight: 700; color: #0093d0; margin-bottom: 12px;">Physiotherapy Assistant (PTA) | Clinical Pilates Instructor, PhD</p>
+      <p style="margin-bottom: 14px;">Adriana Lis Pereira is a movement professional with approximately 30 years of professional experience, including extensive clinical experience in Brazil and more than 15 years of university teaching and professional education. She holds a Bachelor's degree in Physiotherapy from Brazil, a Master's degree, and a PhD in Medical Sciences from the University of São Paulo, as well as specialist certification in Neuroscience from UNICAMP.</p>
+      <p style="margin-bottom: 14px;">Her academic and scientific background includes movement science, motor control, motor learning, and research related to the autonomic nervous system. Her multidisciplinary training includes Clinical Pilates, Yoga, Classical Ballet, and principles of Global Postural Re-education (RPG).</p>
+      <p style="margin-bottom: 14px;">At Beach Health, Adriana supports the delivery of individualized physiotherapy treatment plans through therapeutic exercises and rehabilitation programs under the direction and supervision of a Registered Physiotherapist. She also offers Clinical Pilates and movement sessions focused on postural awareness, coordination, stability, strength, mobility, and body awareness.</p>
+      <div style="background: #e0f2fe; border: 1px solid #bae6fd; border-radius: 10px; padding: 16px; margin: 18px 0;">
+        <strong style="color: #0369a1; display: block; margin-bottom: 8px;">Lis — Services & Pricing (CAD):</strong>
+        <ul style="font-size: 0.9rem; color: #075985; display: flex; flex-direction: column; gap: 6px;">
+          <li>• <strong>Initial Movement & Biomechanical Screening:</strong> 30 mins — $105</li>
+          <li>• <strong>Physio Clinical Pilates:</strong> 30 mins — $105 | 45 mins — $160 | 60 mins — $200</li>
+          <li>• <strong>Mindful Movement & Nervous System Balance:</strong> 45 mins — $160</li>
+          <li>• <strong>Physio Postural Strength:</strong> 45 mins — $160</li>
+        </ul>
+      </div>
+      <p style="font-size: 0.88rem; color: #64748b; margin: 0;"><strong>Languages:</strong> English, Portuguese | <strong>City:</strong> Toronto</p>
+    `
   }
 };
 
