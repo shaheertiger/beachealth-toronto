@@ -312,11 +312,11 @@ const SERVICE_DATA = {
   },
   'physio-pilates': {
     pageUrl: '/clinical-pilates.html',
-    title: 'Clinical Pilates & Physiotherapy at Beach Health',
+    title: 'Physiotherapy & Clinical Pilates at Beach Health',
     portal: 'Physiotherapy & Active Rehab',
     bookingUrl: 'https://beachealth.janeapp.com/#/pilates-physio-pilates',
     image: '/images/pilates-card.jpeg',
-    desc: 'Move with confidence. Build strength. Support your long-term health with physiotherapy-guided Clinical Pilates.',
+    desc: 'Move with confidence. Build strength. Support your long-term health with Physiotherapy & Clinical Pilates.',
     points: [
       'Core strength and spinal stability',
       'Posture and body alignment retraining',
@@ -326,8 +326,8 @@ const SERVICE_DATA = {
     ],
     customHtml: `
       <div class="service-modal-rich">
-        <img src="/images/pilates-card.jpeg" alt="Clinical Pilates & Physiotherapy at Beach Health" style="width: 100%; height: 240px; object-fit: cover; border-radius: 12px; margin-bottom: 20px;" />
-        <h2 style="font-size: 1.7rem; color: #173753; margin-bottom: 8px; font-weight: 800;">Clinical Pilates & Physiotherapy at Beach Health</h2>
+        <img src="/images/pilates-card.jpeg" alt="Physiotherapy & Clinical Pilates at Beach Health" style="width: 100%; height: 240px; object-fit: cover; border-radius: 12px; margin-bottom: 20px;" />
+        <h2 style="font-size: 1.7rem; color: #173753; margin-bottom: 8px; font-weight: 800;">Physiotherapy & Clinical Pilates at Beach Health</h2>
         <p style="font-size: 1.05rem; font-weight: 600; color: #0093d0; margin-bottom: 16px;">Move with confidence. Build strength. Support your long-term health.</p>
 
         <p style="font-size: 0.98rem; line-height: 1.65; color: #334155; margin-bottom: 14px;">
@@ -383,7 +383,7 @@ const SERVICE_DATA = {
         </div>
 
         <div style="display: flex; gap: 12px; flex-wrap: wrap;">
-          <a href="https://beachealth.janeapp.com/#/pilates-physio-pilates" target="_blank" rel="noopener" class="btn btn-primary">Book Clinical Pilates</a>
+          <a href="https://beachealth.janeapp.com/#/pilates-physio-pilates" target="_blank" rel="noopener" class="btn btn-primary">Book Physiotherapy &amp; Clinical Pilates</a>
           <a href="/clinical-pilates.html" class="btn btn-secondary">Learn More <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M12 5l7 7-7 7"/></svg></a>
         </div>
       </div>
@@ -772,18 +772,17 @@ function initModals() {
             <!-- Portal 1: Beachealth Clinic -->
             <div style="border: 2px solid #e2e8f0; border-radius: 12px; padding: 20px 18px; background: #ffffff; display: flex; flex-direction: column; justify-content: space-between; transition: all 0.25s;" onmouseover="this.style.borderColor='#0093d0'; this.style.boxShadow='0 8px 24px rgba(0,147,208,0.15)';" onmouseout="this.style.borderColor='#e2e8f0'; this.style.boxShadow='none';">
               <div>
-                <div style="display: flex; align-items: center; justify-content: space-between; margin-bottom: 10px;">
-                  <span style="display: inline-block; padding: 3px 10px; background: #e6f4fb; color: #0093d0; font-size: 0.72rem; font-weight: 700; border-radius: 20px; text-transform: uppercase;">Rehabilitation</span>
-                  <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#0093d0" stroke-width="2"><path d="M22 12h-4l-3 9L9 3l-3 9H2"/></svg>
+                <div style="display: flex; align-items: center; justify-content: flex-end; margin-bottom: 10px;">
+                  <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#0093d0" stroke-width="2"><path d="M22 12h-4l-3 9L9 3l-3 9H2"/></svg>
                 </div>
                 <h4 style="font-size: 1.2rem; color: #173753; font-weight: 800; margin-bottom: 6px;">Beachealth Services</h4>
                 <p style="font-size: 0.85rem; color: #64748b; margin-bottom: 14px; line-height: 1.4;">Multi-disciplinary manual therapy, spinal rehab, and sports recovery.</p>
                 <ul style="font-size: 0.84rem; color: #334155; margin-bottom: 18px; display: flex; flex-direction: column; gap: 6px;">
                   <li style="display: flex; align-items: center; gap: 8px;"><svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="#0093d0" stroke-width="3"><polyline points="20 6 9 17 4 12"></polyline></svg> Osteopathy (Manual Practice)</li>
                   <li style="display: flex; align-items: center; gap: 8px;"><svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="#0093d0" stroke-width="3"><polyline points="20 6 9 17 4 12"></polyline></svg> Chiropractic Care</li>
+                  <li style="display: flex; align-items: center; gap: 8px;"><svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="#0093d0" stroke-width="3"><polyline points="20 6 9 17 4 12"></polyline></svg> Physiotherapy &amp; Clinical Pilates</li>
                   <li style="display: flex; align-items: center; gap: 8px;"><svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="#0093d0" stroke-width="3"><polyline points="20 6 9 17 4 12"></polyline></svg> Registered Massage Therapy (RMT)</li>
-                  <li style="display: flex; align-items: center; gap: 8px;"><svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="#0093d0" stroke-width="3"><polyline points="20 6 9 17 4 12"></polyline></svg> Clinical Pilates & Running Analysis</li>
-                  <li style="display: flex; align-items: center; gap: 8px;"><svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="#0093d0" stroke-width="3"><polyline points="20 6 9 17 4 12"></polyline></svg> Shockwave & Dry Needling</li>
+                  <li style="display: flex; align-items: center; gap: 8px;"><svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="#0093d0" stroke-width="3"><polyline points="20 6 9 17 4 12"></polyline></svg> Shockwave &amp; Dry Needle</li>
                 </ul>
               </div>
               <a href="https://beachealth.janeapp.com/" target="_blank" rel="noopener" class="btn btn-primary" style="width: 100%; text-align: center; justify-content: center; font-size: 0.9rem; padding: 10px 16px;">
@@ -795,18 +794,17 @@ function initModals() {
             <!-- Portal 2: Beaches Foot Care Centre -->
             <div style="border: 2px solid #e2e8f0; border-radius: 12px; padding: 20px 18px; background: #ffffff; display: flex; flex-direction: column; justify-content: space-between; transition: all 0.25s;" onmouseover="this.style.borderColor='#0093d0'; this.style.boxShadow='0 8px 24px rgba(0,147,208,0.15)';" onmouseout="this.style.borderColor='#e2e8f0'; this.style.boxShadow='none';">
               <div>
-                <div style="display: flex; align-items: center; justify-content: space-between; margin-bottom: 10px;">
-                  <span style="display: inline-block; padding: 3px 10px; background: #e6f4fb; color: #0093d0; font-size: 0.72rem; font-weight: 700; border-radius: 20px; text-transform: uppercase;">Podiatry & Nails</span>
-                  <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#0093d0" stroke-width="2"><path d="M4 17v1a3 3 0 0 0 3 3h10a3 3 0 0 0 3-3v-1"/><path d="M4 12c0-4.4 3.6-8 8-8s8 3.6 8 8"/><path d="M12 4v8"/></svg>
+                <div style="display: flex; align-items: center; justify-content: flex-end; margin-bottom: 10px;">
+                  <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#0093d0" stroke-width="2"><path d="M4 17v1a3 3 0 0 0 3 3h10a3 3 0 0 0 3-3v-1"/><path d="M4 12c0-4.4 3.6-8 8-8s8 3.6 8 8"/><path d="M12 4v8"/></svg>
                 </div>
                 <h4 style="font-size: 1.2rem; color: #173753; font-weight: 800; margin-bottom: 6px;">Beaches Foot Care Centre</h4>
                 <p style="font-size: 0.85rem; color: #64748b; margin-bottom: 14px; line-height: 1.4;">Registered Chiropody, medical-grade pedicures, and bespoke orthotics.</p>
                 <ul style="font-size: 0.84rem; color: #334155; margin-bottom: 18px; display: flex; flex-direction: column; gap: 6px;">
-                  <li style="display: flex; align-items: center; gap: 8px;"><svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="#0093d0" stroke-width="3"><polyline points="20 6 9 17 4 12"></polyline></svg> Chiropody & Foot Assessments</li>
+                  <li style="display: flex; align-items: center; gap: 8px;"><svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="#0093d0" stroke-width="3"><polyline points="20 6 9 17 4 12"></polyline></svg> Chiropody &amp; Foot Care</li>
                   <li style="display: flex; align-items: center; gap: 8px;"><svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="#0093d0" stroke-width="3"><polyline points="20 6 9 17 4 12"></polyline></svg> Sterile Clinical Medical Pedicures</li>
                   <li style="display: flex; align-items: center; gap: 8px;"><svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="#0093d0" stroke-width="3"><polyline points="20 6 9 17 4 12"></polyline></svg> Custom Biomechanical Orthotics</li>
-                  <li style="display: flex; align-items: center; gap: 8px;"><svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="#0093d0" stroke-width="3"><polyline points="20 6 9 17 4 12"></polyline></svg> Ingrown Toenails & Fungal Care</li>
-                  <li style="display: flex; align-items: center; gap: 8px;"><svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="#0093d0" stroke-width="3"><polyline points="20 6 9 17 4 12"></polyline></svg> Plantar Fasciitis & Heel Spurs</li>
+                  <li style="display: flex; align-items: center; gap: 8px;"><svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="#0093d0" stroke-width="3"><polyline points="20 6 9 17 4 12"></polyline></svg> Ingrown Toenails &amp; Fungal Care</li>
+                  <li style="display: flex; align-items: center; gap: 8px;"><svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="#0093d0" stroke-width="3"><polyline points="20 6 9 17 4 12"></polyline></svg> Plantar Fasciitis &amp; Heel Spurs</li>
                 </ul>
               </div>
               <a href="https://beachesfootcare.janeapp.com/" target="_blank" rel="noopener" class="btn btn-primary" style="width: 100%; text-align: center; justify-content: center; font-size: 0.9rem; padding: 10px 16px;">
