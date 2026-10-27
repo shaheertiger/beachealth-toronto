@@ -7,6 +7,7 @@ document.addEventListener('DOMContentLoaded', () => {
   initSlider();
   initMobileDrawer();
   initServicesFilter();
+  initCardLandingAnimations();
   initModals();
   initContactForm();
   initReviewsSlider();
@@ -159,6 +160,7 @@ function initMobileDrawer() {
 function initServicesFilter() {
   const filterBtns = document.querySelectorAll('.filter-btn');
   const cards = document.querySelectorAll('.service-card');
+  if (!filterBtns.length || !cards.length) return;
 
   filterBtns.forEach(btn => {
     btn.addEventListener('click', () => {
@@ -166,25 +168,88 @@ function initServicesFilter() {
       btn.classList.add('active');
 
       const filter = btn.getAttribute('data-filter');
+      let visibleIdx = 0;
 
       cards.forEach(card => {
-        const category = card.getAttribute('data-category');
-        if (filter === 'all' || category.includes(filter)) {
+        const category = card.getAttribute('data-category') || '';
+        const matches = filter === 'all' || category.includes(filter);
+
+        if (matches) {
           card.style.display = 'flex';
+          card.classList.remove('card-landed');
+          card.style.transitionDelay = `${visibleIdx * 70}ms`;
+          visibleIdx++;
+
+          requestAnimationFrame(() => {
+            setTimeout(() => {
+              card.classList.add('card-landed');
+            }, 30);
+          });
+
           setTimeout(() => {
-            card.style.opacity = '1';
-            card.style.transform = 'translateY(0)';
-          }, 20);
+            card.style.transitionDelay = '';
+          }, (visibleIdx * 70) + 750);
         } else {
-          card.style.opacity = '0';
-          card.style.transform = 'translateY(10px)';
+          card.classList.remove('card-landed');
           setTimeout(() => {
             card.style.display = 'none';
-          }, 200);
+          }, 300);
         }
       });
     });
   });
+}
+
+/* ==========================================================================
+   3B. CARD LANDING ENTRANCE ANIMATIONS
+   Staggered, organic scroll reveals for Service & Team Cards
+   ========================================================================== */
+function initCardLandingAnimations() {
+  const cards = document.querySelectorAll('.service-card, .team-card');
+  if (!cards.length) return;
+
+  // Check if reduced motion is preferred
+  const prefersReducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+  if (prefersReducedMotion) {
+    cards.forEach(card => card.classList.add('card-landed'));
+    return;
+  }
+
+  // Add initial animation state class
+  cards.forEach(card => card.classList.add('card-animate-init'));
+
+  if (!('IntersectionObserver' in window)) {
+    // Fallback for older browsers
+    cards.forEach(card => card.classList.add('card-landed'));
+    return;
+  }
+
+  const observer = new IntersectionObserver((entries, obs) => {
+    const intersectingEntries = entries.filter(entry => entry.isIntersecting);
+
+    intersectingEntries.forEach((entry, idx) => {
+      const card = entry.target;
+      // Stagger entrance delay: 90ms per card index in the visible batch
+      const delayMs = idx * 90;
+      card.style.transitionDelay = `${delayMs}ms`;
+
+      requestAnimationFrame(() => {
+        card.classList.add('card-landed');
+      });
+
+      // Clear transitionDelay after landing so hover effects respond instantaneously
+      setTimeout(() => {
+        card.style.transitionDelay = '';
+      }, delayMs + 800);
+
+      obs.unobserve(card);
+    });
+  }, {
+    threshold: 0.08,
+    rootMargin: '0px 0px -30px 0px'
+  });
+
+  cards.forEach(card => observer.observe(card));
 }
 
 /* ==========================================================================

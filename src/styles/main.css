@@ -24,16 +24,18 @@
   --gold: #f59e0b;
   --gold-light: #fef3c7;
   
-  /* Neutral Palette */
-  --bg-page: #f8fafc;
+  /* Neutral & Logo Ambient Palette */
+  --bg-page: #f4f9fd;
   --bg-surface: #ffffff;
-  --bg-alt: #f1f5f9;
+  --bg-alt: #ebf5fb;
+  --brand-cyan-tint: rgba(0, 147, 208, 0.08);
+  --brand-navy-tint: rgba(23, 55, 83, 0.05);
   --text-main: #0f172a;
   --text-body: #334155;
   --text-muted: #64748b;
   --text-light: #94a3b8;
-  --border-color: #e2e8f0;
-  --border-light: #f1f5f9;
+  --border-color: rgba(0, 147, 208, 0.14);
+  --border-light: #f1f6fb;
 
   /* Elevation Shadows */
   --shadow-xs: 0 1px 2px rgba(0, 0, 0, 0.05);
@@ -88,6 +90,8 @@ body {
   min-height: 100vh;
   display: flex;
   flex-direction: column;
+  background: linear-gradient(180deg, #f8fcfe 0%, #ffffff 20%, #f1f7fb 60%, #edf5fa 100%);
+  color: var(--text-body);
 }
 
 img, svg, video, iframe {
@@ -944,7 +948,30 @@ ul, ol {
    WELCOME & WHY CHOOSE US
    ========================================================================== */
 .welcome-section {
-  background: #ffffff;
+  position: relative;
+  background: 
+    radial-gradient(ellipse 75% 45% at 92% 10%, rgba(0, 147, 208, 0.08) 0%, transparent 60%),
+    radial-gradient(ellipse 65% 45% at 8% 85%, rgba(23, 55, 83, 0.05) 0%, transparent 60%),
+    linear-gradient(180deg, #ffffff 0%, #f5fafd 35%, #edf6fc 100%);
+  overflow: hidden;
+}
+
+.welcome-section::before {
+  content: '';
+  position: absolute;
+  top: -80px;
+  right: -80px;
+  width: 450px;
+  height: 450px;
+  border-radius: 50%;
+  background: radial-gradient(circle, rgba(0, 147, 208, 0.07) 0%, transparent 70%);
+  pointer-events: none;
+  z-index: 0;
+}
+
+.welcome-section .container {
+  position: relative;
+  z-index: 1;
 }
 
 .welcome-grid {
@@ -1043,22 +1070,23 @@ ul, ol {
 }
 
 .why-card {
-  background: #ffffff;
-  border: 1px solid var(--border-color);
+  background: rgba(255, 255, 255, 0.96);
+  border: 1px solid rgba(0, 147, 208, 0.16);
   border-radius: var(--radius-lg);
   padding: 32px 24px;
   text-align: center;
   display: flex;
   flex-direction: column;
   align-items: center;
-  box-shadow: var(--shadow-xs);
+  box-shadow: 0 4px 18px -2px rgba(23, 55, 83, 0.05), 0 2px 6px -1px rgba(0, 147, 208, 0.03);
   transition: all var(--transition-normal);
+  backdrop-filter: blur(8px);
 }
 
 .why-card:hover {
-  transform: translateY(-4px);
-  box-shadow: var(--shadow-md);
-  border-color: var(--brand-blue);
+  transform: translateY(-6px);
+  box-shadow: 0 16px 36px -8px rgba(0, 147, 208, 0.20), 0 4px 12px rgba(23, 55, 83, 0.08);
+  border-color: rgba(0, 147, 208, 0.45);
 }
 
 .why-icon-wrap {
@@ -1098,7 +1126,44 @@ ul, ol {
    SERVICES SECTION
    ========================================================================== */
 .services-section {
-  background: var(--bg-page);
+  position: relative;
+  background: 
+    radial-gradient(ellipse 80% 45% at 15% 15%, rgba(0, 147, 208, 0.12) 0%, transparent 60%),
+    radial-gradient(ellipse 75% 50% at 85% 75%, rgba(23, 55, 83, 0.08) 0%, transparent 65%),
+    radial-gradient(ellipse 60% 40% at 50% 40%, rgba(0, 147, 208, 0.05) 0%, transparent 70%),
+    linear-gradient(180deg, #edf6fc 0%, #f7fbfe 25%, #ffffff 50%, #f1f7fb 75%, #ebf4fa 100%);
+  overflow: hidden;
+}
+
+.services-section::before {
+  content: '';
+  position: absolute;
+  top: -120px;
+  left: -120px;
+  width: 520px;
+  height: 520px;
+  border-radius: 50%;
+  background: radial-gradient(circle, rgba(0, 147, 208, 0.09) 0%, transparent 70%);
+  pointer-events: none;
+  z-index: 0;
+}
+
+.services-section::after {
+  content: '';
+  position: absolute;
+  bottom: -100px;
+  right: -100px;
+  width: 560px;
+  height: 560px;
+  border-radius: 50%;
+  background: radial-gradient(circle, rgba(23, 55, 83, 0.06) 0%, transparent 70%);
+  pointer-events: none;
+  z-index: 0;
+}
+
+.services-section .container {
+  position: relative;
+  z-index: 1;
 }
 
 .services-filter {
@@ -1116,9 +1181,11 @@ ul, ol {
   font-size: 0.92rem;
   font-weight: 600;
   color: var(--text-muted);
-  background: #ffffff;
-  border: 1px solid var(--border-color);
+  background: rgba(255, 255, 255, 0.92);
+  border: 1px solid rgba(0, 147, 208, 0.18);
+  box-shadow: 0 2px 6px rgba(23, 55, 83, 0.04);
   transition: all var(--transition-fast);
+  cursor: pointer;
 }
 
 .filter-btn:hover,
@@ -1126,7 +1193,8 @@ ul, ol {
   background: var(--brand-blue);
   color: #ffffff;
   border-color: var(--brand-blue);
-  box-shadow: 0 4px 12px var(--brand-blue-glow);
+  box-shadow: 0 6px 16px var(--brand-blue-glow);
+  transform: translateY(-1px);
 }
 
 .services-grid {
@@ -1151,34 +1219,65 @@ ul, ol {
   background: #ffffff;
   border-radius: var(--radius-lg);
   overflow: hidden;
-  box-shadow: var(--shadow-sm);
-  border: 1px solid var(--border-color);
+  box-shadow: 0 4px 20px -2px rgba(23, 55, 83, 0.06), 0 2px 6px -1px rgba(0, 147, 208, 0.04);
+  border: 1px solid rgba(0, 147, 208, 0.14);
   display: flex;
   flex-direction: column;
-  transition: all var(--transition-normal);
+  position: relative;
+  transition: transform 0.4s cubic-bezier(0.16, 1, 0.3, 1),
+              box-shadow 0.4s cubic-bezier(0.16, 1, 0.3, 1),
+              border-color 0.4s ease,
+              opacity 0.7s cubic-bezier(0.16, 1, 0.3, 1),
+              filter 0.7s cubic-bezier(0.16, 1, 0.3, 1);
+  will-change: transform, box-shadow;
 }
 
+/* Card Top Accent Brand Line */
+.service-card::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 3.5px;
+  background: linear-gradient(90deg, #0093d0 0%, #38bdf8 50%, #173753 100%);
+  opacity: 0;
+  transform: scaleX(0.2);
+  transform-origin: center;
+  transition: opacity 0.35s ease, transform 0.35s cubic-bezier(0.16, 1, 0.3, 1);
+  z-index: 5;
+  pointer-events: none;
+}
+
+/* Rich Interactive Hover State */
 .service-card:hover {
-  transform: translateY(-6px);
-  box-shadow: var(--shadow-lg);
-  border-color: rgba(26, 115, 232, 0.25);
+  transform: translateY(-10px) scale(1.008);
+  box-shadow: 0 22px 45px -10px rgba(0, 147, 208, 0.22), 0 8px 18px -4px rgba(23, 55, 83, 0.10);
+  border-color: rgba(0, 147, 208, 0.42);
+}
+
+.service-card:hover::after {
+  opacity: 1;
+  transform: scaleX(1);
 }
 
 .service-img-wrap {
   position: relative;
   height: 220px;
   overflow: hidden;
+  background: #edf5fa;
 }
 
 .service-img {
   width: 100%;
   height: 100%;
   object-fit: cover;
-  transition: transform 0.5s ease;
+  transition: transform 0.55s cubic-bezier(0.16, 1, 0.3, 1), filter 0.55s ease;
 }
 
 .service-card:hover .service-img {
-  transform: scale(1.06);
+  transform: scale(1.07);
+  filter: saturate(1.05) contrast(1.02);
 }
 
 .service-badge {
@@ -1197,6 +1296,11 @@ ul, ol {
   font-weight: 800;
   color: var(--primary);
   margin-bottom: 12px;
+  transition: color 0.3s ease;
+}
+
+.service-card:hover .service-title {
+  color: #007cb0;
 }
 
 .service-desc {
@@ -1221,7 +1325,7 @@ ul, ol {
   justify-content: space-between;
   gap: 10px;
   padding-top: 16px;
-  border-top: 1px solid var(--border-light);
+  border-top: 1px solid rgba(0, 147, 208, 0.10);
 }
 
 .service-btn-details {
@@ -1231,19 +1335,71 @@ ul, ol {
   display: inline-flex;
   align-items: center;
   gap: 6px;
-  transition: gap var(--transition-fast);
+  transition: all var(--transition-fast);
+  background: none;
+  border: none;
+  cursor: pointer;
+  padding: 4px 0;
+}
+
+.service-btn-details svg {
+  transition: transform 0.3s cubic-bezier(0.16, 1, 0.3, 1);
 }
 
 .service-btn-details:hover {
-  gap: 10px;
   color: var(--brand-blue-hover);
+}
+
+.service-card:hover .service-btn-details svg {
+  transform: translateX(4px);
+}
+
+.service-card:hover .btn-primary {
+  box-shadow: 0 4px 14px rgba(0, 147, 208, 0.45);
 }
 
 /* ==========================================================================
    MEET OUR PRACTITIONERS / TEAM
    ========================================================================== */
 .team-section {
-  background: #ffffff;
+  position: relative;
+  background: 
+    radial-gradient(ellipse 80% 45% at 85% 15%, rgba(0, 147, 208, 0.12) 0%, transparent 60%),
+    radial-gradient(ellipse 65% 50% at 12% 80%, rgba(23, 55, 83, 0.08) 0%, transparent 65%),
+    radial-gradient(ellipse 50% 35% at 50% 50%, rgba(0, 147, 208, 0.04) 0%, transparent 70%),
+    linear-gradient(180deg, #ffffff 0%, #f1f8fc 30%, #edf5fa 65%, #f6fafd 100%);
+  overflow: hidden;
+}
+
+.team-section::before {
+  content: '';
+  position: absolute;
+  top: 15%;
+  right: -100px;
+  width: 500px;
+  height: 500px;
+  border-radius: 50%;
+  background: radial-gradient(circle, rgba(0, 147, 208, 0.08) 0%, transparent 70%);
+  pointer-events: none;
+  z-index: 0;
+}
+
+.team-section::after {
+  content: '';
+  position: absolute;
+  bottom: 5%;
+  left: -80px;
+  width: 480px;
+  height: 480px;
+  border-radius: 50%;
+  background: radial-gradient(circle, rgba(23, 55, 83, 0.05) 0%, transparent 70%);
+  pointer-events: none;
+  z-index: 0;
+}
+
+.team-section .container {
+  position: relative;
+  z-index: 1;
 }
 
 .team-grid {
@@ -1275,17 +1431,46 @@ ul, ol {
   background: #ffffff;
   border-radius: var(--radius-lg);
   overflow: hidden;
-  box-shadow: var(--shadow-sm);
-  border: 1px solid var(--border-color);
-  transition: all var(--transition-normal);
+  box-shadow: 0 4px 20px -2px rgba(23, 55, 83, 0.06), 0 2px 6px -1px rgba(0, 147, 208, 0.04);
+  border: 1px solid rgba(0, 147, 208, 0.14);
+  transition: transform 0.4s cubic-bezier(0.16, 1, 0.3, 1),
+              box-shadow 0.4s cubic-bezier(0.16, 1, 0.3, 1),
+              border-color 0.4s ease,
+              opacity 0.7s cubic-bezier(0.16, 1, 0.3, 1),
+              filter 0.7s cubic-bezier(0.16, 1, 0.3, 1);
   display: flex;
   flex-direction: column;
+  position: relative;
+  will-change: transform, box-shadow;
 }
 
+/* Card Top Accent Brand Line */
+.team-card::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 3.5px;
+  background: linear-gradient(90deg, #173753 0%, #0093d0 50%, #38bdf8 100%);
+  opacity: 0;
+  transform: scaleX(0.2);
+  transform-origin: center;
+  transition: opacity 0.35s ease, transform 0.35s cubic-bezier(0.16, 1, 0.3, 1);
+  z-index: 5;
+  pointer-events: none;
+}
+
+/* Rich Interactive Hover State */
 .team-card:hover {
-  transform: translateY(-6px);
-  box-shadow: var(--shadow-lg);
-  border-color: var(--brand-blue);
+  transform: translateY(-10px) scale(1.008);
+  box-shadow: 0 22px 45px -10px rgba(0, 147, 208, 0.22), 0 8px 18px -4px rgba(23, 55, 83, 0.10);
+  border-color: rgba(0, 147, 208, 0.42);
+}
+
+.team-card:hover::after {
+  opacity: 1;
+  transform: scaleX(1);
 }
 
 .team-img-wrap {
@@ -1300,17 +1485,23 @@ ul, ol {
   height: 100%;
   object-fit: cover;
   object-position: top center;
-  transition: transform 0.5s ease;
+  transition: transform 0.55s cubic-bezier(0.16, 1, 0.3, 1), filter 0.55s ease;
 }
 
 .team-card:hover .team-img {
-  transform: scale(1.05);
+  transform: scale(1.07);
+  filter: saturate(1.05) contrast(1.02);
 }
 
 .team-overlay {
   position: absolute;
   inset: 0;
   background: linear-gradient(180deg, transparent 60%, rgba(14, 36, 55, 0.7) 100%);
+  transition: background 0.4s ease;
+}
+
+.team-card:hover .team-overlay {
+  background: linear-gradient(180deg, transparent 55%, rgba(14, 36, 55, 0.78) 100%);
 }
 
 .team-body {
@@ -1325,6 +1516,11 @@ ul, ol {
   font-weight: 800;
   color: var(--primary);
   margin-bottom: 4px;
+  transition: color 0.3s ease;
+}
+
+.team-card:hover .team-name {
+  color: #007cb0;
 }
 
 .team-role {
@@ -1349,7 +1545,39 @@ ul, ol {
   align-items: center;
   gap: 10px;
   padding-top: 14px;
-  border-top: 1px solid var(--border-light);
+  border-top: 1px solid rgba(0, 147, 208, 0.10);
+}
+
+.team-card:hover .service-btn-details svg {
+  transform: translateX(4px);
+}
+
+.team-card:hover .btn-primary {
+  box-shadow: 0 4px 14px rgba(0, 147, 208, 0.45);
+}
+
+/* ==========================================================================
+   LANDING ENTRANCE ANIMATIONS (CARDS REVEAL)
+   ========================================================================== */
+.card-animate-init {
+  opacity: 0;
+  transform: translateY(34px) scale(0.97);
+  filter: blur(4px);
+}
+
+.card-animate-init.card-landed {
+  opacity: 1;
+  transform: translateY(0) scale(1);
+  filter: blur(0);
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .card-animate-init {
+    opacity: 1 !important;
+    transform: none !important;
+    filter: none !important;
+    transition: none !important;
+  }
 }
 
 /* ==========================================================================
@@ -1409,8 +1637,12 @@ ul, ol {
    Styled after official Google Maps & Google Business Profile reviews
    ========================================================================== */
 .reviews-section {
-  background: #f8fafc;
-  padding: 60px 0;
+  position: relative;
+  background: 
+    radial-gradient(ellipse 65% 45% at 15% 20%, rgba(0, 147, 208, 0.08) 0%, transparent 60%),
+    radial-gradient(ellipse 65% 50% at 85% 80%, rgba(23, 55, 83, 0.06) 0%, transparent 60%),
+    linear-gradient(180deg, #edf5fa 0%, #f7fbfe 40%, #eef5fa 100%);
+  padding: 65px 0;
   overflow: hidden;
 }
 
@@ -1609,7 +1841,11 @@ ul, ol {
    BLOG / ARTICLES SECTION
    ========================================================================== */
 .blog-section {
-  background: #ffffff;
+  position: relative;
+  background: 
+    radial-gradient(ellipse 70% 45% at 50% 0%, rgba(0, 147, 208, 0.07) 0%, transparent 60%),
+    linear-gradient(180deg, #f7fafd 0%, #ffffff 40%, #f1f7fb 100%);
+  overflow: hidden;
 }
 
 .blog-grid {
@@ -2988,7 +3224,9 @@ html.scroll-locked body {
 
 /* Service Page Main Layout */
 .service-page-section {
-  background: #ffffff;
+  background: 
+    radial-gradient(ellipse 70% 40% at 95% 10%, rgba(0, 147, 208, 0.06) 0%, transparent 55%),
+    linear-gradient(180deg, #f8fcfe 0%, #ffffff 25%, #f4f9fd 100%);
   padding: 50px 0 90px;
 }
 
