@@ -600,7 +600,7 @@ ul, ol {
   backdrop-filter: blur(8px);
   border: 1.5px solid rgba(0, 147, 208, 0.20);
   border-radius: var(--radius-md);
-  padding: 11px 13px;
+  padding: 12px 16px;
   margin-bottom: 9px;
   text-decoration: none;
   box-shadow: 0 2px 10px rgba(23, 55, 83, 0.05);
@@ -623,28 +623,6 @@ ul, ol {
 
 .drawer-portal-card.footcare:hover {
   border-color: #0284c7;
-}
-
-.portal-card-icon {
-  width: 36px;
-  height: 36px;
-  border-radius: 9px;
-  background: var(--brand-blue-light);
-  color: var(--brand-blue);
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  flex-shrink: 0;
-  transition: transform 0.25s ease;
-}
-
-.drawer-portal-card:hover .portal-card-icon {
-  transform: scale(1.08);
-}
-
-.drawer-portal-card.footcare .portal-card-icon {
-  background: #e0f2fe;
-  color: #0284c7;
 }
 
 .portal-card-info {
