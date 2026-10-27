@@ -112,14 +112,14 @@ function initMobileDrawer() {
     drawer.classList.add('open');
     backdrop.classList.add('open');
     if (toggleBtn) toggleBtn.setAttribute('aria-expanded', 'true');
-    document.body.style.overflow = 'hidden';
+    setScrollLock(true);
   }
 
   function closeDrawer() {
     drawer.classList.remove('open');
     backdrop.classList.remove('open');
     if (toggleBtn) toggleBtn.setAttribute('aria-expanded', 'false');
-    document.body.style.overflow = '';
+    if (!document.getElementById('modal-overlay')?.classList.contains('open')) setScrollLock(false);
   }
 
   if (toggleBtn) toggleBtn.addEventListener('click', openDrawer);
@@ -147,13 +147,8 @@ function initMobileDrawer() {
 
   // Global ESC key listener to close drawer and modals
   document.addEventListener('keydown', e => {
-    if (e.key === 'Escape') {
+    if (e.key === 'Escape' && drawer && drawer.classList.contains('open')) {
       closeDrawer();
-      const modal = document.getElementById('modal-overlay');
-      if (modal && modal.classList.contains('open')) {
-        modal.classList.remove('open');
-        document.body.style.overflow = '';
-      }
     }
   });
 }
@@ -274,6 +269,7 @@ const TEAM_DATA = {
 
 const SERVICE_DATA = {
   'osteopathy': {
+    pageUrl: '/osteopathy.html',
     title: 'Osteopathy (Manual Practice)',
     portal: 'Beachealth Services',
     bookingUrl: 'https://beachealth.janeapp.com/#/osteopathy',
@@ -287,6 +283,7 @@ const SERVICE_DATA = {
     ]
   },
   'chiropody': {
+    pageUrl: '/chiropody.html',
     title: 'Chiropody & Advanced Foot Care',
     portal: 'Beaches Foot Care Centre',
     bookingUrl: 'https://beachesfootcare.janeapp.com/',
@@ -300,6 +297,7 @@ const SERVICE_DATA = {
     ]
   },
   'massage-therapy': {
+    pageUrl: '/massage-therapy.html',
     title: 'Registered Massage Therapy (RMT)',
     portal: 'Beachealth Services',
     bookingUrl: 'https://beachealth.janeapp.com/#/registered-massage-therapy',
@@ -391,6 +389,7 @@ const SERVICE_DATA = {
     `
   },
   'medical-pedicure': {
+    pageUrl: '/medical-pedicure.html',
     title: 'Clinical Medical Pedicure',
     portal: 'Beaches Foot Care Centre',
     bookingUrl: 'https://beachesfootcare.janeapp.com/',
@@ -404,6 +403,7 @@ const SERVICE_DATA = {
     ]
   },
   'running-analysis': {
+    pageUrl: '/running-analysis.html',
     title: '3D Video Running Gait Analysis',
     portal: 'Beachealth Services',
     bookingUrl: 'https://beachealth.janeapp.com/#/running-analysis',
@@ -417,6 +417,7 @@ const SERVICE_DATA = {
     ]
   },
   'shockwave-therapy': {
+    pageUrl: '/shockwave-therapy.html',
     title: 'Radial Shockwave Therapy',
     portal: 'Beachealth Services',
     bookingUrl: 'https://beachealth.janeapp.com/',
@@ -537,6 +538,7 @@ const SERVICE_DATA = {
     `
   },
   'dry-needling': {
+    pageUrl: '/dry-needling.html',
     title: 'Dry Needling (Intramuscular Stimulation)',
     portal: 'Beachealth Services',
     bookingUrl: 'https://beachealth.janeapp.com/#/acupuncture',
@@ -596,6 +598,25 @@ const BLOG_DATA = {
   }
 };
 
+/* "Dr. Adam Bletsoe" -> "Dr. Adam", "Lada Milos Lee" -> "Lada" */
+function shortName(name) {
+  const parts = name.split(' ');
+  return parts[0].endsWith('.') ? parts.slice(0, 2).join(' ') : parts[0];
+}
+
+/* Lock page scroll behind drawers/modals. The page scrolls on <html>
+   (it has overflow-x: hidden), so both html and body must be locked. */
+function setScrollLock(locked) {
+  const root = document.documentElement;
+  if (locked) {
+    const scrollbar = window.innerWidth - root.clientWidth;
+    root.style.setProperty('--scrollbar-width', `${scrollbar}px`);
+    root.classList.add('scroll-locked');
+  } else {
+    root.classList.remove('scroll-locked');
+  }
+}
+
 function initModals() {
   const modalOverlay = document.getElementById('modal-overlay');
   const modalContent = document.getElementById('modal-body-container');
@@ -603,15 +624,24 @@ function initModals() {
 
   if (!modalOverlay || !modalContent) return;
 
+  let lastTrigger = null;
+
   function closeModal() {
+    if (!modalOverlay.classList.contains('open')) return;
     modalOverlay.classList.remove('open');
-    document.body.style.overflow = '';
+    setScrollLock(false);
+    if (lastTrigger && document.contains(lastTrigger)) lastTrigger.focus({ preventScroll: true });
   }
 
   function openModal(html) {
+    lastTrigger = document.activeElement;
     modalContent.innerHTML = html;
+    modalContent.scrollTop = 0; // always open at the top
     modalOverlay.classList.add('open');
-    document.body.style.overflow = 'hidden';
+    setScrollLock(true);
+    if (modalClose) modalClose.focus({ preventScroll: true });
+    // Close buttons inside injected content (e.g. policy "Understood")
+    modalContent.querySelectorAll('[data-modal-close]').forEach(btn => btn.addEventListener('click', closeModal));
   }
 
   if (modalClose) modalClose.addEventListener('click', closeModal);
@@ -644,7 +674,7 @@ function initModals() {
             <div style="font-size: 0.85rem; font-weight: 700; color: #0093d0; text-transform: uppercase;">${member.portal || 'Practitioner Profile'}</div>
             <h3 style="font-size: 1.6rem; color: #173753; margin: 4px 0 8px;">${member.name}</h3>
             <p style="font-size: 0.95rem; font-weight: 600; color: #64748b; margin-bottom: 14px;">${member.role}</p>
-            <a href="${member.bookingUrl || 'https://beachealth.janeapp.com/'}" target="_blank" rel="noopener" class="btn btn-primary btn-sm">Book with ${member.name.split(' ')[0]}</a>
+            <a href="${member.bookingUrl || 'https://beachealth.janeapp.com/'}" target="_blank" rel="noopener" class="btn btn-primary btn-sm">Book with ${shortName(member.name)}</a>
           </div>
         </div>
         <div style="margin-top: 24px; padding-top: 20px; border-top: 1px solid #e2e8f0; font-size: 1rem; line-height: 1.7; color: #334155;">
@@ -686,7 +716,8 @@ function initModals() {
           </div>
           <div style="display: flex; gap: 14px; flex-wrap: wrap;">
             <a href="${service.bookingUrl || 'https://beachealth.janeapp.com/'}" target="_blank" rel="noopener" class="btn btn-primary">Book Now</a>
-            <a href="tel:4165464887" class="btn btn-secondary">Call (416) 546-4887</a>
+            ${service.pageUrl ? `<a href="${service.pageUrl}" class="btn btn-secondary">View Full Page <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M12 5l7 7-7 7"/></svg></a>` : ''}
+            <a href="tel:4165464887" class="btn btn-outline-dark">Call (416) 546-4887</a>
           </div>
         </div>
       `;
@@ -853,7 +884,7 @@ function initModals() {
             ${policy.content}
           </div>
           <div style="margin-top: 24px; padding-top: 18px; border-top: 1px solid #e2e8f0; display: flex; justify-content: flex-end;">
-            <button class="btn btn-primary btn-sm" onclick="document.getElementById('modal-overlay').classList.remove('open'); document.body.style.overflow='';">Understood</button>
+            <button type="button" class="btn btn-primary btn-sm" data-modal-close>Understood</button>
           </div>
         </div>
       `;
