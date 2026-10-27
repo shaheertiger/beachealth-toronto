@@ -384,8 +384,8 @@ const SERVICE_DATA = {
         </div>
 
         <div style="display: flex; gap: 12px; flex-wrap: wrap;">
-          <a href="https://beachealth.janeapp.com/#/pilates-physio-pilates" target="_blank" rel="noopener" class="btn btn-primary">Book Clinical Pilates Online</a>
-          <a href="/clinical-pilates.html" class="btn btn-secondary">Open Dedicated Pilates Page →</a>
+          <a href="https://beachealth.janeapp.com/#/pilates-physio-pilates" target="_blank" rel="noopener" class="btn btn-primary">Book Clinical Pilates</a>
+          <a href="/clinical-pilates.html" class="btn btn-secondary">View Clinical Pilates Page <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M12 5l7 7-7 7"/></svg></a>
         </div>
       </div>
     `
@@ -530,8 +530,8 @@ const SERVICE_DATA = {
         </div>
 
         <div style="display: flex; gap: 12px; flex-wrap: wrap;">
-          <a href="https://beachealth.janeapp.com/" target="_blank" rel="noopener" class="btn btn-primary">Book with Dr. Adam Online</a>
-          <a href="/chiropractic.html" class="btn btn-secondary">Open Dedicated Chiropractic Page →</a>
+          <a href="https://beachealth.janeapp.com/" target="_blank" rel="noopener" class="btn btn-primary">Book with Dr. Adam</a>
+          <a href="/chiropractic.html" class="btn btn-secondary">View Chiropractic Page <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M12 5l7 7-7 7"/></svg></a>
         </div>
       </div>
     `
@@ -685,7 +685,7 @@ function initModals() {
             <ul style="font-size: 0.95rem; color: #334155;">${pointsHtml}</ul>
           </div>
           <div style="display: flex; gap: 14px; flex-wrap: wrap;">
-            <a href="${service.bookingUrl || 'https://beachealth.janeapp.com/'}" target="_blank" rel="noopener" class="btn btn-primary">Book This Service Online</a>
+            <a href="${service.bookingUrl || 'https://beachealth.janeapp.com/'}" target="_blank" rel="noopener" class="btn btn-primary">Book Now</a>
             <a href="tel:4165464887" class="btn btn-secondary">Call (416) 546-4887</a>
           </div>
         </div>
@@ -714,7 +714,7 @@ function initModals() {
               <p style="font-size: 0.9rem; color: #64748b;">Have questions about this condition?</p>
               <h5 style="color: #173753; font-size: 1.05rem;">Schedule an evaluation with our clinical team.</h5>
             </div>
-            <a href="https://beachealth.janeapp.com/" target="_blank" rel="noopener" class="btn btn-primary btn-sm">Book Consultation</a>
+            <a href="https://beachealth.janeapp.com/" target="_blank" rel="noopener" class="btn btn-primary btn-sm">Book Online</a>
           </div>
         </div>
       `;
@@ -777,7 +777,7 @@ function initModals() {
                 </ul>
               </div>
               <a href="https://beachesfootcare.janeapp.com/" target="_blank" rel="noopener" class="btn btn-primary" style="width: 100%; text-align: center; justify-content: center; font-size: 0.9rem; padding: 10px 16px;">
-                Book Foot Care & Pedicures
+                Book Beaches Foot Care
                 <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
               </a>
             </div>
@@ -1056,8 +1056,8 @@ Sent via Beachealth Website (https://beachealth.com)`
             </a>
 
             <div style="border-top: 1px dashed #cbd5e1; padding-top: 12px; display: flex; gap: 10px; flex-wrap: wrap;">
-              <a href="tel:4165464887" class="btn btn-secondary btn-sm">Call Reception (416) 546-4887</a>
-              <button class="btn btn-outline-dark btn-sm" id="btn-success-book">Book Online via JaneApp</button>
+              <a href="tel:4165464887" class="btn btn-secondary btn-sm">Call (416) 546-4887</a>
+              <button class="btn btn-outline-dark btn-sm" id="btn-success-book">Book Online</button>
             </div>
           </div>
 

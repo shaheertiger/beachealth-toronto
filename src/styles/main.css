@@ -2469,9 +2469,6 @@ ul, ol {
 }
 
 @media (max-width: 768px) {
-  body {
-    padding-bottom: 68px; /* space for the floating bottom bar */
-  }
 
   /* 1. Spacing & Section Titles */
   .section {
@@ -3243,3 +3240,112 @@ ul, ol {
   flex-shrink: 0;
 }
 
+
+/* ==========================================================================
+   CTA SYSTEM & RESPONSIVE POLISH
+   One set of button rules for every page:
+   - Primary (blue)      = book.  "Book Online" opens the portal chooser,
+                           "Book [Service]" / "Book Now" go straight to Jane.
+   - Secondary / outline = explore ("Learn More", "Explore Services").
+   - Text links with →   = in-card info ("Learn More", "View Bio", "Read Article").
+   ========================================================================== */
+.btn {
+  text-align: center;
+}
+
+.btn svg,
+.service-btn-details svg,
+.blog-btn svg {
+  flex-shrink: 0;
+}
+
+/* Practitioner cards: same layout as service cards */
+.team-card-actions {
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+
+/* Service-page "first visit" steps: title above description (was squeezed side-by-side) */
+.service-steps-grid .service-step-card {
+  display: block;
+}
+
+/* Footer legal links wrap cleanly instead of breaking mid-label */
+.footer-bottom-links {
+  flex-wrap: wrap;
+  gap: 8px 20px;
+}
+
+.footer-bottom-links a {
+  white-space: nowrap;
+}
+
+/* Phones, tablets and other touch screens: 44px minimum tap targets */
+@media (max-width: 1024px), (pointer: coarse) {
+  .btn,
+  .btn-sm,
+  .service-btn-details,
+  .blog-btn,
+  .sidebar-search-btn {
+    min-height: 44px;
+  }
+
+  .filter-btn {
+    min-height: 40px;
+  }
+
+  .slider-arrow,
+  .modal-close,
+  .drawer-close,
+  .social-link {
+    width: 44px;
+    height: 44px;
+  }
+
+  .mobile-toggle {
+    width: 44px;
+    height: 44px;
+    padding: 12px 6px;
+    justify-content: center;
+  }
+}
+
+@media (max-width: 768px) {
+  .header-call-btn {
+    width: 44px;
+    height: 44px;
+  }
+
+  .modal-close {
+    top: 12px;
+    right: 12px;
+  }
+
+  .floating-call-btn {
+    min-height: 44px;
+  }
+
+  /* Modal action rows stack into full-width buttons */
+  .modal-content .btn {
+    flex: 1 1 100%;
+    white-space: normal;
+    line-height: 1.3;
+  }
+
+  /* Footer booking buttons full-width for easier tapping */
+  .main-footer .btn {
+    width: 100% !important;
+  }
+
+  /* Space for the fixed bottom bar lives inside the footer, so no empty strip below it */
+  body:has(.floating-book-bar) .main-footer {
+    padding-bottom: calc(30px + 68px + env(safe-area-inset-bottom, 0px));
+  }
+}
+
+@media (max-width: 400px) {
+  .floating-call-btn {
+    width: 44px;
+    height: 44px;
+  }
+}
