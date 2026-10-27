@@ -207,7 +207,7 @@ function initServicesFilter() {
    plus Welcome Section
    ========================================================================== */
 function initCardLandingAnimations() {
-  const cards = document.querySelectorAll('.service-card, .team-card, .why-card, .review-slide-card');
+  const cards = document.querySelectorAll('.service-card, .team-card, .why-card, .review-slide-card, .blog-card');
   const sectionHeaders = document.querySelectorAll('.section-title-wrap, .why-header, .reviews-header');
 
   // Animate Welcome section heading & content on scroll
@@ -297,7 +297,7 @@ function initCardLandingAnimations() {
 function init3DCardTilt() {
   if (window.matchMedia('(hover: none)').matches) return;
 
-  const tiltCards = document.querySelectorAll('.service-card, .team-card, .why-card, .review-slide-card');
+  const tiltCards = document.querySelectorAll('.service-card, .team-card, .why-card, .review-slide-card, .blog-card');
   if (!tiltCards.length) return;
 
   tiltCards.forEach(card => {
