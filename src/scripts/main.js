@@ -311,6 +311,7 @@ const SERVICE_DATA = {
     ]
   },
   'physio-pilates': {
+    pageUrl: '/clinical-pilates.html',
     title: 'Clinical Pilates & Physiotherapy at Beach Health',
     portal: 'Physiotherapy & Active Rehab',
     bookingUrl: 'https://beachealth.janeapp.com/#/pilates-physio-pilates',
@@ -552,6 +553,7 @@ const SERVICE_DATA = {
     ]
   }
 };
+SERVICE_DATA['clinical-pilates'] = SERVICE_DATA['physio-pilates'];
 
 const BLOG_DATA = {
   'shoulder-tears': {
@@ -780,7 +782,7 @@ function initModals() {
                   <li style="display: flex; align-items: center; gap: 8px;"><svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="#0093d0" stroke-width="3"><polyline points="20 6 9 17 4 12"></polyline></svg> Osteopathy (Manual Practice)</li>
                   <li style="display: flex; align-items: center; gap: 8px;"><svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="#0093d0" stroke-width="3"><polyline points="20 6 9 17 4 12"></polyline></svg> Chiropractic Care</li>
                   <li style="display: flex; align-items: center; gap: 8px;"><svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="#0093d0" stroke-width="3"><polyline points="20 6 9 17 4 12"></polyline></svg> Registered Massage Therapy (RMT)</li>
-                  <li style="display: flex; align-items: center; gap: 8px;"><svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="#0093d0" stroke-width="3"><polyline points="20 6 9 17 4 12"></polyline></svg> Physio Pilates & Running Analysis</li>
+                  <li style="display: flex; align-items: center; gap: 8px;"><svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="#0093d0" stroke-width="3"><polyline points="20 6 9 17 4 12"></polyline></svg> Clinical Pilates & Running Analysis</li>
                   <li style="display: flex; align-items: center; gap: 8px;"><svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="#0093d0" stroke-width="3"><polyline points="20 6 9 17 4 12"></polyline></svg> Shockwave & Dry Needling</li>
                 </ul>
               </div>
