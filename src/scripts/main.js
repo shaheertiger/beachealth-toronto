@@ -1378,6 +1378,7 @@ function initReviewsSlider() {
   const dotsContainer = document.getElementById('reviews-dots');
 
   if (!track || !cards.length) return;
+  if (!dotsContainer && !prevBtn && !nextBtn) return;
 
   function getStep() {
     const card = cards[0];
