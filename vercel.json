@@ -1,5 +1,12 @@
 {
   "buildCommand": "npm run build",
   "outputDirectory": "dist",
-  "cleanUrls": true
+  "cleanUrls": true,
+  "redirects": [
+    {
+      "source": "/running-analysis(.*)",
+      "destination": "/#services",
+      "permanent": true
+    }
+  ]
 }

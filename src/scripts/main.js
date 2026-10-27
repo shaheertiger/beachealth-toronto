@@ -403,20 +403,6 @@ const SERVICE_DATA = {
       'Corn, callus, and cracked heel reduction'
     ]
   },
-  'running-analysis': {
-    pageUrl: '/running-analysis.html',
-    title: '3D Video Running Gait Analysis',
-    portal: 'Beachealth Services',
-    bookingUrl: 'https://beachealth.janeapp.com/#/running-analysis',
-    image: '/images/running-card.png',
-    desc: 'Running analysis utilizes specialized high-speed video capture and biomechanical assessment to evaluate cadence, strike patterns, hip drop, and ground reaction forces. We pinpoint exactly why injuries recur and how to boost performance.',
-    points: [
-      'Multi-angle slow-motion video evaluation',
-      'Footwear and orthotic prescription guidance',
-      'Cadence, stride, and pelvis alignment coaching',
-      'Customized strength & mobility drill plan'
-    ]
-  },
   'shockwave-therapy': {
     pageUrl: '/shockwave-therapy.html',
     title: 'Radial Shockwave Therapy',
