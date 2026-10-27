@@ -224,6 +224,12 @@ function initCardLandingAnimations() {
           entries.forEach(entry => {
             if (entry.isIntersecting) {
               entry.target.classList.add('welcome-landed');
+              setTimeout(() => {
+                const popBtns = entry.target.querySelectorAll('.welcome-btn-pop');
+                popBtns.forEach(btn => {
+                  btn.style.transition = 'transform 0.2s ease, background 0.2s ease, box-shadow 0.2s ease, color 0.2s ease';
+                });
+              }, 1200);
               obs.unobserve(entry.target);
             }
           });

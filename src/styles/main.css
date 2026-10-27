@@ -1029,27 +1029,44 @@ ul, ol {
   text-align: center;
   max-width: 860px;
   margin: 0 auto;
+  overflow: hidden;
 }
 
 .welcome-content {
   text-align: center;
   position: relative;
-  will-change: transform, opacity;
+  width: 100%;
 }
 
 .welcome-content .section-badge {
   margin-bottom: 16px;
 }
 
-.welcome-content h2 {
+/* 1. Title: 3D Flip in */
+.welcome-title-flip {
   font-size: 2.4rem;
   font-weight: 800;
   color: var(--primary);
   line-height: 1.25;
   margin-bottom: 20px;
   letter-spacing: -0.01em;
+  transform-origin: 50% 0%;
+  transform: perspective(1000px) rotateX(-85deg);
+  opacity: 0;
+  filter: blur(6px);
+  transition: transform 0.9s cubic-bezier(0.175, 0.885, 0.32, 1.275),
+              opacity 0.6s ease,
+              filter 0.6s ease;
+  will-change: transform, opacity;
 }
 
+.welcome-landed .welcome-title-flip {
+  transform: perspective(1000px) rotateX(0deg);
+  opacity: 1;
+  filter: blur(0);
+}
+
+/* 2. Paragraph 1: Static (present naturally in place, as requested) */
 .welcome-lead {
   font-size: 1.18rem;
   font-weight: 600;
@@ -1059,9 +1076,12 @@ ul, ol {
   max-width: 720px;
   margin-left: auto;
   margin-right: auto;
+  opacity: 1;
+  transform: none;
 }
 
-.welcome-text {
+/* 3. Paragraph 2: Lands in from the RIGHT side */
+.welcome-from-right {
   font-size: 1.05rem;
   color: var(--text-body);
   line-height: 1.7;
@@ -1069,14 +1089,91 @@ ul, ol {
   max-width: 780px;
   margin-left: auto;
   margin-right: auto;
+  transform: translateX(90px);
+  opacity: 0;
+  filter: blur(5px);
+  transition: transform 0.85s cubic-bezier(0.16, 1, 0.3, 1) 0.25s,
+              opacity 0.75s ease 0.25s,
+              filter 0.75s ease 0.25s;
+  will-change: transform, opacity;
 }
 
+.welcome-landed .welcome-from-right {
+  transform: translateX(0);
+  opacity: 1;
+  filter: blur(0);
+}
+
+/* 4. Paragraph 3: Lands in from the LEFT side */
+.welcome-from-left {
+  font-size: 1.05rem;
+  color: var(--text-body);
+  line-height: 1.7;
+  margin-bottom: 20px;
+  max-width: 780px;
+  margin-left: auto;
+  margin-right: auto;
+  transform: translateX(-90px);
+  opacity: 0;
+  filter: blur(5px);
+  transition: transform 0.85s cubic-bezier(0.16, 1, 0.3, 1) 0.45s,
+              opacity 0.75s ease 0.45s,
+              filter 0.75s ease 0.45s;
+  will-change: transform, opacity;
+}
+
+.welcome-landed .welcome-from-left {
+  transform: translateX(0);
+  opacity: 1;
+  filter: blur(0);
+}
+
+/* 5. Buttons: Pop up with spring bounce */
 .welcome-actions {
   display: flex;
   gap: 16px;
   margin-top: 30px;
   flex-wrap: wrap;
   justify-content: center;
+}
+
+.welcome-btn-pop {
+  transform: scale(0.3) translateY(24px);
+  opacity: 0;
+  will-change: transform, opacity;
+}
+
+.welcome-btn-pop:nth-child(1) {
+  transition: transform 0.75s cubic-bezier(0.34, 1.56, 0.64, 1) 0.65s,
+              opacity 0.5s ease 0.65s,
+              background 0.2s, color 0.2s, box-shadow 0.2s;
+}
+
+.welcome-btn-pop:nth-child(2) {
+  transition: transform 0.75s cubic-bezier(0.34, 1.56, 0.64, 1) 0.78s,
+              opacity 0.5s ease 0.78s,
+              background 0.2s, color 0.2s, box-shadow 0.2s;
+}
+
+.welcome-landed .welcome-btn-pop {
+  transform: scale(1) translateY(0);
+  opacity: 1;
+}
+
+.welcome-landed .welcome-btn-pop:hover {
+  transform: translateY(-2px) scale(1.02);
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .welcome-title-flip,
+  .welcome-from-right,
+  .welcome-from-left,
+  .welcome-btn-pop {
+    opacity: 1 !important;
+    transform: none !important;
+    filter: none !important;
+    transition: none !important;
+  }
 }
 
 /* Why Choose Us Section (Reconstructed from Original Elementor Site) */
@@ -1657,25 +1754,12 @@ ul, ol {
 }
 
 .welcome-animate-init {
-  opacity: 0;
-  transform: translateY(34px) scale(0.98);
-  filter: blur(4px);
-  will-change: transform, opacity, filter;
-}
-
-.card-animate-init.card-landed {
+  /* Child elements handle their individual flip, slide, and pop animations */
   opacity: 1;
-  transform: perspective(1000px) rotateX(0deg) translateY(0) scale(1);
-  filter: blur(0);
 }
 
 .welcome-animate-init.welcome-landed {
   opacity: 1;
-  transform: translateY(0) scale(1);
-  filter: blur(0);
-  transition: opacity 0.85s cubic-bezier(0.16, 1, 0.3, 1),
-              transform 0.85s cubic-bezier(0.16, 1, 0.3, 1),
-              filter 0.85s cubic-bezier(0.16, 1, 0.3, 1);
 }
 
 /* Card Gleam Sweep on Arrival */
