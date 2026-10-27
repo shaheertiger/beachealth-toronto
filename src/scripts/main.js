@@ -201,15 +201,64 @@ function initServicesFilter() {
 }
 
 /* ==========================================================================
-   3B. CARD LANDING ENTRANCE ANIMATIONS
-   Staggered, organic scroll reveals for Service & Team Cards
+   3B. CARD & SECTION LANDING ENTRANCE ANIMATIONS
+   Staggered, organic scroll reveals for Service, Team & Why Choose Us Cards,
+   plus Welcome Section
    ========================================================================== */
 function initCardLandingAnimations() {
-  const cards = document.querySelectorAll('.service-card, .team-card');
-  if (!cards.length) return;
+  const cards = document.querySelectorAll('.service-card, .team-card, .why-card');
 
   // Check if reduced motion is preferred
   const prefersReducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+
+  // Animate Welcome section heading & content on scroll
+  const welcomeContent = document.querySelector('.welcome-content');
+  if (welcomeContent) {
+    if (prefersReducedMotion) {
+      welcomeContent.classList.add('welcome-landed');
+    } else {
+      welcomeContent.classList.add('welcome-animate-init');
+      if ('IntersectionObserver' in window) {
+        const welcomeObserver = new IntersectionObserver((entries, obs) => {
+          entries.forEach(entry => {
+            if (entry.isIntersecting) {
+              entry.target.classList.add('welcome-landed');
+              obs.unobserve(entry.target);
+            }
+          });
+        }, { threshold: 0.12, rootMargin: '0px 0px -40px 0px' });
+        welcomeObserver.observe(welcomeContent);
+      } else {
+        welcomeContent.classList.add('welcome-landed');
+      }
+    }
+  }
+
+  // Animate Why Choose Us header on scroll
+  const whyHeader = document.querySelector('.why-header');
+  if (whyHeader) {
+    if (prefersReducedMotion) {
+      whyHeader.classList.add('welcome-landed');
+    } else {
+      whyHeader.classList.add('welcome-animate-init');
+      if ('IntersectionObserver' in window) {
+        const whyHeaderObserver = new IntersectionObserver((entries, obs) => {
+          entries.forEach(entry => {
+            if (entry.isIntersecting) {
+              entry.target.classList.add('welcome-landed');
+              obs.unobserve(entry.target);
+            }
+          });
+        }, { threshold: 0.12, rootMargin: '0px 0px -40px 0px' });
+        whyHeaderObserver.observe(whyHeader);
+      } else {
+        whyHeader.classList.add('welcome-landed');
+      }
+    }
+  }
+
+  if (!cards.length) return;
+
   if (prefersReducedMotion) {
     cards.forEach(card => card.classList.add('card-landed'));
     return;
