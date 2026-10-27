@@ -269,6 +269,7 @@ const TEAM_DATA = {
 
 const SERVICE_DATA = {
   'osteopathy': {
+    pageUrl: '/osteopathy.html',
     title: 'Osteopathy (Manual Practice)',
     portal: 'Beachealth Services',
     bookingUrl: 'https://beachealth.janeapp.com/#/osteopathy',
@@ -282,6 +283,7 @@ const SERVICE_DATA = {
     ]
   },
   'chiropody': {
+    pageUrl: '/chiropody.html',
     title: 'Chiropody & Advanced Foot Care',
     portal: 'Beaches Foot Care Centre',
     bookingUrl: 'https://beachesfootcare.janeapp.com/',
@@ -295,6 +297,7 @@ const SERVICE_DATA = {
     ]
   },
   'massage-therapy': {
+    pageUrl: '/massage-therapy.html',
     title: 'Registered Massage Therapy (RMT)',
     portal: 'Beachealth Services',
     bookingUrl: 'https://beachealth.janeapp.com/#/registered-massage-therapy',
@@ -386,6 +389,7 @@ const SERVICE_DATA = {
     `
   },
   'medical-pedicure': {
+    pageUrl: '/medical-pedicure.html',
     title: 'Clinical Medical Pedicure',
     portal: 'Beaches Foot Care Centre',
     bookingUrl: 'https://beachesfootcare.janeapp.com/',
@@ -399,6 +403,7 @@ const SERVICE_DATA = {
     ]
   },
   'running-analysis': {
+    pageUrl: '/running-analysis.html',
     title: '3D Video Running Gait Analysis',
     portal: 'Beachealth Services',
     bookingUrl: 'https://beachealth.janeapp.com/#/running-analysis',
@@ -412,6 +417,7 @@ const SERVICE_DATA = {
     ]
   },
   'shockwave-therapy': {
+    pageUrl: '/shockwave-therapy.html',
     title: 'Radial Shockwave Therapy',
     portal: 'Beachealth Services',
     bookingUrl: 'https://beachealth.janeapp.com/',
@@ -532,6 +538,7 @@ const SERVICE_DATA = {
     `
   },
   'dry-needling': {
+    pageUrl: '/dry-needling.html',
     title: 'Dry Needling (Intramuscular Stimulation)',
     portal: 'Beachealth Services',
     bookingUrl: 'https://beachealth.janeapp.com/#/acupuncture',
@@ -709,7 +716,8 @@ function initModals() {
           </div>
           <div style="display: flex; gap: 14px; flex-wrap: wrap;">
             <a href="${service.bookingUrl || 'https://beachealth.janeapp.com/'}" target="_blank" rel="noopener" class="btn btn-primary">Book Now</a>
-            <a href="tel:4165464887" class="btn btn-secondary">Call (416) 546-4887</a>
+            ${service.pageUrl ? `<a href="${service.pageUrl}" class="btn btn-secondary">View Full Page <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M12 5l7 7-7 7"/></svg></a>` : ''}
+            <a href="tel:4165464887" class="btn btn-outline-dark">Call (416) 546-4887</a>
           </div>
         </div>
       `;

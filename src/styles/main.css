@@ -3376,3 +3376,166 @@ html.scroll-locked body {
     height: 44px;
   }
 }
+
+/* ==========================================================================
+   SERVICE PAGES (shared template for every service)
+   ========================================================================== */
+.service-hero-banner.has-image {
+  background: linear-gradient(135deg, rgba(23, 55, 83, 0.92) 0%, rgba(15, 36, 56, 0.95) 100%), var(--hero-img) center/cover no-repeat;
+}
+
+.service-list-label {
+  margin-top: 10px;
+  font-weight: 600;
+  color: var(--primary);
+}
+
+.service-checklist-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 10px;
+}
+
+.service-note {
+  font-style: italic;
+  color: var(--text-muted);
+  margin-top: 14px;
+}
+
+.service-step-card p {
+  margin: 0;
+  font-size: 0.95rem;
+  color: #475569;
+}
+
+/* Practitioner cards */
+.service-team-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+  gap: 16px;
+  margin: 20px 0 32px;
+}
+
+.service-team-card {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  padding: 14px;
+  background: var(--bg-page);
+  border: 1px solid var(--border-color);
+  border-radius: var(--radius-md);
+}
+
+.service-team-card img {
+  width: 76px;
+  height: 76px;
+  border-radius: 50%;
+  object-fit: cover;
+  object-position: top center;
+  flex-shrink: 0;
+}
+
+.service-team-name {
+  font-weight: 800;
+  color: var(--primary);
+  font-size: 1.02rem;
+}
+
+.service-team-role {
+  font-size: 0.85rem;
+  color: var(--text-muted);
+  margin-bottom: 4px;
+}
+
+/* Bottom-of-page booking box */
+.service-cta-box {
+  background: linear-gradient(135deg, #e6f4fb 0%, #f0f9ff 100%);
+  border: 1px solid #bae6fd;
+  border-radius: 12px;
+  padding: 28px;
+  margin: 36px 0;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 20px;
+  flex-wrap: wrap;
+}
+
+.service-cta-box h3 {
+  color: var(--primary);
+  font-size: 1.25rem;
+  font-weight: 800;
+  margin-bottom: 6px;
+}
+
+.service-cta-box p {
+  color: #475569;
+  margin: 0;
+  font-size: 0.95rem;
+}
+
+/* Sidebar booking widget */
+.sidebar-book-widget p {
+  font-size: 0.92rem;
+  color: var(--text-muted);
+  margin-bottom: 14px;
+}
+
+.sidebar-book-widget .btn {
+  width: 100%;
+  margin-top: 8px;
+}
+
+/* Mobile drawer: grouped service links */
+.drawer-nav-heading {
+  margin-top: 8px;
+  padding: 4px;
+  font-size: 0.75rem;
+  font-weight: 800;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--brand-blue);
+}
+
+.drawer-nav-services {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  column-gap: 12px;
+  padding-bottom: 6px;
+  border-bottom: 1px solid var(--border-light);
+}
+
+.drawer-nav .drawer-nav-services a {
+  font-size: 0.9rem;
+  font-weight: 500;
+  border-bottom: none;
+  padding: 9px 4px;
+  min-height: 40px;
+}
+
+.drawer-nav a.active {
+  color: var(--brand-blue);
+  font-weight: 700;
+}
+
+@media (max-width: 768px) {
+  .service-cta-box .btn {
+    width: 100%;
+  }
+}
+
+.service-breadcrumbs-box {
+  flex-wrap: wrap;
+  row-gap: 2px;
+}
+
+.service-breadcrumbs-box > * {
+  white-space: nowrap;
+}
+
+/* Sidebar sits below the content on tablets/phones, right after the booking box — skip the duplicate */
+@media (max-width: 991px) {
+  .sidebar-book-widget {
+    display: none;
+  }
+}
