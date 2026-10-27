@@ -208,77 +208,59 @@ function initServicesFilter() {
    ========================================================================== */
 function initCardLandingAnimations() {
   const cards = document.querySelectorAll('.service-card, .team-card, .why-card, .review-slide-card');
-
-  // Check if reduced motion is preferred
-  const prefersReducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+  const sectionHeaders = document.querySelectorAll('.section-title-wrap, .why-header, .reviews-header');
 
   // Animate Welcome section heading & content on scroll
   const welcomeContent = document.querySelector('.welcome-content');
   if (welcomeContent) {
-    if (prefersReducedMotion) {
-      welcomeContent.classList.add('welcome-landed');
+    welcomeContent.classList.add('welcome-animate-init');
+    if ('IntersectionObserver' in window) {
+      const welcomeObserver = new IntersectionObserver((entries, obs) => {
+        entries.forEach(entry => {
+          if (entry.isIntersecting) {
+            entry.target.classList.add('welcome-landed');
+            setTimeout(() => {
+              const popBtns = entry.target.querySelectorAll('.welcome-btn-pop');
+              popBtns.forEach(btn => {
+                btn.style.transition = 'transform 0.2s ease, background 0.2s ease, box-shadow 0.2s ease, color 0.2s ease';
+              });
+            }, 1200);
+            obs.unobserve(entry.target);
+          }
+        });
+      }, { threshold: 0.1, rootMargin: '0px 0px -30px 0px' });
+      welcomeObserver.observe(welcomeContent);
     } else {
-      welcomeContent.classList.add('welcome-animate-init');
-      if ('IntersectionObserver' in window) {
-        const welcomeObserver = new IntersectionObserver((entries, obs) => {
-          entries.forEach(entry => {
-            if (entry.isIntersecting) {
-              entry.target.classList.add('welcome-landed');
-              setTimeout(() => {
-                const popBtns = entry.target.querySelectorAll('.welcome-btn-pop');
-                popBtns.forEach(btn => {
-                  btn.style.transition = 'transform 0.2s ease, background 0.2s ease, box-shadow 0.2s ease, color 0.2s ease';
-                });
-              }, 1200);
-              obs.unobserve(entry.target);
-            }
-          });
-        }, { threshold: 0.12, rootMargin: '0px 0px -40px 0px' });
-        welcomeObserver.observe(welcomeContent);
-      } else {
-        welcomeContent.classList.add('welcome-landed');
-      }
+      welcomeContent.classList.add('welcome-landed');
     }
   }
 
-  // Animate Why Choose Us header on scroll
-  const whyHeader = document.querySelector('.why-header');
-  if (whyHeader) {
-    if (prefersReducedMotion) {
-      whyHeader.classList.add('welcome-landed');
-    } else {
-      whyHeader.classList.add('welcome-animate-init');
-      if ('IntersectionObserver' in window) {
-        const whyHeaderObserver = new IntersectionObserver((entries, obs) => {
-          entries.forEach(entry => {
-            if (entry.isIntersecting) {
-              entry.target.classList.add('welcome-landed');
-              obs.unobserve(entry.target);
-            }
-          });
-        }, { threshold: 0.12, rootMargin: '0px 0px -40px 0px' });
-        whyHeaderObserver.observe(whyHeader);
-      } else {
-        whyHeader.classList.add('welcome-landed');
-      }
-    }
+  // Animate Section Titles & Badges on scroll
+  if (sectionHeaders.length && 'IntersectionObserver' in window) {
+    const headerObserver = new IntersectionObserver((entries, obs) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('header-landed');
+          obs.unobserve(entry.target);
+        }
+      });
+    }, { threshold: 0.08, rootMargin: '0px 0px -20px 0px' });
+
+    sectionHeaders.forEach(header => {
+      header.classList.add('header-animate-init');
+      headerObserver.observe(header);
+    });
   }
 
   if (!cards.length) return;
 
-  if (prefersReducedMotion) {
-    cards.forEach(card => card.classList.add('card-landed'));
-    return;
-  }
-
-  // Add initial animation state class
-  cards.forEach(card => card.classList.add('card-animate-init'));
-
   if (!('IntersectionObserver' in window)) {
-    // Fallback for older browsers
     cards.forEach(card => card.classList.add('card-landed'));
     return;
   }
+
+  // Add initial animation state class to cards
+  cards.forEach(card => card.classList.add('card-animate-init'));
 
   const observer = new IntersectionObserver((entries, obs) => {
     const intersectingEntries = entries.filter(entry => entry.isIntersecting);
@@ -293,29 +275,19 @@ function initCardLandingAnimations() {
         card.classList.add('card-landed');
       });
 
-      // Clear transitionDelay and cleanup init class after landing
+      // Clear transitionDelay after landing so hover/touch effects respond instantaneously
       setTimeout(() => {
         card.style.transitionDelay = '';
-        card.classList.remove('card-animate-init');
-      }, delayMs + 850);
+      }, delayMs + 750);
 
       obs.unobserve(card);
     });
   }, {
-    threshold: 0.05,
+    threshold: 0.04,
     rootMargin: '0px 0px -20px 0px'
   });
 
   cards.forEach(card => observer.observe(card));
-
-  // Global safety fallback: Ensure all cards become fully visible and active
-  setTimeout(() => {
-    cards.forEach(card => {
-      card.classList.add('card-landed');
-      card.classList.remove('card-animate-init');
-      card.style.opacity = '1';
-    });
-  }, 1200);
 }
 
 /* ==========================================================================

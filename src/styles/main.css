@@ -1734,10 +1734,44 @@ ul, ol {
               filter 0.75s cubic-bezier(0.16, 1, 0.3, 1);
 }
 
+@media (max-width: 768px) {
+  .card-animate-init {
+    transform: translateY(34px) scale(0.96);
+    filter: blur(4px);
+    transition: opacity 0.65s cubic-bezier(0.16, 1, 0.3, 1),
+                transform 0.65s cubic-bezier(0.16, 1, 0.3, 1),
+                filter 0.65s cubic-bezier(0.16, 1, 0.3, 1);
+  }
+}
+
 .card-animate-init.card-landed,
 .card-landed {
   opacity: 1 !important;
   transform: perspective(1000px) rotateX(0deg) translateY(0) scale(1) !important;
+  filter: blur(0) !important;
+}
+
+@media (max-width: 768px) {
+  .card-animate-init.card-landed,
+  .card-landed {
+    transform: translateY(0) scale(1) !important;
+  }
+}
+
+/* Section Header Scroll Entrance Reveal */
+.header-animate-init {
+  opacity: 0;
+  transform: translateY(26px);
+  filter: blur(4px);
+  will-change: transform, opacity, filter;
+  transition: opacity 0.7s cubic-bezier(0.16, 1, 0.3, 1),
+              transform 0.7s cubic-bezier(0.16, 1, 0.3, 1),
+              filter 0.7s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.header-animate-init.header-landed {
+  opacity: 1 !important;
+  transform: translateY(0) !important;
   filter: blur(0) !important;
 }
 
@@ -1751,7 +1785,8 @@ ul, ol {
 }
 
 /* Card Gleam Sweep on Arrival */
-.card-animate-init.card-landed::before {
+.card-animate-init.card-landed::before,
+.card-landed::before {
   content: '';
   position: absolute;
   top: -50%;
@@ -1769,6 +1804,17 @@ ul, ol {
   animation: cardGleamSweep 1.2s cubic-bezier(0.16, 1, 0.3, 1) forwards;
   pointer-events: none;
   z-index: 6;
+}
+
+/* Mobile Tactile Touch Feedback */
+@media (hover: none) {
+  .service-card:active,
+  .team-card:active,
+  .why-card:active,
+  .review-slide-card:active {
+    transform: scale(0.985);
+    transition: transform 0.12s ease;
+  }
 }
 
 @keyframes cardGleamSweep {
