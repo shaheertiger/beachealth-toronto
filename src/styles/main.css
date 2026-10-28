@@ -71,7 +71,7 @@ html {
   line-height: 1.6;
   color: var(--text-body);
   background-color: var(--bg-page);
-  scroll-behavior: smooth;
+  
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   overflow-x: hidden;

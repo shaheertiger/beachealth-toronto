@@ -3,6 +3,33 @@
  * Ultra-fast, zero-bloat vanilla JavaScript
  */
 
+// Scroll restoration & reload handling
+if (typeof window !== 'undefined') {
+  if ('scrollRestoration' in history) {
+    history.scrollRestoration = 'manual';
+  }
+
+  // Clear hash on beforeunload so reload always starts fresh at home page
+  window.addEventListener('beforeunload', () => {
+    if (window.location.hash) {
+      history.replaceState(null, '', window.location.pathname);
+    }
+  });
+
+  const navEntries = (typeof performance !== 'undefined' && performance.getEntriesByType)
+    ? performance.getEntriesByType('navigation')
+    : [];
+  const isReload = (navEntries.length > 0 && navEntries[0].type === 'reload') ||
+    (typeof performance !== 'undefined' && performance.navigation && performance.navigation.type === 1);
+
+  if (isReload) {
+    if (window.location.hash) {
+      history.replaceState(null, '', window.location.pathname);
+    }
+    window.scrollTo(0, 0);
+  }
+}
+
 document.addEventListener('DOMContentLoaded', () => {
   initSlider();
   initMobileDrawer();
@@ -12,6 +39,7 @@ document.addEventListener('DOMContentLoaded', () => {
   initModals();
   initContactForm();
   initReviewsSlider();
+  initSmoothScroll();
 
   // Dynamic Copyright Year
   const yearEl = document.getElementById('current-year');
@@ -1399,3 +1427,24 @@ function initReviewsSlider() {
 }
 
 
+
+
+/* ==========================================================================
+   SMOOTH SCROLL FOR IN-PAGE ANCHORS
+   Ensures deliberate smooth navigation on clicks, avoiding drag on page reload
+   ========================================================================== */
+function initSmoothScroll() {
+  document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+    anchor.addEventListener('click', function(e) {
+      const hash = this.getAttribute('href');
+      if (!hash || hash === '#' || this.hasAttribute('data-modal-target') || this.hasAttribute('data-team-id') || this.hasAttribute('data-policy-id')) return;
+      
+      const target = document.querySelector(hash);
+      if (target) {
+        e.preventDefault();
+        target.scrollIntoView({ behavior: 'smooth' });
+        history.pushState(null, '', hash);
+      }
+    });
+  });
+}
