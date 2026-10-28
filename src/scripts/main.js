@@ -340,11 +340,11 @@ function init3DCardTilt() {
 const TEAM_DATA = {
   'lada-milos-lee': {
     name: 'Lada Milos Lee',
-    role: 'Chiropodist & Clinic Owner',
+    role: 'Chiropodist',
     portal: 'Beaches Foot Care Centre',
     bookingUrl: 'https://beachesfootcare.janeapp.com/',
     image: '/images/team-lada.jpg',
-    bio: `Lada Milos Lee has been practicing as a licensed chiropodist for over 15 years and is currently the owner and clinical director of Beaches Foot Care Centre at Beachealth. Graduating with honors from the Michener Institute for Applied Health Sciences, Lada specializes in comprehensive foot care, diabetic wound management, nail surgery, and bespoke biomechanical orthotics. She takes great pride in creating tailored treatment plans that restore mobility and relieve foot and lower-limb pain for patients of all ages.`
+    bio: `Lada Milos Lee has been practicing as a licensed chiropodist for over 15 years at Beaches Foot Care Centre at Beachealth. Graduating with honors from the Michener Institute for Applied Health Sciences, Lada specializes in comprehensive foot care, diabetic wound management, nail surgery, and bespoke biomechanical orthotics. She takes great pride in creating tailored treatment plans that restore mobility and relieve foot and lower-limb pain for patients of all ages.`
   },
   'emily-tran': {
     name: 'Emily Tran',
