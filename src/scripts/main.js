@@ -444,7 +444,7 @@ const TEAM_DATA = {
     name: 'Shakiba Bani',
     role: 'Registered Physiotherapist (Javia Partner)',
     portal: 'Physiotherapy & Pelvic Health',
-    bookingUrl: 'https://javia.janeapp.com/',
+    bookingUrl: 'https://javia.janeapp.com/locations/beach-health/book#/discipline/1/treatment/36',
     image: '/images/team-shakiba.jpg',
     bio: `
       <p style="font-size: 1.05rem; font-weight: 700; color: #0093d0; margin-bottom: 12px;">Registered Physiotherapist & Founder of Javia</p>
@@ -467,7 +467,7 @@ const TEAM_DATA = {
     name: 'Amin Montazeri',
     role: 'Registered Physiotherapist (Javia Partner)',
     portal: 'Physiotherapy & Active Rehab',
-    bookingUrl: 'https://javia.janeapp.com/',
+    bookingUrl: 'https://javia.janeapp.com/locations/beach-health/book#/discipline/1/treatment/36',
     image: '/images/team-amin.jpg',
     bio: `
       <p style="font-size: 1.05rem; font-weight: 700; color: #0093d0; margin-bottom: 12px;">Registered Physiotherapist & CSCS</p>
