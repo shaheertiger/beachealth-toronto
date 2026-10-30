@@ -460,7 +460,7 @@ const TEAM_DATA = {
           <li>• Therapeutic Exercise & Movement Optimization</li>
         </ul>
       </div>
-      <p style="font-size: 0.88rem; color: #64748b; margin-top: 12px;"><strong>Languages:</strong> English, Persian</p>
+      
     `
   },
   'amin-montazeri': {
@@ -484,15 +484,8 @@ const TEAM_DATA = {
           <li>• Strength Training & Functional Movement</li>
         </ul>
       </div>
-      <div style="background: #f0fdf4; border: 1px solid #bbf7d0; border-radius: 10px; padding: 16px; margin-bottom: 14px;">
-        <strong style="color: #166534; display: block; margin-bottom: 8px;">Physiotherapy Services & Pricing (CAD):</strong>
-        <ul style="font-size: 0.9rem; color: #14532d; display: flex; flex-direction: column; gap: 6px;">
-          <li>• <strong>Initial Physiotherapy Assessment:</strong> 60 minutes — $160</li>
-          <li>• <strong>Physiotherapy Session:</strong> 30 min — $105 | 45 min — $160 | 60 min — $200</li>
-        </ul>
-        <span style="font-size: 0.8rem; color: #15803d; display: block; margin-top: 6px; font-style: italic;">Eligible for extended health insurance coverage and direct billing where applicable.</span>
-      </div>
-      <p style="font-size: 0.88rem; color: #64748b; margin: 0;"><strong>Languages:</strong> English, Persian, Arabic</p>
+      
+      
     `
   },
   'adriana-lis': {
@@ -507,15 +500,14 @@ const TEAM_DATA = {
       <p style="margin-bottom: 14px;">Her academic and scientific background includes movement science, motor control, motor learning, and research related to the autonomic nervous system. Her multidisciplinary training includes Clinical Pilates, Yoga, Classical Ballet, and principles of Global Postural Re-education (RPG).</p>
       <p style="margin-bottom: 14px;">At Beach Health, Adriana supports the delivery of individualized physiotherapy treatment plans through therapeutic exercises and rehabilitation programs under the direction and supervision of a Registered Physiotherapist. She also offers Clinical Pilates and movement sessions focused on postural awareness, coordination, stability, strength, mobility, and body awareness.</p>
       <div style="background: #e0f2fe; border: 1px solid #bae6fd; border-radius: 10px; padding: 16px; margin: 18px 0;">
-        <strong style="color: #0369a1; display: block; margin-bottom: 8px;">Lis — Services & Pricing (CAD):</strong>
-        <ul style="font-size: 0.9rem; color: #075985; display: flex; flex-direction: column; gap: 6px;">
-          <li>• <strong>Initial Movement & Biomechanical Screening:</strong> 30 mins — $105</li>
-          <li>• <strong>Physio Clinical Pilates:</strong> 30 mins — $105 | 45 mins — $160 | 60 mins — $200</li>
-          <li>• <strong>Mindful Movement & Nervous System Balance:</strong> 45 mins — $160</li>
-          <li>• <strong>Physio Postural Strength:</strong> 45 mins — $160</li>
+        <strong style="color: #0369a1; display: block; margin-bottom: 8px;">Areas of Practice & Movement Focus:</strong>
+        <ul style="display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 6px; font-size: 0.9rem; color: #0369a1;">
+          <li>• Postural Alignment & Spinal Stability</li>
+          <li>• Motor Control & Core Rehabilitation</li>
+          <li>• Clinical Pilates & Functional Movement</li>
+          <li>• Mindful Movement & Autonomic Balance</li>
         </ul>
       </div>
-      <p style="font-size: 0.88rem; color: #64748b; margin: 0;"><strong>Languages:</strong> English, Portuguese | <strong>City:</strong> Toronto</p>
     `
   }
 };
@@ -771,7 +763,7 @@ const SERVICE_DATA = {
         </div>
 
         <div style="display: flex; gap: 12px; flex-wrap: wrap;">
-          <a href="https://beachealth.janeapp.com/" target="_blank" rel="noopener" class="btn btn-primary">Book with Dr. Adam</a>
+          <a href="https://beachealth.janeapp.com/" target="_blank" rel="noopener" class="btn btn-primary">Book Chiropractic</a>
           <a href="/chiropractic.html" class="btn btn-secondary">Learn More <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M12 5l7 7-7 7"/></svg></a>
         </div>
       </div>
