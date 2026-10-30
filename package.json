@@ -11,5 +11,8 @@
   "devDependencies": {
     "sharp": "^0.35.5",
     "vite": "^6.0.0"
+  },
+  "dependencies": {
+    "puppeteer-core": "^25.16.0"
   }
 }
