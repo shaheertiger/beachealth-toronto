@@ -238,30 +238,7 @@ function initCardLandingAnimations() {
   const cards = document.querySelectorAll('.service-card, .team-card, .why-card, .review-slide-card, .blog-card');
   const sectionHeaders = document.querySelectorAll('.section-title-wrap, .why-header, .reviews-header');
 
-  // Animate Welcome section heading & content on scroll
-  const welcomeContent = document.querySelector('.welcome-content');
-  if (welcomeContent) {
-    welcomeContent.classList.add('welcome-animate-init');
-    if ('IntersectionObserver' in window) {
-      const welcomeObserver = new IntersectionObserver((entries, obs) => {
-        entries.forEach(entry => {
-          if (entry.isIntersecting) {
-            entry.target.classList.add('welcome-landed');
-            setTimeout(() => {
-              const popBtns = entry.target.querySelectorAll('.welcome-btn-pop');
-              popBtns.forEach(btn => {
-                btn.style.transition = 'transform 0.2s ease, background 0.2s ease, box-shadow 0.2s ease, color 0.2s ease';
-              });
-            }, 1200);
-            obs.unobserve(entry.target);
-          }
-        });
-      }, { threshold: 0.1, rootMargin: '0px 0px -30px 0px' });
-      welcomeObserver.observe(welcomeContent);
-    } else {
-      welcomeContent.classList.add('welcome-landed');
-    }
-  }
+  // Welcome section is static (no scroll animation needed)
 
   // Animate Section Titles & Badges on scroll
   if (sectionHeaders.length && 'IntersectionObserver' in window) {

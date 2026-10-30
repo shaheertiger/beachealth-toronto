@@ -1027,7 +1027,7 @@ ul, ol {
   margin-bottom: 16px;
 }
 
-/* 1. Title: 3D Flip in */
+/* 1. Title: Static */
 .welcome-title-flip {
   font-size: 2.4rem;
   font-weight: 800;
@@ -1035,20 +1035,9 @@ ul, ol {
   line-height: 1.25;
   margin-bottom: 20px;
   letter-spacing: -0.01em;
-  transform-origin: 50% 0%;
-  transform: perspective(1000px) rotateX(-85deg);
-  opacity: 0;
-  filter: blur(6px);
-  transition: transform 0.9s cubic-bezier(0.175, 0.885, 0.32, 1.275),
-              opacity 0.6s ease,
-              filter 0.6s ease;
-  will-change: transform, opacity;
-}
-
-.welcome-landed .welcome-title-flip {
-  transform: perspective(1000px) rotateX(0deg);
   opacity: 1;
-  filter: blur(0);
+  transform: none;
+  filter: none;
 }
 
 /* 2. Paragraph 1: Static (present naturally in place, as requested) */
@@ -1065,7 +1054,7 @@ ul, ol {
   transform: none;
 }
 
-/* 3. Paragraph 2: Lands in from the RIGHT side */
+/* 3. Paragraph 2: Static */
 .welcome-from-right {
   font-size: 1.05rem;
   color: var(--text-body);
@@ -1074,22 +1063,12 @@ ul, ol {
   max-width: 780px;
   margin-left: auto;
   margin-right: auto;
-  transform: translateX(90px);
-  opacity: 0;
-  filter: blur(5px);
-  transition: transform 0.85s cubic-bezier(0.16, 1, 0.3, 1) 0.25s,
-              opacity 0.75s ease 0.25s,
-              filter 0.75s ease 0.25s;
-  will-change: transform, opacity;
-}
-
-.welcome-landed .welcome-from-right {
-  transform: translateX(0);
   opacity: 1;
-  filter: blur(0);
+  transform: none;
+  filter: none;
 }
 
-/* 4. Paragraph 3: Lands in from the LEFT side */
+/* 4. Paragraph 3: Static */
 .welcome-from-left {
   font-size: 1.05rem;
   color: var(--text-body);
@@ -1098,22 +1077,12 @@ ul, ol {
   max-width: 780px;
   margin-left: auto;
   margin-right: auto;
-  transform: translateX(-90px);
-  opacity: 0;
-  filter: blur(5px);
-  transition: transform 0.85s cubic-bezier(0.16, 1, 0.3, 1) 0.45s,
-              opacity 0.75s ease 0.45s,
-              filter 0.75s ease 0.45s;
-  will-change: transform, opacity;
-}
-
-.welcome-landed .welcome-from-left {
-  transform: translateX(0);
   opacity: 1;
-  filter: blur(0);
+  transform: none;
+  filter: none;
 }
 
-/* 5. Buttons: Pop up with spring bounce */
+/* 5. Buttons: Static */
 .welcome-actions {
   display: flex;
   gap: 16px;
@@ -1123,30 +1092,13 @@ ul, ol {
 }
 
 .welcome-btn-pop {
-  transform: scale(0.3) translateY(24px);
-  opacity: 0;
-  will-change: transform, opacity;
-}
-
-.welcome-btn-pop:nth-child(1) {
-  transition: transform 0.75s cubic-bezier(0.34, 1.56, 0.64, 1) 0.65s,
-              opacity 0.5s ease 0.65s,
-              background 0.2s, color 0.2s, box-shadow 0.2s;
-}
-
-.welcome-btn-pop:nth-child(2) {
-  transition: transform 0.75s cubic-bezier(0.34, 1.56, 0.64, 1) 0.78s,
-              opacity 0.5s ease 0.78s,
-              background 0.2s, color 0.2s, box-shadow 0.2s;
-}
-
-.welcome-landed .welcome-btn-pop {
-  transform: scale(1) translateY(0);
   opacity: 1;
+  transform: none;
+  transition: transform 0.2s ease, background 0.2s ease, box-shadow 0.2s ease, color 0.2s ease;
 }
 
-.welcome-landed .welcome-btn-pop:hover {
-  transform: translateY(-2px) scale(1.02);
+.welcome-btn-pop:hover {
+  transform: translateY(-2px);
 }
 
 @media (prefers-reduced-motion: reduce) {
