@@ -332,13 +332,6 @@ ul, ol {
 }
 
 /* Dropdown */
-.nav-item-dropdown > .nav-link svg {
-  display: inline-block;
-  flex-shrink: 0;
-  vertical-align: middle;
-  margin-top: 1px;
-}
-
 .nav-item-dropdown {
   position: relative;
 }
