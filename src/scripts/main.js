@@ -110,19 +110,18 @@ function initSlider() {
   if (sliderSection) {
     sliderSection.addEventListener('mouseenter', () => clearInterval(slideTimer));
     sliderSection.addEventListener('mouseleave', () => resetProgress());
+
+    let touchStartX = 0;
+    sliderSection.addEventListener('touchstart', e => {
+      touchStartX = e.changedTouches[0].screenX;
+    }, { passive: true });
+
+    sliderSection.addEventListener('touchend', e => {
+      const touchEndX = e.changedTouches[0].screenX;
+      if (touchStartX - touchEndX > 50) nextSlide();
+      if (touchEndX - touchStartX > 50) prevSlide();
+    }, { passive: true });
   }
-
-  // Touch swipe support
-  let touchStartX = 0;
-  sliderSection.addEventListener('touchstart', e => {
-    touchStartX = e.changedTouches[0].screenX;
-  }, { passive: true });
-
-  sliderSection.addEventListener('touchend', e => {
-    const touchEndX = e.changedTouches[0].screenX;
-    if (touchStartX - touchEndX > 50) nextSlide();
-    if (touchEndX - touchStartX > 50) prevSlide();
-  }, { passive: true });
 
   // Initialize first slide progress
   resetProgress();
