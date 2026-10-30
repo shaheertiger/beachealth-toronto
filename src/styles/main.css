@@ -4081,3 +4081,129 @@ html.scroll-locked body {
     display: none;
   }
 }
+
+
+/* Modern Authentic Google Reviews Card Styles */
+.review-card-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 12px;
+}
+
+.review-author-info {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.review-author-avatar {
+  width: 44px;
+  height: 44px;
+  border-radius: 50%;
+  object-fit: cover;
+  flex-shrink: 0;
+  border: 1px solid rgba(0, 147, 208, 0.2);
+  background: #f1f5f9;
+}
+
+.review-author-meta {
+  display: flex;
+  flex-direction: column;
+}
+
+.review-author-name {
+  font-size: 1.02rem;
+  font-weight: 700;
+  color: #173753;
+  line-height: 1.25;
+}
+
+.review-author-sub {
+  font-size: 0.82rem;
+  color: #64748b;
+  margin-top: 2px;
+}
+
+.review-google-badge {
+  display: flex;
+  align-items: center;
+  padding: 6px;
+  border-radius: 50%;
+  background: #f8fafc;
+  border: 1px solid #e2e8f0;
+  flex-shrink: 0;
+}
+
+.review-rating-row {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-bottom: 14px;
+}
+
+.review-date-badge {
+  font-size: 0.82rem;
+  color: #64748b;
+}
+
+.review-service-tag {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  margin-top: auto;
+  padding: 6px 14px;
+  background: #f1f8fc;
+  border: 1px solid #d4ebf8;
+  border-radius: 20px;
+  font-size: 0.8rem;
+  font-weight: 600;
+  color: #007cb0;
+  width: fit-content;
+}
+
+.reviews-status-pill {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  padding: 5px 14px;
+  border-radius: 20px;
+  font-size: 0.8rem;
+  font-weight: 600;
+  color: #0093d0;
+  background: #e6f4fb;
+  border: 1px solid #bae6fd;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  user-select: none;
+}
+
+.reviews-status-dot {
+  display: inline-block;
+  width: 7px;
+  height: 7px;
+  border-radius: 50%;
+  background: #0093d0;
+  animation: pulseDot 1.8s infinite;
+}
+
+@keyframes pulseDot {
+  0% { transform: scale(0.95); opacity: 0.6; }
+  50% { transform: scale(1.3); opacity: 1; }
+  100% { transform: scale(0.95); opacity: 0.6; }
+}
+
+.reviews-status-pill.paused {
+  color: #64748b;
+  background: #f1f5f9;
+  border-color: #cbd5e1;
+}
+
+.reviews-status-pill.paused .reviews-status-dot {
+  background: #94a3b8;
+  animation: none;
+}
+
+.reviews-status-pill:hover {
+  transform: translateY(-1px);
+}

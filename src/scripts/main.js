@@ -1345,9 +1345,10 @@ function initReviewsSlider() {
   const nextBtn = document.querySelector('.reviews-next');
   const cards = document.querySelectorAll('.review-slide-card');
   const dotsContainer = document.getElementById('reviews-dots');
+  const statusPill = document.querySelector('.reviews-status-pill');
+  const statusText = document.querySelector('.reviews-status-text');
 
   if (!track || !cards.length) return;
-  if (!dotsContainer && !prevBtn && !nextBtn) return;
 
   function getStep() {
     const card = cards[0];
@@ -1363,6 +1364,7 @@ function initReviewsSlider() {
       dot.className = `reviews-dot ${idx === 0 ? 'active' : ''}`;
       dot.setAttribute('aria-label', `Go to review ${idx + 1}`);
       dot.addEventListener('click', () => {
+        stopAutoScroll('manual');
         track.scrollTo({ left: idx * getStep(), behavior: 'smooth' });
         updateDots(idx);
       });
@@ -1377,15 +1379,35 @@ function initReviewsSlider() {
     });
   }
 
+  function scrollNext() {
+    const maxScroll = track.scrollWidth - track.clientWidth;
+    if (track.scrollLeft >= maxScroll - 15) {
+      track.scrollTo({ left: 0, behavior: 'smooth' });
+    } else {
+      track.scrollBy({ left: getStep(), behavior: 'smooth' });
+    }
+  }
+
+  function scrollPrev() {
+    if (track.scrollLeft <= 15) {
+      const maxScroll = track.scrollWidth - track.clientWidth;
+      track.scrollTo({ left: maxScroll, behavior: 'smooth' });
+    } else {
+      track.scrollBy({ left: -getStep(), behavior: 'smooth' });
+    }
+  }
+
   if (nextBtn) {
     nextBtn.addEventListener('click', () => {
-      track.scrollBy({ left: getStep(), behavior: 'smooth' });
+      stopAutoScroll('manual');
+      scrollNext();
     });
   }
 
   if (prevBtn) {
     prevBtn.addEventListener('click', () => {
-      track.scrollBy({ left: -getStep(), behavior: 'smooth' });
+      stopAutoScroll('manual');
+      scrollPrev();
     });
   }
 
@@ -1393,6 +1415,58 @@ function initReviewsSlider() {
     const activeIndex = Math.round(track.scrollLeft / getStep());
     updateDots(Math.min(activeIndex, cards.length - 1));
   }, { passive: true });
+
+  // Automatic scrolling until pressed on them
+  let autoScrollTimer = null;
+  let isStopped = false;
+
+  function stopAutoScroll(reason) {
+    if (isStopped) return;
+    isStopped = true;
+    if (autoScrollTimer) {
+      clearInterval(autoScrollTimer);
+      autoScrollTimer = null;
+    }
+    if (statusPill) statusPill.classList.add('paused');
+    if (statusText) statusText.textContent = 'Paused (Click to Resume)';
+  }
+
+  function resumeAutoScroll() {
+    isStopped = false;
+    if (statusPill) statusPill.classList.remove('paused');
+    if (statusText) statusText.textContent = 'Auto-scrolling (Press card to pause)';
+    startAutoScroll();
+  }
+
+  function startAutoScroll() {
+    if (autoScrollTimer) clearInterval(autoScrollTimer);
+    autoScrollTimer = setInterval(() => {
+      if (isStopped) return;
+      scrollNext();
+    }, 3800);
+  }
+
+  // Start auto-scroll automatically
+  startAutoScroll();
+
+  // "until pressed on them" - stop scrolling immediately when pressed/clicked/touched
+  track.addEventListener('mousedown', () => stopAutoScroll('pressed'));
+  track.addEventListener('touchstart', () => stopAutoScroll('pressed'), { passive: true });
+  track.addEventListener('pointerdown', () => stopAutoScroll('pressed'));
+
+  cards.forEach(card => {
+    card.addEventListener('click', () => stopAutoScroll('pressed'));
+  });
+
+  if (statusPill) {
+    statusPill.addEventListener('click', () => {
+      if (isStopped) {
+        resumeAutoScroll();
+      } else {
+        stopAutoScroll('toggle');
+      }
+    });
+  }
 }
 
 
