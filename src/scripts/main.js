@@ -1481,29 +1481,3 @@ function initSmoothScroll() {
     });
   });
 }
-
-// Dynamically remove Elfsight free branding badge if injected
-(function removeElfsightBadge() {
-  function cleanup() {
-    const badges = document.querySelectorAll(
-      'a[href*="elfsight.com"], [class*="BadgeContainer"], [class*="Badge__BadgeContainer"], .es-badge-container, [class*="es-badge"]'
-    );
-    badges.forEach(el => {
-      el.remove();
-    });
-  }
-
-  // Run on load and observe widget container
-  if (document.readyState === 'loading') {
-    document.addEventListener('DOMContentLoaded', cleanup);
-  } else {
-    cleanup();
-  }
-
-  // Periodic checks during initial widget render
-  const interval = setInterval(cleanup, 250);
-  setTimeout(() => clearInterval(interval), 10000);
-
-  const observer = new MutationObserver(cleanup);
-  observer.observe(document.body, { childList: true, subtree: true });
-})();

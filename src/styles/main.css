@@ -4214,26 +4214,3 @@ html.scroll-locked body {
 .reviews-status-pill:hover {
   transform: translateY(-1px);
 }
-
-/* ==========================================================================
-   HIDE ELFSIGHT FREE BRANDING BADGE / WATERMARK
-   ========================================================================== */
-.reviews-elfsight-wrap a[href*="elfsight.com"],
-.reviews-elfsight-wrap [class*="BadgeContainer"],
-.reviews-elfsight-wrap [class*="Badge__BadgeContainer"],
-.reviews-elfsight-wrap [class*="Badge"],
-.reviews-elfsight-wrap [class*="es-badge"],
-.reviews-elfsight-wrap [class*="badge-container"],
-.reviews-elfsight-wrap .es-badge-container,
-.reviews-elfsight-wrap a[class*="Badge"],
-a[href*="elfsight.com"] {
-  display: none !important;
-  opacity: 0 !important;
-  visibility: hidden !important;
-  pointer-events: none !important;
-  height: 0 !important;
-  max-height: 0 !important;
-  overflow: hidden !important;
-  margin: 0 !important;
-  padding: 0 !important;
-}
