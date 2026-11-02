@@ -1338,14 +1338,13 @@ Sent via Beachealth Website (https://beachealth.com)`
 /* ==========================================================================
    6. REVIEWS SLIDER (PATIENT REVIEWS CAROUSEL)
    ========================================================================== */
+const GOOGLE_BUSINESS_PROFILE_URL = 'https://www.google.com/maps/search/?api=1&query=Beachealth+350+Beech+Ave+Toronto';
+
 function initReviewsSlider() {
   const track = document.querySelector('.reviews-track');
   const prevBtn = document.querySelector('.reviews-prev');
   const nextBtn = document.querySelector('.reviews-next');
   const cards = document.querySelectorAll('.review-slide-card');
-  const dotsContainer = document.getElementById('reviews-dots');
-  const statusPill = document.querySelector('.reviews-status-pill');
-  const statusText = document.querySelector('.reviews-status-text');
 
   if (!track || !cards.length) return;
 
@@ -1353,29 +1352,6 @@ function initReviewsSlider() {
     const card = cards[0];
     const gap = 24;
     return card ? card.offsetWidth + gap : 360;
-  }
-
-  // Create pagination dots
-  if (dotsContainer) {
-    dotsContainer.innerHTML = '';
-    cards.forEach((_, idx) => {
-      const dot = document.createElement('button');
-      dot.className = `reviews-dot ${idx === 0 ? 'active' : ''}`;
-      dot.setAttribute('aria-label', `Go to review ${idx + 1}`);
-      dot.addEventListener('click', () => {
-        stopAutoScroll('manual');
-        track.scrollTo({ left: idx * getStep(), behavior: 'smooth' });
-        updateDots(idx);
-      });
-      dotsContainer.appendChild(dot);
-    });
-  }
-
-  function updateDots(activeIndex) {
-    const dots = document.querySelectorAll('.reviews-dot');
-    dots.forEach((dot, idx) => {
-      dot.classList.toggle('active', idx === activeIndex);
-    });
   }
 
   function scrollNext() {
@@ -1410,11 +1386,6 @@ function initReviewsSlider() {
     });
   }
 
-  track.addEventListener('scroll', () => {
-    const activeIndex = Math.round(track.scrollLeft / getStep());
-    updateDots(Math.min(activeIndex, cards.length - 1));
-  }, { passive: true });
-
   // Automatic scrolling until pressed on them
   let autoScrollTimer = null;
   let isStopped = false;
@@ -1426,15 +1397,6 @@ function initReviewsSlider() {
       clearInterval(autoScrollTimer);
       autoScrollTimer = null;
     }
-    if (statusPill) statusPill.classList.add('paused');
-    if (statusText) statusText.textContent = 'Paused (Click to Resume)';
-  }
-
-  function resumeAutoScroll() {
-    isStopped = false;
-    if (statusPill) statusPill.classList.remove('paused');
-    if (statusText) statusText.textContent = 'Auto-scrolling (Press card to pause)';
-    startAutoScroll();
   }
 
   function startAutoScroll() {
@@ -1448,24 +1410,53 @@ function initReviewsSlider() {
   // Start auto-scroll automatically
   startAutoScroll();
 
-  // "until pressed on them" - stop scrolling immediately when pressed/clicked/touched
+  // Pause scrolling on track interaction
   track.addEventListener('mousedown', () => stopAutoScroll('pressed'));
   track.addEventListener('touchstart', () => stopAutoScroll('pressed'), { passive: true });
   track.addEventListener('pointerdown', () => stopAutoScroll('pressed'));
 
-  cards.forEach(card => {
-    card.addEventListener('click', () => stopAutoScroll('pressed'));
-  });
+  // On clicking review card, redirect to Google Business Profile in new tab
+  // (with drag-detection so swiping through cards on mobile doesn't trigger the click)
+  let pointerStartX = 0;
+  let pointerStartY = 0;
+  let maxMoveDistance = 0;
 
-  if (statusPill) {
-    statusPill.addEventListener('click', () => {
-      if (isStopped) {
-        resumeAutoScroll();
-      } else {
-        stopAutoScroll('toggle');
+  cards.forEach(card => {
+    card.setAttribute('role', 'button');
+    card.setAttribute('tabindex', '0');
+    card.setAttribute('title', 'View verified reviews for Beachealth on Google Maps (opens in new tab)');
+
+    card.addEventListener('pointerdown', e => {
+      pointerStartX = e.clientX;
+      pointerStartY = e.clientY;
+      maxMoveDistance = 0;
+    });
+
+    card.addEventListener('pointermove', e => {
+      const dx = Math.abs(e.clientX - pointerStartX);
+      const dy = Math.abs(e.clientY - pointerStartY);
+      const dist = Math.sqrt(dx * dx + dy * dy);
+      if (dist > maxMoveDistance) {
+        maxMoveDistance = dist;
       }
     });
-  }
+
+    card.addEventListener('click', e => {
+      stopAutoScroll('pressed');
+      // If movement was minimal (< 8px), it's a deliberate click/tap
+      if (maxMoveDistance < 8) {
+        window.open(GOOGLE_BUSINESS_PROFILE_URL, '_blank', 'noopener,noreferrer');
+      }
+    });
+
+    card.addEventListener('keydown', e => {
+      if (e.key === 'Enter' || e.key === ' ') {
+        e.preventDefault();
+        stopAutoScroll('pressed');
+        window.open(GOOGLE_BUSINESS_PROFILE_URL, '_blank', 'noopener,noreferrer');
+      }
+    });
+  });
 }
 
 
