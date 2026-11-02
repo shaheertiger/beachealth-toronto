@@ -234,7 +234,7 @@ function initServicesFilter() {
    plus Welcome Section
    ========================================================================== */
 function initCardLandingAnimations() {
-  const cards = document.querySelectorAll('.service-card, .team-card, .why-card, .review-slide-card, .blog-card');
+  const cards = document.querySelectorAll('.service-card, .team-card, .why-card, .review-slide-card, .blog-card, .physio-practitioner-card, .physio-services-box');
   const sectionHeaders = document.querySelectorAll('.section-title-wrap, .why-header, .reviews-header');
 
   // Welcome section is static (no scroll animation needed)
@@ -417,76 +417,92 @@ const TEAM_DATA = {
     bio: `Krystele Charles is a compassionate Registered Massage Therapist dedicated to musculoskeletal recovery and pain reduction. Her clinical focus includes TMJ dysfunction massage, sports injury recovery, neck and shoulder tension relief, and stress reduction. Krystele coordinates with Beachealth’s osteopaths and chiropractors to augment structural recovery with targeted soft-tissue therapy.`
   },
   'shakiba-bani': {
-    name: 'Shakiba Bani',
-    role: 'Registered Physiotherapist (Javia Partner)',
-    portal: 'Physiotherapy & Pelvic Health',
+    name: 'Shakiba Banifatemi',
+    role: 'Pelvic Physiotherapist & Founder of Javia',
+    portal: 'Javia Physiotherapy Booking',
     bookingUrl: 'https://javia.janeapp.com/locations/beach-health/book#/discipline/1/treatment/36',
     image: '/images/team-shakiba.jpg',
-    bio: `
-      <p style="font-size: 1.05rem; font-weight: 700; color: #0093d0; margin-bottom: 12px;">Registered Physiotherapist & Founder of Javia</p>
-      <p style="margin-bottom: 14px;">Shakiba graduated from Western University with a Master’s in Physical Therapy (MPT) and is registered with the College of Physiotherapists of Ontario and the College of Health and Care Professionals of BC. She brings a profound passion for movement and exercise therapy, underpinned by her background in personal training and gymnastics-related injury recovery.</p>
-      <p style="margin-bottom: 14px;">Through Beach Health's outsourcing partnership with Javia, Shakiba delivers multi-dimensional, evidence-based care focused on pain-free living, functional mobility, and long-term health longevity.</p>
-      <div style="background: #fdf2f8; border: 1px solid #fbcfe8; border-radius: 10px; padding: 16px; margin: 18px 0;">
-        <strong style="color: #9d174d; display: block; margin-bottom: 8px;">Areas of Practice & Clinical Focus:</strong>
-        <ul style="display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 6px; font-size: 0.9rem; color: #701a75;">
-          <li>• Pelvic Health Physiotherapy (Pre/Postnatal)</li>
-          <li>• Musculoskeletal Rehabilitation & Back Pain</li>
-          <li>• Vestibular Dysfunction & Concussion Recovery</li>
-          <li>• Return-to-Sports Rehabilitation</li>
-          <li>• Therapeutic Exercise & Movement Optimization</li>
-        </ul>
-      </div>
-      
-    `
+    bio: `<p style="font-size: 1.05rem; font-weight: 700; color: #0093d0; margin-bottom: 12px;">Pelvic Physiotherapist & Founder of Javia</p>
+<p style="margin-bottom: 14px;">Shakiba specializes in pelvic health, running-related injuries, and movement rehabilitation. As a physiotherapist and passionate runner, she combines clinical knowledge with her personal experience in running, strength training, and Pilates to help clients recover, prevent injuries, and remain active throughout life.</p>
+<div style="background: #f4f9fd; border: 1px solid rgba(0, 147, 208, 0.25); border-radius: 10px; padding: 16px; margin: 18px 0;">
+  <strong style="color: #007cb0; display: block; margin-bottom: 8px;">Areas of Practice & Clinical Focus:</strong>
+  <ul style="display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 6px; font-size: 0.9rem; color: #115e59;">
+    <li>• Pelvic Health Physiotherapy (Pre/Postnatal)</li>
+    <li>• Running Assessment & Injury Prevention</li>
+    <li>• Movement Rehabilitation & Strength Training</li>
+    <li>• Musculoskeletal Recovery & Return-to-Sport</li>
+  </ul>
+</div>
+<div style="margin-top: 14px;">
+  <a href="https://javia.janeapp.com/locations/beach-health/book#/discipline/1/treatment/36" target="_blank" rel="noopener" class="btn btn-primary btn-sm" style="background: #0093d0; border-color: #0093d0;">Book with Shakiba</a>
+</div>`
+  },
+  'shakiba-banifatemi': {
+    name: 'Shakiba Banifatemi',
+    role: 'Pelvic Physiotherapist & Founder of Javia',
+    portal: 'Javia Physiotherapy Booking',
+    bookingUrl: 'https://javia.janeapp.com/locations/beach-health/book#/discipline/1/treatment/36',
+    image: '/images/team-shakiba.jpg',
+    bio: `<p style="font-size: 1.05rem; font-weight: 700; color: #0093d0; margin-bottom: 12px;">Pelvic Physiotherapist & Founder of Javia</p>
+<p style="margin-bottom: 14px;">Shakiba specializes in pelvic health, running-related injuries, and movement rehabilitation. As a physiotherapist and passionate runner, she combines clinical knowledge with her personal experience in running, strength training, and Pilates to help clients recover, prevent injuries, and remain active throughout life.</p>
+<div style="background: #f4f9fd; border: 1px solid rgba(0, 147, 208, 0.25); border-radius: 10px; padding: 16px; margin: 18px 0;">
+  <strong style="color: #007cb0; display: block; margin-bottom: 8px;">Areas of Practice & Clinical Focus:</strong>
+  <ul style="display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 6px; font-size: 0.9rem; color: #115e59;">
+    <li>• Pelvic Health Physiotherapy (Pre/Postnatal)</li>
+    <li>• Running Assessment & Injury Prevention</li>
+    <li>• Movement Rehabilitation & Strength Training</li>
+    <li>• Musculoskeletal Recovery & Return-to-Sport</li>
+  </ul>
+</div>
+<div style="margin-top: 14px;">
+  <a href="https://javia.janeapp.com/locations/beach-health/book#/discipline/1/treatment/36" target="_blank" rel="noopener" class="btn btn-primary btn-sm" style="background: #0093d0; border-color: #0093d0;">Book with Shakiba</a>
+</div>`
   },
   'amin-montazeri': {
     name: 'Amin Montazeri',
-    role: 'Registered Physiotherapist (Javia Partner)',
-    portal: 'Physiotherapy & Active Rehab',
+    role: 'Registered Physiotherapist (Javia)',
+    portal: 'Javia Physiotherapy Booking',
     bookingUrl: 'https://javia.janeapp.com/locations/beach-health/book#/discipline/1/treatment/36',
     image: '/images/team-amin.jpg',
-    bio: `
-      <p style="font-size: 1.05rem; font-weight: 700; color: #0093d0; margin-bottom: 12px;">Registered Physiotherapist & CSCS</p>
-      <p style="margin-bottom: 14px;">Amin is a Registered Physiotherapist registered with the College of Physiotherapists of Ontario and a certified Strength and Conditioning Specialist (CSCS). He holds a Master of Physical Therapy from Western University and a BSc in Kinesiology & Recreation Management from the University of Manitoba. With clinical experience across Canada and internationally, Amin delivers patient-centred, evidence-based care tailored to each person.</p>
-      <p style="margin-bottom: 14px;">His approach integrates manual therapy techniques, functional movement training, and strength conditioning principles. Drawing on his background as a CSEP-Certified Personal Trainer and black belt martial artist, Amin incorporates acupuncture and dry needling into treatment plans when clinically appropriate to address muscle tension, accelerate recovery, and build lifelong resilience.</p>
-      <div style="background: #f8fafc; border: 1px solid #e2e8f0; border-radius: 10px; padding: 16px; margin: 18px 0;">
-        <strong style="color: #173753; display: block; margin-bottom: 8px;">Credentials & Areas of Practice:</strong>
-        <ul style="display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 6px; font-size: 0.9rem; color: #334155;">
-          <li>• Musculoskeletal & Orthopedic Rehabilitation</li>
-          <li>• Manual Therapy & Joint Mobilization</li>
-          <li>• Acupuncture & Dry Needling</li>
-          <li>• Therapeutic Exercise & Injury Prevention</li>
-          <li>• Concussion Recovery & Chronic Pain Management</li>
-          <li>• Strength Training & Functional Movement</li>
-        </ul>
-      </div>
-      
-      
-    `
+    bio: `<p style="font-size: 1.05rem; font-weight: 700; color: #0093d0; margin-bottom: 12px;">Registered Physiotherapist (Javia)</p>
+<p style="margin-bottom: 14px;">Amin focuses on musculoskeletal and orthopaedic physiotherapy, helping clients manage pain, recover from injuries, and restore movement and function. His treatment approach incorporates therapeutic exercise, manual therapy, dry needling, and electro-acupuncture when appropriate.</p>
+<div style="background: #f8fafc; border: 1px solid #e2e8f0; border-radius: 10px; padding: 16px; margin: 18px 0;">
+  <strong style="color: #173753; display: block; margin-bottom: 8px;">Clinical Focus & Techniques:</strong>
+  <ul style="display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 6px; font-size: 0.9rem; color: #334155;">
+    <li>• Musculoskeletal & Orthopaedic Physiotherapy</li>
+    <li>• Pre- & Post-Operative Rehabilitation</li>
+    <li>• Manual Therapy & Joint Mobilization</li>
+    <li>• Dry Needling & Electro-Acupuncture</li>
+    <li>• Therapeutic Exercise & Active Rehab</li>
+  </ul>
+</div>
+<div style="margin-top: 14px;">
+  <a href="https://javia.janeapp.com/locations/beach-health/book#/discipline/1/treatment/36" target="_blank" rel="noopener" class="btn btn-primary btn-sm" style="background: #0093d0; border-color: #0093d0;">Book with Amin</a>
+</div>`
   },
   'adriana-lis': {
     name: 'Adriana Lis Pereira',
-    role: 'Physiotherapy Assistant (PTA) | Clinical Pilates Instructor',
-    portal: 'Clinical Pilates & Movement',
+    role: 'Physiotherapy Assistant and Clinical Pilates Instructor',
+    portal: 'Beachealth Clinic',
     bookingUrl: 'https://beachealth.janeapp.com/#/pilates-physio-pilates',
     image: '/images/team-lis.jpg',
-    bio: `
-      <p style="font-size: 1.05rem; font-weight: 700; color: #0093d0; margin-bottom: 12px;">Physiotherapy Assistant (PTA) | Clinical Pilates Instructor, PhD</p>
-      <p style="margin-bottom: 14px;">Adriana Lis Pereira is a movement professional with approximately 30 years of professional experience, including extensive clinical experience in Brazil and more than 15 years of university teaching and professional education. She holds a Bachelor's degree in Physiotherapy from Brazil, a Master's degree, and a PhD in Medical Sciences from the University of São Paulo, as well as specialist certification in Neuroscience from UNICAMP.</p>
-      <p style="margin-bottom: 14px;">Her academic and scientific background includes movement science, motor control, motor learning, and research related to the autonomic nervous system. Her multidisciplinary training includes Clinical Pilates, Yoga, Classical Ballet, and principles of Global Postural Re-education (RPG).</p>
-      <p style="margin-bottom: 14px;">At Beach Health, Adriana supports the delivery of individualized physiotherapy treatment plans through therapeutic exercises and rehabilitation programs under the direction and supervision of a Registered Physiotherapist. She also offers Clinical Pilates and movement sessions focused on postural awareness, coordination, stability, strength, mobility, and body awareness.</p>
-      <div style="background: #e0f2fe; border: 1px solid #bae6fd; border-radius: 10px; padding: 16px; margin: 18px 0;">
-        <strong style="color: #0369a1; display: block; margin-bottom: 8px;">Areas of Practice & Movement Focus:</strong>
-        <ul style="display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 6px; font-size: 0.9rem; color: #0369a1;">
-          <li>• Postural Alignment & Spinal Stability</li>
-          <li>• Motor Control & Core Rehabilitation</li>
-          <li>• Clinical Pilates & Functional Movement</li>
-          <li>• Mindful Movement & Autonomic Balance</li>
-        </ul>
-      </div>
-    `
-  }
-};
+    bio: `<p style="font-size: 1.05rem; font-weight: 700; color: #0093d0; margin-bottom: 12px;">Physiotherapy Assistant & Clinical Pilates Instructor, PhD</p>
+<p style="margin-bottom: 14px;">Lis is a PhD in Medical Sciences from the University of São Paulo and a specialization in Neuroscience from UNICAMP. At Beachealth, she delivers therapeutic exercise and rehab programs under the supervision of a Registered Physiotherapist, along with Clinical Pilates sessions focused on posture, stability, strength, and mobility.</p>
+<p style="margin-bottom: 14px; font-weight: 600; color: #0284c7;">Clients can also choose to book private sessions with Lis.</p>
+<div style="background: #e0f2fe; border: 1px solid #bae6fd; border-radius: 10px; padding: 16px; margin: 18px 0;">
+  <strong style="color: #0369a1; display: block; margin-bottom: 8px;">Areas of Practice & Movement Focus:</strong>
+  <ul style="display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 6px; font-size: 0.9rem; color: #0369a1;">
+    <li>• Postural Re-education & Alignment</li>
+    <li>• Core Stability & Functional Strengthening</li>
+    <li>• Clinical & Therapeutic Pilates</li>
+    <li>• Breathing Techniques & Breath Control</li>
+    <li>• Private Mindful Movement Sessions</li>
+  </ul>
+</div>
+<div style="margin-top: 14px;">
+  <a href="https://beachealth.janeapp.com/#/pilates-physio-pilates" target="_blank" rel="noopener" class="btn btn-primary btn-sm">Book with Lis via Beachealth</a>
+</div>`
+  }};
 
 const SERVICE_DATA = {
   'osteopathy': {
@@ -531,84 +547,148 @@ const SERVICE_DATA = {
       'Prenatal & postnatal massage protocols'
     ]
   },
-  'physio-pilates': {
+  'physiotherapy': {
+    pageUrl: '/physiotherapy.html',
+    title: 'Physiotherapy (In Partnership with Javia)',
+    portal: 'Javia Physiotherapy Booking',
+    bookingUrl: 'https://javia.janeapp.com/locations/beach-health/book#/discipline/1/treatment/36',
+    image: '/images/physio-hero.jpg',
+    desc: 'Beachealth has partnered with Javia, a physiotherapy and movement-focused healthcare company dedicated to helping people move better, recover from injuries, build strength, and maintain an active, healthy lifestyle.',
+    points: [
+      'Musculoskeletal & Orthopaedic Physiotherapy',
+      'Pre-Operative & Post-Operative Rehabilitation',
+      'Pelvic Health Physiotherapy',
+      'Running Assessment & Rehabilitation',
+      'Dry Needling & Electro-Acupuncture',
+      'Strength, Mobility & Injury Prevention'
+    ],
+    customHtml: `<div class="service-modal-rich">
+  <img src="/images/physio-hero.jpg" alt="Physiotherapy in Partnership with Javia" style="width: 100%; height: 240px; object-fit: cover; border-radius: 12px; margin-bottom: 20px;" />
+  <div style="display: inline-block; background: #0093d0; color: #fff; font-size: 0.75rem; font-weight: 700; padding: 4px 12px; border-radius: 20px; text-transform: uppercase; letter-spacing: 0.05em; margin-bottom: 10px;">In Partnership with Javia</div>
+  <h2 style="font-size: 1.7rem; color: #173753; margin-bottom: 8px; font-weight: 800;">Physiotherapy at Beach Health</h2>
+  <p style="font-size: 1.05rem; font-weight: 600; color: #0093d0; margin-bottom: 16px;">Move better. Recover from injuries. Build strength. Maintain an active, healthy lifestyle.</p>
+  <p style="font-size: 0.98rem; line-height: 1.65; color: #334155; margin-bottom: 16px;">Beachealth has partnered with <strong>Javia</strong>, a physiotherapy and movement-focused healthcare company dedicated to helping people move better, recover from injuries, build strength, and maintain an active, healthy lifestyle.</p>
+  <div style="background: #f8fafc; border: 1px solid #e2e8f0; border-radius: 12px; padding: 18px; margin-bottom: 20px;">
+    <h3 style="font-size: 1.15rem; color: #173753; font-weight: 800; margin-bottom: 12px;">Our Physiotherapy Services Include:</h3>
+    <ul style="display: flex; flex-direction: column; gap: 10px; font-size: 0.9rem; color: #334155;">
+      <li style="display: flex; gap: 8px; align-items: flex-start;"><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="#0093d0" stroke-width="3" style="flex-shrink: 0; margin-top: 3px;"><polyline points="20 6 9 17 4 12"/></svg> <span><strong>Musculoskeletal &amp; Orthopaedic Physiotherapy:</strong> Assessment and treatment of muscle, joint, and sports-related injuries, chronic pain, and movement limitations.</span></li>
+      <li style="display: flex; gap: 8px; align-items: flex-start;"><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="#0093d0" stroke-width="3" style="flex-shrink: 0; margin-top: 3px;"><polyline points="20 6 9 17 4 12"/></svg> <span><strong>Pre-Operative &amp; Post-Operative Rehabilitation:</strong> Individualized rehabilitation programs to improve strength, mobility, and physical function before surgery and support safe recovery.</span></li>
+      <li style="display: flex; gap: 8px; align-items: flex-start;"><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="#0093d0" stroke-width="3" style="flex-shrink: 0; margin-top: 3px;"><polyline points="20 6 9 17 4 12"/></svg> <span><strong>Pelvic Health Physiotherapy:</strong> Specialized care for pelvic floor dysfunction, prenatal and postnatal recovery, and women's pelvic health.</span></li>
+      <li style="display: flex; gap: 8px; align-items: flex-start;"><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="#0093d0" stroke-width="3" style="flex-shrink: 0; margin-top: 3px;"><polyline points="20 6 9 17 4 12"/></svg> <span><strong>Running Assessment &amp; Rehabilitation:</strong> Running gait assessment, injury prevention, rehabilitation, and return-to-running programs.</span></li>
+      <li style="display: flex; gap: 8px; align-items: flex-start;"><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="#0093d0" stroke-width="3" style="flex-shrink: 0; margin-top: 3px;"><polyline points="20 6 9 17 4 12"/></svg> <span><strong>Dry Needling &amp; Electro-Acupuncture:</strong> Treatment approaches offered when clinically appropriate.</span></li>
+      <li style="display: flex; gap: 8px; align-items: flex-start;"><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="#0093d0" stroke-width="3" style="flex-shrink: 0; margin-top: 3px;"><polyline points="20 6 9 17 4 12"/></svg> <span><strong>Strength, Mobility &amp; Injury Prevention:</strong> Individualized exercise programs to improve movement, function, and long-term physical health.</span></li>
+    </ul>
+  </div>
+  <div style="background: #f4f9fd; border: 1.5px solid #0093d0; border-radius: 12px; padding: 18px; margin-bottom: 20px;">
+    <h3 style="font-size: 1.15rem; color: #007cb0; font-weight: 800; margin-bottom: 8px;">Meet Our Physiotherapists</h3>
+    <p style="font-size: 0.9rem; color: #115e59; line-height: 1.6; margin-bottom: 10px;">
+      <strong>Shakiba Banifatemi</strong> – Pelvic Physiotherapist &amp; Founder of Javia<br>
+      <span style="font-size: 0.86rem; color: #134e4a;">Specializes in pelvic health, running-related injuries, and movement rehabilitation.</span>
+    </p>
+    <p style="font-size: 0.9rem; color: #115e59; line-height: 1.6; margin: 0;">
+      <strong>Amin Montazeri</strong> – Registered Physiotherapist<br>
+      <span style="font-size: 0.86rem; color: #134e4a;">Focuses on musculoskeletal and orthopaedic physiotherapy, therapeutic exercise, manual therapy, and dry needling.</span>
+    </p>
+  </div>
+  <div style="display: flex; gap: 12px; flex-wrap: wrap;">
+    <a href="https://javia.janeapp.com/locations/beach-health/book#/discipline/1/treatment/36" target="_blank" rel="noopener" class="btn btn-primary" style="background: #0093d0; border-color: #0093d0;">Book Now</a>
+    <a href="/physiotherapy.html" class="btn btn-secondary">Learn More <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M12 5l7 7-7 7"/></svg></a>
+  </div>
+</div>`
+  },
+  'clinical-pilates': {
     pageUrl: '/clinical-pilates.html',
-    title: 'Physiotherapy & Clinical Pilates at Beach Health',
-    portal: 'Physiotherapy & Active Rehab',
+    title: 'Clinical Pilates',
+    portal: 'Beachealth Clinic',
     bookingUrl: 'https://beachealth.janeapp.com/#/pilates-physio-pilates',
     image: '/images/pilates-card.jpeg',
-    desc: 'Move with confidence. Build strength. Support your long-term health with Physiotherapy & Clinical Pilates.',
+    desc: 'Clinical Pilates combines Pilates-based movements with physiotherapy principles to improve strength, mobility, posture, balance, and movement control.',
     points: [
-      'Core strength and spinal stability',
-      'Posture and body alignment retraining',
-      'Hip, knee, ankle and pelvic stability',
-      'Specialized Pelvic Health Physiotherapy with Javia',
-      'Return to running, fitness, and daily sport'
+      'Clinical & Therapeutic Pilates',
+      'Pilates for Strength & Mobility',
+      'Postural Re-education',
+      'Core Stability & Functional Strengthening',
+      'Breathing Techniques & Breath Control',
+      'Injury Recovery & Prevention'
     ],
-    customHtml: `
-      <div class="service-modal-rich">
-        <img src="/images/pilates-card.jpeg" alt="Physiotherapy & Clinical Pilates at Beach Health" style="width: 100%; height: 240px; object-fit: cover; border-radius: 12px; margin-bottom: 20px;" />
-        <h2 style="font-size: 1.7rem; color: #173753; margin-bottom: 8px; font-weight: 800;">Physiotherapy & Clinical Pilates at Beach Health</h2>
-        <p style="font-size: 1.05rem; font-weight: 600; color: #0093d0; margin-bottom: 16px;">Move with confidence. Build strength. Support your long-term health.</p>
-
-        <p style="font-size: 0.98rem; line-height: 1.65; color: #334155; margin-bottom: 14px;">
-          We offer physiotherapy-guided Clinical Pilates, combining evidence-based rehabilitation with mindful, individualized movement.
-        </p>
-        <p style="font-size: 0.98rem; line-height: 1.65; color: #334155; margin-bottom: 14px;">
-          Our Registered Physiotherapists integrate Pilates-based therapeutic exercises into personalized treatment plans when clinically appropriate, helping clients improve strength, mobility, stability, and movement confidence.
-        </p>
-        <div style="background: #e0f2fe; border-left: 4px solid #0284c7; padding: 14px 18px; border-radius: 0 10px 10px 0; margin-bottom: 20px;">
-          <strong style="color: #0369a1; display: block; font-size: 0.92rem; margin-bottom: 4px;">Pelvic Health Partnership with Javia:</strong>
-          <p style="font-size: 0.88rem; color: #0c4a6e; line-height: 1.5; margin: 0;">
-            We also have access to a Registered Pelvic Health Physiotherapist through Javia, offering specialized consultations for clients interested in addressing pelvic floor concerns, pregnancy and postpartum recovery, or other pelvic health conditions.
-          </p>
-        </div>
-
-        <div style="background: #f8fafc; border: 1px solid #e2e8f0; border-radius: 12px; padding: 18px; margin-bottom: 20px;">
-          <h3 style="font-size: 1.15rem; color: #173753; font-weight: 800; margin-bottom: 10px;">Who Is Clinical Pilates For?</h3>
-          <p style="font-size: 0.9rem; color: #475569; margin-bottom: 12px;">Clinical Pilates is suitable for individuals recovering from injury, managing pain, improving physical function, or looking to build strength and confidence in their movements. It can help with:</p>
-          <ul style="display: flex; flex-direction: column; gap: 8px; font-size: 0.88rem; color: #334155;">
-            <li style="display: flex; gap: 8px; align-items: flex-start;"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="#0093d0" stroke-width="3" style="flex-shrink: 0; margin-top: 3px;"><polyline points="20 6 9 17 4 12"/></svg> <span><strong>Back and neck pain:</strong> Improving spinal mobility, postural awareness, and muscular endurance.</span></li>
-            <li style="display: flex; gap: 8px; align-items: flex-start;"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="#0093d0" stroke-width="3" style="flex-shrink: 0; margin-top: 3px;"><polyline points="20 6 9 17 4 12"/></svg> <span><strong>Sports and repetitive strain injuries:</strong> Supporting rehabilitation and a gradual return to physical activity.</span></li>
-            <li style="display: flex; gap: 8px; align-items: flex-start;"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="#0093d0" stroke-width="3" style="flex-shrink: 0; margin-top: 3px;"><polyline points="20 6 9 17 4 12"/></svg> <span><strong>Hip, knee, and ankle concerns:</strong> Improving joint stability, strength, and movement control.</span></li>
-            <li style="display: flex; gap: 8px; align-items: flex-start;"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="#0093d0" stroke-width="3" style="flex-shrink: 0; margin-top: 3px;"><polyline points="20 6 9 17 4 12"/></svg> <span><strong>Pregnancy and postpartum recovery:</strong> Supporting physical changes during pregnancy and rebuilding strength following childbirth.</span></li>
-            <li style="display: flex; gap: 8px; align-items: flex-start;"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="#0093d0" stroke-width="3" style="flex-shrink: 0; margin-top: 3px;"><polyline points="20 6 9 17 4 12"/></svg> <span><strong>Pelvic floor concerns:</strong> Specialized consultations for pelvic floor weakness, urinary leakage, or coordination difficulties.</span></li>
-            <li style="display: flex; gap: 8px; align-items: flex-start;"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="#0093d0" stroke-width="3" style="flex-shrink: 0; margin-top: 3px;"><polyline points="20 6 9 17 4 12"/></svg> <span><strong>Diastasis recti:</strong> Supporting abdominal wall rehabilitation and functional core strength.</span></li>
-            <li style="display: flex; gap: 8px; align-items: flex-start;"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="#0093d0" stroke-width="3" style="flex-shrink: 0; margin-top: 3px;"><polyline points="20 6 9 17 4 12"/></svg> <span><strong>Arthritis, stiffness, and hypermobility:</strong> Improving muscular support, mobility, and joint control.</span></li>
-            <li style="display: flex; gap: 8px; align-items: flex-start;"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="#0093d0" stroke-width="3" style="flex-shrink: 0; margin-top: 3px;"><polyline points="20 6 9 17 4 12"/></svg> <span><strong>Running and fitness injuries:</strong> Supporting rehabilitation and a safe return to sport.</span></li>
-            <li style="display: flex; gap: 8px; align-items: flex-start;"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="#0093d0" stroke-width="3" style="flex-shrink: 0; margin-top: 3px;"><polyline points="20 6 9 17 4 12"/></svg> <span><strong>Healthy aging:</strong> Maintaining balance, strength, mobility, and independence.</span></li>
-          </ul>
-        </div>
-
-        <div style="background: #ffffff; border: 1px solid #e2e8f0; border-radius: 12px; padding: 18px; margin-bottom: 20px;">
-          <h3 style="font-size: 1.15rem; color: #173753; font-weight: 800; margin-bottom: 10px;">What Is the Difference Between Regular Pilates and Clinical Pilates?</h3>
-          <p style="font-size: 0.92rem; color: #475569; line-height: 1.6; margin-bottom: 10px;">
-            Regular Pilates focuses on general fitness, flexibility, strength, and body awareness. <strong>Clinical Pilates takes a more individualized, therapeutic approach.</strong>
-          </p>
-          <p style="font-size: 0.92rem; color: #475569; line-height: 1.6;">
-            At Beach Health, our physiotherapists assess your movement, strength, mobility, and functional limitations before determining whether Pilates-based exercises would benefit your rehabilitation. Exercises are selected and modified according to your individual condition, physical abilities, and treatment goals.
-          </p>
-        </div>
-
-        <div style="background: #fdf2f8; border: 1px solid #fbcfe8; border-radius: 12px; padding: 18px; margin-bottom: 20px;">
-          <h3 style="font-size: 1.15rem; color: #9d174d; font-weight: 800; margin-bottom: 8px;">Specialized Pelvic Health Physiotherapy Consultations</h3>
-          <p style="font-size: 0.88rem; color: #831843; line-height: 1.5; margin-bottom: 10px;">Through our partnership with Javia, Beach Health clients can access consultations with a Registered Physiotherapist specializing in pelvic health:</p>
-          <ul style="display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 6px; font-size: 0.85rem; color: #701a75;">
-            <li>• Pregnancy-related pelvic or back discomfort</li>
-            <li>• Postpartum recovery concerns</li>
-            <li>• Urinary incontinence & pelvic floor issues</li>
-            <li>• Diastasis recti abdominal rehab</li>
-            <li>• Safe return to exercise after childbirth</li>
-            <li>• Menopause-related pelvic health changes</li>
-          </ul>
-        </div>
-
-        <div style="display: flex; gap: 12px; flex-wrap: wrap;">
-          <a href="https://beachealth.janeapp.com/#/pilates-physio-pilates" target="_blank" rel="noopener" class="btn btn-primary">Book Physiotherapy &amp; Clinical Pilates</a>
-          <a href="/clinical-pilates.html" class="btn btn-secondary">Learn More <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M12 5l7 7-7 7"/></svg></a>
-        </div>
-      </div>
-    `
+    customHtml: `<div class="service-modal-rich">
+  <img src="/images/pilates-card.jpeg" alt="Clinical Pilates at Beach Health" style="width: 100%; height: 240px; object-fit: cover; border-radius: 12px; margin-bottom: 20px;" />
+  <h2 style="font-size: 1.7rem; color: #173753; margin-bottom: 8px; font-weight: 800;">Clinical Pilates at Beach Health</h2>
+  <p style="font-size: 1.05rem; font-weight: 600; color: #0093d0; margin-bottom: 16px;">Individualized, goal-oriented exercise programs supporting rehabilitation and long-term well-being.</p>
+  <p style="font-size: 0.98rem; line-height: 1.65; color: #334155; margin-bottom: 14px;">Clinical Pilates combines Pilates-based movements with physiotherapy principles to improve strength, mobility, posture, balance, and movement control.</p>
+  <p style="font-size: 0.98rem; line-height: 1.65; color: #334155; margin-bottom: 18px;">Our focus is on individualized, goal-oriented exercise programs that support rehabilitation, injury prevention, and long-term physical well-being.</p>
+  <div style="background: #f8fafc; border: 1px solid #e2e8f0; border-radius: 12px; padding: 18px; margin-bottom: 20px;">
+    <h3 style="font-size: 1.15rem; color: #173753; font-weight: 800; margin-bottom: 10px;">Services Can Include:</h3>
+    <ul style="display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 8px; font-size: 0.9rem; color: #334155;">
+      <li style="display: flex; gap: 8px; align-items: center;"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="#0093d0" stroke-width="3"><polyline points="20 6 9 17 4 12"/></svg> <span>Clinical &amp; Therapeutic Pilates</span></li>
+      <li style="display: flex; gap: 8px; align-items: center;"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="#0093d0" stroke-width="3"><polyline points="20 6 9 17 4 12"/></svg> <span>Pilates for Strength &amp; Mobility</span></li>
+      <li style="display: flex; gap: 8px; align-items: center;"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="#0093d0" stroke-width="3"><polyline points="20 6 9 17 4 12"/></svg> <span>Postural Re-education</span></li>
+      <li style="display: flex; gap: 8px; align-items: center;"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="#0093d0" stroke-width="3"><polyline points="20 6 9 17 4 12"/></svg> <span>Core Stability &amp; Functional Strengthening</span></li>
+      <li style="display: flex; gap: 8px; align-items: center;"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="#0093d0" stroke-width="3"><polyline points="20 6 9 17 4 12"/></svg> <span>Breathing Techniques &amp; Breath Control</span></li>
+      <li style="display: flex; gap: 8px; align-items: center;"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="#0093d0" stroke-width="3"><polyline points="20 6 9 17 4 12"/></svg> <span>Injury Recovery &amp; Prevention</span></li>
+    </ul>
+  </div>
+  <div style="background: #f0f9ff; border: 1.5px solid #bae6fd; border-left: 5px solid #0093d0; border-radius: 10px; padding: 16px 18px; margin-bottom: 20px;">
+    <p style="font-size: 0.92rem; color: #1e293b; line-height: 1.6; margin-bottom: 10px;">Clinical Pilates delivered as physiotherapy treatment requires an initial physiotherapy assessment and an individualized treatment plan. Our physiotherapy assistants can then guide clients through their prescribed exercises under physiotherapist supervision.</p>
+    <p style="font-size: 0.92rem; color: #0284c7; font-weight: 700; margin: 0;">Clients can also choose to book private sessions with Lis</p>
+  </div>
+  <div style="background: #ffffff; border: 1px solid #e2e8f0; border-radius: 12px; padding: 18px; margin-bottom: 20px;">
+    <h3 style="font-size: 1.15rem; color: #173753; font-weight: 800; margin-bottom: 8px;">Adriana Lis Pereira</h3>
+    <div style="color: #0093d0; font-size: 0.9rem; font-weight: 700; margin-bottom: 10px;">Physiotherapy Assistant and Clinical Pilates Instructor</div>
+    <p style="font-size: 0.88rem; color: #475569; line-height: 1.55; margin: 0;">Lis is a PhD in Medical Sciences from the University of São Paulo and a specialization in Neuroscience from UNICAMP. At Beachealth, she delivers therapeutic exercise and rehab programs under the supervision of a Registered Physiotherapist, along with Clinical Pilates sessions focused on posture, stability, strength, and mobility.</p>
+  </div>
+  <div style="display: flex; gap: 12px; flex-wrap: wrap;">
+    <a href="https://beachealth.janeapp.com/#/pilates-physio-pilates" target="_blank" rel="noopener" class="btn btn-primary">Book Clinical Pilates</a>
+    <a href="/clinical-pilates.html" class="btn btn-secondary">Learn More <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M12 5l7 7-7 7"/></svg></a>
+  </div>
+</div>`
+  },
+  'physio-pilates': {
+    pageUrl: '/clinical-pilates.html',
+    title: 'Clinical Pilates',
+    portal: 'Beachealth Clinic',
+    bookingUrl: 'https://beachealth.janeapp.com/#/pilates-physio-pilates',
+    image: '/images/pilates-card.jpeg',
+    desc: 'Clinical Pilates combines Pilates-based movements with physiotherapy principles to improve strength, mobility, posture, balance, and movement control.',
+    points: [
+      'Clinical & Therapeutic Pilates',
+      'Pilates for Strength & Mobility',
+      'Postural Re-education',
+      'Core Stability & Functional Strengthening',
+      'Breathing Techniques & Breath Control',
+      'Injury Recovery & Prevention'
+    ],
+    customHtml: `<div class="service-modal-rich">
+  <img src="/images/pilates-card.jpeg" alt="Clinical Pilates at Beach Health" style="width: 100%; height: 240px; object-fit: cover; border-radius: 12px; margin-bottom: 20px;" />
+  <h2 style="font-size: 1.7rem; color: #173753; margin-bottom: 8px; font-weight: 800;">Clinical Pilates at Beach Health</h2>
+  <p style="font-size: 1.05rem; font-weight: 600; color: #0093d0; margin-bottom: 16px;">Individualized, goal-oriented exercise programs supporting rehabilitation and long-term well-being.</p>
+  <p style="font-size: 0.98rem; line-height: 1.65; color: #334155; margin-bottom: 14px;">Clinical Pilates combines Pilates-based movements with physiotherapy principles to improve strength, mobility, posture, balance, and movement control.</p>
+  <p style="font-size: 0.98rem; line-height: 1.65; color: #334155; margin-bottom: 18px;">Our focus is on individualized, goal-oriented exercise programs that support rehabilitation, injury prevention, and long-term physical well-being.</p>
+  <div style="background: #f8fafc; border: 1px solid #e2e8f0; border-radius: 12px; padding: 18px; margin-bottom: 20px;">
+    <h3 style="font-size: 1.15rem; color: #173753; font-weight: 800; margin-bottom: 10px;">Services Can Include:</h3>
+    <ul style="display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 8px; font-size: 0.9rem; color: #334155;">
+      <li style="display: flex; gap: 8px; align-items: center;"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="#0093d0" stroke-width="3"><polyline points="20 6 9 17 4 12"/></svg> <span>Clinical &amp; Therapeutic Pilates</span></li>
+      <li style="display: flex; gap: 8px; align-items: center;"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="#0093d0" stroke-width="3"><polyline points="20 6 9 17 4 12"/></svg> <span>Pilates for Strength &amp; Mobility</span></li>
+      <li style="display: flex; gap: 8px; align-items: center;"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="#0093d0" stroke-width="3"><polyline points="20 6 9 17 4 12"/></svg> <span>Postural Re-education</span></li>
+      <li style="display: flex; gap: 8px; align-items: center;"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="#0093d0" stroke-width="3"><polyline points="20 6 9 17 4 12"/></svg> <span>Core Stability &amp; Functional Strengthening</span></li>
+      <li style="display: flex; gap: 8px; align-items: center;"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="#0093d0" stroke-width="3"><polyline points="20 6 9 17 4 12"/></svg> <span>Breathing Techniques &amp; Breath Control</span></li>
+      <li style="display: flex; gap: 8px; align-items: center;"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="#0093d0" stroke-width="3"><polyline points="20 6 9 17 4 12"/></svg> <span>Injury Recovery &amp; Prevention</span></li>
+    </ul>
+  </div>
+  <div style="background: #f0f9ff; border: 1.5px solid #bae6fd; border-left: 5px solid #0093d0; border-radius: 10px; padding: 16px 18px; margin-bottom: 20px;">
+    <p style="font-size: 0.92rem; color: #1e293b; line-height: 1.6; margin-bottom: 10px;">Clinical Pilates delivered as physiotherapy treatment requires an initial physiotherapy assessment and an individualized treatment plan. Our physiotherapy assistants can then guide clients through their prescribed exercises under physiotherapist supervision.</p>
+    <p style="font-size: 0.92rem; color: #0284c7; font-weight: 700; margin: 0;">Clients can also choose to book private sessions with Lis</p>
+  </div>
+  <div style="background: #ffffff; border: 1px solid #e2e8f0; border-radius: 12px; padding: 18px; margin-bottom: 20px;">
+    <h3 style="font-size: 1.15rem; color: #173753; font-weight: 800; margin-bottom: 8px;">Adriana Lis Pereira</h3>
+    <div style="color: #0093d0; font-size: 0.9rem; font-weight: 700; margin-bottom: 10px;">Physiotherapy Assistant and Clinical Pilates Instructor</div>
+    <p style="font-size: 0.88rem; color: #475569; line-height: 1.55; margin: 0;">Lis is a PhD in Medical Sciences from the University of São Paulo and a specialization in Neuroscience from UNICAMP. At Beachealth, she delivers therapeutic exercise and rehab programs under the supervision of a Registered Physiotherapist, along with Clinical Pilates sessions focused on posture, stability, strength, and mobility.</p>
+  </div>
+  <div style="display: flex; gap: 12px; flex-wrap: wrap;">
+    <a href="https://beachealth.janeapp.com/#/pilates-physio-pilates" target="_blank" rel="noopener" class="btn btn-primary">Book Clinical Pilates</a>
+    <a href="/clinical-pilates.html" class="btn btn-secondary">Learn More <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M12 5l7 7-7 7"/></svg></a>
+  </div>
+</div>`
   },
   'medical-pedicure': {
     pageUrl: '/medical-pedicure.html',

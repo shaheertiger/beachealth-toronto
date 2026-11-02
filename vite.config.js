@@ -16,6 +16,7 @@ export default defineConfig({
         notFound: resolve(__dirname, '404.html'),
         chiropractic: resolve(__dirname, 'chiropractic.html'),
         clinicalPilates: resolve(__dirname, 'clinical-pilates.html'),
+        physiotherapy: resolve(__dirname, 'physiotherapy.html'),
         osteopathy: resolve(__dirname, 'osteopathy.html'),
         massageTherapy: resolve(__dirname, 'massage-therapy.html'),
         tmjMassage: resolve(__dirname, 'tmj-massage.html'),

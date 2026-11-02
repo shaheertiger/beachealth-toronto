@@ -4214,3 +4214,290 @@ html.scroll-locked body {
 .reviews-status-pill:hover {
   transform: translateY(-1px);
 }
+
+
+/* ==========================================================================
+   PHYSIOTHERAPY (JAVIA) DEDICATED SECTION ENHANCEMENTS & ANIMATIONS
+   ========================================================================== */
+.physio-partner-section {
+  position: relative;
+  background: linear-gradient(180deg, #f4f9fd 0%, #ffffff 100%);
+  border-top: 1px solid rgba(0, 147, 208, 0.15);
+  border-bottom: 1px solid #e2e8f0;
+  padding: 75px 0;
+  overflow: hidden;
+}
+
+.physio-partner-section .section-title-wrap {
+  text-align: center;
+  margin-bottom: 48px;
+}
+
+.physio-partner-pill {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  background: rgba(0, 147, 208, 0.08);
+  border: 1.5px solid #0093d0;
+  padding: 6px 18px;
+  border-radius: 20px;
+  color: #007cb0;
+  font-size: 0.82rem;
+  font-weight: 800;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  margin-bottom: 14px;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.physio-partner-pill:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 4px 14px rgba(0, 147, 208, 0.18);
+}
+
+.physio-partner-section .section-title {
+  color: #173753;
+  font-size: 2.35rem;
+  font-weight: 800;
+  margin-bottom: 12px;
+}
+
+.physio-partner-section .section-subtitle {
+  max-width: 760px;
+  margin: 0 auto;
+  color: #475569;
+  font-size: 1.05rem;
+  line-height: 1.65;
+}
+
+.physio-grid-layout {
+  display: grid;
+  grid-template-columns: 1fr 1.2fr;
+  gap: 36px;
+  align-items: start;
+}
+
+@media (max-width: 992px) {
+  .physio-grid-layout {
+    grid-template-columns: 1fr;
+    gap: 36px;
+  }
+}
+
+.physio-col-header {
+  margin-bottom: 20px;
+}
+
+.physio-col-title {
+  font-size: 1.35rem;
+  color: #173753;
+  font-weight: 800;
+  margin-bottom: 6px;
+}
+
+.physio-col-desc {
+  color: #64748b;
+  font-size: 0.92rem;
+  margin: 0;
+  line-height: 1.55;
+}
+
+.physio-practitioners-list {
+  display: flex;
+  flex-direction: column;
+  gap: 22px;
+}
+
+/* Practitioner Cards (Left) */
+.physio-practitioner-card {
+  background: #ffffff;
+  border: 1.5px solid rgba(0, 147, 208, 0.18);
+  border-radius: 16px;
+  overflow: hidden;
+  box-shadow: 0 4px 18px rgba(23, 55, 83, 0.05);
+  display: flex;
+  flex-direction: column;
+  transition: transform 0.35s cubic-bezier(0.16, 1, 0.3, 1),
+              box-shadow 0.35s cubic-bezier(0.16, 1, 0.3, 1),
+              border-color 0.35s ease;
+}
+
+.physio-practitioner-card:hover {
+  transform: translateY(-5px);
+  border-color: #0093d0;
+  box-shadow: 0 14px 32px rgba(0, 147, 208, 0.15);
+}
+
+.physio-card-top {
+  display: flex;
+  gap: 18px;
+  padding: 22px 22px 14px;
+  flex-wrap: wrap;
+  align-items: center;
+}
+
+.physio-avatar-img {
+  width: 105px;
+  height: 105px;
+  border-radius: 50%;
+  object-fit: cover;
+  object-position: center 20%;
+  border: 3px solid #0093d0;
+  flex-shrink: 0;
+  transition: transform 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.physio-practitioner-card:hover .physio-avatar-img {
+  transform: scale(1.06);
+}
+
+.physio-card-info {
+  flex: 1;
+  min-width: 190px;
+}
+
+.physio-practitioner-name {
+  font-size: 1.25rem;
+  color: #173753;
+  font-weight: 800;
+  margin: 0 0 4px;
+}
+
+.physio-practitioner-role {
+  color: #0093d0;
+  font-size: 0.88rem;
+  font-weight: 700;
+  margin-bottom: 0;
+}
+
+.physio-card-body {
+  padding: 0 22px 22px;
+}
+
+.physio-practitioner-bio {
+  color: #475569;
+  font-size: 0.9rem;
+  line-height: 1.6;
+  margin-bottom: 16px;
+}
+
+.physio-card-actions {
+  display: flex;
+  gap: 10px;
+  flex-wrap: wrap;
+}
+
+/* Services Box (Right) */
+.physio-services-box {
+  background: #ffffff;
+  border: 1px solid #e2e8f0;
+  border-radius: 16px;
+  padding: 32px 30px;
+  box-shadow: 0 4px 20px rgba(23, 55, 83, 0.05);
+  transition: box-shadow 0.3s ease, border-color 0.3s ease;
+}
+
+.physio-services-box:hover {
+  border-color: rgba(0, 147, 208, 0.3);
+  box-shadow: 0 10px 28px rgba(0, 147, 208, 0.08);
+}
+
+.physio-services-list {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.physio-service-item {
+  display: flex;
+  gap: 14px;
+  align-items: flex-start;
+  padding: 10px 14px;
+  margin: 0 -14px;
+  border-radius: 10px;
+  transition: transform 0.25s cubic-bezier(0.16, 1, 0.3, 1),
+              background 0.25s ease,
+              box-shadow 0.25s ease;
+}
+
+.physio-service-item:hover {
+  transform: translateX(6px);
+  background: rgba(0, 147, 208, 0.05);
+  box-shadow: 0 2px 8px rgba(0, 147, 208, 0.05);
+}
+
+.physio-num-badge {
+  width: 28px;
+  height: 28px;
+  border-radius: 50%;
+  background: #0093d0;
+  color: #ffffff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 0.8rem;
+  font-weight: 800;
+  flex-shrink: 0;
+  margin-top: 2px;
+  transition: transform 0.3s cubic-bezier(0.34, 1.56, 0.64, 1), background-color 0.3s ease;
+}
+
+.physio-service-item:hover .physio-num-badge {
+  transform: scale(1.15);
+  background-color: #173753;
+}
+
+.physio-item-title {
+  color: #173753;
+  font-size: 0.98rem;
+  display: block;
+  margin-bottom: 3px;
+  transition: color 0.25s ease;
+}
+
+.physio-service-item:hover .physio-item-title {
+  color: #0093d0;
+}
+
+.physio-item-desc {
+  color: #475569;
+  font-size: 0.88rem;
+  line-height: 1.55;
+  display: block;
+}
+
+.physio-booking-banner {
+  margin-top: 28px;
+  padding-top: 22px;
+  border-top: 1px dashed #cbd5e1;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 14px;
+}
+
+.physio-booking-label {
+  font-size: 0.8rem;
+  font-weight: 700;
+  color: #007cb0;
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+  display: block;
+}
+
+.physio-booking-title {
+  font-size: 0.95rem;
+  font-weight: 800;
+  color: #173753;
+}
+
+.physio-booking-btn {
+  padding: 10px 22px;
+  transition: transform 0.25s ease, box-shadow 0.25s ease;
+}
+
+.physio-booking-btn:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 6px 16px rgba(0, 147, 208, 0.25);
+}
