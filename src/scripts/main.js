@@ -379,8 +379,8 @@ const TEAM_DATA = {
           <li>• TMJ jaw tension, headaches & posture care</li>
         </ul>
       </div>
-      <div style="margin-top: 16px;">
-        <a href="/chiropractic.html" style="color: #0093d0; font-weight: 700; text-decoration: underline;">Learn More →</a>
+
+
       </div>
     `
   },
@@ -490,8 +490,8 @@ const TEAM_DATA = {
     <li>• Private Mindful Movement Sessions</li>
   </ul>
 </div>
-<div style="margin-top: 14px;">
-  <a href="https://beachealth.janeapp.com/#/pilates-physio-pilates" target="_blank" rel="noopener" class="btn btn-primary btn-sm">Book with Lis via Beachealth</a>
+
+
 </div>`
   }};
 
@@ -881,6 +881,7 @@ const BLOG_DATA = {
 
 /* "Dr. Adam Bletsoe" -> "Dr. Adam", "Lada Milos Lee" -> "Lada" */
 function shortName(name) {
+  if (name.includes('Adriana Lis')) return 'Lis';
   const parts = name.split(' ');
   return parts[0].endsWith('.') ? parts.slice(0, 2).join(' ') : parts[0];
 }
@@ -896,6 +897,17 @@ function setScrollLock(locked) {
   } else {
     root.classList.remove('scroll-locked');
   }
+}
+
+function getServiceUrlForTeam(id) {
+  if (!id) return null;
+  if (id.includes('adam') || id.includes('chiro')) return '/chiropractic.html';
+  if (id.includes('jared') || id.includes('jake') || id.includes('osteo')) return '/osteopathy.html';
+  if (id.includes('shakiba') || id.includes('amin') || id.includes('physio')) return '/physiotherapy.html';
+  if (id.includes('lis') || id.includes('pilates')) return '/clinical-pilates.html';
+  if (id.includes('lada') || id.includes('emily') || id.includes('foot')) return '/chiropody.html';
+  if (id.includes('patrice') || id.includes('krystele') || id.includes('massage')) return '/massage-therapy.html';
+  return null;
 }
 
 function initModals() {
@@ -960,6 +972,14 @@ function initModals() {
         </div>
         <div style="margin-top: 24px; padding-top: 20px; border-top: 1px solid #e2e8f0; font-size: 1rem; line-height: 1.7; color: #334155;">
           ${member.bio}
+          ${(() => {
+            const sUrl = member.serviceUrl || getServiceUrlForTeam(id);
+            return sUrl ? `
+              <div style="margin-top: 16px;">
+                <a href="${sUrl}" style="color: #0093d0; font-weight: 700; text-decoration: underline;">Learn More →</a>
+              </div>
+            ` : '';
+          })()}
         </div>
       `;
       openModal(html);
