@@ -580,19 +580,20 @@ const SERVICE_DATA = {
     </ul>
   </div>
   <div style="background: #f4f9fd; border: 1.5px solid #0093d0; border-radius: 12px; padding: 18px; margin-bottom: 20px;">
-    <h3 style="font-size: 1.15rem; color: #007cb0; font-weight: 800; margin-bottom: 8px;">Meet Our Physiotherapists</h3>
-    <p style="font-size: 0.9rem; color: #115e59; line-height: 1.6; margin-bottom: 10px;">
-      <strong>Shakiba Banifatemi</strong> – Pelvic Physiotherapist &amp; Founder of Javia<br>
-      <span style="font-size: 0.86rem; color: #134e4a;">Specializes in pelvic health, running-related injuries, and movement rehabilitation.</span>
+    <h3 style="font-size: 1.15rem; color: #173753; font-weight: 800; margin-bottom: 8px;">Meet Our Physiotherapists</h3>
+    <p style="font-size: 0.92rem; color: #173753; line-height: 1.6; margin-bottom: 10px;">
+      <strong>Shakiba Banifatemi</strong> – Pelvic Physiotherapist<br>
+      <span style="font-size: 0.86rem; color: #64748b;">Specializes in pelvic health, running-related injuries, and movement rehabilitation.</span>
     </p>
-    <p style="font-size: 0.9rem; color: #115e59; line-height: 1.6; margin: 0;">
+    <p style="font-size: 0.92rem; color: #173753; line-height: 1.6; margin: 0;">
       <strong>Amin Montazeri</strong> – Registered Physiotherapist<br>
-      <span style="font-size: 0.86rem; color: #134e4a;">Focuses on musculoskeletal and orthopaedic physiotherapy, therapeutic exercise, manual therapy, and dry needling.</span>
+      <span style="font-size: 0.86rem; color: #64748b;">Focuses on musculoskeletal and orthopaedic physiotherapy, therapeutic exercise, manual therapy, and dry needling.</span>
     </p>
   </div>
   <div style="display: flex; gap: 12px; flex-wrap: wrap;">
     <a href="https://javia.janeapp.com/locations/beach-health/book#/discipline/1/treatment/36" target="_blank" rel="noopener" class="btn btn-primary" style="background: #0093d0; border-color: #0093d0;">Book Now</a>
     <a href="/physiotherapy.html" class="btn btn-secondary">Learn More <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M12 5l7 7-7 7"/></svg></a>
+    <a href="tel:4165464887" class="btn btn-outline-dark">Call (416) 546-4887</a>
   </div>
 </div>`
   },
