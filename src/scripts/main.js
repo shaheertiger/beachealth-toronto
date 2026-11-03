@@ -432,9 +432,6 @@ const TEAM_DATA = {
     <li>• Movement Rehabilitation & Strength Training</li>
     <li>• Musculoskeletal Recovery & Return-to-Sport</li>
   </ul>
-</div>
-<div style="margin-top: 14px;">
-  <a href="https://javia.janeapp.com/locations/beach-health/book#/discipline/1/treatment/36" target="_blank" rel="noopener" class="btn btn-primary btn-sm" style="background: #0093d0; border-color: #0093d0;">Book with Shakiba</a>
 </div>`
   },
   'shakiba-banifatemi': {
@@ -453,9 +450,6 @@ const TEAM_DATA = {
     <li>• Movement Rehabilitation & Strength Training</li>
     <li>• Musculoskeletal Recovery & Return-to-Sport</li>
   </ul>
-</div>
-<div style="margin-top: 14px;">
-  <a href="https://javia.janeapp.com/locations/beach-health/book#/discipline/1/treatment/36" target="_blank" rel="noopener" class="btn btn-primary btn-sm" style="background: #0093d0; border-color: #0093d0;">Book with Shakiba</a>
 </div>`
   },
   'amin-montazeri': {
@@ -475,9 +469,6 @@ const TEAM_DATA = {
     <li>• Dry Needling & Electro-Acupuncture</li>
     <li>• Therapeutic Exercise & Active Rehab</li>
   </ul>
-</div>
-<div style="margin-top: 14px;">
-  <a href="https://javia.janeapp.com/locations/beach-health/book#/discipline/1/treatment/36" target="_blank" rel="noopener" class="btn btn-primary btn-sm" style="background: #0093d0; border-color: #0093d0;">Book with Amin</a>
 </div>`
   },
   'adriana-lis': {
