@@ -909,8 +909,8 @@ function setScrollLock(locked) {
 
 function initModals() {
   const modalOverlay = document.getElementById('modal-overlay');
-  const modalContent = document.getElementById('modal-body-container');
-  const modalClose = document.getElementById('modal-close-btn');
+  const modalContent = document.getElementById('modal-body-container') || document.getElementById('modal-content');
+  const modalClose = document.getElementById('modal-close-btn') || document.getElementById('modal-close');
 
   if (!modalOverlay || !modalContent) return;
 
