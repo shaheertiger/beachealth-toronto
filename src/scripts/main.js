@@ -420,7 +420,7 @@ const TEAM_DATA = {
     name: 'Shakiba Banifatemi',
     role: 'Pelvic Physiotherapist & Founder of Javia',
     portal: 'Javia Physiotherapy Booking',
-    bookingUrl: 'https://javia.janeapp.com/locations/beach-health/book#/discipline/1/treatment/36',
+    bookingUrl: 'https://javia.janeapp.com/locations/beachealth/book',
     image: '/images/team-shakiba.jpg',
     bio: `<p style="font-size: 1.05rem; font-weight: 700; color: #0093d0; margin-bottom: 12px;">Pelvic Physiotherapist & Founder of Javia</p>
 <p style="margin-bottom: 14px;">Shakiba specializes in pelvic health, running-related injuries, and movement rehabilitation. As a physiotherapist and passionate runner, she combines clinical knowledge with her personal experience in running, strength training, and Pilates to help clients recover, prevent injuries, and remain active throughout life.</p>
@@ -438,7 +438,7 @@ const TEAM_DATA = {
     name: 'Shakiba Banifatemi',
     role: 'Pelvic Physiotherapist & Founder of Javia',
     portal: 'Javia Physiotherapy Booking',
-    bookingUrl: 'https://javia.janeapp.com/locations/beach-health/book#/discipline/1/treatment/36',
+    bookingUrl: 'https://javia.janeapp.com/locations/beachealth/book',
     image: '/images/team-shakiba.jpg',
     bio: `<p style="font-size: 1.05rem; font-weight: 700; color: #0093d0; margin-bottom: 12px;">Pelvic Physiotherapist & Founder of Javia</p>
 <p style="margin-bottom: 14px;">Shakiba specializes in pelvic health, running-related injuries, and movement rehabilitation. As a physiotherapist and passionate runner, she combines clinical knowledge with her personal experience in running, strength training, and Pilates to help clients recover, prevent injuries, and remain active throughout life.</p>
@@ -456,7 +456,7 @@ const TEAM_DATA = {
     name: 'Amin Montazeri',
     role: 'Registered Physiotherapist (Javia)',
     portal: 'Javia Physiotherapy Booking',
-    bookingUrl: 'https://javia.janeapp.com/locations/beach-health/book#/discipline/1/treatment/36',
+    bookingUrl: 'https://javia.janeapp.com/locations/beachealth/book',
     image: '/images/team-amin.jpg',
     bio: `<p style="font-size: 1.05rem; font-weight: 700; color: #0093d0; margin-bottom: 12px;">Registered Physiotherapist (Javia)</p>
 <p style="margin-bottom: 14px;">Amin focuses on musculoskeletal and orthopaedic physiotherapy, helping clients manage pain, recover from injuries, and restore movement and function. His treatment approach incorporates therapeutic exercise, manual therapy, dry needling, and electro-acupuncture when appropriate.</p>
@@ -542,7 +542,7 @@ const SERVICE_DATA = {
     pageUrl: '/physiotherapy.html',
     title: 'Physiotherapy',
     portal: 'Javia Physiotherapy Booking',
-    bookingUrl: 'https://javia.janeapp.com/locations/beach-health/book#/discipline/1/treatment/36',
+    bookingUrl: 'https://javia.janeapp.com/locations/beachealth/book',
     image: '/images/physio-hero.jpg',
     desc: 'Beachealth has partnered with <a href="https://javia.ca/" target="_blank" rel="noopener" style="color: #0093d0; text-decoration: underline; font-weight: 700;">Javia</a>, a physiotherapy and movement-focused healthcare company dedicated to helping people move better, recover from injuries, build strength, and maintain an active, healthy lifestyle.',
     points: [
@@ -582,7 +582,7 @@ const SERVICE_DATA = {
     </p>
   </div>
   <div style="display: flex; gap: 12px; flex-wrap: wrap;">
-    <a href="https://javia.janeapp.com/locations/beach-health/book#/discipline/1/treatment/36" target="_blank" rel="noopener" class="btn btn-primary" style="background: #0093d0; border-color: #0093d0;">Book Now</a>
+    <a href="https://javia.janeapp.com/locations/beachealth/book" target="_blank" rel="noopener" class="btn btn-primary" style="background: #0093d0; border-color: #0093d0;">Book Now</a>
     <a href="/physiotherapy.html" class="btn btn-secondary">Learn More <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M12 5l7 7-7 7"/></svg></a>
     <a href="tel:4165464887" class="btn btn-outline-dark">Call (416) 546-4887</a>
   </div>
