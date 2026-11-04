@@ -540,11 +540,11 @@ const SERVICE_DATA = {
   },
   'physiotherapy': {
     pageUrl: '/physiotherapy.html',
-    title: 'Physiotherapy (In Partnership with Javia)',
+    title: 'Physiotherapy',
     portal: 'Javia Physiotherapy Booking',
     bookingUrl: 'https://javia.janeapp.com/locations/beach-health/book#/discipline/1/treatment/36',
     image: '/images/physio-hero.jpg',
-    desc: 'Beachealth has partnered with Javia, a physiotherapy and movement-focused healthcare company dedicated to helping people move better, recover from injuries, build strength, and maintain an active, healthy lifestyle.',
+    desc: 'Beachealth has partnered with <a href="https://javia.ca/" target="_blank" rel="noopener" style="color: #0093d0; text-decoration: underline; font-weight: 700;">Javia</a>, a physiotherapy and movement-focused healthcare company dedicated to helping people move better, recover from injuries, build strength, and maintain an active, healthy lifestyle.',
     points: [
       'Musculoskeletal & Orthopaedic Physiotherapy',
       'Pre-Operative & Post-Operative Rehabilitation',
@@ -698,7 +698,7 @@ const SERVICE_DATA = {
   },
   'shockwave-therapy': {
     pageUrl: '/shockwave-therapy.html',
-    title: 'Shockwave',
+    title: 'Shockwave Therapy',
     portal: 'Beachealth Services',
     bookingUrl: 'https://beachealth.janeapp.com/',
     image: '/images/shockwave-card.jpeg',
@@ -711,6 +711,7 @@ const SERVICE_DATA = {
     ]
   },
   'chiropractic': {
+    pageUrl: '/chiropractic.html',
     title: 'Chiropractic Care',
     portal: 'Beachealth Services',
     bookingUrl: 'https://beachealth.janeapp.com/',
@@ -819,7 +820,7 @@ const SERVICE_DATA = {
   },
   'dry-needling': {
     pageUrl: '/dry-needling.html',
-    title: 'Dry Needle',
+    title: 'Dry Needling',
     portal: 'Beachealth Services',
     bookingUrl: 'https://beachealth.janeapp.com/#/acupuncture',
     image: '/images/dry-needling-hero.jpg',
@@ -994,7 +995,7 @@ function initModals() {
       const service = SERVICE_DATA[id];
       if (!service) return;
 
-      if (service.customHtml) {
+      if (false && service.customHtml) {
         openModal(service.customHtml);
         return;
       }
