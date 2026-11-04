@@ -24,7 +24,8 @@ export default defineConfig({
         medicalPedicure: resolve(__dirname, 'medical-pedicure.html'),
         runningAnalysis: resolve(__dirname, 'running-analysis.html'),
         shockwaveTherapy: resolve(__dirname, 'shockwave-therapy.html'),
-        dryNeedling: resolve(__dirname, 'dry-needling.html')
+        dryNeedling: resolve(__dirname, 'dry-needling.html'),
+        privacyTerms: resolve(__dirname, 'privacy-terms.html')
       }
     }
   }

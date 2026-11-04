@@ -27,6 +27,103 @@
 
   <!-- Stylesheet -->
   <link rel="stylesheet" href="/src/styles/main.css" />
+
+  <style>
+    /* Scoped Footer Styling */
+    .site-footer {
+      background: #f1f7fa;
+      border-top: 1px solid #e2e8f0;
+      padding: 60px 0 30px;
+      color: #334155;
+      margin-top: 50px;
+    }
+    .site-footer .footer-title {
+      color: #173753 !important;
+      font-size: 1.15rem;
+      font-weight: 800;
+      margin-bottom: 20px;
+      position: relative;
+      padding-bottom: 10px;
+      display: inline-block;
+    }
+    .site-footer .footer-title::after {
+      content: '';
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      width: 36px;
+      height: 3px;
+      background: #0093d0;
+      border-radius: 2px;
+    }
+    .site-footer .footer-links {
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+      list-style: none;
+      padding: 0;
+      margin: 0;
+    }
+    .site-footer .footer-links a {
+      color: #475569 !important;
+      font-size: 0.92rem;
+      font-weight: 500;
+      text-decoration: none;
+      transition: all 0.2s ease;
+    }
+    .site-footer .footer-links a:hover {
+      color: #0093d0 !important;
+      padding-left: 4px;
+    }
+    .site-footer .footer-contact-line {
+      font-size: 0.92rem;
+      line-height: 1.6;
+      color: #475569;
+      margin-bottom: 12px;
+    }
+    .site-footer .footer-contact-line strong {
+      color: #173753;
+      font-weight: 700;
+    }
+    .site-footer .footer-contact-line a {
+      color: #0093d0;
+      text-decoration: none;
+    }
+    .site-footer .footer-social-links {
+      display: flex !important;
+      gap: 16px !important;
+      align-items: center !important;
+      margin-top: 20px !important;
+    }
+    .site-footer .footer-social-links a {
+      display: inline-flex !important;
+      align-items: center !important;
+      justify-content: center !important;
+      width: 42px !important;
+      height: 42px !important;
+      border-radius: 50% !important;
+      background: #ffffff !important;
+      color: #0093d0 !important;
+      border: 1.5px solid #cbd5e1 !important;
+      box-shadow: 0 2px 6px rgba(0, 0, 0, 0.05) !important;
+      transition: all 0.2s ease !important;
+    }
+    .site-footer .footer-social-links a:hover {
+      background: #0093d0 !important;
+      color: #ffffff !important;
+      border-color: #0093d0 !important;
+      transform: translateY(-2px);
+      box-shadow: 0 4px 12px rgba(0, 147, 208, 0.25) !important;
+    }
+    .site-footer .footer-bottom {
+      margin-top: 40px;
+      padding-top: 24px;
+      border-top: 1px solid #e2e8f0;
+      text-align: center;
+      font-size: 0.88rem;
+      color: #64748b;
+    }
+  </style>
 </head>
 <body>
 
@@ -65,10 +162,10 @@
           <li class="nav-item-dropdown">
             <a href="/#services" class="nav-link active">Services</a>
             <div class="dropdown-menu">
+              <a href="/physiotherapy.html" class="dropdown-link">Physiotherapy <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M12 5l7 7-7 7"/></svg></a>
+              <a href="/clinical-pilates.html" class="dropdown-link">Clinical Pilates <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M12 5l7 7-7 7"/></svg></a>
               <a href="/osteopathy.html" class="dropdown-link">Osteopathy <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M12 5l7 7-7 7"/></svg></a>
               <a href="/chiropractic.html" class="dropdown-link">Chiropractic Care <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M12 5l7 7-7 7"/></svg></a>
-              <a href="/physiotherapy.html" class="dropdown-link">Physiotherapy (Javia) <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M12 5l7 7-7 7"/></svg></a>
-              <a href="/clinical-pilates.html" class="dropdown-link">Clinical Pilates <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M12 5l7 7-7 7"/></svg></a>
               <a href="/chiropody.html" class="dropdown-link">Chiropody and Foot Care <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M12 5l7 7-7 7"/></svg></a>
               <a href="/medical-pedicure.html" class="dropdown-link">Medical Pedicure <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M12 5l7 7-7 7"/></svg></a>
               <a href="/massage-therapy.html" class="dropdown-link">Massage Therapy <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M12 5l7 7-7 7"/></svg></a>
@@ -86,7 +183,7 @@
         <a href="tel:4165464887" class="header-call-btn" title="Call Clinic" aria-label="Call (416) 546-4887">
           <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"></path></svg>
         </a>
-        <a href="https://beachealth.janeapp.com/" target="_blank" rel="noopener" class="btn btn-primary btn-header-book" data-open-booking>Book Online</a>
+        <a href="https://beachealth.janeapp.com/#/registered-massage-therapy" target="_blank" rel="noopener" class="btn btn-primary btn-header-book">Book Now</a>
         <button class="mobile-toggle" aria-label="Open mobile menu" aria-expanded="false" aria-controls="mobile-drawer">
           <span></span>
           <span></span>
@@ -106,13 +203,21 @@
       <button class="drawer-close" aria-label="Close menu"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><line x1="18" y1="6" x2="6" y2="18"></line><line x1="6" y1="6" x2="18" y2="18"></line></svg></button>
     </div>
 
-    <!-- Dual Booking Quick Cards inside Drawer -->
+    <!-- Direct Booking Portals inside Drawer -->
     <div class="drawer-portals">
       <div class="drawer-portal-title">Direct Booking Portals</div>
-      <a href="https://beachealth.janeapp.com/" target="_blank" rel="noopener" class="drawer-portal-card">
+      <a href="https://beachealth.janeapp.com/#/registered-massage-therapy" target="_blank" rel="noopener" class="drawer-portal-card" style="border-left: 4px solid #0093d0;">
         <div class="portal-card-info">
           <strong>Beachealth Clinic</strong>
-          <span>Osteo, Chiro, Physio, Massage</span>
+          <span>TMJ Massage, Osteo, Chiro, Clinical Pilates</span>
+        </div>
+        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+      </a>
+
+      <a href="https://javia.janeapp.com/locations/beach-health/book#/discipline/1/treatment/36" target="_blank" rel="noopener" class="drawer-portal-card">
+        <div class="portal-card-info">
+          <strong>Javia Physiotherapy</strong>
+          <span>Musculoskeletal, Pelvic Health, Rehab</span>
         </div>
         <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
       </a>
@@ -131,10 +236,10 @@
       <a href="/#about">About Our Clinic</a>
       <div class="drawer-nav-heading">Services</div>
       <div class="drawer-nav-services">
+        <a href="/physiotherapy.html">Physiotherapy</a>
+        <a href="/clinical-pilates.html">Clinical Pilates</a>
         <a href="/osteopathy.html">Osteopathy</a>
         <a href="/chiropractic.html">Chiropractic Care</a>
-        <a href="/physiotherapy.html">Physiotherapy (Javia)</a>
-        <a href="/clinical-pilates.html">Clinical Pilates</a>
         <a href="/chiropody.html">Chiropody and Foot Care</a>
         <a href="/medical-pedicure.html">Medical Pedicure</a>
         <a href="/massage-therapy.html">Massage Therapy</a>
@@ -161,7 +266,7 @@
   <!-- ========================================================================
        HERO BANNER
        ======================================================================== -->
-  <section class="service-hero-banner has-image" style="--hero-img: url('/images/massage-hero.jpg');">
+  <section class="service-hero-banner" style="background: linear-gradient(135deg, #173753 0%, #1a4d6e 50%, #0093d0 100%);">
     <div class="container service-hero-container">
       <h1 class="service-hero-title">TMJ Massage</h1>
       <div class="service-breadcrumbs-box">
@@ -183,112 +288,31 @@
         <main class="service-page-main">
 
           <h2 class="service-main-heading">
-            TMJ massage at Beachealth helps relieve jaw pain, clenching, and the headaches and neck tension that often come with them.
+            TMJ Massage in The Beaches: Relief for Jaw Pain, Clenching &amp; Tension Headaches
           </h2>
 
-          <p class="service-lead-p">Your temporomandibular joints (TMJ) connect your jaw to your skull and work every time you talk, chew or yawn. When the muscles around them become overworked — often from clenching, grinding, stress or posture — the result can be jaw pain, clicking, limited opening, headaches and neck tension.</p>
+          <p class="service-lead-p" style="font-size: 1.15rem; font-weight: 500; color: #173753; line-height: 1.7; margin-bottom: 20px;">
+            Your temporomandibular joints (TMJ) connect your jaw to your skull and work tirelessly every time you speak, chew, or yawn. When jaw and masticatory muscles become chronically overworked—often due to night clenching, teeth grinding, postural strain, or stress—the outcome is persistent jaw tenderness, clicking, temple headaches, and restrictive neck stiffness. TMJ massage is specialized registered massage therapy designed to release tension at the root source.
+          </p>
 
-          <p class="service-lead-p">TMJ massage is focused registered massage therapy for the jaw, face, head and neck muscles that drive these symptoms.</p>
-
+          <!-- Featured Massage Image -->
           <div class="service-featured-image-wrap">
-            <img src="/images/massage-card.jpg" alt="Massage therapist treating neck and jaw tension at Beachealth" class="service-featured-img" loading="lazy" />
+            <img 
+              src="/images/massage-card.jpg" 
+              alt="Registered Massage Therapist treating jaw tension and TMJ at Beachealth Toronto" 
+              class="service-featured-img" 
+              loading="lazy"
+            />
           </div>
 
-          <!-- Contact & Booking CTA Callout -->
-          <div class="service-cta-callout">
-            To book an appointment you can call us at <a href="tel:4165464887">(416) 546-4887</a> or <a href="https://beachealth.janeapp.com/#/registered-massage-therapy" target="_blank" rel="noopener">book online</a>.
-          </div>
+          <!-- ========================================================================
+               MEET OUR TMJ MASSAGE THERAPISTS
+               ======================================================================== -->
+          <h2 class="service-section-title" style="margin-top: 30px; margin-bottom: 8px;">Meet Our TMJ Massage Therapists</h2>
+          <p style="margin-bottom: 24px; color: #475569; font-size: 1rem;">
+            Our Registered Massage Therapists have advanced clinical training in TMJ dysfunction, intra-oral techniques, and myofascial release:
+          </p>
 
-          <h2 class="service-section-title">How TMJ Massage Works</h2>
-          <p>Your therapist assesses how your jaw opens and moves and where tension is held, then works on the muscles involved.</p>
-          <p class="service-list-label">Treatment may include:</p>
-          <ul class="service-checklist">
-            <li>
-              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg>
-              <span><strong>Jaw muscle release:</strong> Targeted work on the chewing muscles, such as the masseter and temporalis, to reduce tension and tenderness.</span>
-            </li>
-            <li>
-              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg>
-              <span><strong>Neck, shoulder &amp; upper back work:</strong> Releasing the surrounding muscles that often contribute to jaw and head tension.</span>
-            </li>
-            <li>
-              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg>
-              <span><strong>Trigger point therapy:</strong> Easing tender points that can refer pain into the jaw, temples and teeth.</span>
-            </li>
-            <li>
-              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg>
-              <span><strong>Self-care &amp; habit strategies:</strong> Simple exercises and tips to reduce clenching and tension between visits.</span>
-            </li>
-          </ul>
-
-          <h2 class="service-section-title">Conditions We Commonly Help With</h2>
-          <ul class="service-checklist service-checklist-grid">
-            <li>
-              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg>
-              <span>Jaw pain or tenderness</span>
-            </li>
-            <li>
-              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg>
-              <span>Clenching and teeth grinding</span>
-            </li>
-            <li>
-              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg>
-              <span>Jaw clicking or popping</span>
-            </li>
-            <li>
-              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg>
-              <span>Limited or uncomfortable jaw opening</span>
-            </li>
-            <li>
-              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg>
-              <span>Tension headaches and temple pain</span>
-            </li>
-            <li>
-              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg>
-              <span>Neck and shoulder tension</span>
-            </li>
-            <li>
-              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg>
-              <span>Facial muscle tension</span>
-            </li>
-            <li>
-              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg>
-              <span>Stress-related tension</span>
-            </li>
-          </ul>
-          <p class="service-note">TMJ massage complements care from your dentist. If you use a night guard or are under dental care, keep it up — we focus on the muscles.</p>
-
-          <h2 class="service-section-title">Working Inside the Mouth</h2>
-          <p>Some of the jaw muscles are easiest to reach from inside the mouth. Where it is appropriate, your therapist may suggest gentle intra-oral work using gloves. It is always explained first and is only done with your consent — you can say no and still receive effective treatment from outside the mouth.</p>
-          <p>Jaw symptoms often overlap with neck and posture problems. TMJ-related care is also part of chiropractic care with Dr. Adam Bletsoe, and your care can be coordinated across our team.</p>
-
-          <h2 class="service-section-title">What to Expect at Your First Visit</h2>
-          <div class="service-steps-grid">
-            <div class="service-step-card">
-              <div class="service-step-header">
-                <span class="service-step-number">1</span>
-                <span class="service-step-title">Health History</span>
-              </div>
-              <p>We discuss your jaw symptoms, headaches, clenching or grinding, dental care and stress levels.</p>
-            </div>
-            <div class="service-step-card">
-              <div class="service-step-header">
-                <span class="service-step-number">2</span>
-                <span class="service-step-title">Jaw &amp; Neck Assessment</span>
-              </div>
-              <p>Your therapist checks jaw opening, movement and muscle tension in the jaw, head and neck.</p>
-            </div>
-            <div class="service-step-card">
-              <div class="service-step-header">
-                <span class="service-step-number">3</span>
-                <span class="service-step-title">Treatment &amp; Home Care</span>
-              </div>
-              <p>Focused hands-on treatment plus simple strategies to manage clenching and tension at home.</p>
-            </div>
-          </div>
-
-          <!-- Practitioners -->
-          <h2 class="service-section-title">Your TMJ Massage Practitioners</h2>
           <div class="service-practitioners-grid">
             <!-- Clinician: Krystele Charles -->
             <div class="service-practitioner-card">
@@ -304,7 +328,7 @@
                   </p>
                 </div>
                 <div class="service-practitioner-actions">
-                  <a href="https://beachealth.janeapp.com/" target="_blank" rel="noopener" class="service-practitioner-btn">Book Now</a>
+                  <a href="https://beachealth.janeapp.com/#/registered-massage-therapy" target="_blank" rel="noopener" class="service-practitioner-btn">Book Now</a>
                 </div>
               </div>
             </div>
@@ -319,41 +343,129 @@
                   <h3 class="service-practitioner-name">Patrice Wilson</h3>
                   <div class="service-practitioner-role">Registered Massage Therapist</div>
                   <p class="service-practitioner-bio">
-                    Patrice combines deep tissue therapy, trigger point release, and myofascial work around the neck, shoulders, and jaw to relieve chronic clenching and tension.
+                    Patrice combines deep tissue therapy, trigger point release, and myofascial work around the neck, shoulders, and jaw to relieve chronic clenching, tightness, and postural stress.
                   </p>
                 </div>
                 <div class="service-practitioner-actions">
-                  <a href="https://beachealth.janeapp.com/" target="_blank" rel="noopener" class="service-practitioner-btn">Book Now</a>
+                  <a href="https://beachealth.janeapp.com/#/registered-massage-therapy" target="_blank" rel="noopener" class="service-practitioner-btn">Book Now</a>
                 </div>
               </div>
+            </div>
+          </div>
+
+          <h2 class="service-section-title">How TMJ Massage Works</h2>
+          <p>Your therapist evaluates jaw tracking, opening range, and regional muscular trigger points before applying focused, gentle myofascial techniques.</p>
+          <p class="service-list-label">Targeted clinical interventions include:</p>
+          <ul class="service-checklist">
+            <li>
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg>
+              <span><strong>Masticatory muscle release:</strong> Specific release of the masseter, temporalis, and pterygoid muscles to diminish painful spasm and tightness.</span>
+            </li>
+            <li>
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg>
+              <span><strong>Cervical, shoulder &amp; suboccipital release:</strong> Treating the upper neck and cranial base muscles that perpetuate jaw restriction and tension headaches.</span>
+            </li>
+            <li>
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg>
+              <span><strong>Myofascial trigger point therapy:</strong> Deactivating referral points that project dull aches into the ear, temples, cheek, and teeth.</span>
+            </li>
+            <li>
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg>
+              <span><strong>Habit &amp; postural awareness:</strong> Practical breathing, tongue positioning, and jaw-resting exercises to reduce subconscious daytime clenching.</span>
+            </li>
+          </ul>
+
+          <h2 class="service-section-title">Conditions We Commonly Help With</h2>
+          <ul class="service-checklist service-checklist-grid">
+            <li>
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg>
+              <span>TMJ joint pain &amp; jaw soreness</span>
+            </li>
+            <li>
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg>
+              <span>Nighttime bruxism &amp; daytime clenching</span>
+            </li>
+            <li>
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg>
+              <span>Jaw clicking, popping &amp; deviation</span>
+            </li>
+            <li>
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg>
+              <span>Restricted or painful mouth opening</span>
+            </li>
+            <li>
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg>
+              <span>Tension headaches &amp; temple pressure</span>
+            </li>
+            <li>
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg>
+              <span>Chronic neck, clavicle &amp; shoulder tightness</span>
+            </li>
+            <li>
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg>
+              <span>Facial muscular fatigue &amp; soreness</span>
+            </li>
+            <li>
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg>
+              <span>Stress-induced nervous system hypersensitivity</span>
+            </li>
+          </ul>
+          <p class="service-note">TMJ massage perfectly complements dental treatment and night guards. We focus directly on soothing overworked muscles while your dentist addresses bite and tooth wear.</p>
+
+          <h2 class="service-section-title">Intra-Oral Treatment Techniques</h2>
+          <p>Key chewing muscles—such as the medial and lateral pterygoids—are located inside the cheek and easiest to reach from within the mouth. When clinically indicated, your RMT may recommend gentle intra-oral work using clean surgical gloves.</p>
+          <p>Intra-oral work is always clearly explained in advance and performed exclusively with your informed consent. You can decline at any time and still experience tremendous relief from external facial, scalp, and cervical techniques.</p>
+
+          <h2 class="service-section-title">What to Expect at Your Visit</h2>
+          <div class="service-steps-grid">
+            <div class="service-step-card">
+              <div class="service-step-header">
+                <span class="service-step-number">1</span>
+                <span class="service-step-title">Health History &amp; Clenching Review</span>
+              </div>
+              <p>We discuss your symptoms, dental care, night guard usage, headache patterns, and daily stressors.</p>
+            </div>
+            <div class="service-step-card">
+              <div class="service-step-header">
+                <span class="service-step-number">2</span>
+                <span class="service-step-title">Jaw &amp; Cervical Assessment</span>
+              </div>
+              <p>Your therapist checks jaw range, symmetry of movement, and tension hotspots across face and neck muscles.</p>
+            </div>
+            <div class="service-step-card">
+              <div class="service-step-header">
+                <span class="service-step-number">3</span>
+                <span class="service-step-title">Focused Therapy &amp; Home Care</span>
+              </div>
+              <p>Targeted hands-on treatment followed by ergonomic adjustments and self-release exercises for lasting comfort.</p>
             </div>
           </div>
 
           <h2 class="service-section-title">Frequently Asked Questions</h2>
           <div class="service-faq-wrap">
             <div class="service-faq-item">
-              <div class="service-faq-question">Is TMJ massage covered by insurance?</div>
-              <p class="service-faq-answer">TMJ massage is performed by a Registered Massage Therapist, so you receive an RMT receipt you can submit to your extended health plan.</p>
+              <div class="service-faq-question">Is TMJ massage covered under extended health insurance?</div>
+              <p class="service-faq-answer">Yes. Because TMJ massage is delivered by a Registered Massage Therapist (RMT), you will receive an official RMT receipt eligible for reimbursement through employer extended health benefits.</p>
             </div>
             <div class="service-faq-item">
-              <div class="service-faq-question">Does it hurt?</div>
-              <p class="service-faq-answer">The jaw muscles can be tender when they are overworked, so you may feel some discomfort, but your therapist will keep pressure within your comfort and check in throughout.</p>
+              <div class="service-faq-question">Does TMJ massage hurt?</div>
+              <p class="service-faq-answer">Chronically tight jaw muscles may feel sensitive when initial pressure is applied, but your therapist will always calibrate pressure to your comfort level and communicate closely throughout.</p>
             </div>
             <div class="service-faq-item">
-              <div class="service-faq-question">How many sessions will I need?</div>
-              <p class="service-faq-answer">Many people notice a difference after the first visit. Longer-standing clenching or jaw pain usually responds best to a short series of treatments plus home care.</p>
+              <div class="service-faq-question">How many appointments will I need?</div>
+              <p class="service-faq-answer">Most patients report marked relief in temple tightness and jaw freedom following their first session. For chronic bruxism, a short treatment plan combined with home exercises yields lasting stability.</p>
             </div>
             <div class="service-faq-item">
-              <div class="service-faq-question">Should I see my dentist too?</div>
-              <p class="service-faq-answer">Yes, if you have not already. Your dentist can check for dental causes and advise on a night guard; TMJ massage works alongside that care.</p>
+              <div class="service-faq-question">Should I consult my dentist as well?</div>
+              <p class="service-faq-answer">Yes, if you suspect tooth wear or bite misalignment. TMJ massage works hand-in-hand with dental care and night guard therapy to manage muscular pain.</p>
             </div>
           </div>
 
           <!-- Booking CTA Box -->
           <div class="service-cta-box">
             <div>
-              <h3>Ready to Relax Your Jaw?</h3>
-              <p>Book TMJ massage with one of our Registered Massage Therapists at Beachealth.</p>
+              <h3>Ready to Free Your Jaw from Tension?</h3>
+              <p>Book a specialized TMJ massage session with our Registered Massage Therapists in East Toronto.</p>
             </div>
             <a href="https://beachealth.janeapp.com/#/registered-massage-therapy" target="_blank" rel="noopener" class="btn btn-primary">Book TMJ Massage</a>
           </div>
@@ -367,146 +479,56 @@
         <!-- Right Column: Sidebar -->
         <aside class="service-page-sidebar">
 
-          <!-- Booking Widget -->
-          <div class="sidebar-widget sidebar-book-widget">
-            <h3 class="sidebar-widget-title">Book an Appointment</h3>
-            <p>Book online with Beachealth Clinic, or call our reception team.</p>
-            <a href="https://beachealth.janeapp.com/#/registered-massage-therapy" target="_blank" rel="noopener" class="btn btn-primary">Book TMJ Massage</a>
-            <a href="tel:4165464887" class="btn btn-outline-dark"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"></path></svg> Call (416) 546-4887</a>
+          <!-- Booking Card -->
+          <div class="sidebar-card booking-widget-card" style="border-top: 4px solid #0093d0;">
+            <h3 class="sidebar-title">Book TMJ Massage</h3>
+            <p style="font-size: 0.9rem; color: #475569; margin-bottom: 16px;">
+              Direct online booking via Beachealth's Jane App portal.
+            </p>
+            <a href="https://beachealth.janeapp.com/#/registered-massage-therapy" target="_blank" rel="noopener" class="btn btn-primary" style="width: 100%; text-align: center; justify-content: center; background: #0093d0; border-color: #0093d0; margin-bottom: 10px;">
+              Book TMJ Massage <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" style="margin-left: 6px;"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6M15 3h6v6M10 14L21 3"/></svg>
+            </a>
+            <a href="tel:4165464887" class="btn btn-secondary" style="width: 100%; text-align: center; justify-content: center;">
+              Call Clinic (416) 546-4887
+            </a>
           </div>
 
-          <!-- Our Therapists Widget -->
-          <div class="sidebar-widget">
-            <h3 class="sidebar-widget-title">Our Therapists</h3>
-            <ul class="sidebar-nav-list">
-              <li class="sidebar-nav-item">
-                <a href="/#team" data-team-id="lada-milos-lee">
-                  <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><polyline points="9 18 15 12 9 6"/></svg>
-                  <span>Lada Milos Lee</span>
-                </a>
-              </li>
-              <li class="sidebar-nav-item">
-                <a href="/#team" data-team-id="emily-tran">
-                  <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><polyline points="9 18 15 12 9 6"/></svg>
-                  <span>Emily Tran</span>
-                </a>
-              </li>
-              <li class="sidebar-nav-item">
-                <a href="/#team" data-team-id="dr-adam-bletsoe">
-                  <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><polyline points="9 18 15 12 9 6"/></svg>
-                  <span>Dr. Adam Bletsoe</span>
-                </a>
-              </li>
-              <li class="sidebar-nav-item">
-                <a href="/#team" data-team-id="jared-cox">
-                  <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><polyline points="9 18 15 12 9 6"/></svg>
-                  <span>Jared Cox</span>
-                </a>
-              </li>
-              <li class="sidebar-nav-item">
-                <a href="/#team" data-team-id="jake-maher">
-                  <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><polyline points="9 18 15 12 9 6"/></svg>
-                  <span>Jake Maher</span>
-                </a>
-              </li>
-              <li class="sidebar-nav-item active">
-                <a href="/#team" data-team-id="patrice-wilson">
-                  <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><polyline points="9 18 15 12 9 6"/></svg>
-                  <span>Patrice Wilson</span>
-                </a>
-              </li>
-              <li class="sidebar-nav-item active">
-                <a href="/#team" data-team-id="krystele-charles">
-                  <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><polyline points="9 18 15 12 9 6"/></svg>
-                  <span>Krystele Charles</span>
-                </a>
-              </li>
-              <li class="sidebar-nav-item">
-                <a href="/#team" data-team-id="shakiba-bani">
-                  <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><polyline points="9 18 15 12 9 6"/></svg>
-                  <span>Shakiba Bani</span>
-                </a>
-              </li>
-              <li class="sidebar-nav-item">
-                <a href="/#team" data-team-id="amin-montazeri">
-                  <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><polyline points="9 18 15 12 9 6"/></svg>
-                  <span>Amin Montazeri</span>
-                </a>
-              </li>
-              <li class="sidebar-nav-item">
-                <a href="/#team" data-team-id="adriana-lis">
-                  <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><polyline points="9 18 15 12 9 6"/></svg>
-                  <span>Adriana Lis Pereira</span>
-                </a>
-              </li>
-              <li class="sidebar-nav-item">
-                <a href="https://beachealth.com/job-opportunities/" target="_blank" rel="noopener">
-                  <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><polyline points="9 18 15 12 9 6"/></svg>
-                  <span>Job Opportunities</span>
-                </a>
-              </li>
+          <!-- All Services Menu -->
+          <div class="sidebar-card services-list-card">
+            <h3 class="sidebar-title">Our Healthcare Services</h3>
+            <ul class="sidebar-services-links">
+              <li><a href="/physiotherapy.html">Physiotherapy</a></li>
+              <li><a href="/clinical-pilates.html">Clinical Pilates</a></li>
+              <li><a href="/osteopathy.html">Osteopathy</a></li>
+              <li><a href="/chiropractic.html">Chiropractic Care</a></li>
+              <li><a href="/chiropody.html">Chiropody &amp; Foot Care</a></li>
+              <li><a href="/medical-pedicure.html">Medical Pedicure</a></li>
+              <li><a href="/massage-therapy.html">Massage Therapy</a></li>
+              <li><a href="/shockwave-therapy.html">Shockwave Therapy</a></li>
+              <li><a href="/dry-needling.html">Dry Needling</a></li>
             </ul>
           </div>
 
-          <!-- Our Services Widget -->
-          <div class="sidebar-widget">
-            <h3 class="sidebar-widget-title">Our Services</h3>
-            <ul class="sidebar-nav-list">
-              <li class="sidebar-nav-item">
-                <a href="/#services">
-                  <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><polyline points="9 18 15 12 9 6"/></svg>
-                  <span>All Services</span>
-                </a>
-              </li>
-              <li class="sidebar-nav-item">
-                <a href="/osteopathy.html">
-                  <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><polyline points="9 18 15 12 9 6"/></svg>
-                  <span>Osteopathy</span>
-                </a>
-              </li>
-              <li class="sidebar-nav-item">
-                <a href="/chiropractic.html">
-                  <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><polyline points="9 18 15 12 9 6"/></svg>
-                  <span>Chiropractic Care</span>
-                </a>
-              </li>
-              <li class="sidebar-nav-item">
-                <a href="/clinical-pilates.html">
-                  <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><polyline points="9 18 15 12 9 6"/></svg>
-                  <span>Physiotherapy &amp; Clinical Pilates</span>
-                </a>
-              </li>
-              <li class="sidebar-nav-item">
-                <a href="/chiropody.html">
-                  <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><polyline points="9 18 15 12 9 6"/></svg>
-                  <span>Chiropody and Foot Care</span>
-                </a>
-              </li>
-              <li class="sidebar-nav-item">
-                <a href="/medical-pedicure.html">
-                  <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><polyline points="9 18 15 12 9 6"/></svg>
-                  <span>Medical Pedicure</span>
-                </a>
-              </li>
-              <li class="sidebar-nav-item">
-                <a href="/massage-therapy.html">
-                  <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><polyline points="9 18 15 12 9 6"/></svg>
-                  <span>Massage Therapy</span>
-                </a>
-              </li>
-              <li class="sidebar-nav-item">
-                <a href="/shockwave-therapy.html">
-                  <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><polyline points="9 18 15 12 9 6"/></svg>
-                  <span>Shockwave</span>
-                </a>
-              </li>
-              <li class="sidebar-nav-item">
-                <a href="/dry-needling.html">
-                  <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><polyline points="9 18 15 12 9 6"/></svg>
-                  <span>Dry Needle</span>
-                </a>
-              </li>
-            </ul>
+          <!-- Clinic Location & Contact Card -->
+          <div class="sidebar-card contact-info-card">
+            <h3 class="sidebar-title">Clinic Details</h3>
+            <div style="font-size: 0.9rem; color: #475569; display: flex; flex-direction: column; gap: 10px;">
+              <div>
+                <strong style="color: #173753; display: block;">Address:</strong>
+                350 Beech Avenue, Upper Level<br>Toronto, ON M4E 3T8
+              </div>
+              <div>
+                <strong style="color: #173753; display: block;">Contact:</strong>
+                Phone: <a href="tel:4165464887" style="color: #0093d0;">(416) 546-4887</a><br>
+                Email: <a href="mailto:info@beachealth.com" style="color: #0093d0;">info@beachealth.com</a>
+              </div>
+              <div>
+                <strong style="color: #173753; display: block;">Hours:</strong>
+                Mon–Fri: 8:00 AM – 6:00 PM<br>
+                Sat: 9:00 AM – 3:00 PM<br>
+                Sun: Closed
+              </div>
+            </div>
           </div>
 
         </aside>
@@ -516,89 +538,70 @@
   </section>
 
   <!-- ========================================================================
-       GLOBAL FOOTER
+       FOOTER
        ======================================================================== -->
-  <footer class="main-footer">
-    <div class="container">
+  <footer class="site-footer" style="background: #f1f7fa; border-top: 1px solid #e2e8f0; padding: 60px 0 30px; margin-top: 50px;">
+    <div class="container footer-container">
       <div class="footer-grid">
-        <div class="footer-col-brand">
-          <a href="/" aria-label="Beachealth Home">
-            <img src="/images/logo.png" alt="Beachealth" />
-          </a>
-          <p class="footer-bio">Beachealth is a multidisciplinary rehabilitation and integrated healthcare clinic located in The Beaches, East Toronto. We believe in collaborative, root-cause healing across disciplines.</p>
-          <div class="social-links">
-            <a href="https://www.facebook.com/beachintegrated" class="social-link" target="_blank" rel="noopener" aria-label="Facebook">
-              <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"/></svg>
+        <div class="footer-col footer-about">
+          <img src="/images/logo.png" alt="Beachealth" class="footer-logo" style="height: 44px; width: auto; margin-bottom: 16px;" />
+          <p class="footer-desc" style="font-size: 0.92rem; line-height: 1.6; color: #475569; margin-bottom: 20px;">
+            A multidisciplinary health clinic in The Beaches, East Toronto, bringing together osteopathy, chiropractic care, physiotherapy with Javia, clinical pilates, chiropody, and massage therapy.
+          </p>
+          <div class="footer-social-links" style="display: flex; gap: 14px; align-items: center; margin-top: 20px;">
+            <a href="https://www.instagram.com/beachintegrated/?hl=en" target="_blank" rel="noopener" aria-label="Instagram" style="display: inline-flex; align-items: center; justify-content: center; width: 40px; height: 40px; border-radius: 50%; background: #ffffff; color: #0093d0; border: 1.5px solid #cbd5e1; box-shadow: 0 2px 6px rgba(0,0,0,0.05); transition: all 0.2s ease;">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="2" width="20" height="20" rx="5" ry="5"></rect><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"></path><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"></line></svg>
             </a>
-            <a href="https://www.instagram.com/beachintegrated/?hl=en" class="social-link" target="_blank" rel="noopener" aria-label="Instagram">
-              <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"/></svg>
+            <a href="https://www.facebook.com/beachintegrated" target="_blank" rel="noopener" aria-label="Facebook" style="display: inline-flex; align-items: center; justify-content: center; width: 40px; height: 40px; border-radius: 50%; background: #ffffff; color: #0093d0; border: 1.5px solid #cbd5e1; box-shadow: 0 2px 6px rgba(0,0,0,0.05); transition: all 0.2s ease;">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"></path></svg>
             </a>
           </div>
         </div>
 
-        <div>
-          <h4 class="footer-title">All Services</h4>
-          <div class="footer-links">
-            <a href="/osteopathy.html">Osteopathy</a>
-            <a href="/chiropractic.html">Chiropractic Care</a>
-            <a href="/physiotherapy.html">Physiotherapy (Javia)</a>
-            <a href="/clinical-pilates.html">Clinical Pilates</a>
-            <a href="/chiropody.html">Chiropody and Foot Care</a>
-            <a href="/medical-pedicure.html">Medical Pedicure</a>
-            <a href="/massage-therapy.html">Massage Therapy</a>
-            <a href="/shockwave-therapy.html">Shockwave</a>
-            <a href="/dry-needling.html">Dry Needle</a>
-          </div>
+        <div class="footer-col">
+          <h4 class="footer-title" style="color: #173753 !important; font-size: 1.15rem; font-weight: 800; margin-bottom: 20px; position: relative; padding-bottom: 10px; display: inline-block;">Our Services</h4>
+          <ul class="footer-links">
+            <li><a href="/physiotherapy.html" style="color: #475569;">Physiotherapy</a></li>
+            <li><a href="/clinical-pilates.html" style="color: #475569;">Clinical Pilates</a></li>
+            <li><a href="/osteopathy.html" style="color: #475569;">Osteopathy</a></li>
+            <li><a href="/chiropractic.html" style="color: #475569;">Chiropractic Care</a></li>
+            <li><a href="/chiropody.html" style="color: #475569;">Chiropody &amp; Foot Care</a></li>
+            <li><a href="/medical-pedicure.html" style="color: #475569;">Medical Pedicure</a></li>
+            <li><a href="/massage-therapy.html" style="color: #475569;">Massage Therapy</a></li>
+            <li><a href="/shockwave-therapy.html" style="color: #475569;">Shockwave Therapy</a></li>
+            <li><a href="/dry-needling.html" style="color: #475569;">Dry Needling</a></li>
+          </ul>
         </div>
 
-        <div>
-          <h4 class="footer-title">Our Practitioners</h4>
-          <div class="footer-links">
-            <a href="/#team" data-team-id="jared-cox">Jared Cox (Osteopath)</a>
-            <a href="/#team" data-team-id="jake-maher">Jake Maher (Osteopath)</a>
-            <a href="/#team" data-team-id="dr-adam-bletsoe">Dr. Adam Bletsoe (Chiropractor)</a>
-            <a href="/#team" data-team-id="shakiba-bani">Shakiba Bani (Physiotherapist)</a>
-            <a href="/#team" data-team-id="amin-montazeri">Amin Montazeri (Physiotherapist)</a>
-            <a href="/#team" data-team-id="adriana-lis">Adriana Lis Pereira (PTA / Clinical Pilates)</a>
-            <a href="/#team" data-team-id="lada-milos-lee">Lada Milos Lee (Chiropodist)</a>
-            <a href="/#team" data-team-id="emily-tran">Emily Tran (Chiropodist)</a>
-            <a href="/#team" data-team-id="patrice-wilson">Patrice Wilson (RMT)</a>
-            <a href="/#team" data-team-id="krystele-charles">Krystele Charles (RMT)</a>
-            <a href="https://beachealth.com/job-opportunities/" target="_blank" rel="noopener" style="margin-top: 6px; color: #38bdf8; font-weight: 600;">Job Opportunities →</a>
-          </div>
+        <div class="footer-col">
+          <h4 class="footer-title" style="color: #173753 !important; font-size: 1.15rem; font-weight: 800; margin-bottom: 20px; position: relative; padding-bottom: 10px; display: inline-block;">Booking Portals</h4>
+          <ul class="footer-links">
+            <li><a href="https://beachealth.janeapp.com/#/registered-massage-therapy" target="_blank" rel="noopener" style="color: #475569;">TMJ Massage Booking</a></li>
+            <li><a href="https://javia.janeapp.com/locations/beach-health/book#/discipline/1/treatment/36" target="_blank" rel="noopener" style="color: #475569;">Javia Physiotherapy Booking</a></li>
+            <li><a href="https://beachealth.janeapp.com/" target="_blank" rel="noopener" style="color: #475569;">Beachealth Clinic Booking</a></li>
+            <li><a href="https://beachesfootcare.janeapp.com/" target="_blank" rel="noopener" style="color: #475569;">Beaches Foot Care Booking</a></li>
+          </ul>
         </div>
 
-        <div>
-          <h4 class="footer-title">Contact & Location</h4>
-          <div class="footer-contact-info">
-            <p>
-              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path><circle cx="12" cy="10" r="3"></circle></svg>
-              <span>Upper Level, 350 Beech Avenue, Toronto, ON M4E 3T8</span>
+        <div class="footer-col">
+          <h4 class="footer-title" style="color: #173753 !important; font-size: 1.15rem; font-weight: 800; margin-bottom: 20px; position: relative; padding-bottom: 10px; display: inline-block;">Contact &amp; Location</h4>
+          <div class="footer-contact-info" style="font-size: 0.92rem; color: #475569; line-height: 1.7;">
+            <p><strong>Address:</strong><br>350 Beech Avenue, Upper Level<br>Toronto, ON M4E 3T8</p>
+            <p style="margin-top: 10px;"><strong>Phone:</strong> <a href="tel:4165464887" style="color: #0093d0; font-weight: 600;">(416) 546-4887</a></p>
+            <p><strong>Email:</strong> <a href="mailto:admin@beachealth.com" style="color: #0093d0; font-weight: 600;">admin@beachealth.com</a></p>
+            <p style="margin-top: 8px;">
+              <a href="mailto:admin@beachealth.com?subject=Job%20Opportunities%20Inquiry%20-%20Beachealth" style="color: #0093d0; font-weight: 600; text-decoration: none;">Job Opportunities &rarr;</a>
             </p>
-            <p>
-              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"></path></svg>
-              <a href="tel:4165464887">(416) 546-4887</a>
-            </p>
-            <p>
-              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path><polyline points="22,6 12,13 2,6"></polyline></svg>
-              <a href="mailto:admin@beachealth.com">admin@beachealth.com</a>
-            </p>
-            <div style="margin-top: 16px; display: flex; flex-direction: column; gap: 8px;">
-              <a href="https://beachealth.janeapp.com/" target="_blank" rel="noopener" class="btn btn-primary btn-sm" style="width: fit-content;">Book Beachealth Services</a>
-              <a href="https://beachesfootcare.janeapp.com/" target="_blank" rel="noopener" class="btn btn-primary btn-sm" style="width: fit-content;">Book Beaches Foot Care</a>
-            </div>
           </div>
         </div>
       </div>
 
-      <div class="footer-bottom">
-        <div>
-          © <span id="current-year">2026</span> Beach Integrated Health Clinic (Beachealth). All rights reserved. Multidisciplinary healthcare in The Beaches, East Toronto.
-        </div>
-        <div class="footer-bottom-links">
-          <a href="/#privacy" data-policy-id="privacy">Privacy Policy</a>
-          <a href="/#terms" data-policy-id="terms">Terms of Service</a>
-          <a href="/#cancellation" data-policy-id="cancellation">Cancellation Policy</a>
+      <div class="footer-bottom" style="margin-top: 40px; padding-top: 24px; border-top: 1px solid #e2e8f0; display: flex; flex-wrap: wrap; justify-content: space-between; align-items: center; font-size: 0.88rem; color: #64748b; gap: 12px;">
+        <div>&copy; <span id="current-year">2026</span> Beachealth. All rights reserved. Multidisciplinary healthcare in The Beaches, East Toronto.</div>
+        <div style="display: flex; gap: 18px;">
+          <a href="/privacy-terms.html#privacy" style="color: #64748b; text-decoration: none;">Privacy Policy</a>
+          <a href="/privacy-terms.html#terms" style="color: #64748b; text-decoration: none;">Terms of Service</a>
+          <a href="/privacy-terms.html#cancellation" style="color: #64748b; text-decoration: none;">Cancellation Policy</a>
         </div>
       </div>
     </div>
@@ -610,21 +613,6 @@
       <button class="modal-close" id="modal-close-btn" aria-label="Close dialog"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><line x1="18" y1="6" x2="6" y2="18"></line><line x1="6" y1="6" x2="18" y2="18"></line></svg></button>
       <div id="modal-body-container"></div>
     </div>
-  </div>
-
-  <!-- Toast Notice -->
-  <div class="toast-notice" id="toast-notification"></div>
-
-  <!-- Mobile Floating Action Bar -->
-  <div class="floating-book-bar" id="floating-book-bar">
-    <a href="tel:4165464887" class="floating-call-btn" aria-label="Call clinic reception">
-      <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"></path></svg>
-      <span>(416) 546-4887</span>
-    </a>
-    <a href="https://beachealth.janeapp.com/" target="_blank" rel="noopener" class="btn btn-primary btn-sm floating-action-btn" data-open-booking>
-      <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><rect x="3" y="4" width="18" height="18" rx="2" ry="2"></rect><line x1="16" y1="2" x2="16" y2="6"></line><line x1="8" y1="2" x2="8" y2="6"></line><line x1="3" y1="10" x2="21" y2="10"></line></svg>
-      Book Online
-    </a>
   </div>
 
   <script type="module" src="/src/scripts/main.js"></script>
