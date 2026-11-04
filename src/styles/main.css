@@ -4615,3 +4615,85 @@ html.scroll-locked body {
   transform: translateY(-2px) !important;
   box-shadow: 0 6px 16px rgba(0, 147, 208, 0.35) !important;
 }
+
+/* ==========================================================================
+   SERVICE PAGE SIDEBAR & HEALTHCARE SERVICES MENU
+   Interactive "Our Healthcare Services" list across all service pages:
+   Pops up slightly on hover with a refined, soft light-blue glow
+   ========================================================================== */
+.sidebar-card {
+  background: #ffffff;
+  border: 1px solid #e2e8f0;
+  border-radius: 14px;
+  padding: 24px 22px;
+  box-shadow: 0 4px 14px rgba(0, 0, 0, 0.03);
+}
+
+.sidebar-title {
+  font-size: 1.15rem;
+  font-weight: 800;
+  color: #173753;
+  margin-bottom: 16px;
+  line-height: 1.3;
+}
+
+.sidebar-services-links {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.sidebar-services-links li {
+  margin: 0;
+  padding: 0;
+}
+
+.sidebar-services-links a {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 9px 14px;
+  border-radius: 10px;
+  color: #334155;
+  font-size: 0.94rem;
+  font-weight: 500;
+  text-decoration: none;
+  background: transparent;
+  border: 1.5px solid transparent;
+  transition: transform 0.25s cubic-bezier(0.16, 1, 0.3, 1),
+              box-shadow 0.25s cubic-bezier(0.16, 1, 0.3, 1),
+              background-color 0.25s ease,
+              border-color 0.25s ease,
+              color 0.25s ease;
+  position: relative;
+  cursor: pointer;
+}
+
+/* Pop up slightly on hover with a gentle light-blue glow */
+.sidebar-services-links a:hover {
+  color: #0093d0;
+  background: #ffffff;
+  border-color: rgba(0, 147, 208, 0.35);
+  transform: translateY(-2.5px);
+  box-shadow: 0 6px 16px rgba(0, 147, 208, 0.22), 0 0 10px rgba(0, 147, 208, 0.15);
+  font-weight: 600;
+}
+
+/* Active current service page indicator */
+.sidebar-services-links a.active {
+  color: #0093d0;
+  font-weight: 700;
+  background: rgba(0, 147, 208, 0.08);
+  border-color: rgba(0, 147, 208, 0.22);
+}
+
+.sidebar-services-links a.active:hover {
+  transform: translateY(-2.5px);
+  background: #ffffff;
+  border-color: rgba(0, 147, 208, 0.45);
+  box-shadow: 0 6px 18px rgba(0, 147, 208, 0.25), 0 0 12px rgba(0, 147, 208, 0.18);
+}
+
