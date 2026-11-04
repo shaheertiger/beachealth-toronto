@@ -4501,3 +4501,117 @@ html.scroll-locked body {
   transform: translateY(-2px);
   box-shadow: 0 6px 16px rgba(0, 147, 208, 0.25);
 }
+
+
+/* ==========================================================================
+   Service Page Practitioner Cards (Unified across all service pages)
+   ========================================================================== */
+.service-practitioners-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(280px, 340px));
+  gap: 24px;
+  margin-bottom: 40px;
+}
+
+@media (max-width: 640px) {
+  .service-practitioners-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+.service-practitioner-card {
+  max-width: 350px;
+  width: 100%;
+  background: #ffffff;
+  border: 1.5px solid #e2e8f0;
+  border-radius: 14px;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.04);
+  transition: transform 0.25s ease, box-shadow 0.25s ease;
+}
+
+.service-practitioner-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 12px 24px rgba(0, 147, 208, 0.14);
+}
+
+.service-practitioner-img-wrap {
+  height: 290px;
+  overflow: hidden;
+  position: relative;
+  background: #f1f5f9;
+}
+
+.service-practitioner-img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: top center;
+  transition: transform 0.45s ease;
+}
+
+.service-practitioner-card:hover .service-practitioner-img {
+  transform: scale(1.03);
+}
+
+.service-practitioner-body {
+  padding: 22px;
+  display: flex;
+  flex-direction: column;
+  flex-grow: 1;
+  justify-content: space-between;
+}
+
+.service-practitioner-name {
+  font-size: 1.25rem;
+  color: #173753;
+  margin-bottom: 4px;
+  font-weight: 800;
+}
+
+.service-practitioner-role {
+  color: #0093d0;
+  font-size: 0.9rem;
+  font-weight: 700;
+  margin-bottom: 12px;
+}
+
+.service-practitioner-bio {
+  font-size: 0.9rem;
+  color: #475569;
+  line-height: 1.6;
+  margin-bottom: 18px;
+}
+
+.service-practitioner-actions {
+  display: flex;
+  margin-top: auto;
+  padding-top: 6px;
+}
+
+.service-practitioner-btn {
+  background: #0093d0 !important;
+  border: 1.5px solid #0093d0 !important;
+  color: #ffffff !important;
+  font-weight: 700 !important;
+  font-size: 0.92rem !important;
+  padding: 9px 26px !important;
+  border-radius: 9999px !important;
+  text-decoration: none !important;
+  display: inline-flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+  transition: all 0.2s ease !important;
+  box-shadow: 0 2px 8px rgba(0, 147, 208, 0.25) !important;
+}
+
+.service-practitioner-btn:hover {
+  background: #007bb8 !important;
+  border-color: #007bb8 !important;
+  color: #ffffff !important;
+  transform: translateY(-2px) !important;
+  box-shadow: 0 6px 16px rgba(0, 147, 208, 0.35) !important;
+}
