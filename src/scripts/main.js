@@ -477,7 +477,7 @@ const TEAM_DATA = {
     portal: 'Beachealth Clinic',
     bookingUrl: 'https://beachealth.janeapp.com/#/pilates-physio-pilates',
     image: '/images/team-lis.jpg',
-    bio: `<p style="font-size: 1.05rem; font-weight: 700; color: #0093d0; margin-bottom: 12px;">Clinical Pilates Instructor &amp; Physiotherapy Assistant, PhD</p>
+    bio: `<p style="font-size: 1.05rem; font-weight: 700; color: #0093d0; margin-bottom: 12px;">Clinical Pilates Instructor &amp; Physiotherapy Assistant</p>
 <p style="margin-bottom: 14px;">Adriana Lis Pereira holds a PhD in Medical Sciences from the University of São Paulo and a specialization in Neuroscience from UNICAMP. At Beachealth, she delivers therapeutic exercise and rehab programs under the supervision of a Registered Physiotherapist, along with Clinical Pilates sessions focused on posture, stability, strength, and mobility.</p>
 <p style="margin-bottom: 14px; font-weight: 600; color: #0284c7;">Clients can also choose to book private sessions with Adriana Lis Pereira.</p>
 <div style="background: #e0f2fe; border: 1px solid #bae6fd; border-radius: 10px; padding: 16px; margin: 18px 0;">
