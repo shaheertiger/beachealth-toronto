@@ -683,20 +683,6 @@ const SERVICE_DATA = {
   </div>
 </div>`
   },
-  'medical-pedicure': {
-    pageUrl: '/medical-pedicure.html',
-    title: 'Medical Pedicure',
-    portal: 'Beaches Foot Care Centre',
-    bookingUrl: 'https://beachesfootcare.janeapp.com/',
-    image: '/images/pedicure-card.jpg',
-    desc: 'An advanced clinical medical pedicure performed in a sterile, medical-grade environment by our registered Chiropodists. Ideal for individuals with thickened nails, calluses, fungal infections, diabetes, or sensitive feet requiring sterile medical care.',
-    points: [
-      '100% Hospital-grade autoclave sterilization',
-      'Safe for diabetics, immunocompromised & elderly',
-      'Thickened, fungal, and ingrown nail management',
-      'Corn, callus, and cracked heel reduction'
-    ]
-  },
   'shockwave-therapy': {
     pageUrl: '/shockwave-therapy.html',
     title: 'Shockwave Therapy',
@@ -1156,10 +1142,9 @@ function initModals() {
                   <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#0093d0" stroke-width="2"><path d="M4 17v1a3 3 0 0 0 3 3h10a3 3 0 0 0 3-3v-1"/><path d="M4 12c0-4.4 3.6-8 8-8s8 3.6 8 8"/><path d="M12 4v8"/></svg>
                 </div>
                 <h4 style="font-size: 1.2rem; color: #173753; font-weight: 800; margin-bottom: 6px;">Beaches Foot Care Centre</h4>
-                <p style="font-size: 0.85rem; color: #64748b; margin-bottom: 14px; line-height: 1.4;">Registered Chiropody, medical-grade pedicures, and bespoke orthotics.</p>
+                <p style="font-size: 0.85rem; color: #64748b; margin-bottom: 14px; line-height: 1.4;">Registered Chiropody, nail and skin care, and bespoke orthotics.</p>
                 <ul style="font-size: 0.84rem; color: #334155; margin-bottom: 18px; display: flex; flex-direction: column; gap: 6px;">
                   <li style="display: flex; align-items: center; gap: 8px;"><svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="#0093d0" stroke-width="3"><polyline points="20 6 9 17 4 12"></polyline></svg> Chiropody and Foot Care</li>
-                  <li style="display: flex; align-items: center; gap: 8px;"><svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="#0093d0" stroke-width="3"><polyline points="20 6 9 17 4 12"></polyline></svg> Medical Pedicure</li>
                   <li style="display: flex; align-items: center; gap: 8px;"><svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="#0093d0" stroke-width="3"><polyline points="20 6 9 17 4 12"></polyline></svg> Custom Biomechanical Orthotics</li>
                 </ul>
               </div>

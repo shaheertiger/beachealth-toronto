@@ -21,7 +21,6 @@ export default defineConfig({
         massageTherapy: resolve(__dirname, 'massage-therapy.html'),
         tmjMassage: resolve(__dirname, 'tmj-massage.html'),
         chiropody: resolve(__dirname, 'chiropody.html'),
-        medicalPedicure: resolve(__dirname, 'medical-pedicure.html'),
         runningAnalysis: resolve(__dirname, 'running-analysis.html'),
         shockwaveTherapy: resolve(__dirname, 'shockwave-therapy.html'),
         dryNeedling: resolve(__dirname, 'dry-needling.html'),
