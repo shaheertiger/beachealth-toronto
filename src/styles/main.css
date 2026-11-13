@@ -354,6 +354,15 @@ ul, ol {
   z-index: 100;
 }
 
+.dropdown-menu::before {
+  content: '';
+  position: absolute;
+  top: -15px;
+  left: 0;
+  right: 0;
+  height: 15px;
+}
+
 .nav-item-dropdown:hover .dropdown-menu {
   opacity: 1;
   visibility: visible;
@@ -364,6 +373,8 @@ ul, ol {
   display: flex;
   align-items: center;
   justify-content: space-between;
+  gap: 16px;
+  white-space: nowrap;
   padding: 10px 20px;
   font-size: 0.92rem;
   font-weight: 500;
@@ -1348,6 +1359,7 @@ ul, ol {
   display: flex;
   flex-direction: column;
   position: relative;
+  cursor: pointer;
   transition: transform 0.4s cubic-bezier(0.16, 1, 0.3, 1),
               box-shadow 0.4s cubic-bezier(0.16, 1, 0.3, 1),
               border-color 0.4s ease,
@@ -1566,6 +1578,7 @@ ul, ol {
   flex-direction: column;
   position: relative;
   will-change: transform, box-shadow;
+  cursor: pointer;
 }
 
 /* Card Top Accent Brand Line */
@@ -2916,6 +2929,65 @@ ul, ol {
 
 .footer-bottom-links a:hover {
   color: #ffffff;
+}
+
+/* Service Pages Footer (matches .main-footer) */
+.site-footer {
+  background: var(--primary-dark) !important;
+  color: #94a3b8 !important;
+  border-top: 1px solid rgba(255, 255, 255, 0.08) !important;
+  padding: 60px 0 30px !important;
+  margin-top: 50px !important;
+}
+
+.site-footer .footer-logo {
+  filter: brightness(0) invert(1) !important;
+}
+
+.site-footer .footer-desc {
+  color: #cbd5e1 !important;
+}
+
+.site-footer .footer-title {
+  color: #ffffff !important;
+}
+
+.site-footer .footer-links a,
+.site-footer .footer-links li a {
+  color: #cbd5e1 !important;
+}
+
+.site-footer .footer-links a:hover,
+.site-footer .footer-links li a:hover {
+  color: var(--brand-blue) !important;
+}
+
+.site-footer .footer-social-links a {
+  background: rgba(255, 255, 255, 0.08) !important;
+  color: #ffffff !important;
+  border: 1px solid rgba(255, 255, 255, 0.12) !important;
+}
+
+.site-footer .footer-social-links a:hover {
+  background: var(--brand-blue) !important;
+  color: #ffffff !important;
+}
+
+.site-footer .footer-contact-info,
+.site-footer .footer-contact-line,
+.site-footer .footer-contact-info p {
+  color: #cbd5e1 !important;
+}
+
+.site-footer .footer-contact-info strong,
+.site-footer .footer-contact-line strong,
+.site-footer .footer-contact-info p strong {
+  color: #ffffff !important;
+}
+
+.site-footer .footer-bottom {
+  border-top: 1px solid rgba(255, 255, 255, 0.08) !important;
+  color: #94a3b8 !important;
 }
 
 /* ==========================================================================

@@ -473,13 +473,13 @@ const TEAM_DATA = {
   },
   'adriana-lis': {
     name: 'Adriana Lis Pereira',
-    role: 'Physiotherapy Assistant and Clinical Pilates Instructor',
+    role: 'Clinical Pilates Instructor & Physiotherapy Assistant',
     portal: 'Beachealth Clinic',
     bookingUrl: 'https://beachealth.janeapp.com/#/pilates-physio-pilates',
     image: '/images/team-lis.jpg',
-    bio: `<p style="font-size: 1.05rem; font-weight: 700; color: #0093d0; margin-bottom: 12px;">Physiotherapy Assistant & Clinical Pilates Instructor, PhD</p>
-<p style="margin-bottom: 14px;">Lis is a PhD in Medical Sciences from the University of São Paulo and a specialization in Neuroscience from UNICAMP. At Beachealth, she delivers therapeutic exercise and rehab programs under the supervision of a Registered Physiotherapist, along with Clinical Pilates sessions focused on posture, stability, strength, and mobility.</p>
-<p style="margin-bottom: 14px; font-weight: 600; color: #0284c7;">Clients can also choose to book private sessions with Lis.</p>
+    bio: `<p style="font-size: 1.05rem; font-weight: 700; color: #0093d0; margin-bottom: 12px;">Clinical Pilates Instructor &amp; Physiotherapy Assistant, PhD</p>
+<p style="margin-bottom: 14px;">Adriana Lis Pereira holds a PhD in Medical Sciences from the University of São Paulo and a specialization in Neuroscience from UNICAMP. At Beachealth, she delivers therapeutic exercise and rehab programs under the supervision of a Registered Physiotherapist, along with Clinical Pilates sessions focused on posture, stability, strength, and mobility.</p>
+<p style="margin-bottom: 14px; font-weight: 600; color: #0284c7;">Clients can also choose to book private sessions with Adriana Lis Pereira.</p>
 <div style="background: #e0f2fe; border: 1px solid #bae6fd; border-radius: 10px; padding: 16px; margin: 18px 0;">
   <strong style="color: #0369a1; display: block; margin-bottom: 8px;">Areas of Practice & Movement Focus:</strong>
   <ul style="display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 6px; font-size: 0.9rem; color: #0369a1;">
@@ -622,12 +622,12 @@ const SERVICE_DATA = {
   </div>
   <div style="background: #f0f9ff; border: 1.5px solid #bae6fd; border-left: 5px solid #0093d0; border-radius: 10px; padding: 16px 18px; margin-bottom: 20px;">
     <p style="font-size: 0.92rem; color: #1e293b; line-height: 1.6; margin-bottom: 10px;">Clinical Pilates delivered as physiotherapy treatment requires an initial physiotherapy assessment and an individualized treatment plan. Our physiotherapy assistants can then guide clients through their prescribed exercises under physiotherapist supervision.</p>
-    <p style="font-size: 0.92rem; color: #0284c7; font-weight: 700; margin: 0;">Clients can also choose to book private sessions with Lis</p>
+    <p style="font-size: 0.92rem; color: #0284c7; font-weight: 700; margin: 0;">Clients can also choose to book private sessions with Adriana Lis Pereira</p>
   </div>
   <div style="background: #ffffff; border: 1px solid #e2e8f0; border-radius: 12px; padding: 18px; margin-bottom: 20px;">
     <h3 style="font-size: 1.15rem; color: #173753; font-weight: 800; margin-bottom: 8px;">Adriana Lis Pereira</h3>
-    <div style="color: #0093d0; font-size: 0.9rem; font-weight: 700; margin-bottom: 10px;">Physiotherapy Assistant and Clinical Pilates Instructor</div>
-    <p style="font-size: 0.88rem; color: #475569; line-height: 1.55; margin: 0;">Lis is a PhD in Medical Sciences from the University of São Paulo and a specialization in Neuroscience from UNICAMP. At Beachealth, she delivers therapeutic exercise and rehab programs under the supervision of a Registered Physiotherapist, along with Clinical Pilates sessions focused on posture, stability, strength, and mobility.</p>
+    <div style="color: #0093d0; font-size: 0.9rem; font-weight: 700; margin-bottom: 10px;">Clinical Pilates Instructor &amp; Physiotherapy Assistant</div>
+    <p style="font-size: 0.88rem; color: #475569; line-height: 1.55; margin: 0;">Adriana Lis Pereira holds a PhD in Medical Sciences from the University of São Paulo and a specialization in Neuroscience from UNICAMP. At Beachealth, she delivers therapeutic exercise and rehab programs under the supervision of a Registered Physiotherapist, along with Clinical Pilates sessions focused on posture, stability, strength, and mobility.</p>
   </div>
   <div style="display: flex; gap: 12px; flex-wrap: wrap;">
     <a href="https://beachealth.janeapp.com/#/pilates-physio-pilates" target="_blank" rel="noopener" class="btn btn-primary">Book Clinical Pilates</a>
@@ -669,12 +669,12 @@ const SERVICE_DATA = {
   </div>
   <div style="background: #f0f9ff; border: 1.5px solid #bae6fd; border-left: 5px solid #0093d0; border-radius: 10px; padding: 16px 18px; margin-bottom: 20px;">
     <p style="font-size: 0.92rem; color: #1e293b; line-height: 1.6; margin-bottom: 10px;">Clinical Pilates delivered as physiotherapy treatment requires an initial physiotherapy assessment and an individualized treatment plan. Our physiotherapy assistants can then guide clients through their prescribed exercises under physiotherapist supervision.</p>
-    <p style="font-size: 0.92rem; color: #0284c7; font-weight: 700; margin: 0;">Clients can also choose to book private sessions with Lis</p>
+    <p style="font-size: 0.92rem; color: #0284c7; font-weight: 700; margin: 0;">Clients can also choose to book private sessions with Adriana Lis Pereira</p>
   </div>
   <div style="background: #ffffff; border: 1px solid #e2e8f0; border-radius: 12px; padding: 18px; margin-bottom: 20px;">
     <h3 style="font-size: 1.15rem; color: #173753; font-weight: 800; margin-bottom: 8px;">Adriana Lis Pereira</h3>
-    <div style="color: #0093d0; font-size: 0.9rem; font-weight: 700; margin-bottom: 10px;">Physiotherapy Assistant and Clinical Pilates Instructor</div>
-    <p style="font-size: 0.88rem; color: #475569; line-height: 1.55; margin: 0;">Lis is a PhD in Medical Sciences from the University of São Paulo and a specialization in Neuroscience from UNICAMP. At Beachealth, she delivers therapeutic exercise and rehab programs under the supervision of a Registered Physiotherapist, along with Clinical Pilates sessions focused on posture, stability, strength, and mobility.</p>
+    <div style="color: #0093d0; font-size: 0.9rem; font-weight: 700; margin-bottom: 10px;">Clinical Pilates Instructor &amp; Physiotherapy Assistant</div>
+    <p style="font-size: 0.88rem; color: #475569; line-height: 1.55; margin: 0;">Adriana Lis Pereira holds a PhD in Medical Sciences from the University of São Paulo and a specialization in Neuroscience from UNICAMP. At Beachealth, she delivers therapeutic exercise and rehab programs under the supervision of a Registered Physiotherapist, along with Clinical Pilates sessions focused on posture, stability, strength, and mobility.</p>
   </div>
   <div style="display: flex; gap: 12px; flex-wrap: wrap;">
     <a href="https://beachealth.janeapp.com/#/pilates-physio-pilates" target="_blank" rel="noopener" class="btn btn-primary">Book Clinical Pilates</a>
@@ -882,7 +882,7 @@ const BLOG_DATA = {
 
 /* "Dr. Adam Bletsoe" -> "Dr. Adam", "Lada Milos Lee" -> "Lada" */
 function shortName(name) {
-  if (name.includes('Adriana Lis')) return 'Lis';
+  if (name.includes('Adriana Lis')) return 'Adriana Lis Pereira';
   const parts = name.split(' ');
   return parts[0].endsWith('.') ? parts.slice(0, 2).join(' ') : parts[0];
 }
@@ -987,6 +987,34 @@ function initModals() {
     });
   });
 
+  // Make entire team card clickable to open bio modal (while preserving direct booking link)
+  document.querySelectorAll('.team-card').forEach(card => {
+    const btn = card.querySelector('.service-btn-details[data-team-id], [data-team-id]');
+    if (!btn) return;
+    card.style.cursor = 'pointer';
+    card.setAttribute('role', 'button');
+    card.setAttribute('tabindex', '0');
+    card.setAttribute('aria-label', `View bio for ${card.querySelector('.team-name')?.textContent || 'practitioner'}`);
+    
+    card.addEventListener('click', e => {
+      // If clicking directly on an anchor link (e.g. "Book Now"), allow standard navigation
+      if (e.target.closest('a')) return;
+      // If clicking the button itself, allow its click handler to fire naturally
+      if (e.target.closest('[data-team-id]') === btn) return;
+      
+      e.preventDefault();
+      btn.click();
+    });
+
+    card.addEventListener('keydown', e => {
+      if (e.key === 'Enter' || e.key === ' ') {
+        if (e.target.closest('a') || e.target.closest('button')) return;
+        e.preventDefault();
+        btn.click();
+      }
+    });
+  });
+
   // 2. Service Detail Modals
   document.querySelectorAll('[data-service-id]').forEach(btn => {
     btn.addEventListener('click', e => {
@@ -1024,6 +1052,34 @@ function initModals() {
         </div>
       `;
       openModal(html);
+    });
+  });
+
+  // Make entire service card clickable to open service modal (while preserving direct booking link)
+  document.querySelectorAll('.service-card').forEach(card => {
+    const btn = card.querySelector('.service-btn-details[data-service-id], [data-service-id]');
+    if (!btn) return;
+    card.style.cursor = 'pointer';
+    card.setAttribute('role', 'button');
+    card.setAttribute('tabindex', '0');
+    card.setAttribute('aria-label', `View details for ${card.querySelector('.service-title')?.textContent || 'service'}`);
+    
+    card.addEventListener('click', e => {
+      // If clicking directly on an anchor link (e.g. "Book Now"), allow standard navigation
+      if (e.target.closest('a')) return;
+      // If clicking the button itself, allow its click handler to fire naturally
+      if (e.target.closest('[data-service-id]') === btn) return;
+      
+      e.preventDefault();
+      btn.click();
+    });
+
+    card.addEventListener('keydown', e => {
+      if (e.key === 'Enter' || e.key === ' ') {
+        if (e.target.closest('a') || e.target.closest('button')) return;
+        e.preventDefault();
+        btn.click();
+      }
     });
   });
 
