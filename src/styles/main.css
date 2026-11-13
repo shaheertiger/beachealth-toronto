@@ -4769,3 +4769,429 @@ html.scroll-locked body {
   box-shadow: 0 6px 18px rgba(0, 147, 208, 0.25), 0 0 12px rgba(0, 147, 208, 0.18);
 }
 
+/* ==========================================================================
+   FLOATING "TEXT US" WIDGET (FormSubmit.co to admin@beachealth.com)
+   ========================================================================== */
+.floating-textus-container {
+  position: fixed;
+  bottom: 24px;
+  right: 24px;
+  z-index: 9999;
+  font-family: inherit;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+}
+
+/* Prompt Callout Bubble */
+.textus-prompt-bubble {
+  position: absolute;
+  bottom: calc(100% + 14px);
+  right: 0;
+  background: #ffffff;
+  border-radius: 18px;
+  padding: 12px 18px 12px 14px;
+  box-shadow: 0 12px 32px rgba(15, 23, 42, 0.16), 0 2px 8px rgba(0, 0, 0, 0.06);
+  border: 1px solid rgba(226, 232, 240, 0.95);
+  cursor: pointer;
+  white-space: nowrap;
+  animation: textusFloatIn 0.35s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+  user-select: none;
+}
+
+.textus-prompt-bubble:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 14px 38px rgba(15, 23, 42, 0.2), 0 4px 12px rgba(0, 0, 0, 0.08);
+}
+
+/* Downward Speech Bubble Caret pointing to "Text us" button */
+.textus-prompt-bubble::after {
+  content: '';
+  position: absolute;
+  bottom: -8px;
+  right: 36px;
+  width: 0;
+  height: 0;
+  border-left: 8px solid transparent;
+  border-right: 8px solid transparent;
+  border-top: 8px solid #ffffff;
+  filter: drop-shadow(0 2px 2px rgba(0, 0, 0, 0.06));
+}
+
+.textus-bubble-close {
+  position: absolute;
+  top: -8px;
+  right: -8px;
+  width: 22px;
+  height: 22px;
+  border-radius: 50%;
+  background: #ffffff;
+  border: 1px solid #cbd5e1;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.12);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #64748b;
+  cursor: pointer;
+  padding: 0;
+  transition: all 0.15s ease;
+  z-index: 2;
+}
+
+.textus-bubble-close:hover {
+  background: #f1f5f9;
+  color: #0f172a;
+  transform: scale(1.1);
+}
+
+.textus-bubble-content {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.textus-avatar {
+  width: 44px;
+  height: 44px;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 2px solid #ffffff;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.14);
+  flex-shrink: 0;
+}
+
+.textus-bubble-text {
+  display: flex;
+  flex-direction: column;
+  text-align: left;
+}
+
+.textus-bubble-title {
+  font-size: 0.92rem;
+  font-weight: 600;
+  color: #1e293b;
+  line-height: 1.25;
+}
+
+.textus-bubble-action {
+  font-size: 0.96rem;
+  font-weight: 800;
+  color: #0093d0;
+  line-height: 1.35;
+  margin-top: 2px;
+}
+
+/* Floating "Text us" Pill Button */
+.floating-textus-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 9px;
+  background: #0093d0;
+  color: #ffffff;
+  border: none;
+  border-radius: 9999px;
+  padding: 13px 24px;
+  font-size: 1.02rem;
+  font-weight: 700;
+  letter-spacing: -0.01em;
+  box-shadow: 0 6px 20px rgba(0, 147, 208, 0.45), 0 2px 6px rgba(0, 0, 0, 0.12);
+  cursor: pointer;
+  transition: all 0.25s cubic-bezier(0.16, 1, 0.3, 1);
+  outline: none;
+  user-select: none;
+}
+
+.floating-textus-btn:hover {
+  background: #0284c7;
+  transform: translateY(-2px) scale(1.02);
+  box-shadow: 0 8px 26px rgba(0, 147, 208, 0.55), 0 3px 8px rgba(0, 0, 0, 0.15);
+}
+
+.floating-textus-btn:active {
+  transform: translateY(0) scale(0.98);
+}
+
+.floating-textus-btn svg {
+  flex-shrink: 0;
+}
+
+/* Text Us Popover Card */
+.textus-popover {
+  position: absolute;
+  bottom: calc(100% + 14px);
+  right: 0;
+  width: 360px;
+  max-width: calc(100vw - 32px);
+  max-height: calc(100vh - 120px);
+  background: #ffffff;
+  border-radius: 20px;
+  box-shadow: 0 20px 48px rgba(15, 23, 42, 0.24), 0 4px 14px rgba(0, 0, 0, 0.08);
+  border: 1px solid rgba(226, 232, 240, 0.95);
+  overflow: hidden;
+  display: none;
+  flex-direction: column;
+  animation: textusPopIn 0.28s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+  z-index: 10001;
+}
+
+.textus-popover.active {
+  display: flex;
+}
+
+.textus-header {
+  background: linear-gradient(135deg, #173753 0%, #0e2437 100%);
+  color: #ffffff;
+  padding: 16px 18px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+}
+
+.textus-header-info {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.textus-header-avatar-wrap {
+  position: relative;
+  width: 42px;
+  height: 42px;
+  flex-shrink: 0;
+}
+
+.textus-header-avatar {
+  width: 100%;
+  height: 100%;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 2px solid rgba(255, 255, 255, 0.3);
+}
+
+.textus-status-dot {
+  position: absolute;
+  bottom: 1px;
+  right: 1px;
+  width: 11px;
+  height: 11px;
+  background: #22c55e;
+  border-radius: 50%;
+  border: 2px solid #173753;
+}
+
+.textus-header-title {
+  font-size: 1.05rem;
+  font-weight: 800;
+  color: #ffffff;
+  line-height: 1.2;
+}
+
+.textus-header-sub {
+  font-size: 0.8rem;
+  color: #38bdf8;
+  font-weight: 600;
+  display: flex;
+  align-items: center;
+  gap: 4px;
+  margin-top: 2px;
+}
+
+.textus-close-btn {
+  width: 32px;
+  height: 32px;
+  border-radius: 50%;
+  background: rgba(255, 255, 255, 0.12);
+  border: none;
+  color: #ffffff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  transition: all 0.15s ease;
+  flex-shrink: 0;
+}
+
+.textus-close-btn:hover {
+  background: rgba(255, 255, 255, 0.25);
+  transform: rotate(90deg);
+}
+
+.textus-body {
+  padding: 18px 20px;
+  overflow-y: auto;
+  max-height: calc(100vh - 220px);
+}
+
+.textus-intro {
+  font-size: 0.88rem;
+  color: #475569;
+  line-height: 1.5;
+  margin-bottom: 14px;
+}
+
+.textus-field {
+  margin-bottom: 12px;
+  text-align: left;
+}
+
+.textus-label {
+  display: block;
+  font-size: 0.8rem;
+  font-weight: 700;
+  color: #334155;
+  margin-bottom: 5px;
+}
+
+.textus-input,
+.textus-textarea {
+  width: 100%;
+  padding: 10px 14px;
+  border: 1.5px solid #cbd5e1;
+  border-radius: 10px;
+  font-size: 0.92rem;
+  color: #1e293b;
+  background: #ffffff;
+  outline: none;
+  font-family: inherit;
+  transition: border-color 0.2s, box-shadow 0.2s;
+}
+
+.textus-input:focus,
+.textus-textarea:focus {
+  border-color: #0093d0;
+  box-shadow: 0 0 0 3px rgba(0, 147, 208, 0.15);
+}
+
+.textus-textarea {
+  resize: vertical;
+  min-height: 72px;
+}
+
+.textus-submit {
+  width: 100%;
+  background: #0093d0;
+  color: #ffffff;
+  border: none;
+  border-radius: 10px;
+  padding: 12px;
+  font-size: 0.98rem;
+  font-weight: 700;
+  cursor: pointer;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  transition: all 0.2s ease;
+  box-shadow: 0 4px 12px rgba(0, 147, 208, 0.35);
+  margin-top: 4px;
+}
+
+.textus-submit:hover:not(:disabled) {
+  background: #0284c7;
+  transform: translateY(-1px);
+  box-shadow: 0 6px 16px rgba(0, 147, 208, 0.45);
+}
+
+.textus-submit:disabled {
+  opacity: 0.7;
+  cursor: not-allowed;
+}
+
+.textus-footer-note {
+  font-size: 0.75rem;
+  color: #94a3b8;
+  text-align: center;
+  margin-top: 10px;
+  line-height: 1.4;
+}
+
+.textus-footer-note a {
+  color: #0093d0;
+  font-weight: 600;
+}
+
+/* Success Confirmation Inside Card */
+.textus-success {
+  text-align: center;
+  padding: 14px 4px;
+}
+
+.textus-success-icon {
+  width: 54px;
+  height: 54px;
+  background: #dcfce7;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0 auto 14px;
+}
+
+.textus-success-title {
+  font-size: 1.2rem;
+  font-weight: 800;
+  color: #173753;
+  margin-bottom: 8px;
+}
+
+.textus-success-desc {
+  font-size: 0.9rem;
+  color: #475569;
+  line-height: 1.55;
+  margin-bottom: 18px;
+}
+
+/* Animations */
+@keyframes textusFloatIn {
+  from {
+    opacity: 0;
+    transform: translateY(10px) scale(0.96);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0) scale(1);
+  }
+}
+
+@keyframes textusPopIn {
+  from {
+    opacity: 0;
+    transform: translateY(12px) scale(0.95);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0) scale(1);
+  }
+}
+
+/* Mobile Responsiveness & Clearance */
+@media (max-width: 768px) {
+  .floating-textus-container {
+    bottom: calc(78px + env(safe-area-inset-bottom, 0px));
+    right: 14px;
+  }
+  
+  .textus-prompt-bubble {
+    white-space: normal;
+    width: 275px;
+    max-width: calc(100vw - 32px);
+  }
+
+  .textus-popover {
+    position: fixed;
+    bottom: calc(84px + env(safe-area-inset-bottom, 0px));
+    right: 14px;
+    left: 14px;
+    width: auto;
+    max-width: none;
+    max-height: calc(100vh - 170px);
+  }
+
+  .floating-textus-btn {
+    padding: 11px 20px;
+    font-size: 0.95rem;
+  }
+}
+

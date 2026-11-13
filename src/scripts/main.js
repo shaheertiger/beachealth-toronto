@@ -40,6 +40,7 @@ document.addEventListener('DOMContentLoaded', () => {
   initContactForm();
   initReviewsSlider();
   initSmoothScroll();
+  initFloatingTextWidget();
 
   // Dynamic Copyright Year
   const yearEl = document.getElementById('current-year');
@@ -1629,4 +1630,260 @@ function initSmoothScroll() {
       }
     });
   });
+}
+
+/* ==========================================================================
+   FLOATING "TEXT US" WIDGET (FormSubmit.co to admin@beachealth.com)
+   ========================================================================== */
+function initFloatingTextWidget() {
+  if (document.querySelector('.floating-textus-container')) return;
+
+  const container = document.createElement('div');
+  container.className = 'floating-textus-container';
+  container.innerHTML = `
+    <!-- Floating Prompt Bubble -->
+    <div class="textus-prompt-bubble" id="textus-prompt-bubble" role="button" tabindex="0" aria-label="Text us prompt">
+      <button class="textus-bubble-close" id="textus-bubble-close" type="button" aria-label="Close message">
+        <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><line x1="18" y1="6" x2="6" y2="18"></line><line x1="6" y1="6" x2="18" y2="18"></line></svg>
+      </button>
+      <div class="textus-bubble-content">
+        <img src="/images/team-lis.jpg" alt="Beach Health Reception" class="textus-avatar" />
+        <div class="textus-bubble-text">
+          <span class="textus-bubble-title">Hi there, any questions?</span>
+          <span class="textus-bubble-action">Text us here!</span>
+        </div>
+      </div>
+    </div>
+
+    <!-- Text Us Popover Card -->
+    <div class="textus-popover" id="textus-popover" role="dialog" aria-modal="true" aria-labelledby="textus-card-title">
+      <div class="textus-header">
+        <div class="textus-header-info">
+          <div class="textus-header-avatar-wrap">
+            <img src="/images/team-lis.jpg" alt="Beach Health Reception" class="textus-header-avatar" />
+            <span class="textus-status-dot" title="Online"></span>
+          </div>
+          <div>
+            <div class="textus-header-title" id="textus-card-title">Beach Health Reception</div>
+            <div class="textus-header-sub">
+              <svg width="10" height="10" viewBox="0 0 24 24" fill="currentColor"><circle cx="12" cy="12" r="10"/></svg>
+              <span>Online • Fast Reply</span>
+            </div>
+          </div>
+        </div>
+        <button class="textus-close-btn" id="textus-popover-close" type="button" aria-label="Close dialog">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><line x1="18" y1="6" x2="6" y2="18"></line><line x1="6" y1="6" x2="18" y2="18"></line></svg>
+        </button>
+      </div>
+
+      <div class="textus-body" id="textus-card-body">
+        <p class="textus-intro">Have questions regarding treatments, bookings, or practitioner availability? Send us a quick text below:</p>
+        <form id="floating-textus-form" novalidate>
+          <div class="textus-field">
+            <label for="textus-input-name" class="textus-label">Your Name <span style="color: #ef4444;">*</span></label>
+            <input type="text" id="textus-input-name" name="name" class="textus-input" placeholder="e.g. Sarah Mitchell" required />
+          </div>
+          <div class="textus-field">
+            <label for="textus-input-phone" class="textus-label">Mobile Phone Number <span style="color: #ef4444;">*</span></label>
+            <input type="tel" id="textus-input-phone" name="phone" class="textus-input" placeholder="(416) 000-0000" required />
+          </div>
+          <div class="textus-field">
+            <label for="textus-input-email" class="textus-label">Email Address <span style="font-weight: 400; color: #94a3b8;">(optional)</span></label>
+            <input type="email" id="textus-input-email" name="email" class="textus-input" placeholder="sarah@example.com" />
+          </div>
+          <div class="textus-field">
+            <label for="textus-input-message" class="textus-label">How can we help? <span style="color: #ef4444;">*</span></label>
+            <textarea id="textus-input-message" name="message" class="textus-textarea" rows="3" placeholder="Type your question or message here..." required></textarea>
+          </div>
+          <button type="submit" id="textus-submit-btn" class="textus-submit">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><line x1="22" y1="2" x2="11" y2="13"></line><polygon points="22 2 15 22 11 13 2 9 22 2"></polygon></svg>
+            <span>Send Message</span>
+          </button>
+          <div class="textus-footer-note">
+            Routed directly to clinic reception at <a href="mailto:admin@beachealth.com">admin@beachealth.com</a>
+          </div>
+        </form>
+      </div>
+    </div>
+
+    <!-- Floating "Text us" Pill Button -->
+    <button class="floating-textus-btn" id="floating-textus-btn" type="button" aria-label="Text us">
+      <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round">
+        <path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"></path>
+        <line x1="9" y1="10" x2="15" y2="10"></line>
+        <line x1="9" y1="14" x2="13" y2="14"></line>
+      </svg>
+      <span>Text us</span>
+    </button>
+  `;
+
+  document.body.appendChild(container);
+
+  const bubble = container.querySelector('#textus-prompt-bubble');
+  const bubbleClose = container.querySelector('#textus-bubble-close');
+  const popover = container.querySelector('#textus-popover');
+  const popoverClose = container.querySelector('#textus-popover-close');
+  const floatingBtn = container.querySelector('#floating-textus-btn');
+  const form = container.querySelector('#floating-textus-form');
+  const cardBody = container.querySelector('#textus-card-body');
+
+  // Check if bubble was closed this session
+  if (sessionStorage.getItem('textus_bubble_dismissed') === 'true') {
+    if (bubble) bubble.style.display = 'none';
+  }
+
+  // Dismiss bubble only
+  if (bubbleClose) {
+    bubbleClose.addEventListener('click', e => {
+      e.stopPropagation();
+      if (bubble) bubble.style.display = 'none';
+      sessionStorage.setItem('textus_bubble_dismissed', 'true');
+    });
+  }
+
+  // Open popover from bubble
+  if (bubble) {
+    bubble.addEventListener('click', () => {
+      popover.classList.add('active');
+      bubble.style.display = 'none';
+      const firstInput = container.querySelector('#textus-input-name');
+      if (firstInput) setTimeout(() => firstInput.focus(), 150);
+    });
+
+    bubble.addEventListener('keydown', e => {
+      if (e.key === 'Enter' || e.key === ' ') {
+        e.preventDefault();
+        bubble.click();
+      }
+    });
+  }
+
+  // Toggle popover from floating button
+  if (floatingBtn) {
+    floatingBtn.addEventListener('click', () => {
+      const isActive = popover.classList.contains('active');
+      if (isActive) {
+        popover.classList.remove('active');
+      } else {
+        popover.classList.add('active');
+        if (bubble) bubble.style.display = 'none';
+        const firstInput = container.querySelector('#textus-input-name');
+        if (firstInput) setTimeout(() => firstInput.focus(), 150);
+      }
+    });
+  }
+
+  // Close popover from header close button
+  if (popoverClose) {
+    popoverClose.addEventListener('click', () => {
+      popover.classList.remove('active');
+    });
+  }
+
+  // Close on Escape key
+  document.addEventListener('keydown', e => {
+    if (e.key === 'Escape' && popover.classList.contains('active')) {
+      popover.classList.remove('active');
+    }
+  });
+
+  // Close on click outside
+  document.addEventListener('click', e => {
+    if (popover.classList.contains('active')) {
+      if (!container.contains(e.target)) {
+        popover.classList.remove('active');
+      }
+    }
+  });
+
+  // Handle Form Submission via FormSubmit.co
+  if (form) {
+    form.addEventListener('submit', e => {
+      e.preventDefault();
+
+      const nameInput = form.querySelector('#textus-input-name');
+      const phoneInput = form.querySelector('#textus-input-phone');
+      const emailInput = form.querySelector('#textus-input-email');
+      const messageInput = form.querySelector('#textus-input-message');
+      const submitBtn = form.querySelector('#textus-submit-btn');
+
+      const nameVal = nameInput ? nameInput.value.trim() : '';
+      const phoneVal = phoneInput ? phoneInput.value.trim() : '';
+      const emailVal = emailInput ? emailInput.value.trim() : '';
+      const messageVal = messageInput ? messageInput.value.trim() : '';
+
+      if (!nameVal) {
+        if (nameInput) nameInput.focus();
+        return;
+      }
+      if (!phoneVal) {
+        if (phoneInput) phoneInput.focus();
+        return;
+      }
+      if (!messageVal) {
+        if (messageInput) messageInput.focus();
+        return;
+      }
+
+      if (submitBtn) {
+        submitBtn.disabled = true;
+        submitBtn.innerHTML = `
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" style="animation: spin 1s linear infinite;"><line x1="12" y1="2" x2="12" y2="6"></line><line x1="12" y1="18" x2="12" y2="22"></line><line x1="4.93" y1="4.93" x2="7.76" y2="7.76"></line><line x1="16.24" y1="16.24" x2="19.07" y2="19.07"></line><line x1="2" y1="12" x2="6" y2="12"></line><line x1="18" y1="12" x2="22" y2="12"></line><line x1="4.93" y1="19.07" x2="7.76" y2="16.24"></line><line x1="16.24" y1="7.76" x2="19.07" y2="4.93"></line></svg>
+          <span>Sending to reception...</span>
+        `;
+      }
+
+      // 1. Asynchronous dispatch to FormSubmit.co for admin@beachealth.com
+      fetch('https://formsubmit.co/ajax/admin@beachealth.com', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+          'Accept': 'application/json'
+        },
+        body: JSON.stringify({
+          name: nameVal,
+          phone: phoneVal,
+          email: emailVal || 'Not provided',
+          message: messageVal,
+          _subject: `New "Text Us" Question: ${nameVal} (${phoneVal})`,
+          _template: 'table'
+        })
+      })
+      .then(res => res.json())
+      .catch(err => {
+        console.warn('FormSubmit notice:', err);
+      });
+
+      // 2. Render confirmation screen
+      setTimeout(() => {
+        const safeName = nameVal.replace(/</g, '&lt;').replace(/>/g, '&gt;');
+        const safePhone = phoneVal.replace(/</g, '&lt;').replace(/>/g, '&gt;');
+
+        cardBody.innerHTML = `
+          <div class="textus-success">
+            <div class="textus-success-icon">
+              <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="#16a34a" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"></polyline></svg>
+            </div>
+            <div class="textus-success-title">Message Sent!</div>
+            <p class="textus-success-desc">
+              Thank you, <strong>${safeName}</strong>! Your message has been routed directly to clinic reception at <strong style="color: #0093d0;"><a href="mailto:admin@beachealth.com" style="text-decoration: underline;">admin@beachealth.com</a></strong>.
+              <br><br>
+              A coordinator will text or call you back shortly at <strong>${safePhone}</strong>.
+            </p>
+            <button type="button" id="textus-success-close-btn" class="btn btn-primary" style="width: 100%; justify-content: center; border-radius: 10px; margin-bottom: 12px; font-weight: 700;">Close</button>
+            <div style="font-size: 0.8rem; color: #64748b;">
+              Need immediate assistance? Call us at <a href="tel:4165464887" style="color: #0093d0; font-weight: 700;">(416) 546-4887</a>
+            </div>
+          </div>
+        `;
+
+        const closeBtn = cardBody.querySelector('#textus-success-close-btn');
+        if (closeBtn) {
+          closeBtn.addEventListener('click', () => {
+            popover.classList.remove('active');
+          });
+        }
+      }, 500);
+    });
+  }
 }
