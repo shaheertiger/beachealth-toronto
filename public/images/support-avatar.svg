@@ -1,0 +1,40 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 80 80" width="80" height="80">
+  <defs>
+    <linearGradient id="bgGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#0093d0"/>
+      <stop offset="100%" stop-color="#173753"/>
+    </linearGradient>
+    <linearGradient id="skinGrad" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#ffd5b8"/>
+      <stop offset="100%" stop-color="#f6be9b"/>
+    </linearGradient>
+  </defs>
+  <!-- Background Circle -->
+  <circle cx="40" cy="40" r="40" fill="url(#bgGrad)"/>
+  
+  <!-- Clinic White Plus Icon / Watermark -->
+  <path d="M40 8v8M36 12h8" stroke="#ffffff" stroke-width="2.5" stroke-linecap="round" opacity="0.3"/>
+  
+  <!-- Body / Shoulders -->
+  <path d="M18 70c0-12 10-18 22-18s22 6 22 18v6H18v-6z" fill="#ffffff" opacity="0.95"/>
+  <path d="M34 52h12v12H34z" fill="url(#skinGrad)"/>
+  <path d="M34 56l6 6 6-6v6h-12z" fill="#0093d0" opacity="0.4"/>
+  
+  <!-- Head -->
+  <circle cx="40" cy="35" r="14" fill="url(#skinGrad)"/>
+  
+  <!-- Hair -->
+  <path d="M26 33c0-8 6-15 14-15s14 7 14 15c0 2-1 4-2 4-2-7-5-10-12-10s-10 3-12 10c-1 0-2-2-2-4z" fill="#2d3748"/>
+  
+  <!-- Headset / Receptionist Mic -->
+  <path d="M24 33c0-9 7-16 16-16s16 7 16 16" fill="none" stroke="#e2e8f0" stroke-width="3" stroke-linecap="round"/>
+  <rect x="23" y="30" width="4" height="8" rx="2" fill="#0093d0"/>
+  <rect x="53" y="30" width="4" height="8" rx="2" fill="#0093d0"/>
+  <path d="M54 36c0 6-5 9-11 9h-2" fill="none" stroke="#0093d0" stroke-width="2.5" stroke-linecap="round"/>
+  <circle cx="40" cy="45" r="2.5" fill="#173753"/>
+  
+  <!-- Friendly Face features -->
+  <circle cx="35" cy="35" r="1.5" fill="#2d3748"/>
+  <circle cx="45" cy="35" r="1.5" fill="#2d3748"/>
+  <path d="M37 40q3 3 6 0" fill="none" stroke="#e53e3e" stroke-width="1.8" stroke-linecap="round"/>
+</svg>

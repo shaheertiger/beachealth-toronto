@@ -1647,7 +1647,7 @@ function initFloatingTextWidget() {
         <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><line x1="18" y1="6" x2="6" y2="18"></line><line x1="6" y1="6" x2="18" y2="18"></line></svg>
       </button>
       <div class="textus-bubble-content">
-        <img src="/images/team-lis.jpg" alt="Beach Health Reception" class="textus-avatar" />
+        <img src="/images/support-avatar.svg" alt="Beach Health Reception" class="textus-avatar" />
         <div class="textus-bubble-text">
           <span class="textus-bubble-title">Hi there, any questions?</span>
           <span class="textus-bubble-action">Text us here!</span>
@@ -1660,7 +1660,7 @@ function initFloatingTextWidget() {
       <div class="textus-header">
         <div class="textus-header-info">
           <div class="textus-header-avatar-wrap">
-            <img src="/images/team-lis.jpg" alt="Beach Health Reception" class="textus-header-avatar" />
+            <img src="/images/support-avatar.svg" alt="Beach Health Reception" class="textus-header-avatar" />
             <span class="textus-status-dot" title="Online"></span>
           </div>
           <div>
