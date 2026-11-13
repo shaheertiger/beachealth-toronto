@@ -1682,18 +1682,22 @@ function initFloatingTextWidget() {
           <div class="textus-field">
             <label for="textus-input-name" class="textus-label">Your Name <span style="color: #ef4444;">*</span></label>
             <input type="text" id="textus-input-name" name="name" class="textus-input" placeholder="e.g. Sarah Mitchell" required />
+            <div class="textus-error-msg" id="textus-err-name"></div>
           </div>
           <div class="textus-field">
             <label for="textus-input-phone" class="textus-label">Mobile Phone Number <span style="color: #ef4444;">*</span></label>
             <input type="tel" id="textus-input-phone" name="phone" class="textus-input" placeholder="(416) 000-0000" required />
+            <div class="textus-error-msg" id="textus-err-phone"></div>
           </div>
           <div class="textus-field">
             <label for="textus-input-email" class="textus-label">Email Address <span style="font-weight: 400; color: #94a3b8;">(optional)</span></label>
             <input type="email" id="textus-input-email" name="email" class="textus-input" placeholder="sarah@example.com" />
+            <div class="textus-error-msg" id="textus-err-email"></div>
           </div>
           <div class="textus-field">
             <label for="textus-input-message" class="textus-label">How can we help? <span style="color: #ef4444;">*</span></label>
             <textarea id="textus-input-message" name="message" class="textus-textarea" rows="3" placeholder="Type your question or message here..." required></textarea>
+            <div class="textus-error-msg" id="textus-err-message"></div>
           </div>
           <button type="submit" id="textus-submit-btn" class="textus-submit">
             <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><line x1="22" y1="2" x2="11" y2="13"></line><polygon points="22 2 15 22 11 13 2 9 22 2"></polygon></svg>
@@ -1798,30 +1802,123 @@ function initFloatingTextWidget() {
 
   // Handle Form Submission via FormSubmit.co
   if (form) {
+    const nameInput = form.querySelector('#textus-input-name');
+    const phoneInput = form.querySelector('#textus-input-phone');
+    const emailInput = form.querySelector('#textus-input-email');
+    const messageInput = form.querySelector('#textus-input-message');
+    const submitBtn = form.querySelector('#textus-submit-btn');
+
+    function clearTextusErrors() {
+      [nameInput, phoneInput, emailInput, messageInput].forEach(inp => {
+        if (inp) {
+          inp.classList.remove('is-invalid');
+          inp.removeAttribute('aria-invalid');
+        }
+      });
+      container.querySelectorAll('.textus-error-msg').forEach(err => {
+        err.classList.remove('visible');
+        err.textContent = '';
+      });
+    }
+
+    function setTextusError(inp, errId, msg) {
+      if (inp) {
+        inp.classList.add('is-invalid');
+        inp.setAttribute('aria-invalid', 'true');
+      }
+      const errEl = container.querySelector(errId);
+      if (errEl) {
+        errEl.textContent = msg;
+        errEl.classList.add('visible');
+      }
+    }
+
+    // Dynamic error clearing on user typing
+    if (nameInput) {
+      nameInput.addEventListener('input', () => {
+        nameInput.classList.remove('is-invalid');
+        const err = container.querySelector('#textus-err-name');
+        if (err) err.classList.remove('visible');
+      });
+    }
+    if (phoneInput) {
+      phoneInput.addEventListener('input', () => {
+        phoneInput.classList.remove('is-invalid');
+        const err = container.querySelector('#textus-err-phone');
+        if (err) err.classList.remove('visible');
+      });
+    }
+    if (emailInput) {
+      emailInput.addEventListener('input', () => {
+        emailInput.classList.remove('is-invalid');
+        const err = container.querySelector('#textus-err-email');
+        if (err) err.classList.remove('visible');
+      });
+    }
+    if (messageInput) {
+      messageInput.addEventListener('input', () => {
+        messageInput.classList.remove('is-invalid');
+        const err = container.querySelector('#textus-err-message');
+        if (err) err.classList.remove('visible');
+      });
+    }
+
     form.addEventListener('submit', e => {
       e.preventDefault();
-
-      const nameInput = form.querySelector('#textus-input-name');
-      const phoneInput = form.querySelector('#textus-input-phone');
-      const emailInput = form.querySelector('#textus-input-email');
-      const messageInput = form.querySelector('#textus-input-message');
-      const submitBtn = form.querySelector('#textus-submit-btn');
+      clearTextusErrors();
 
       const nameVal = nameInput ? nameInput.value.trim() : '';
       const phoneVal = phoneInput ? phoneInput.value.trim() : '';
       const emailVal = emailInput ? emailInput.value.trim() : '';
       const messageVal = messageInput ? messageInput.value.trim() : '';
 
-      if (!nameVal) {
-        if (nameInput) nameInput.focus();
-        return;
+      let hasError = false;
+      let firstInvalid = null;
+
+      // 1. Validate Name
+      if (!nameVal || nameVal.length < 2) {
+        setTextusError(nameInput, '#textus-err-name', 'Please enter your name.');
+        hasError = true;
+        if (!firstInvalid) firstInvalid = nameInput;
       }
+
+      // 2. Validate Phone Number
+      const cleanDigits = phoneVal.replace(/\D/g, '');
       if (!phoneVal) {
-        if (phoneInput) phoneInput.focus();
-        return;
+        setTextusError(phoneInput, '#textus-err-phone', 'Please enter your mobile phone number.');
+        hasError = true;
+        if (!firstInvalid) firstInvalid = phoneInput;
+      } else if (/[a-zA-Z]/.test(phoneVal)) {
+        setTextusError(phoneInput, '#textus-err-phone', 'Please enter numbers only (letters are not allowed).');
+        hasError = true;
+        if (!firstInvalid) firstInvalid = phoneInput;
+      } else if (cleanDigits.length < 10) {
+        setTextusError(phoneInput, '#textus-err-phone', 'Phone number must be at least 10 digits (e.g. 416-546-4887).');
+        hasError = true;
+        if (!firstInvalid) firstInvalid = phoneInput;
+      } else if (cleanDigits.length > 15) {
+        setTextusError(phoneInput, '#textus-err-phone', 'Phone number is too long (maximum 15 digits).');
+        hasError = true;
+        if (!firstInvalid) firstInvalid = phoneInput;
       }
-      if (!messageVal) {
-        if (messageInput) messageInput.focus();
+
+      // 3. Validate Email (if provided)
+      const emailPattern = /^[^\s@]+@[^\s@]+\.[a-zA-Z]{2,}$/;
+      if (emailVal && !emailPattern.test(emailVal)) {
+        setTextusError(emailInput, '#textus-err-email', 'Please enter a valid email address (e.g. name@example.com).');
+        hasError = true;
+        if (!firstInvalid) firstInvalid = emailInput;
+      }
+
+      // 4. Validate Message
+      if (!messageVal || messageVal.length < 5) {
+        setTextusError(messageInput, '#textus-err-message', 'Please enter your question or message (at least 5 characters).');
+        hasError = true;
+        if (!firstInvalid) firstInvalid = messageInput;
+      }
+
+      if (hasError) {
+        if (firstInvalid) firstInvalid.focus();
         return;
       }
 

@@ -5064,6 +5064,33 @@ html.scroll-locked body {
   box-shadow: 0 0 0 3px rgba(0, 147, 208, 0.15);
 }
 
+.textus-input.is-invalid,
+.textus-textarea.is-invalid {
+  border-color: #ef4444 !important;
+  box-shadow: 0 0 0 3px rgba(239, 68, 68, 0.15) !important;
+  background-color: #fffafa !important;
+}
+
+.textus-error-msg {
+  color: #ef4444;
+  font-size: 0.78rem;
+  font-weight: 600;
+  margin-top: 4px;
+  display: none;
+  line-height: 1.35;
+  animation: textusShake 0.3s ease;
+}
+
+.textus-error-msg.visible {
+  display: block;
+}
+
+@keyframes textusShake {
+  0%, 100% { transform: translateX(0); }
+  25% { transform: translateX(-4px); }
+  75% { transform: translateX(4px); }
+}
+
 .textus-textarea {
   resize: vertical;
   min-height: 72px;
