@@ -1963,6 +1963,7 @@ ul, ol {
   font-weight: 500;
 }
 
+.reviews-widget-wrap,
 .reviews-elfsight-wrap {
   position: relative;
   max-width: 1140px;
