@@ -351,14 +351,6 @@ const TEAM_DATA = {
     image: '/images/team-lada.jpg',
     bio: `Lada Milos Lee has been practicing as a licensed chiropodist for over 15 years at Beaches Foot Care Centre at Beachealth. Graduating with honors from the Michener Institute for Applied Health Sciences, Lada specializes in comprehensive foot care, diabetic wound management, nail surgery, and bespoke biomechanical orthotics. She takes great pride in creating tailored treatment plans that restore mobility and relieve foot and lower-limb pain for patients of all ages.`
   },
-  'emily-tran': {
-    name: 'Emily Tran',
-    role: 'Chiropodist',
-    portal: 'Beaches Foot Care Centre',
-    bookingUrl: 'https://beachesfootcare.janeapp.com/',
-    image: '/images/team-emily.jpg',
-    bio: `Emily is a skilled, dedicated Chiropodist holding an Advanced Diploma of Health Sciences in Chiropody (with distinction) from the prestigious Michener Institute. Her clinical approach merges preventive podiatric care with advanced medical treatments for ingrown toenails, plantar fasciitis, dermatological conditions, and diabetic foot health. Emily works closely with Beachealth’s osteopaths and physiotherapists to analyze gait and correct lower extremity mechanics.`
-  },
   'dr-adam-bletsoe': {
     name: 'Dr. Adam Bletsoe',
     role: 'Chiropractor',
@@ -392,14 +384,6 @@ const TEAM_DATA = {
     bookingUrl: 'https://beachealth.janeapp.com/',
     image: '/images/team-jared.jpg',
     bio: `Jared is a registered Osteopathic Manual Practitioner, certified Holistic Nutritionist, and Personal Trainer with a specialized passion for sports injuries, spinal rehabilitation, and chronic pain management. He uses gentle osteopathic articular techniques, visceral mobilization, and cranial work combined with functional nutrition to resolve the underlying root causes of systemic inflammation and structural imbalance.`
-  },
-  'jake-maher': {
-    name: 'Jake Maher',
-    role: 'Osteopathic Manual Practitioner',
-    portal: 'Beachealth Clinic',
-    bookingUrl: 'https://beachealth.janeapp.com/',
-    image: '/images/team-jake.jpg',
-    bio: `Jake graduated from RMIT University in Melbourne, Australia, completing an intensive double degree comprising a Bachelor of Health Science and Bachelor of Applied Science (Osteopathy). Jake brings extensive international experience treating postural fatigue, rotator cuff strains, disc herniations, and repetitive stress injuries through osteopathic manual medicine and evidence-based rehabilitation.`
   },
   'patrice-wilson': {
     name: 'Patrice Wilson',
@@ -890,10 +874,10 @@ function setScrollLock(locked) {
 function getServiceUrlForTeam(id) {
   if (!id) return null;
   if (id.includes('adam') || id.includes('chiro')) return '/chiropractic.html';
-  if (id.includes('jared') || id.includes('jake') || id.includes('osteo')) return '/osteopathy.html';
+  if (id.includes('jared') || id.includes('osteo')) return '/osteopathy.html';
   if (id.includes('shakiba') || id.includes('amin') || id.includes('physio')) return '/physiotherapy.html';
   if (id.includes('lis') || id.includes('pilates')) return '/clinical-pilates.html';
-  if (id.includes('lada') || id.includes('emily') || id.includes('foot')) return '/chiropody.html';
+  if (id.includes('lada') || id.includes('foot')) return '/chiropody.html';
   if (id.includes('patrice') || id.includes('krystele') || id.includes('massage')) return '/massage-therapy.html';
   return null;
 }

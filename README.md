@@ -44,7 +44,7 @@ beachealth-clone/
 │       ├── favicon.png
 │       ├── osteo-hero.jpg
 │       ├── chiro-hero.jpeg
-│       ├── team-*.jpg       # Real staff headshots (Lada, Emily, Adam, Jared, Jake, Patrice, Krystele)
+│       ├── team-*.jpg       # Real staff headshots (Lada, Adam, Jared, Patrice, Krystele)
 │       └── ...
 ├── src/
 │   ├── styles/
