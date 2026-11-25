@@ -807,46 +807,219 @@ const SERVICE_DATA = {
 SERVICE_DATA['clinical-pilates'] = SERVICE_DATA['physio-pilates'];
 
 const BLOG_DATA = {
-  'shoulder-tears': {
-    title: 'The Aging Shoulder: What Do Rotator Cuff “Tears” Really Mean?',
-    category: 'Osteopathy & Physical Rehab',
-    date: 'Recent Clinical Insight',
+  'desk-posture-tech-neck': {
+    title: 'The "Tech Neck" Myth: Why Movement Breaks Beat Perfect Posture',
+    category: 'Chiropractic Care',
+    author: 'Dr. Adam Bletsoe, Chiropractor',
+    bookingUrl: 'https://beachealth.janeapp.com/',
+    bookingLabel: 'Book Chiropractic Care',
     content: `
-      <p>Shoulder pain can quickly interfere with daily life—from lifting groceries and typing to reaching overhead or getting a restful night’s sleep. Often, patients undergo an MRI only to receive a report stating they have a "rotator cuff tear" or "degenerative fraying."</p>
+      <p>Walk through any coffee shop in The Beaches or scan a row of work-from-home setups, and you’ll see the exact same thing: heads craned forward, shoulders creeping toward ears, and spines curved into a gentle "C" shape over laptops. It’s natural to feel guilty about slouching. But here’s the clinical reality: <strong>there is no single "perfect posture" that your body is meant to freeze in for eight hours straight.</strong></p>
       <br>
-      <h4>Understanding Asymptomatic Tears</h4>
-      <p>Numerous medical studies have shown that a significant percentage of people over age 40 have asymptomatic rotator cuff tears. In other words, gray hair for your joints! Just because an imaging scan reports a tear does not mean surgery is inevitable.</p>
+      <h4>Why Freezing Like a Soldier Doesn’t Work</h4>
+      <p>When people try to fix "bad posture," they often jerk their shoulder blades back, puff out their chest, and hold themselves rigid. Within fifteen minutes, muscles fatigue, upper back burning sets in, and they slump back down. That’s because posture isn’t a statue; it’s a dynamic state. Your cervical spine and upper thoracic joints are designed to move, lubricate, and share load through varied positions.</p>
       <br>
-      <h4>The Coordinated Beachealth Approach</h4>
-      <p>At Beachealth, we focus on function rather than just MRI scans. By releasing thoracic spine restrictions with osteopathy, rebalancing scapular rhythm with chiropractic care, and strengthening the surrounding rotator cuff muscles, over 80% of shoulder pain cases resolve successfully with non-surgical conservative care.</p>
+      <h4>The Mechanical Cost of the Forward Head Position</h4>
+      <p>For every inch your head drifts forward past your shoulders, your neck muscles have to support an extra 10 pounds of gravitational weight. If your head is hanging forward at 45 degrees over a phone or lower screen, your suboccipital muscles and upper trapezius are effectively holding up the weight of a bowling ball all afternoon. Over weeks and months, that constant tension leads to facet joint irritation, chronic upper back knots, and tension headaches wrapping around your temples.</p>
+      <br>
+      <h4>Three Practical Fixes That Actually Work</h4>
+      <ul style="padding-left: 20px; line-height: 1.8; margin-top: 10px;">
+        <li><strong>The 30-Minute Movement Snack:</strong> Instead of obsessing over sitting like a mannequin, set a gentle timer every 30 minutes. Stand up, roll your shoulders backward three times, tuck your chin gently (creating a mild double chin for three seconds), and sit back down. Movement resets tissue tension faster than posture braces.</li>
+        <li><strong>Elevate Your Screen to Eye Level:</strong> If you use a laptop at your kitchen table or desk, elevate it on a riser or stack of books and plug in an external keyboard. Bringing the top third of your screen to eye level immediately eliminates 30 degrees of neck flexion.</li>
+        <li><strong>Targeted Spinal Mobilization:</strong> When facet joints in the upper back and neck become locked or irritated from sustained positions, gentle chiropractic adjustments and joint mobilization restore normal glide and take protective pressure off surrounding muscles.</li>
+      </ul>
+      <br>
+      <p>If you’ve been dealing with stubborn neck stiffness, burning between your shoulder blades, or afternoon headaches that ibuprofen barely touches, a thorough cervical spine assessment can pinpoint whether joint restriction or nervous system fatigue is driving the pain.</p>
     `
   },
-  'tendon-pain': {
-    title: 'From Frustration to Recovery: A Smarter Approach to Tendon Pain',
-    category: 'Sports & Musculoskeletal Care',
-    date: 'Clinical Update',
+  'sciatica-disc-relief': {
+    title: 'Sciatica and Disc Bulges: Why You Don’t Have to Live in Fear of Bending',
+    category: 'Chiropractic Care',
+    author: 'Dr. Adam Bletsoe, Chiropractor',
+    bookingUrl: 'https://beachealth.janeapp.com/',
+    bookingLabel: 'Book Chiropractic Care',
     content: `
-      <p>Tendons are tough, resilient fibrous bands that transmit mechanical force from muscles to bones. When tendons become overloaded, microscopic tissue changes occur—a state known as tendinopathy (often affecting the Achilles, patellar, or elbow tendons).</p>
+      <p>Few things are as unnerving as sharp, electric pain shooting down your buttock, hamstring, and into your calf. When patients in East Toronto visit our clinic with sciatica, they often arrive carrying an MRI report that reads like an eviction notice for their spine: <em>"L4-L5 disc protrusion," "lumbar degenerative disc disease,"</em> or <em>"mild canal narrowing."</em> The first thing they ask is, <em>"Is my back permanently damaged? Will I ever bend over or lift my kids again?"</em></p>
       <br>
-      <h4>Why Rest and Ice Fail Chronic Tendons</h4>
-      <p>Traditional "rest and ice" often provides temporary symptom dampening, but fails to rebuild the tendon’s load-bearing capacity. Tendons need progressive, structured mechanical load to stimulate collagen synthesis.</p>
+      <h4>The Truth About Lumbar Discs</h4>
+      <p>Here is what imaging reports rarely explain: spinal disc bulges are astonishingly common in people who have zero pain whatsoever. Large-scale MRI studies show that over 50% of healthy, pain-free 30-to-40-year-olds have bulging discs. Discs are tough, fibrocartilaginous shock absorbers—not delicate jelly donuts waiting to explode the moment you tie your shoes.</p>
       <br>
-      <h4>Combining Shockwave with Active Loading</h4>
-      <p>At our Toronto clinic, we pair radial shockwave therapy with progressive eccentric loading protocols. Shockwave breaks the chronic inflammation loop and stimulates blood flow, while tailored exercises rebuild tendon resilience for long-term athletic durability.</p>
+      <h4>Why Sciatica Flares Up</h4>
+      <p>Sciatica isn't a disease; it’s a descriptive term meaning the sciatic nerve is chemically irritated or mechanically sensitized as it exits the lumbar spine. Acute flare-ups are usually driven by a combination of local inflammatory cytokines, sustained flexed sitting, and protective muscular guarding from the glutes and piriformis. The brain senses a threat and locks down the entire lower back into a rigid spasm.</p>
+      <br>
+      <h4>How We Decompress and Desensitize the Nerve</h4>
+      <ul style="padding-left: 20px; line-height: 1.8; margin-top: 10px;">
+        <li><strong>Directional Preference & Decompression:</strong> Many disc-related sciatic irritations have a "directional preference." For instance, gentle prone extension exercises (like press-ups) often push the nuclear material forward and centralize pain, bringing it out of the leg and back toward the waistline—which is a major sign of healing.</li>
+        <li><strong>Gentle Chiropractic Adjustments:</strong> Precise spinal adjustments to adjacent stiff sacroiliac (SI) and upper lumbar joints offload the irritated nerve root, reduce reflex muscle spasms, and restore fluid dynamics inside the spinal canal.</li>
+        <li><strong>Nerve Gliding:</strong> Gentle neural mobilization drills slide the sciatic nerve through its anatomical tunnels without aggravating it, reducing scar-tissue tethering and restoring comfortable leg extension.</li>
+      </ul>
+      <br>
+      <p>Most cases of sciatica resolve completely with non-invasive, conservative management within 6 to 12 weeks. You do not have to live in fear of your lower back; with the right movement strategy and chiropractic guidance, your spine can regain its full, resilient strength.</p>
     `
   },
-  'dry-needling-guide': {
-    title: 'Dry Needling Explained: Intramuscular Manual Therapy for Myofascial Dysfunction',
-    category: 'Advanced Modalities',
-    date: 'Therapy Guide',
+  'cervicogenic-headaches-jaw': {
+    title: 'Cervicogenic Headaches & Jaw Clenching: When Neck Tension Triggers Head Pain',
+    category: 'Chiropractic Care',
+    author: 'Dr. Adam Bletsoe, Chiropractor',
+    bookingUrl: 'https://beachealth.janeapp.com/',
+    bookingLabel: 'Book Chiropractic Care',
     content: `
-      <p>Dry needling is a western, anatomy-based treatment modality where fine filament needles are inserted directly into hyper-irritable spots within skeletal muscle known as trigger points.</p>
+      <p>Do you regularly wake up with a dull, throbbing band around your forehead or a gripping pressure at the base of your skull that creeps over one side of your head? Have you noticed that during stressful workdays, your jaw feels sore, your teeth clench tightly, and the headache intensifies by 3:00 PM?</p>
       <br>
-      <h4>How Does It Differ from Acupuncture?</h4>
-      <p>While both utilize sterile needles, dry needling is grounded in modern neuroanatomy and musculoskeletal examination. The objective is to produce a local twitch response (LTR), which resets dysfunctional muscle spindles and clears acidic biochemicals that irritate nerves.</p>
+      <h4>The Neck-Head-Jaw Connection Explained</h4>
+      <p>Many patients spend years treating what they believe are chronic migraines or sinus pressure, cycling through pain medications with only fleeting relief. In many cases, the true source is <strong>cervicogenic headache</strong>—a headache where the primary pain generator lives in the upper three joints of the cervical spine (C1, C2, and C3) or the temporomandibular joint (TMJ).</p>
       <br>
-      <h4>What Conditions Respond Best?</h4>
-      <p>Dry needling produces outstanding results for chronic neck stiffness, tension headaches, tennis elbow, gluteal tightness, and stubborn calf cramps.</p>
+      <p>Nerve signals from the top of your neck feed directly into the trigeminocervical nucleus—a major sensory relay station in the brainstem that also receives sensory input from your face, forehead, and jaw. When the upper neck joints become stiff or suboccipital muscles contract into chronic spasms, your brain can't distinguish where the irritation started and "refers" the pain forward into your temple, forehead, or behind your eyeball.</p>
+      <br>
+      <h4>Signs Your Headache Originates in Your Neck or Jaw:</h4>
+      <ul style="padding-left: 20px; line-height: 1.8; margin-top: 10px;">
+        <li>Pain starts at the base of your skull and radiates upward in a "ram's horn" pattern over your head.</li>
+        <li>Your headache is triggered or worsened by keeping your neck in one position (like working at a monitor) or turning your head fully to one side.</li>
+        <li>You clench your teeth during sleep or catch yourself bracing your jaw during high-focus tasks.</li>
+        <li>Pressure on the upper cervical joints or suboccipital muscles reproduces your exact headache symptoms.</li>
+      </ul>
+      <br>
+      <h4>How Chiropractic Care Breaks the Cycle</h4>
+      <p>By restoring gentle, targeted mobility to the restricted upper cervical vertebrae, chiropractic adjustments reduce the constant sensory overload bombarding the trigeminocervical nucleus. When combined with soft-tissue release of the masseter (jaw) muscles, pterygoids, and upper trapezius, the frequency and intensity of tension headaches drop dramatically—often providing clarity and relief that medication alone couldn’t deliver.</p>
+    `
+  },
+  'chiropractic-joint-pop': {
+    title: 'What Actually Happens When a Joint "Pops"? The Science of Adjustments',
+    category: 'Chiropractic Science',
+    author: 'Dr. Adam Bletsoe, Chiropractor',
+    bookingUrl: 'https://beachealth.janeapp.com/',
+    bookingLabel: 'Book Chiropractic Care',
+    content: `
+      <p>It’s the number one question new patients ask when visiting a chiropractor: <em>"What is that cracking sound? Are my bones grinding against each other?"</em></p>
+      <br>
+      <p>The short answer: <strong>No, your bones are not grinding, snapping, or cracking.</strong> In fact, the audible release heard during a spinal adjustment is completely natural, painless, and rooted in fascinating joint physics.</p>
+      <br>
+      <h4>The Physics of Cavitation (The Gas Bubble Effect)</h4>
+      <p>Every movable joint in your spine (called a facet joint) is encased in a protective fibrous capsule filled with lubricating synovial fluid. This fluid contains dissolved gases, including nitrogen, oxygen, and carbon dioxide. Think of it like a sealed bottle of carbonated mineral water.</p>
+      <br>
+      <p>During a gentle, high-velocity low-amplitude (HVLA) chiropractic adjustment, the chiropractor applies a quick, precise stretch to the joint capsule. This sudden, slight increase in joint volume causes an instantaneous drop in internal fluid pressure. Because of this pressure vacuum, dissolved nitrogen gas rapidly comes out of solution and forms a microscopic gas bubble. The sudden release of this bubble is what produces the audible "pop"—a physical phenomenon known as <strong>cavitation</strong>.</p>
+      <br>
+      <h4>What Happens in Your Body Immediately Afterward?</h4>
+      <ul style="padding-left: 20px; line-height: 1.8; margin-top: 10px;">
+        <li><strong>Instant Muscle Relaxation:</strong> Deep inside your joint capsules and surrounding spinal ligaments live specialized sensory nerve endings called mechanoreceptors and Golgi tendon organs. The quick stretch of an adjustment fires off a massive sensory volley to your spinal cord, which reflexively shuts down chronic protective muscle spasm (a process called the arthrokinetic reflex).</li>
+        <li><strong>Endorphin & Neurochemical Release:</strong> Cavitation stimulates the production of natural pain-inhibiting endorphins and neurotensin, explaining the immediate feeling of lightness and tension relief patients report stepping off the table.</li>
+        <li><strong>Restored Joint Glide:</strong> Facet joints that were restricted or slightly locked regain their natural physiological motion, allowing you to turn your head and bend your back with fluid freedom.</li>
+      </ul>
+      <br>
+      <p>At Beachealth, adjustments are tailored to your comfort level. Whether you prefer traditional hands-on adjustments or gentler low-force mobilizations that don't involve any popping at all, the goal is always the same: restoring optimal mechanics so your body can heal itself.</p>
+    `
+  },
+  'plantar-fasciitis-morning-heel-pain': {
+    title: 'Morning Heel Stabbing Pain? The Real Story Behind Plantar Fasciitis',
+    category: 'Chiropody & Foot Care',
+    author: 'Lada Milos Lee, Registered Chiropodist',
+    bookingUrl: 'https://beachesfootcare.janeapp.com/',
+    bookingLabel: 'Book Foot Care',
+    content: `
+      <p>You wake up, swing your legs out of bed, and the moment your heel touches the floor, a sharp, stabbing sensation shoots through your arch like stepping directly onto a nail. You limp to the bathroom, and after five or ten minutes of walking around, the pain eases to a dull ache—only to flare right back up when you stand up after sitting through lunch.</p>
+      <br>
+      <p>Sound familiar? At Beaches Foot Care Centre, this is by far the most common condition we see. And while most people call it "plantar fasciitis," the medical reality is often misunderstood.</p>
+      <br>
+      <h4>Why It’s Often Not True "Inflammation"</h4>
+      <p>The suffix <em>"-itis"</em> implies acute inflammation. However, clinical biopsies of long-standing heel pain consistently show an absence of inflammatory cells. Instead, chronic heel pain is usually <strong>plantar fasciosis</strong>: microscopic tearing, collagen disorganization, and diminished blood flow at the point where the plantar fascia attaches to the calcaneus (heel bone).</p>
+      <br>
+      <p>During the night while you sleep, your foot naturally rests in a pointed, relaxed position (plantarflexion). The micro-tears attempt to knit back together in a shortened state. When you take your first morning step, your entire body weight forcefully yanks that newly repaired tissue open—triggering immediate, sharp pain.</p>
+      <br>
+      <h4>Why Calf Stretching Alone Rarely Solves It</h4>
+      <p>Many patients spend months rolling their foot on frozen water bottles or stretching their calves against a wall without lasting results. While calf flexibility matters, plantar fascia strain is almost always driven by an underlying biomechanical fault—such as excessive subtalar pronation (flattening arches that overstretch the fascia) or a high, rigid cavus arch that cannot absorb ground impact forces walking along hard pavement or boardwalks.</p>
+      <br>
+      <h4>Clinical Solutions That Create Lasting Relief</h4>
+      <ul style="padding-left: 20px; line-height: 1.8; margin-top: 10px;">
+        <li><strong>Custom Biomechanical Orthotics:</strong> By capturing a precise 3D cast of your foot in its subtalar neutral position, custom orthotics support the medial longitudinal arch, prevent excess fascia elongation, and disperse heel strike pressures.</li>
+        <li><strong>Radial Shockwave Therapy:</strong> For chronic, stubborn cases, shockwave delivers acoustic soundwaves deep into the degenerative fascia tissue, stimulating neovascularization (new blood vessel growth) and jumpstarting real collagen remodeling.</li>
+        <li><strong>Footwear Audit & Night Splinting:</strong> Wearing supportive, rigid-soled indoor footwear (rather than walking barefoot on hardwood or tile floors) prevents repeated micro-trauma while tissue heals.</li>
+      </ul>
+      <br>
+      <p>You don't have to limp through your mornings. An in-depth chiropody evaluation can identify whether mechanical strain, footwear, or tissue degeneration is driving your heel pain and map out a clear path to pain-free walking.</p>
+    `
+  },
+  'custom-orthotics-vs-store-insoles': {
+    title: 'Custom Orthotics vs. Pharmacy Insoles: What Makes the Difference?',
+    category: 'Chiropody & Orthotics',
+    author: 'Lada Milos Lee, Registered Chiropodist',
+    bookingUrl: 'https://beachesfootcare.janeapp.com/',
+    bookingLabel: 'Book Foot Care',
+    content: `
+      <p>Step into any pharmacy or sporting goods store, and you’ll find entire aisles lined with memory foam insoles, gel cups, and arch support inserts promising instant relief for aching feet. At $30 to $60 a pair, they sound like a tempting alternative to custom medical orthotics prescribed by a licensed Chiropodist. So what are you actually paying for—and does your body truly need custom correction?</p>
+      <br>
+      <h4>When Over-the-Counter Insoles Are Totally Fine</h4>
+      <p>Let’s be honest: over-the-counter (OTC) inserts have their place. If you have reasonably neutral foot mechanics and your main issue is foot fatigue from standing on concrete floors at work, a basic cushioning insole can provide pleasant shock absorption. Think of OTC insoles like non-prescription reading glasses from a drugstore: they magnify slightly, and for mild tiredness, they might suffice.</p>
+      <br>
+      <h4>Where Store-Bought Inserts Fall Short</h4>
+      <p>The major limitation of store-bought inserts is that they are mass-manufactured on a generic average arch mold using compressible foams. They offer soft cushioning, but <strong>cushioning is not mechanical correction</strong>. If your foot collapses inward (overpronation), your heel tilts, or your first metatarsophalangeal joint is jamming during push-off, soft foam will simply compress under your body weight within a few weeks, doing nothing to alter abnormal kinetic torque traveling up into your shins, knees, and hips.</p>
+      <br>
+      <h4>The Anatomy of a Prescription Custom Orthotic</h4>
+      <p>A true custom orthotic is a regulated medical device engineered from a non-weight-bearing 3D anatomical model of your foot captured by a registered Chiropodist. Here is how custom orthotics solve root-cause biomechanics:</p>
+      <ul style="padding-left: 20px; line-height: 1.8; margin-top: 10px;">
+        <li><strong>Subtalar Joint Neutral Alignment:</strong> We capture your foot in its ideal anatomical neutral position—not the deformed, flattened position it takes when you stand on a generic scanning mat at a shoe store.</li>
+        <li><strong>Prescribed Rigidity & Materials:</strong> Depending on your weight, activity level (e.g. running along the Martin Goodman Trail vs. everyday dress shoes), and pathology, the orthotic shell is crafted from semi-rigid polypropylene, carbon composite, or dual-density EVA designed to resist specific torsional forces.</li>
+        <li><strong>Targeted Biomechanical Accommodations:</strong> We incorporate custom metatarsal pads, deep heel cups, medial rearfoot posting, or first-ray cutouts to offload bunions, neuroma impingements, or Achilles tendon overload.</li>
+      </ul>
+      <br>
+      <p>Most private extended health insurance plans in Ontario cover custom orthotics when prescribed and dispensed by a licensed Chiropodist. If you’re struggling with recurring shin splints, runner’s knee, or persistent arch pain, a comprehensive biomechanical gait assessment will tell you exactly what your feet require.</p>
+    `
+  },
+  'ingrown-toenail-clinical-relief': {
+    title: 'Stop "Bathroom Surgery": Safe, Permanent Relief for Ingrown Toenails',
+    category: 'Chiropody & Foot Care',
+    author: 'Lada Milos Lee, Registered Chiropodist',
+    bookingUrl: 'https://beachesfootcare.janeapp.com/',
+    bookingLabel: 'Book Foot Care',
+    content: `
+      <p>Almost everyone who has suffered from an ingrown toenail (onychocryptosis) has tried it at least once: sitting on the edge of the bathtub with nail clippers, tweezers, or manicure scissors, desperately trying to dig out the sharp corner of nail that is stabbing into the red, tender skin of the big toe.</p>
+      <br>
+      <p>Unfortunately, this "bathroom surgery" almost always makes things worse. When you blindly clip down the side of a curved toenail, it’s virtually impossible to reach the deep base. You end up leaving behind a jagged, microscopic spike of nail (a spicule). As the nail continues to grow forward, that hidden spike digs deeper into the surrounding flesh, triggering acute bacterial infection, throbbing swelling, and hypergranulation tissue.</p>
+      <br>
+      <h4>Why Do Toenails Become Ingrown?</h4>
+      <ul style="padding-left: 20px; line-height: 1.8; margin-top: 10px;">
+        <li><strong>Improper Trimming:</strong> Rounding or tapering the edges of your toenails down into the corners encourages the nail border to curve and pierce the periungual skin. Toenails should always be cut straight across.</li>
+        <li><strong>Tight Footwear:</strong> Shoes with narrow, pointed toe boxes or tight athletic footwear compress the toes together, jamming the lateral nail fold against the hard nail plate.</li>
+        <li><strong>Natural Involuted or Pincer Anatomy:</strong> Many individuals genetically have curved, C-shaped nail plates that naturally direct nail growth into the nail sulcus.</li>
+        <li><strong>Repetitive Micro-Trauma:</strong> Runners, soccer players, and hikers frequently jam their toes into the front of their shoes on downhill descents, causing micro-damage to the nail bed.</li>
+      </ul>
+      <br>
+      <h4>How a Chiropodist Fixes It Safely</h4>
+      <p>At Beaches Foot Care Centre, you have two clear, clinically proven pathways:</p>
+      <ul style="padding-left: 20px; line-height: 1.8; margin-top: 10px;">
+        <li><strong>Conservative Clinical Debridement:</strong> For early-stage ingrowns, a chiropodist uses sterile, medical-grade instruments to gently clear the offending nail border, resect the spike without cutting healthy skin, and pack the sulcus with soothing antiseptic relief. There is no downtime, and pain relief is usually immediate.</li>
+        <li><strong>Permanent Partial Nail Avulsion (PNA):</strong> For chronic, recurring ingrowns that keep coming back, we perform a minor in-clinic procedure under local anesthesia. We gently remove only the narrow 2mm sliver of offending nail border (leaving the rest of your nail looking completely normal and intact) and apply a gentle chemical agent (phenol) to the nail matrix. This prevents that tiny edge from ever growing back, permanently ending the cycle with a 98% success rate.</li>
+      </ul>
+      <br>
+      <p>You don't have to suffer with throbbing toes or dread putting on running shoes. Book an assessment with a licensed Chiropodist to resolve painful toenails safely and permanently.</p>
+    `
+  },
+  'diabetic-foot-care-prevention': {
+    title: 'Diabetic Foot Health: Simple Daily Checks That Prevent Complications',
+    category: 'Chiropody & Foot Care',
+    author: 'Lada Milos Lee, Registered Chiropodist',
+    bookingUrl: 'https://beachesfootcare.janeapp.com/',
+    bookingLabel: 'Book Foot Care',
+    content: `
+      <p>If you or someone you love lives with Type 1 or Type 2 diabetes, you’ve likely been told that taking care of your feet is critical. Yet many patients are never clearly taught <em>why</em> the feet are so vulnerable, or what specific warning signs require urgent attention.</p>
+      <br>
+      <h4>The Dual Challenge: Neuropathy and Circulation</h4>
+      <p>Over time, elevated blood glucose levels can affect two vital systems in your lower extremities:</p>
+      <ul style="padding-left: 20px; line-height: 1.8; margin-top: 10px;">
+        <li><strong>Diabetic Peripheral Neuropathy (Loss of Sensation):</strong> Microvascular changes can damage the fine sensory nerve fibers that transmit pain. When neuropathy develops, you may not feel a pebble inside your shoe, a blister from tight socks, or the pressure of a thickened callous. Pain is the body’s warning siren—without it, minor skin breakdown can go unnoticed for days.</li>
+        <li><strong>Peripheral Arterial Disease (Reduced Blood Flow):</strong> Diabetes can narrow small arteries, reducing blood circulation to the toes. Without adequate blood supply and oxygen, even a small scratch or crack in the heel heals very slowly, dramatically increasing the risk of infection.</li>
+      </ul>
+      <br>
+      <h4>The Golden Rules of Daily At-Home Foot Care</h4>
+      <p>Incorporating a simple two-minute daily routine can prevent over 85% of diabetes-related foot complications:</p>
+      <ul style="padding-left: 20px; line-height: 1.8; margin-top: 10px;">
+        <li><strong>The Daily Mirror Inspection:</strong> Every evening before bed, inspect the tops, bottoms, and between the toes of both feet under good lighting. If you have difficulty bending, place a handheld mirror on the floor or ask a family member to check for redness, blisters, or breaks in the skin.</li>
+        <li><strong>Never Walk Barefoot:</strong> Even indoors on carpet or hardwood, always wear supportive, hard-soled slippers or shoes. A stray sewing pin, pet claw, or sharp piece of debris can cause a puncture wound that goes unfelt.</li>
+        <li><strong>Moisturize the Heels, Never Between the Toes:</strong> Apply a urea-based foot cream to the heels and soles to prevent deep skin fissures. However, avoid applying cream between the toes, as excess moisture in those skin folds can foster fungal infections.</li>
+        <li><strong>Never Use Drugstore Callous Acids or Blades:</strong> Over-the-counter salicylic acid callous pads and razor blades can cause chemical burns and deep wounds on diabetic skin. Always have callouses reduced by a licensed Chiropodist using autoclave-sterilized instruments.</li>
+      </ul>
+      <br>
+      <h4>The Role of Routine Chiropody Checkups</h4>
+      <p>At Beaches Foot Care Centre, our comprehensive diabetic foot assessments include non-invasive neurological monofilament testing, Doppler vascular pulses evaluation, dermatological checks, and safe, medical-grade toenail maintenance. Regular preventative visits ensure your feet stay healthy, comfortable, and active for years to come.</p>
     `
   }
 };
@@ -1054,7 +1227,31 @@ function initModals() {
     });
   });
 
-  // 3. Blog Reader Modals
+  // 3. Blog Reader Modals & Card Clickability
+  document.querySelectorAll('.blog-card').forEach(card => {
+    const btn = card.querySelector('.blog-btn[data-blog-id]');
+    if (!btn) return;
+    card.style.cursor = 'pointer';
+    card.setAttribute('role', 'button');
+    card.setAttribute('tabindex', '0');
+    card.setAttribute('aria-label', `Read article: ${card.querySelector('.blog-title')?.textContent || 'blog post'}`);
+
+    card.addEventListener('click', e => {
+      if (e.target.closest('a')) return;
+      if (e.target.closest('[data-blog-id]') === btn) return;
+      e.preventDefault();
+      btn.click();
+    });
+
+    card.addEventListener('keydown', e => {
+      if (e.key === 'Enter' || e.key === ' ') {
+        if (e.target.closest('a') || e.target.closest('button')) return;
+        e.preventDefault();
+        btn.click();
+      }
+    });
+  });
+
   document.querySelectorAll('[data-blog-id]').forEach(btn => {
     btn.addEventListener('click', e => {
       e.preventDefault();
@@ -1062,19 +1259,24 @@ function initModals() {
       const post = BLOG_DATA[id];
       if (!post) return;
 
+      const bookingUrl = post.bookingUrl || 'https://beachealth.janeapp.com/';
+      const bookingLabel = post.bookingLabel || 'Book Online';
+      const authorText = post.author ? `<div style="font-size: 0.88rem; color: #64748b; margin: 4px 0 16px; font-weight: 600;">By ${post.author}</div>` : '';
+
       const html = `
         <div>
-          <span style="color: #0093d0; font-size: 0.85rem; font-weight: 700; text-transform: uppercase;">${post.category}</span>
-          <h3 style="font-size: 1.6rem; color: #173753; margin: 8px 0 16px; line-height: 1.3;">${post.title}</h3>
+          <span style="color: #0093d0; font-size: 0.85rem; font-weight: 700; text-transform: uppercase; letter-spacing: 0.05em;">${post.category}</span>
+          <h3 style="font-size: 1.6rem; color: #173753; margin: 8px 0 4px; line-height: 1.3;">${post.title}</h3>
+          ${authorText}
           <div style="font-size: 1.02rem; line-height: 1.7; color: #334155; margin-bottom: 28px;">
             ${post.content}
           </div>
           <div style="padding-top: 20px; border-top: 1px solid #e2e8f0; display: flex; align-items: center; justify-content: space-between; flex-wrap: wrap; gap: 14px;">
             <div>
-              <p style="font-size: 0.9rem; color: #64748b;">Have questions about this condition?</p>
+              <p style="font-size: 0.9rem; color: #64748b; margin-bottom: 2px;">Have questions about this condition?</p>
               <h5 style="color: #173753; font-size: 1.05rem;">Schedule an evaluation with our clinical team.</h5>
             </div>
-            <a href="https://beachealth.janeapp.com/" target="_blank" rel="noopener" class="btn btn-primary btn-sm">Book Online</a>
+            <a href="${bookingUrl}" target="_blank" rel="noopener" class="btn btn-primary btn-sm">${bookingLabel}</a>
           </div>
         </div>
       `;
