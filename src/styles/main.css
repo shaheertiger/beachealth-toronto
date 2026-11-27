@@ -3332,10 +3332,27 @@ html.scroll-locked body {
   .team-grid {
     grid-template-columns: 1fr;
     gap: 18px;
+    max-width: 440px;
+    margin-left: auto;
+    margin-right: auto;
   }
 
   .team-img-wrap {
-    height: 220px;
+    height: auto;
+    aspect-ratio: 1 / 0.95;
+  }
+
+  .team-img {
+    object-position: center 16%;
+  }
+
+  .service-practitioner-img-wrap {
+    height: auto;
+    aspect-ratio: 1 / 0.95;
+  }
+
+  .service-practitioner-img {
+    object-position: center 16%;
   }
 
   .team-body {
