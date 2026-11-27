@@ -687,6 +687,7 @@ const SERVICE_DATA = {
     portal: 'Beachealth Services',
     bookingUrl: 'https://beachealth.janeapp.com/',
     image: '/images/chiro-hero.jpeg',
+    imagePosition: 'center 22%',
     desc: 'Move Better. Hurt Less. Get Back to Doing What You Love. Hands-on chiropractic care combined with movement and pain science with Dr. Adam Bletsoe.',
     points: [
       'Gentle spinal & extremity joint adjustments',
@@ -697,7 +698,7 @@ const SERVICE_DATA = {
     ],
     customHtml: `
       <div class="service-modal-rich">
-        <img src="/images/chiro-hero.jpeg" alt="Dr. Adam Bletsoe Chiropractic Care" style="width: 100%; height: 240px; object-fit: cover; border-radius: 12px; margin-bottom: 20px;" />
+        <img src="/images/chiro-hero.jpeg" alt="Dr. Adam Bletsoe Chiropractic Care" style="width: 100%; height: 240px; object-fit: cover; object-position: center 22%; border-radius: 12px; margin-bottom: 20px;" />
         <h2 style="font-size: 1.7rem; color: #173753; margin-bottom: 8px; font-weight: 800;">Chiropractic Care with Dr. Adam Bletsoe</h2>
         <p style="font-size: 1.05rem; font-weight: 600; color: #0093d0; margin-bottom: 16px;">Move Better. Hurt Less. Get Back to Doing What You Love.</p>
 
@@ -1181,7 +1182,7 @@ function initModals() {
 
       const html = `
         <div>
-          <img src="${service.image}" alt="${service.title}" style="width: 100%; height: 220px; object-fit: cover; border-radius: 12px; margin-bottom: 20px;" />
+          <img src="${service.image}" alt="${service.title}" style="width: 100%; height: 240px; object-fit: cover; object-position: ${service.imagePosition || 'center'}; border-radius: 12px; margin-bottom: 20px;" />
           <h3 style="font-size: 1.6rem; color: #173753; margin-bottom: 12px;">${service.title}</h3>
           <p style="font-size: 1.02rem; line-height: 1.65; color: #334155; margin-bottom: 20px;">${service.desc}</p>
           <div style="background: #f8fafc; padding: 20px; border-radius: 12px; border: 1px solid #e2e8f0; margin-bottom: 24px;">
